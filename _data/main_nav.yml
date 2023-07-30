@@ -1,0 +1,24 @@
+entry_list: 
+  - 
+    text: "Home"
+    target: "/" 
+
+  - 
+    text: "About"
+    target: "/" 
+
+  - 
+    text: "Products"
+    target: "/" 
+
+  - 
+    text: "FAQ" 
+    target: "/" 
+
+  - 
+    text: "Order"
+    target: "/" 
+
+  - 
+    text: "Contact" 
+    target: "/"
