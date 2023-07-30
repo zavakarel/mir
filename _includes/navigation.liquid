@@ -1,7 +1,21 @@
-<ul class= "nav nav-entry-list"> 
+<ul class= "nav-entry-list"> 
 {% for e in include.entry_list %} 
+
     <li class= "entry nav-entry">
-        <a class= "link nav-link" href= "{{ e.target }}">{{ e.text }}</a>
-    </li>
+        <a class= "link nav-link" href= "{{ e.target }}">{{ e.text }}</a> 
+        
+        {% if e.entry_list %} 
+            <ul class= "nav-entry-list subnav-entry-list">
+            {% for se in e.entry_list %} 
+
+                <li class="entry nav-entry subnav-entry"> 
+                    <a class= "link nav-link subnav-link" href= "{{ se.target }}">{{ se.text }}</a>
+                </li> 
+
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </li> 
+
 {% endfor %}
 </ul> 

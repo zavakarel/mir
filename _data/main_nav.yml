@@ -11,6 +11,15 @@ entry_list:
     text: "Products"
     target: "/" 
 
+    entry_list: 
+      - 
+        text: "Amino Acids" 
+        target: "/" 
+
+      - 
+        text: "Proteins" 
+        target: "/" 
+
   - 
     text: "FAQ" 
     target: "/" 
