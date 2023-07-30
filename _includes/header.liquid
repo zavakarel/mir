@@ -1,0 +1,10 @@
+<header class= "header site-header">
+    {% include id.liquid %} 
+
+    <nav class= "main-nav"> 
+        <h6 class= "heading usability-heading">Site Navigation</h6> 
+        {% include navigation.liquid 
+            entry_list = site.data.mainNav.entryList 
+        %} 
+    </nav>
+</header>
