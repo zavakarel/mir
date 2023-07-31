@@ -1,0 +1,80 @@
+<style> 
+
+.id-logo, 
+.image-placeholder {
+    display: block; 
+    width: 5rem; height: 5rem; 
+    background-color: red; 
+} 
+
+.image-placeholder {
+    width: auto; height: 5rem; 
+} 
+
+.footer-contacts { 
+    display: flex; flex-wrap: wrap; 
+} 
+
+.footer-contacts > .heading {
+    width: 100%; 
+}
+
+.footer-nav-blocks { 
+    display: flex; 
+} 
+
+.footer-nav-block:not( :first-child ) { 
+    margin-left: 0.5rem; 
+}
+
+</style>
+
+<footer class= "footer site-footer"> 
+    {% include id.liquid %} 
+    <p class= "company-info">{{ site.data.footer.company.text }}</p> 
+
+    <section class= "footer-contacts"> 
+        {% include heading.liquid 
+            level = 3 
+            text = "Footer Contacts" 
+        %}
+
+        {% include contact.liquid 
+            key = 'phone'
+            value = site.data.footer.contacts.phone 
+        %} 
+
+        {% include contact.liquid 
+            key = 'email'
+            value = site.data.footer.contacts.email 
+        %}
+    </section> 
+
+    <section class= "footer-nav"> 
+        {% include heading.liquid 
+            level = 3 
+            text = "Footer Navigation" 
+        %}
+
+        <div class= "footer-nav-blocks"> 
+        {% for e in site.data.footer.nav_blocks %} 
+
+            <article class= "nav-block footer-nav-block"> 
+                <span class= "image-placeholder"></span> 
+                <h4 class= "heading nav-block-heading">{{ e.heading }}</h4> 
+
+                {% include navigation.liquid 
+                    entry_list = e.links 
+                %} 
+            </article> 
+
+        {% endfor %} 
+        </div> 
+    </section> 
+
+    <p class= "copyrights">
+        <span class= "owner">Biogame Nutrition</span>
+        <span class= "year">2023</span> 
+        <span class= "notice">&copy; All Rights Reserved.</span> 
+    </p>
+</footer> 

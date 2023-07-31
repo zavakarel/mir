@@ -1,0 +1,35 @@
+company: 
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis, quisquam corrupti architecto? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore. 
+  
+contacts: 
+  phone: 0888 123 456 
+  email: orders@biogame.biz 
+
+nav_blocks: 
+  - 
+    image: 
+      src: "/" 
+    heading: "Info" 
+    links: 
+      - text: "Home" 
+      - text: "Products" 
+      - text: "Q & A" 
+      - text: "About" 
+
+  - 
+    image: 
+      src: "/" 
+    heading: "Products" 
+    links: 
+      - text: "Amino Acids" 
+      - text: "Proteins" 
+      
+  - 
+    image: 
+      src: "/" 
+    heading: "Buy" 
+    links: 
+      - text: "How To" 
+      - text: "Delivery" 
+      - text: "Cart" 
+        
