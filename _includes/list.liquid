@@ -1,0 +1,11 @@
+{% if include.ordered == true %} 
+    {% assign tag = 'ol' %} 
+{% else %} 
+    {% assign tag = 'ul' %}
+{% endif %}
+
+<{{ tag }}>
+{% for e in include.list %} 
+    <li>{{ e }}</li> 
+{% endfor %} 
+</{{ tag }}> 
