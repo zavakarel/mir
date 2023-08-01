@@ -1,0 +1,14 @@
+<div class= "contact-map {{ include.contact }}"> 
+    <h{{ include.level }} class= "heading contact-heading">{{ include.heading }}</h{{ include.level }}> 
+
+    <dl class= "map"> 
+    {% for kvp in key_value_pairs %} 
+
+        <div class= "key-value-pair">
+            <dt class= "key">{{ kvp.key }}</dt> 
+            <dd class= "value">{{ kvp.value }}</dd> 
+        </div>
+            
+    {% endfor %}
+    </dl> 
+</div> 
