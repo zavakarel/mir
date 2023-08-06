@@ -1,0 +1,12 @@
+<div class= "image"></div> 
+
+{% include heading.liquid 
+    level = include.level 
+    text = include.data.name 
+%} 
+
+<p class= "sport">{{ include.data.sport }}</p> 
+
+{% include text.liquid 
+    text = include.data.text 
+%} 

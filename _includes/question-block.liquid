@@ -1,0 +1,13 @@
+<div class= "question-title">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.title 
+    %} 
+
+    <a href= "#question-id-{{ include.data.id }}">Open</a> 
+</div> 
+<div class= "question-body" id= "question-id-{{ include.data.id }}"> 
+    {% include text.liquid 
+        text = include.data.body 
+    %} 
+</div> 

@@ -1,0 +1,18 @@
+{% assign article_date = include.data.date | split: '-' %} 
+
+<footer class="date">
+    <span class="month">{{ article_date[ 1 ] }}</span> 
+    <span class="day">{{ article_date[ 2 ] }}</span> 
+    <span class="year">{{ article_date[ 0 ] }}</span> 
+</footer>
+
+{% include heading.liquid 
+    level = include.level 
+    text = include.data.heading 
+%} 
+
+{% include text.liquid 
+    text = include.data.text 
+%} 
+
+<a href= "#" class= "read-more-button">Read More</a> 
