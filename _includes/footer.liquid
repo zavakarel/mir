@@ -1,10 +1,7 @@
 <style> 
 
-.id-logo, 
-.image-placeholder {
-    display: block; 
-    width: 5rem; height: 5rem; 
-    background-color: red; 
+.footer-nav-block .image {
+    --width: 8rem; 
 } 
 
 .image-placeholder {
@@ -60,7 +57,7 @@
         {% for e in site.data.footer.nav_blocks %} 
 
             <article class= "nav-block footer-nav-block"> 
-                <span class= "image-placeholder"></span> 
+                <div class= "image"></div> 
                 <h4 class= "heading nav-block-heading">{{ e.heading }}</h4> 
 
                 {% include navigation.liquid 

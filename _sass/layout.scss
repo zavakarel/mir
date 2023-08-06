@@ -1,5 +1,9 @@
-.id-logo {
-    display: block; 
-    width: 5rem; height: 5rem; 
-    background-color: red; 
+.image {
+    --width: 5rem; 
+    --height: var( --width ); 
+} 
+
+.image { 
+    width: var( --width ); height: var( --height ); 
+    border: 1px solid; 
 } 
