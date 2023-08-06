@@ -1,7 +1,13 @@
 {% for p in include.text %} 
-    {% if include.text | size > 1 && forloop.index0 == 0 %} 
-        {% assign first_paragraph = 'first-paragraph' %}
+    {% if include.text.size > 1 %} 
+        {% if forloop.first %}
+            {% assign paragraph = 'first-paragraph' %} 
+        {% elsif forloop.last %} 
+            {% assign paragraph = 'last-paragraph' %} 
+        {% else %} 
+            {% assign paragraph = '' %} 
+        {% endif %} 
     {% endif %} 
 
-    <p class= "paragraph {{ first_paragraph }}">{{ p }}</p>
+    <p class= "paragraph {{ paragraph }}">{{ p }}</p> 
 {% endfor %} 
