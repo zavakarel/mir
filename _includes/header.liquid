@@ -4,14 +4,26 @@
     display: none; 
 } 
 
+.product-group-image { 
+    float: left; 
+    width: 10rem; height: 8rem; 
+    border: 1px solid; 
+} 
+
+.product-group::after {
+    content: ""; 
+    display: table; 
+    clear: both; 
+} 
+
 </style>
 
 <header class= "header site-header"> 
     <section class= "contacts"> 
         <h3 class= "heading contacts-heading">Make an Order</h3> 
 
-        <a class= "phone" href= "">0888 123 456</a> 
-        <a class= "email" href= "">order@biogame.biz</a> 
+        <a class= "phone" href= "#">0888 123 456</a> 
+        <a class= "email" href= "#">order@biogame.biz</a> 
         <p class= "working-hours">Mon-Fr <span class= "hours">08.00-18.00</span></p> 
     </section> 
 
@@ -63,9 +75,9 @@
             <li class= "main-nav-entry">
                 <a href= "{{ e.target }}" class= "main-nav-link">{{ e.text }}</a> 
 
-                {% if e.subnav %} 
-                    {% include {{ e.subnav.templ }} 
-                        subnav = e.subnav.data 
+                {% if e.subnavigation %} 
+                    {% include {{ e.subnavigation.templ }} 
+                        data = e.subnavigation.data 
                     %} 
                 {% endif %}
             </li>

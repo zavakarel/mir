@@ -1,0 +1,12 @@
+{% for group in include.data %} 
+<div class= "product-group">
+    <div class= "product-group-image"></div> 
+    <h4 class= "subnav-heading">{{ group.heading }}</h4> 
+
+    <div class= "link-list">
+    {% for entry in group.entry_list %} 
+        <a href= "{{ entry.target }}">{{ entry.text }}</a> 
+    {% endfor %} 
+    </div> 
+</div> 
+{% endfor %} 

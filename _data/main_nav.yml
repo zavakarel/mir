@@ -7,19 +7,93 @@ entry_list:
     text: "About"
     target: "/" 
 
+    subnavigation: 
+      templ: "subnav-block.liquid"
+      data: 
+        - 
+          heading: "About" 
+          image: "" 
+          entry_list: 
+            - 
+              text: "News"
+              target: "/" 
+            - 
+              text: "Quality"
+              target: "/" 
+            - 
+              text: "Partners"
+              target: "/" 
+            - 
+              text: "Sponsorship"
+              target: "/" 
+            - 
+              text: "Publications"
+              target: "/" 
+            - 
+              text: "Contacts" 
+              target: "/"
+
+
   - 
     text: "Products"
     target: "/" 
 
-    entry_list: 
-      - 
-        text: "Amino Acids" 
-        target: "/" 
+    subnavigation: 
+      templ: "subnav-block.liquid"
+      data: 
+        - 
+          heading: "Products by Type" 
+          image: "" 
+          entry_list: 
+            - 
+              text: "Proteins"
+              target: "/" 
+            - 
+              text: "Amino Acids"
+              target: "/" 
+            - 
+              text: "Gainers"
+              target: "/" 
+            - 
+              text: "Fat Burning"
+              target: "/" 
+            - 
+              text: "Antioxidants"
+              target: "/" 
+            - 
+              text: "Vitamins"
+              target: "/" 
+            - 
+              text: "Minerals"
+              target: "/" 
+            - 
+              text: "Isotonic"
+              target: "/" 
 
-      - 
-        text: "Proteins" 
-        target: "/" 
-
+        - 
+          heading: "Products by Goal" 
+          image: "" 
+          entry_list: 
+            - 
+              text: "Muscle Gain"
+              target: "/" 
+            - 
+              text: "Weight Loss"
+              target: "/" 
+            - 
+              text: "Recovery"
+              target: "/" 
+            - 
+              text: "Strength" 
+              target: "/" 
+            - 
+              text: "Endurance" 
+              target: "/" 
+            - 
+              text: "General Health" 
+              target: "/" 
+        
+          
   - 
     text: "FAQ" 
     target: "/" 
@@ -28,6 +102,24 @@ entry_list:
     text: "Order"
     target: "/" 
 
+    subnavigation: 
+      templ: "subnav-block.liquid"
+      data: 
+        - 
+          heading: "Order" 
+          image: "" 
+          entry_list: 
+            - 
+              text: "How to Order"
+              target: "/" 
+            - 
+              text: "Delivery"
+              target: "/" 
+            - 
+              text: "Cart" 
+              target: "/"
+
+
   - 
     text: "Contact" 
-    target: "/"
+    target: "/" 
