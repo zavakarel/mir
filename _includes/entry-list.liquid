@@ -10,8 +10,11 @@
 {% if include.entry_list %} 
     <ul class= "entry-list"> 
     {% for entry in include.entry_list %} 
-        <li class= "entry">
+        <li class= "entry"> 
+            {% assign entry_level = include.level | plus: 1 %} 
+            
             {% include {{ include.entry_template }} 
+                level = entry_level 
                 data = entry 
             %} 
         </li>
