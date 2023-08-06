@@ -1,0 +1,20 @@
+{% include heading.liquid 
+    level = include.level 
+    text = include.heading 
+%} 
+
+{% include text.liquid 
+    text = include.text 
+%} 
+
+{% if include.entry_list %} 
+    <ul class= "entry-list"> 
+    {% for entry in include.entry_list %} 
+        <li class= "entry">
+            {% include {{ include.entry_template }} 
+                data = entry 
+            %} 
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
