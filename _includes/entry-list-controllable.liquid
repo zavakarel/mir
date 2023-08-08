@@ -1,0 +1,40 @@
+{% assign entry_level = include.level | plus: 1 %}
+
+{% include heading.liquid 
+    level = include.level 
+    text = include.heading 
+%} 
+
+{% include subheading.liquid 
+    text = include.subheading 
+%} 
+
+{% include text.liquid 
+    text = include.text 
+%} 
+
+{% assign entry_id_string = "" %}  
+
+<ul class= "entry-list-controllable"> 
+{% for entry in include.entry_list %} 
+    {% assign entry_id = entry[ include.as_entry_id ] | downcase | split: " " | join: "-" %}  
+
+    <li class= "entry" id= "{{ entry_id }}"> 
+        {% include {{ include.entry_template }} 
+            level = entry_level 
+            data = entry 
+        %}
+    </li> 
+
+    {% assign entry_id_string = entry_id_string | append: "; " | append: entry_id  %} 
+{% endfor %}
+</ul> 
+
+{% assign entry_id_list = entry_id_string | remove_first: "; " | split: "; " %} 
+{% include control-list.liquid 
+    id_list = entry_id_list 
+    level = entry_level 
+    block_list = include.control_entry_list 
+    block_template = include.control_entry_template 
+    text_list = include.control_text_list 
+%} 
