@@ -1,0 +1,26 @@
+<ol class= "entry-list control-list"> 
+{% for id in include.id_list %} 
+    <li class= "entry control-entry">  
+        {% if include.block_list %} 
+            {% assign control_entry = include.block_list[ forloop.index0 ] %} 
+
+            {% include {{ include.block_template }} 
+                level = 5 
+                data = control_entry 
+            %} 
+
+            {% if include.as_control_text %}
+                {% assign control_text = control_entry[ include.as_control_text ] %} 
+            {% endif %} 
+        {% endif %} 
+
+        {% if include.text_list.size > 1 %} 
+            {% assign control_text = include.text_list[ forloop.index0 ] %} 
+        {% elsif include.text_list.size == 1 %}
+            {% assign control_text = include.text_list[ 0 ] %} 
+        {% endif %} 
+
+        <a class= "control-link" href= "#{{ id }}">{{ control_text }}</a> 
+    </li>
+{% endfor %}
+</ol> 
