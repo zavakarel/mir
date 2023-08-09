@@ -1,5 +1,6 @@
 --- 
 product_group: "amino_acids"  
+form: liquid 
 name: "Amino Acid 3800" 
 description: 
   - 

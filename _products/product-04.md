@@ -1,5 +1,7 @@
 --- 
+selected: true 
 product_group: "amino_acids"  
+form: tablets 
 name: "Aminostrong" 
 description: 
   - 

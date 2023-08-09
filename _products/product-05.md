@@ -1,5 +1,7 @@
 --- 
+selected: true 
 product_group: "gainers"  
+form: powder 
 name: "Supermass" 
 description: 
   - 

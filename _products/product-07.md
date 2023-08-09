@@ -1,5 +1,6 @@
 ---
 product_group: "gainers"  
+form: powder 
 name: "Supermass 2000" 
 description: 
   - 

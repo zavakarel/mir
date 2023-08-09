@@ -1,5 +1,7 @@
 --- 
+selected: true 
 product_group: "proteins"  
+form: powder 
 name: "Iso Milk" 
 description: 
   - 
