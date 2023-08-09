@@ -1,0 +1,18 @@
+---
+layout: module 
+--- 
+
+{% assign selected_products_list = site.products | where: "selected", true %} 
+{% assign control_text_list = "Read More" | split: "," %} 
+{% include entry-list-controllable.liquid 
+    level = 2 
+    heading = "Selected Products"
+    text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit eveniet rerum unde tempora aliquid eius possimus repellat quidem commodi fugiat, optio recusandae veniam. Temporibus non omnis et assumenda corporis?"   
+    entry_list = selected_products_list 
+    entry_template = "selected-product-entry.liquid" 
+    as_entry_id = "name" 
+    control_entry_list = selected_products_list 
+    control_entry_template = "selected-product-control-entry.liquid" 
+    control_text_list = control_text_list 
+%} 
+

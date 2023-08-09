@@ -1,0 +1,41 @@
+{% include image.liquid 
+    width = "40rem" 
+    height = "10rem" 
+%} 
+
+{% include heading.liquid 
+    level = include.level 
+    text = include.data.name 
+%} 
+
+{% assign product_group = include.data.product_group | split: "_" | join: " " %} 
+<div class= "details">
+    <span class= "product-group">{{ product_group }}</span> 
+    | 
+    <span class= "product-form">{{ include.data.form }}</span> 
+</div>
+
+{% include text.liquid 
+    text = include.data.description 
+%} 
+
+<ul class= "product-feature-list">
+{% for feature in include.data.feature_list %} 
+    <li class= "product-feature"> 
+        {% include heading.liquid 
+            level = 4 
+            text = feature.title 
+        %} 
+        {% include text.liquid 
+            text = feature.text 
+        %}
+    </li>
+{% endfor %} 
+</ul> 
+
+{% include price.liquid 
+    price = include.data.price 
+    text = "Buy Now" 
+%} 
+
+<a href= "" class= "button buy-product-button">Buy</a>

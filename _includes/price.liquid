@@ -1,0 +1,11 @@
+{% assign value = include.price | split: "." %}
+
+<div class= "price"> 
+    <p class="price-text">{{ include.text }}</p> 
+    
+    <div class= "value">
+        <span class= "int">{{ value[ 0 ] }}</span> 
+        <span class= "fract">{{ value[ 1 ] }}</span>
+    </div>
+    <span class= "currency">BGN</span>
+</div> 
