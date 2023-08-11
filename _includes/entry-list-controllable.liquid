@@ -15,11 +15,11 @@
 
 {% assign entry_id_string = "" %}  
 
-<ul class= "entry-list-controllable"> 
+<ul class= "entry-list-controllable {{ include.namespace }}-list"> 
 {% for entry in include.entry_list %} 
     {% assign entry_id = entry[ include.as_entry_id ] | downcase | split: " " | join: "-" %}  
 
-    <li class= "entry" id= "{{ entry_id }}"> 
+    <li class= "entry {{ include.namespace }}-entry" id= "{{ entry_id }}"> 
         {% include {{ include.entry_template }} 
             level = entry_level 
             data = entry 
