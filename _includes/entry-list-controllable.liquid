@@ -5,9 +5,11 @@
     text = include.heading 
 %} 
 
-{% include subheading.liquid 
-    text = include.subheading 
-%} 
+{% if include.subheading %}
+    {% include subheading.liquid 
+        text = include.subheading 
+    %} 
+{% endif %}
 
 {% include text.liquid 
     text = include.text 
