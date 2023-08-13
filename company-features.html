@@ -1,0 +1,18 @@
+---
+layout: module 
+--- 
+
+<div class= "section company-features"> 
+
+{% assign control_text_list = site.data.company_features | map: "heading" %} 
+{% include entry-list-controllable.liquid 
+    level = 2 
+    namespace = "company-features" 
+    heading = "Company Features" 
+    entry_list = site.data.company_features
+    entry_template = "block.liquid" 
+    as_entry_id = "heading" 
+    control_text_list = control_text_list 
+%} 
+
+</div> 

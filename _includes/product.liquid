@@ -3,11 +3,16 @@
     height = "5rem" 
 %} 
 
-{% include heading.liquid 
-    level = include.level 
-    text = include.name 
-%} 
+<div class= "text-content">
+    {% include heading.liquid 
+        level = include.level 
+        namespace = "product" 
+        text = include.name 
+    %} 
 
-{% include text.liquid 
-    text = include.description 
-%} 
+    <ol class= "entry-list product-feature-list"> 
+    {% for feature in include.description %} 
+        <li class= "entry product-feature">{{ feature }}</li> 
+    {% endfor %}
+    </ol> 
+</div> 

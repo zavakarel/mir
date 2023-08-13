@@ -3,15 +3,19 @@
     height = "10rem" 
 %} 
 
-{% include heading.liquid 
-    level = include.level 
-    text = include.data.heading 
-%} 
+<div class= "text-content">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.heading 
+    %} 
 
-{% include subheading.liquid 
-    text = include.data.subheading 
-%} 
+    {% include subheading.liquid 
+        text = include.data.subheading 
+    %} 
 
-{% include text.liquid 
-    text = include.data.text 
-%} 
+    {% include text.liquid 
+        text = include.data.text 
+    %} 
+
+    <a class= "link" href= "#">Read More</a> 
+</div> 

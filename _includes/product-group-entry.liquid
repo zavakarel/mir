@@ -1,28 +1,42 @@
+{% assign product_list_level = include.level | plus: 1 %}
+{% assign product_entry_level = product_list_level | plus: 1 %} 
+
 {% include image.liquid 
     width = "40rem" 
     height = "10rem" 
 %} 
 
-{% include heading.liquid 
-    level = include.level 
-    text = include.data.heading 
-%} 
+<div class= "text-content product-group-text-content"> 
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.heading 
+    %} 
 
-{% include text.liquid 
-    text = include.data.text 
-%} 
+    {% include text.liquid 
+        text = include.data.text 
+    %} 
 
-<ul class= "product-list">
-{% for product in site.products %} 
-    {% if product.product_group != include.data.name %} 
-        {% continue %} 
-    {% endif %} 
+    {% include heading.liquid 
+        level = product_list_level 
+        namespace = "product-list" 
+        text = "In This Group You Will Find:" 
+    %} 
 
-    <li class= "product"> 
-        {% include product.liquid 
-            name = product.name 
-            description = product.description 
-        %}
-    </li>
-{% endfor %} 
-</ul> 
+    <ul class= "entry-list product-list"> 
+    {% for product in site.products %} 
+        {% if product.product_group != include.data.name %} 
+            {% continue %} 
+        {% endif %} 
+
+        {% assign features = product.feature_list | map: "title" %} 
+
+        <li class= "entry product"> 
+            {% include product.liquid 
+                level = product_entry_level 
+                name = product.name 
+                description = features 
+            %}
+        </li>
+    {% endfor %} 
+    </ul> 
+</div> 
