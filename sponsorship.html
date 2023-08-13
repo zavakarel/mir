@@ -2,10 +2,15 @@
 layout: module 
 --- 
 
+<div class= "section sponsorship"> 
+
 {% include entry-list.liquid 
     level = 2 
+    namespace = "sponsorship" 
     heading = site.data.sponsorship.heading 
     text = site.data.sponsorship.text 
     entry_list = site.data.sponsorship.entry_list 
     entry_template = "sportsman.liquid" 
 %} 
+
+</div> 

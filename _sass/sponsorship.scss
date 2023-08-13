@@ -1,0 +1,33 @@
+.sponsorship { 
+    & { 
+        text-align: center; 
+    } 
+
+    &-list { 
+        width: 50%; 
+        margin: { 
+            left: auto; right: auto; 
+        } 
+
+        .entry + .entry {
+            margin-top: 2.5em; 
+        }
+
+        .heading {
+            font-size: 1.2em; 
+        } 
+
+        .sport { 
+            display: inline-block; 
+            padding: 0.5em 1.4em; 
+            border: 1px solid; border-radius: 8px; 
+            font-size: 0.9em; 
+        }
+
+        .image { 
+            display: inline-block; 
+            border-radius: 50%; 
+        } 
+    }
+
+}
