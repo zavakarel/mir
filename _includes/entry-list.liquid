@@ -1,26 +1,30 @@
 {% include heading.liquid 
     level = include.level 
     text = include.heading 
+    namespace = include.namespace 
 %} 
 
 {% include heading.liquid 
     level = 5 
     text = include.subheading 
+    namespace = include.namespace 
 %} 
 
 {% include text.liquid 
     text = include.text 
+    namespace = include.namespace 
 %} 
 
 {% if include.entry_list %} 
-    <ul class= "entry-list"> 
+    <ul class= "entry-list {{ include.namespace }}-list"> 
     {% for entry in include.entry_list %} 
-        <li class= "entry"> 
+        <li class= "entry {{ include.namespace }}-entry"> 
             {% assign entry_level = include.level | plus: 1 %} 
             
             {% include {{ include.entry_template }} 
                 level = entry_level 
                 data = entry 
+                namespace = include.namespace 
             %} 
         </li>
     {% endfor %}

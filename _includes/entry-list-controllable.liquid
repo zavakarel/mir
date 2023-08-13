@@ -3,16 +3,19 @@
 {% include heading.liquid 
     level = include.level 
     text = include.heading 
+    namespace = include.namespace 
 %} 
 
 {% if include.subheading %}
     {% include subheading.liquid 
         text = include.subheading 
+        namespace = include.namespace 
     %} 
 {% endif %}
 
 {% include text.liquid 
     text = include.text 
+    namespace = include.namespace 
 %} 
 
 {% assign entry_id_string = "" %}  
@@ -25,6 +28,7 @@
         {% include {{ include.entry_template }} 
             level = entry_level 
             data = entry 
+            namespace = include.namespace 
         %}
     </li> 
 

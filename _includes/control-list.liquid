@@ -1,12 +1,13 @@
-<ol class= "entry-list control-list"> 
+<ol class= "entry-list control-list {{ include.namespace }}-control-list"> 
 {% for id in include.id_list %} 
-    <li class= "entry control-entry">  
+    <li class= "entry control-entry {{ include.namespace }}-control-entry">  
         {% if include.block_list %} 
             {% assign control_entry = include.block_list[ forloop.index0 ] %} 
 
             {% include {{ include.block_template }} 
                 level = 5 
                 data = control_entry 
+                namespace = include.namespace 
             %} 
 
             {% if include.as_control_text %}
@@ -20,7 +21,7 @@
             {% assign control_text = include.text_list[ 0 ] %} 
         {% endif %} 
 
-        <a class= "control-link" href= "#{{ id }}">{{ control_text }}</a> 
+        <a class= "control-link {{ include.namespace }}-control-link" href= "#{{ id }}">{{ control_text }}</a> 
     </li>
 {% endfor %}
 </ol> 
