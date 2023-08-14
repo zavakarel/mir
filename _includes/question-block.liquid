@@ -4,7 +4,7 @@
         text = include.data.title 
     %} 
 
-    <a href= "#question-id-{{ include.data.id }}">Open</a> 
+    <a class= "button question-open-button" href= "#question-id-{{ include.data.id }}">Open</a> 
 </div> 
 <div class= "question-body" id= "question-id-{{ include.data.id }}"> 
     {% include text.liquid 
