@@ -14,5 +14,5 @@ feature_list:
   - 
     title: "Feature 02" 
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit." 
-price: 39.99 
+price: 29.99 
 --- 

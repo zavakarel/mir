@@ -1,5 +1,4 @@
 --- 
-selected: true 
 product_group: "amino_acids"  
 form: liquid 
 name: "Aminogame" 

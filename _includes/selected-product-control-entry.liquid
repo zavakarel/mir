@@ -3,11 +3,22 @@
     height = "8rem" 
 %} 
 
-{% include heading.liquid 
-    level = include.level 
-    text = include.data.name 
-%} 
+<div class= "text-content">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.name 
+    %} 
 
-{% include text.liquid 
-    text = include.data.description 
-%} 
+    <div class= "details"> 
+        {% assign product_group = include.data.product_group | split: "_" | join: " " %} 
+
+        <span class= "product-group">{{ product_group }}</span> 
+        | 
+        <span class= "product-form">{{ include.data.form }}</span> 
+    </div> 
+
+    {% include price.liquid 
+        price = include.data.price 
+    %} 
+
+</div>
