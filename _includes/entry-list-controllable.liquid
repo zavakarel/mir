@@ -18,23 +18,25 @@
     namespace = include.namespace 
 %} 
 
-{% assign entry_id_string = "" %}  
+{% capture entry_list %} 
+    {% assign entry_id_string = "" %}  
+    
+    <ul class= "entry-list-controllable {{ include.namespace }}-list"> 
+    {% for entry in include.entry_list %} 
+        {% assign entry_id = entry[ include.as_entry_id ] | downcase | split: " " | join: "-" %}  
 
-<ul class= "entry-list-controllable {{ include.namespace }}-list"> 
-{% for entry in include.entry_list %} 
-    {% assign entry_id = entry[ include.as_entry_id ] | downcase | split: " " | join: "-" %}  
+        <li class= "entry {{ include.namespace }}-entry" id= "{{ entry_id }}"> 
+            {% include {{ include.entry_template }} 
+                level = entry_level 
+                data = entry 
+                namespace = include.namespace 
+            %}
+        </li> 
 
-    <li class= "entry {{ include.namespace }}-entry" id= "{{ entry_id }}"> 
-        {% include {{ include.entry_template }} 
-            level = entry_level 
-            data = entry 
-            namespace = include.namespace 
-        %}
-    </li> 
-
-    {% assign entry_id_string = entry_id_string | append: "; " | append: entry_id  %} 
-{% endfor %}
-</ul> 
+        {% assign entry_id_string = entry_id_string | append: "; " | append: entry_id  %} 
+    {% endfor %}
+    </ul> 
+{% endcapture %}
 
 {% assign entry_id_list = entry_id_string | remove_first: "; " | split: "; " %} 
 {% include control-list.liquid 
@@ -44,3 +46,5 @@
     block_template = include.control_entry_template 
     text_list = include.control_text_list 
 %} 
+
+{{ entry_list }} 
