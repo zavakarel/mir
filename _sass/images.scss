@@ -1,0 +1,9 @@
+.image {
+    --width: 100%; 
+    --height: var( --width, 5rem ); 
+} 
+
+.image { 
+    width: var( --width ); height: var( --height ); 
+    background-color: rgb( 235, 235, 235 ); 
+} 

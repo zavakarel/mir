@@ -1,9 +1,24 @@
-.image {
-    --width: 5rem; 
-    --height: var( --width ); 
-} 
+.entry-list { 
+    --column-count: 1; 
+    --column-gap-x: 0em; 
+    --column-gap-y: var( --column-gap-x ); 
+    --column-width: calc( ( 100% - ( var( --column-count ) - 1 ) * var( --column-gap-x ) ) / var( --column-count ) ); 
 
-.image { 
-    width: var( --width ); height: var( --height ); 
-    background-color: rgb( 235, 235, 235 ); 
+    & {
+        display: flex; flex-wrap: wrap; 
+    }
+
+    > .entry {  
+        width: var( --column-width );  
+        margin-left: var( --column-gap-x ); margin-top: var( --column-gap-y ); 
+    } 
+
+    // > .entry:nth-child( -n + 4 ) { 
+    //     margin-top: 0; 
+    // }
+
+    // > .entry:nth-child( 4n + 1 ) { 
+    //     margin-left: 0; 
+    // } 
+
 } 

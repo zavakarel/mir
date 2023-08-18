@@ -1,21 +1,3 @@
-.entry-list { 
-    --column-count: 1; 
-    --column-gap-x: 0em; 
-    --column-gap-y: var( --column-gap-x ); 
-    --column-width: calc( ( 100% - ( var( --column-count ) - 1 ) * var( --column-gap-x ) ) / var( --column-count ) ); 
-
-    & {
-        display: flex; flex-wrap: wrap; 
-    }
-
-    > .entry {  
-        width: var( --column-width );  
-        margin-left: var( --column-gap-x ); margin-top: var( --column-gap-y ); 
-    } 
-
-} 
-
-
 body { 
     padding-top: 15rem; padding-bottom: 15rem; 
 
@@ -39,7 +21,7 @@ body {
 
 .product-groups { 
     & { 
-        display: flex; flex-direction: column; 
+        
         width: 1080px; 
         margin: {
             left: auto; right: auto; 
@@ -48,13 +30,14 @@ body {
 
     > .control-list { 
         --column-count: 4; 
-        --column-gap-x: 0.4em; 
+        --column-gap-x: 0.5em; 
         --control-link-height: 2.2em; 
         --control-link-border-width: 1px; 
         --control-link-border-radius: 5px; 
         --control-link-border-color: rgba( 0, 0, 0, 0.342 ); 
 
         & { 
+            margin-left: 50%;
             padding-top: 2rem; 
             font-size: 0.8em; 
         }
@@ -66,12 +49,6 @@ body {
         > .entry:nth-child( 4n + 1 ) { 
             margin-left: 0; 
         } 
-
-        & { 
-            order: 3; 
-            display: flex; 
-            margin-left: 50%; 
-        }
 
         .control-link {
             display: flex; justify-content: center; align-items: center; 
