@@ -1,0 +1,88 @@
+.site-footer {
+    max-width: 960px; 
+    margin: {
+        left: auto; right: auto; 
+    } 
+
+    > * + * {
+        margin-top: 3em; 
+    } 
+
+    :where( .footer-contacts, .footer-nav ) > .heading {
+        display: none; 
+    }
+    
+    .image-placeholder {
+        width: auto; height: 5rem; 
+    } 
+
+    .company-info {
+        margin-top: 2em; 
+        max-width: 80%; 
+    }
+    
+    .footer-contacts { 
+        --icon-size: 1em; 
+        --icon-block: 0 1em; 
+
+        display: flex; flex-wrap: wrap; 
+
+        > :nth-child( n + 3 ) {
+            margin-left: 1.8em; 
+        } 
+
+        .contact-key { 
+            margin-bottom: 0.4em; 
+            font-weight: bold; 
+            text-transform: capitalize; 
+        }
+    } 
+    
+    // .footer-contacts > .heading {
+    //     width: 100%; 
+    // } 
+    
+    .footer-nav-blocks { 
+        --column-count: 3; 
+        --column-gap-x: 0.8em; 
+
+        > .entry:nth-child( -n + 3 ) { 
+            margin-top: 0; 
+        }
+
+        > .entry:nth-child( 3n + 1 ) { 
+            margin-left: 0; 
+        } 
+
+        display: flex; 
+
+        .footer-nav-block { 
+            font-size: 0.8em; 
+            text-transform: uppercase; 
+
+            > * + * {
+                margin-top: 1.4em; 
+            } 
+
+            .heading {
+                font-weight: bold; 
+            }
+    
+            .image {
+                border-radius: 8px; 
+            } 
+    
+            .nav-entry-list > * + * { 
+                margin-top: 0.8em; 
+            }
+        } 
+    } 
+
+    .copyrights {
+        margin-top: 7rem; 
+    }
+    
+    // .footer-nav-block:not( :first-child ) { 
+    //     margin-left: 0.5rem; 
+    // } 
+}
