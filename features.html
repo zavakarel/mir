@@ -1,0 +1,12 @@
+---
+layout: module 
+---
+
+<div class= "section features">
+{% include entry-list.liquid 
+    level = 2 
+    namespace = "features" 
+    entry_list = site.data.features 
+    entry_template = "features-block.liquid" 
+%} 
+</div>
