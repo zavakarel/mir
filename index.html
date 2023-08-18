@@ -13,7 +13,16 @@ layout: default
     as_entry_id = "heading" 
     control_text_list = control_text_list 
 %} 
-</div>
+</div> 
+
+<div class= "section features">
+{% include entry-list.liquid 
+    level = 2 
+    namespace = "features" 
+    entry_list = site.data.features 
+    entry_template = "features-block.liquid" 
+%} 
+</div> 
 
 <div class= "section product-groups"> 
 {% assign control_text_list = site.product_groups | map: "heading" %} 
@@ -79,10 +88,13 @@ layout: default
 %} 
 </div> 
 
+<div class= "section news"> 
 {% include entry-list.liquid 
     level = 2 
+    namespace = "news" 
     heading = site.data.news.heading 
     text = site.data.news.text 
     entry_list = site.data.news.entry_list 
     entry_template = "news-block.liquid" 
 %} 
+</div> 
