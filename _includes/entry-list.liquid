@@ -1,19 +1,24 @@
-{% include heading.liquid 
-    level = include.level 
-    text = include.heading 
-    namespace = include.namespace 
-%} 
+{% if include.heading %}
+    {% include heading.liquid 
+        level = include.level 
+        text = include.heading 
+        namespace = include.namespace 
+    %} 
+{% endif %}
 
-{% include heading.liquid 
-    level = 5 
-    text = include.subheading 
-    namespace = include.namespace 
-%} 
+{% if include.subheading %}
+    {% include subheading.liquid 
+        text = include.subheading 
+        namespace = include.namespace 
+    %} 
+{% endif %} 
 
-{% include text.liquid 
-    text = include.text 
-    namespace = include.namespace 
-%} 
+{% if include.text %}
+    {% include text.liquid 
+        text = include.text 
+        namespace = include.namespace 
+    %} 
+{% endif %}
 
 {% if include.entry_list %} 
     <ul class= "entry-list {{ include.namespace }}-list"> 
