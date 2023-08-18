@@ -4,14 +4,13 @@
         --column-gap-x: 1em; 
         --column-gap-y: 3.5em; 
 
-        --icon-size: 1.8em; 
+        
         --icon-code: "\2713"; 
-        --icon-block-bottom: 1.2em; 
+        --icon-block: 0 1.2em; 
+        --icon-inline: auto; 
         --icon-background-color: rgba( 0, 0, 0, 0.637 );  
-        --icon-color: rgba(255, 255, 255, 0.726); 
-        --icon-border: none; 
+        --icon-color: rgba( 255, 255, 255, 0.918 ); 
         --icon-border-radius: 50%; 
-        --icon-font-size: 1.4em; 
 
 
         > .entry:nth-child( -n + 2 ) { 
