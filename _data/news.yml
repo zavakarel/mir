@@ -1,17 +1,17 @@
 heading: "News"
 text: 
   - 
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis, quisquam corrupti architecto? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
 entry_list: 
   - 
     date: "2022-03-21" 
-    title: "Corporis Velit Temporibus" 
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis, quisquam corrupti architecto? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
+    heading: "Corporis Velit Temporibus" 
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis?" 
   - 
-    date: "2022-03-21" 
-    title: "Corporis Velit Temporibus" 
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis, quisquam corrupti architecto? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
+    date: "2021-09-01" 
+    heading: "Corporis Velit Temporibus" 
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis?" 
   - 
-    date: "2022-03-21" 
-    title: "Corporis Velit Temporibus" 
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis, quisquam corrupti architecto? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
+    date: "2020-11-15" 
+    heading: "Corporis Velit Temporibus" 
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis?" 

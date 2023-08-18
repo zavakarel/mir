@@ -2,10 +2,13 @@
 layout: module 
 --- 
 
+<div class= "section news"> 
 {% include entry-list.liquid 
     level = 2 
+    namespace = "news" 
     heading = site.data.news.heading 
     text = site.data.news.text 
     entry_list = site.data.news.entry_list 
     entry_template = "news-block.liquid" 
 %} 
+</div>
