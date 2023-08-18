@@ -38,18 +38,24 @@ h6 {
 .control-link {
     display: inline-block; 
     font: inherit; color: inherit; 
+} 
+
+body > :nth-child( n + 3 ) {
+    margin-top: 10em; 
 }
 
 .company-features { 
-    --entry-padding-y : 7rem; 
+    --entry-padding-y-top: 4rem; 
+    --entry-padding-y-bottom: 12rem; 
     --entry-padding-x: 0.5rem; 
     --entry-image-width: 40%; 
     --entry-image-distance-x: 5%; 
-    --entry-image-distance-y: 50%; 
+    --entry-image-distance-y: 0; 
 
     --control-link-size: 8px; 
 
     & { 
+        position: relative; 
         width: 960px; 
         margin: {
             left: auto; right: auto; 
@@ -69,7 +75,7 @@ h6 {
 
     &-entry { 
         position: relative; 
-        border: 2px dashed; 
+        // border: 2px dashed; 
     } 
 
     &-entry .image {
@@ -81,7 +87,7 @@ h6 {
         box-sizing: border-box; 
         margin-left: 0; 
         padding: { 
-            top: var( --entry-padding-y ); bottom: var( --entry-padding-y ); 
+            top: var( --entry-padding-y-top ); bottom: var( --entry-padding-y-bottom ); 
             left: var( --entry-padding-x ); right: var( --entry-padding-x ); 
         } 
         width: 50%; 
@@ -93,9 +99,15 @@ h6 {
     } 
 
     .control-list { 
-        display: flex; justify-content: center; 
-        margin-top: 2rem; 
-        width: 50%; 
+        --column-width: auto; 
+
+        & { 
+            display: flex; justify-content: center; 
+            position: absolute; bottom: var( --entry-padding-y-top ); 
+            margin-top: 2rem; 
+            width: 50%; 
+
+        }
 
         .entry + .entry { 
             margin-left: 1em; 
