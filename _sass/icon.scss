@@ -8,9 +8,24 @@
     --icon-border: none; 
     --icon-border-radius: 0; 
     --icon-font-size: 1.4rem; 
-}
+} 
 
-:where( .features-entry, .selected-products .product-feature, .news-read-more-button, .footer-contacts .contact )::before { 
+// @font-face {
+//     font-family: Ionicons;
+//     src: url( '/assets/fonts' ); 
+// } 
+
+:where( 
+    .header-pane .button, 
+    .working-hours, 
+    .has-subnav, 
+    .shopping-cart-link, 
+    .header .social-link, 
+    .features-entry, 
+    .selected-products .product-feature, 
+    .news-read-more-button, 
+    .footer-contacts .contact 
+)::before { 
     display: flex; justify-content: center; align-items: center; 
     margin-block: var( --icon-block ); margin-inline: var( --icon-inline ); 
     width: var( --icon-size ); height: var( --icon-size ); 

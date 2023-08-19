@@ -1,81 +1,58 @@
-<style> 
-
-.user-action-menu {
-    display: none; 
-} 
-
-.product-group-image { 
-    --width: 10rem; --height: 8rem; 
-}
-
-.product-group-image { 
-    float: left; 
-} 
-
-.main-nav .product-group::after {
-    content: ""; 
-    display: table; 
-    clear: both; 
-} 
-
-</style>
-
 <header class= "header site-header"> 
-    <section class= "contacts"> 
-        <h3 class= "heading contacts-heading">Make an Order</h3> 
+    <div class= "header-pane">
+        <section class= "contacts"> 
+            <h3 class= "heading header-heading contacts-heading">Make an Order</h3> 
 
-        <a class= "phone" href= "#">0888 123 456</a> 
-        <a class= "email" href= "#">order@biogame.biz</a> 
-        <p class= "working-hours">Mon-Fr <span class= "hours">08.00-18.00</span></p> 
-    </section> 
+            <a class= "button contacts-button header-contacts-button contacts-button-phone" href= "#">0888 123 456</a> 
+            <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#">order@biogame.biz</a> 
 
-    <section class= "user-actions"> 
-        <h3 class="heading user-actions-heading">User Settings</h3> 
+            <p class= "working-hours">Mon-Fr <span class= "hours">08.00-18.00</span></p> 
+        </section> 
 
-        <div class= "lang-select"> 
-            <a class= "toggle-menu-button lang-select-toggle-menu-button" href= "#lang-select-menu">en</a> 
-            <div class= "user-action-menu lang-select-menu" id= "lang-select-menu"> 
-                <a href= "#" class= "lang-select-button">en</a> 
-                <a href= "#" class= "lang-select-button">ru</a> 
-                <a href= "#" class= "lang-select-button">bg</a> 
-            </div>
-        </div> 
+        <section class= "user-actions"> 
+            <h3 class="heading header-heading user-actions-heading">User Settings</h3> 
 
-        <div class="theme-select"> 
-            <a class= "toggle-menu-button theme-select-toggle-menu-button" href= "#theme-select-menu">dark</a> 
-            <div class= "user-action-menu theme-select-menu" id= "theme-select-menu">
-                <a href= "#" class= "theme-select-button">dark</a> 
-                <a href= "#" class= "theme-select-button">light</a> 
-            </div>
-        </div> 
+            <div class= "lang-select"> 
+                <a class= "button user-actions-button toggle-menu-button lang-select-toggle-menu-button" href= "#lang-select-menu">en</a> 
 
-        <div class= "login">
-            <a href= "#" class= "login-button">log in</a> 
-        </div> 
-    </section> 
+                <div class= "user-action-menu lang-select-menu" id= "lang-select-menu"> 
+                    <a href= "#" class= "lang-select-button">en</a> 
+                    <a href= "#" class= "lang-select-button">ru</a> 
+                    <a href= "#" class= "lang-select-button">bg</a> 
+                </div>
+            </div> 
+
+            <div class= "theme-select"> 
+                <a class= "button user-actions-button toggle-menu-button theme-select-toggle-menu-button" href= "#theme-select-menu">dark</a> 
+
+                <div class= "user-action-menu theme-select-menu" id= "theme-select-menu">
+                    <a href= "#" class= "theme-select-button">dark</a> 
+                    <a href= "#" class= "theme-select-button">light</a> 
+                </div>
+            </div> 
+
+            <div class= "login">
+                <a href= "#" class= "button user-actions-button login-button">log in</a> 
+            </div> 
+        </section> 
+    </div> 
     
     {% include id.liquid %} 
 
-    <div class= "social-links">
-        <h3 class="heading social-links-heading">Join Us</h3>
-        <ul class= "social-link-list">
-            <li class= "social-link-entry">
-                <a class= "social-link social-link-instagram" href= "#">Instagram</a>
-            </li> 
-
-            <li class= "social-link-entry">
-                <a class= "social-link social-link-facebook" href= "#">Facebook</a> 
-            </li>
-        </ul> 
-    </div>
+    
 
     <nav class= "main-nav"> 
-        <h6 class= "heading usability-heading">Site Navigation</h6> 
+        <h3 class= "heading usability-heading header-heading">Site Navigation</h3> 
 
         <ul class= "main-nav-list">
         {% for e in site.data.main_nav.entry_list %} 
-            <li class= "main-nav-entry">
-                <a href= "{{ e.target }}" class= "main-nav-link">{{ e.text }}</a> 
+            <li class= "main-nav-entry"> 
+                <a 
+                    href= "{{ e.target }}" 
+                    class= "link main-nav-link {% if e.subnavigation %}has-subnav{% endif %}"
+                >
+                    {{ e.text }} 
+                </a> 
 
                 {% if e.subnavigation %} 
                     {% include {{ e.subnavigation.templ }} 
@@ -86,6 +63,19 @@
         {% endfor %}
         </ul> 
 
-        <a class= "shopping-cart-link" href= "#">Cart</a> 
-    </nav>
+        <a class= "link main-nav-link shopping-cart-link" href= "#">Cart</a> 
+    </nav> 
+
+    <div class= "social-links">
+        <h3 class="heading header-heading social-links-heading">Join Us</h3>
+        <ul class= "social-links-list">
+            <li class= "social-link-entry">
+                <a class= "link social-link social-link-instagram" href= "#">Instagram</a>
+            </li> 
+
+            <li class= "social-link-entry">
+                <a class= "link social-link social-link-facebook" href= "#">Facebook</a> 
+            </li>
+        </ul> 
+    </div> 
 </header> 

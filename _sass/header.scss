@@ -1,0 +1,158 @@
+body {
+    padding: 0; 
+}
+
+.site-header { 
+    --link-padding-block: 0.5em;  
+    --link-padding-inline: 1em; 
+
+    & { 
+        display: flex; flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .header-heading:not( .contacts-heading ) {
+        display: none; 
+    } 
+
+    .link, .button { 
+        text-decoration: none;
+    }
+
+    .header-pane, 
+    .contacts, .user-actions, 
+    .id, 
+    .main-nav, 
+    .main-nav-list, 
+    .main-nav-entry, 
+    .social-links-list {
+        display: flex; align-items: center; 
+    } 
+
+    :where( 
+        .header-pane .button, 
+        .header-pane .working-hours, 
+        .main-nav .has-subnav, 
+        .shopping-cart-link, 
+        .header .social-link 
+    ) { 
+        display: flex; align-items: center;  
+    } 
+
+    .main-nav .has-subnav {
+        flex-direction: row-reverse; 
+    }
+
+    .header-pane {  
+        //padding-block: 0.5em; 
+        padding-inline: 1.25rem; 
+        width: 100%; 
+        background-color: rgb( 46, 46, 46 ); color: beige; 
+
+        .button { 
+            padding-block: 0.8em; padding-inline: 1em; 
+            color: inherit; 
+        } 
+
+        font-size: 0.9em; 
+    } 
+
+    .contacts { 
+        align-items: center; 
+
+        > * + * {
+            margin-left: 0.2em; 
+        } 
+
+        .contacts-heading {
+            font-size: 1em; 
+        } 
+    } 
+ 
+    .user-actions {
+        margin-left: auto; 
+
+        
+    }
+
+    .id { 
+        justify-content: center; 
+        padding-block: 3em; 
+        width: 100%; 
+        
+    }
+
+    .main-nav { 
+
+        .main-nav-list { 
+            align-items: stretch; 
+            padding-right: 2em; 
+            border-right: 1px solid; 
+        } 
+
+        .main-nav-list:hover .main-nav-entry {
+            color: inherit; 
+        } 
+
+        .main-nav-list:hover .main-nav-entry:hover, 
+        .main-nav-entry:nth-child( 1 ) {
+            color: red; 
+        } 
+
+        .main-nav-entry { 
+            --icon-size: 1.2em; 
+            --icon-font-size: 1.2em; 
+            --icon-inline: 0.2em 0; 
+        }
+
+        .main-nav-link { 
+            box-sizing: border-box; 
+            padding-block: 0.4em; padding-inline: 1.4em; 
+
+            // &::after {
+            //     display: block; 
+            //     position: absolute; 
+            //     content: attr( data-text ); 
+            // } 
+        } 
+
+        .has-subnav {
+            padding-right: 0.8em; 
+        }
+         
+        .subnav-group {
+            display: none; 
+        } 
+
+        .shopping-cart-link {
+            margin-left: 1em; 
+        }
+    } 
+
+    .social-links {
+        margin-left: 4em; 
+
+        .social-link {
+            padding-block: 0.5em; padding-inline: 1em; 
+        }
+    } 
+
+    .user-action-menu {
+        display: none; 
+    } 
+    
+    .product-group-image { 
+        --width: 10rem; --height: 8rem; 
+    }
+    
+    .product-group-image { 
+        float: left; 
+    } 
+    
+    .main-nav .product-group::after {
+        content: ""; 
+        display: table; 
+        clear: both; 
+    } 
+
+}
