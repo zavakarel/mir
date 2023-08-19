@@ -1,0 +1,16 @@
+.id {
+    &-logo { 
+        display: block; 
+        width: 8rem; height: auto; 
+        background-color: transparent; 
+        // background-image: url( '/assets/images/biogame-logo-color.png' ); 
+        // background-size: contain; background-repeat: no-repeat; background-position: 0 center; 
+
+    } 
+
+    &-name {
+        position: absolute; left: -10000px; top: -10000px; 
+        width: 0; height: 0; 
+        overflow: hidden; 
+    }
+}
