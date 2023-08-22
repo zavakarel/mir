@@ -22,8 +22,9 @@
     }
     
     .footer-contacts { 
-        --icon-size: 1em; 
-        --icon-block: 0 1em; 
+        --icon-size: 1.5rem; 
+        --icon-font-size: 1.4em; 
+        --icon-block: 0 1rem; 
 
         display: flex; flex-wrap: wrap; 
 
@@ -35,7 +36,17 @@
             margin-bottom: 0.4em; 
             font-weight: bold; 
             text-transform: capitalize; 
-        }
+        } 
+
+        .contact-phone { 
+            --icon-code: "\f4b8"; 
+            
+        } 
+
+        .contact-email { 
+            --icon-code: "\f2c3"; 
+            --icon-font-size: 1.2em; 
+        } 
     } 
     
     // .footer-contacts > .heading {

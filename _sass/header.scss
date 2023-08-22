@@ -1,14 +1,24 @@
+// html {
+//     font-size: 15px; 
+// } 
+
 body {
     padding: 0; 
+    
 }
 
 .site-header { 
     --link-padding-block: 0.5em;  
     --link-padding-inline: 1em; 
+    --icon-size: 1.2rem; 
+    --icon-font-size: 1.2rem;
+    --icon-inline: 0 0.4rem; 
 
     & { 
         display: flex; flex-wrap: wrap; 
         justify-content: center; 
+        text-transform: uppercase; 
+        font-size: 0.8em; 
     }
 
     .header-heading:not( .contacts-heading ) {
@@ -39,22 +49,21 @@ body {
         display: flex; align-items: center;  
     } 
 
-    .main-nav .has-subnav {
-        flex-direction: row-reverse; 
-    }
-
     .header-pane {  
-        //padding-block: 0.5em; 
+        --icon-font-size: 1.3em; 
+
+        // padding-block: 0.5em; 
         padding-inline: 1.25rem; 
         width: 100%; 
-        background-color: rgb( 46, 46, 46 ); color: beige; 
+        background-color: rgb( 46, 46, 46 ); color: rgb( 231, 231, 231 ); 
+        
 
         .button { 
-            padding-block: 0.8em; padding-inline: 1em; 
+            padding-block: 1.5em; padding-inline: 1em; 
             color: inherit; 
         } 
 
-        font-size: 0.9em; 
+        font-size: 0.95em; 
     } 
 
     .contacts { 
@@ -67,11 +76,52 @@ body {
         .contacts-heading {
             font-size: 1em; 
         } 
+
+        .contacts-button-phone {
+            --icon-code: "\f4b8"; 
+            --icon-font-size: 1.5em; 
+        } 
+
+        .contacts-button-email {
+            --icon-code: "\f2c3"; 
+            --icon-font-size: 1.2em; 
+        }
+
+        .working-hours { 
+            --icon-code: "\f3b3"; 
+            --icon-font-size: 1.3em; 
+        }
     } 
  
-    .user-actions {
+    .user-actions { 
         margin-left: auto; 
 
+        .lang-select {
+            --icon-code: "\f276"; 
+            --icon-font-size: 1.4em; 
+        } 
+
+        .theme-select {
+            --icon-code: "\f467"; // \f468 
+            --icon-font-size: 2.4em; 
+        }
+
+        .login { 
+            --icon-code: "\f47d"; 
+            --icon-font-size: 1.7em; 
+
+            position: relative; 
+            margin-left: 1rem; 
+
+            &::after { 
+                display: block; 
+                position: absolute; right: 100%; margin-right: 0.5rem; 
+                top: 25%; bottom: 25%; 
+                border-left: 1px solid; 
+                content: ""; 
+            } 
+            
+        } 
         
     }
 
@@ -80,11 +130,17 @@ body {
         padding-block: 3em; 
         width: 100%; 
         
+    } 
+
+    .main-nav, 
+    .social-links {
+        --icon-size: 1.2em;  
     }
 
     .main-nav { 
-
         .main-nav-list { 
+            --icon-inline: 0.4em 0; 
+
             align-items: stretch; 
             padding-right: 2em; 
             border-right: 1px solid; 
@@ -99,24 +155,15 @@ body {
             color: red; 
         } 
 
-        .main-nav-entry { 
-            --icon-size: 1.2em; 
-            --icon-font-size: 1.2em; 
-            --icon-inline: 0.2em 0; 
-        }
-
         .main-nav-link { 
             box-sizing: border-box; 
             padding-block: 0.4em; padding-inline: 1.4em; 
-
-            // &::after {
-            //     display: block; 
-            //     position: absolute; 
-            //     content: attr( data-text ); 
-            // } 
         } 
 
-        .has-subnav {
+        .has-subnav {  
+            --icon-code: "\f3d0"; 
+
+            flex-direction: row-reverse; 
             padding-right: 0.8em; 
         }
          
@@ -124,35 +171,61 @@ body {
             display: none; 
         } 
 
-        .shopping-cart-link {
+        .shopping-cart-link { 
+            --icon-code: "\f3f8";  
+            --icon-size: 1.3em; 
+
             margin-left: 1em; 
         }
     } 
 
-    .social-links {
+    .social-links { 
         margin-left: 4em; 
 
-        .social-link {
-            padding-block: 0.5em; padding-inline: 1em; 
+        .social-link-entry + .social-link-entry {
+            margin-left: 0.5em; 
         }
+
+        .social-link { 
+            --icon-size: 1.8em; 
+            --icon-inline: 0; 
+            --icon-border: 1px solid; 
+            --icon-border-radius: 4px; 
+
+            // padding-block: 0.5em; padding-inline: 1em; 
+            
+            .icon-text {
+                position: absolute; left: -10000px; top: -10000px; 
+                width: 1px; height: 1px; overflow: hidden; 
+            }
+        } 
+
+        .social-link-instagram { 
+            --icon-code: "\f350"; 
+            
+        } 
+
+        .social-link-facebook {
+            --icon-code: "\f231"; 
+        } 
     } 
 
     .user-action-menu {
         display: none; 
     } 
     
-    .product-group-image { 
-        --width: 10rem; --height: 8rem; 
-    }
+    // .product-group-image { 
+    //     --width: 10rem; --height: 8rem; 
+    // }
     
-    .product-group-image { 
-        float: left; 
-    } 
+    // .product-group-image { 
+    //     float: left; 
+    // } 
     
-    .main-nav .product-group::after {
-        content: ""; 
-        display: table; 
-        clear: both; 
-    } 
+    // .main-nav .product-group::after {
+    //     content: ""; 
+    //     display: table; 
+    //     clear: both; 
+    // } 
 
 }

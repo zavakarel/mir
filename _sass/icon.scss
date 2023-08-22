@@ -1,19 +1,15 @@
 :root {
-    --icon-size: 2.5rem; 
-    --icon-code: "\2713"; 
+    --icon-size: 1rem; 
+    --icon-code: ""; 
     --icon-block: 0; 
     --icon-inline: 0; 
     --icon-background-color: transparent;  
     --icon-color: inherit; 
     --icon-border: none; 
     --icon-border-radius: 0; 
-    --icon-font-size: 1.4rem; 
+    --icon-font-family: "Ionicons"; 
+    --icon-font-size: 1rem; 
 } 
-
-// @font-face {
-//     font-family: Ionicons;
-//     src: url( '/assets/fonts' ); 
-// } 
 
 :where( 
     .header-pane .button, 
@@ -22,10 +18,12 @@
     .shopping-cart-link, 
     .header .social-link, 
     .features-entry, 
+    .quality-entry, 
     .selected-products .product-feature, 
     .news-read-more-button, 
     .footer-contacts .contact 
 )::before { 
+    box-sizing: border-box; 
     display: flex; justify-content: center; align-items: center; 
     margin-block: var( --icon-block ); margin-inline: var( --icon-inline ); 
     width: var( --icon-size ); height: var( --icon-size ); 
@@ -33,5 +31,6 @@
     color: var( --icon-color ); 
     border: var( --icon-border ); border-radius: var( --icon-border-radius ); 
     content: var( --icon-code ); 
+    font-family: var( --icon-font-family ); 
     font-size: var( --icon-font-size ); 
 } 

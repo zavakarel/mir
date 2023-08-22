@@ -47,8 +47,11 @@
         --column-count: 3; 
         --column-gap-x: 0em; 
 
-        --icon-size: 1.2em; 
-        --icon-code: "\2713"; 
+        --icon-size: 0.5em; 
+        --icon-font-size: 4em; 
+        --icon-inline: auto; 
+        --icon-block: 0 0.4em; 
+        --icon-code: "\f3fd"; 
 
         .entry {
             box-sizing: border-box; 
@@ -63,18 +66,18 @@
             margin-left: 0; 
         } 
 
-        > .entry::before { 
-            display: block; 
-            margin: { 
-                left: auto; right: auto; bottom: 0.4em;     
-            } 
-            width: var( --icon-size ); height: var( --icon-size ); 
-            line-height: var( --icon-size ); text-align: center; 
-            // border: 1px solid; border-radius: 50%; 
-            font-size: 1.8em; 
+        // > .entry::before { 
+        //     display: block; 
+        //     margin: { 
+        //         left: auto; right: auto; bottom: 0.4em;     
+        //     } 
+        //     width: var( --icon-size ); height: var( --icon-size ); 
+        //     line-height: var( --icon-size ); text-align: center; 
+        //     // border: 1px solid; border-radius: 50%; 
+        //     font-size: 1.8em; 
 
-            content: var( --icon-code ); 
-        } 
+        //     content: var( --icon-code ); 
+        // } 
 
         .entry:nth-child( 2 ) {
             border: 1px solid; border-radius: 10px; 
