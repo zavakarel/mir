@@ -38,9 +38,14 @@
 }
 
 .quality { 
+    width: auto; 
+    text-align: center; 
 
-    & {
-        text-align: center; 
+    > :where( .heading, .paragraph ) {
+        width: 960px; 
+        margin: {
+            left: auto; right: auto; 
+        }
     }
 
     &-list { 
@@ -55,7 +60,7 @@
 
         .entry {
             box-sizing: border-box; 
-            padding: 1.2em; padding-bottom: 2.5em; 
+            padding: 3.5em; padding-bottom: 5em; 
         }
 
         > .entry:nth-child( -n + 3 ) { 
