@@ -40,26 +40,26 @@ h6 {
     font: inherit; color: inherit; 
 } 
 
-body > :nth-child( n + 2 ) {
-    margin-top: 10em; 
+body > :where( :nth-child( n + 2 ) ) {
+    margin-top: 8rem; 
 }
 
 .company-features { 
-    --entry-padding-y-top: 4rem; 
-    --entry-padding-y-bottom: 12rem; 
-    --entry-padding-x: 0.5rem; 
+    --section-padding-x: 1.25rem; 
+    --entry-padding-y-top: 8rem; 
+    --entry-padding-y-bottom: calc( var( --control-list-top ) + var( --control-link-size ) + var( --control-list-bottom ) ); 
+    --entry-padding-x: 1.25rem; 
     --entry-image-width: 40%; 
     --entry-image-distance-x: 5%; 
     --entry-image-distance-y: 0; 
 
+    --control-list-top: 6rem; 
+    --control-list-bottom: 4rem; 
     --control-link-size: 8px; 
 
     & { 
+        margin-top: 4rem; 
         position: relative; 
-        width: 960px; 
-        margin: {
-            left: auto; right: auto; 
-        } 
     }
 
     > .heading {
@@ -88,10 +88,14 @@ body > :nth-child( n + 2 ) {
         margin-left: 0; 
         padding: { 
             top: var( --entry-padding-y-top ); bottom: var( --entry-padding-y-bottom ); 
-            left: var( --entry-padding-x ); right: var( --entry-padding-x ); 
+            // left: var( --entry-padding-x ); right: var( --entry-padding-x ); 
         } 
         width: 50%; 
         text-align: center; 
+
+        .heading {
+            font-size: 2.3em; 
+        }
     }
 
     .text-content * + * {
@@ -103,9 +107,9 @@ body > :nth-child( n + 2 ) {
 
         & { 
             display: flex; justify-content: center; 
-            position: absolute; bottom: var( --entry-padding-y-top ); 
+            position: absolute; bottom: var( --control-list-bottom ); 
             margin-top: 2rem; 
-            width: 50%; 
+            width: calc( ( 100% - ( 2 * var( --section-padding-x ) ) ) / 2 ); 
 
         }
 
