@@ -55,6 +55,9 @@ entry_list:
               text: "Gainers"
               target: "/" 
             - 
+              text: "Energetics" 
+              target: "/" 
+            - 
               text: "Fat Burning"
               target: "/" 
             - 
@@ -91,6 +94,9 @@ entry_list:
               target: "/" 
             - 
               text: "General Health" 
+              target: "/" 
+            - 
+              text: "Feeling Better" 
               target: "/" 
         
           

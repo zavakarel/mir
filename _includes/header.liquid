@@ -69,6 +69,7 @@
                 {% if e.subnavigation %} 
                     {% include {{ e.subnavigation.templ }} 
                         data = e.subnavigation.data 
+                        block_link_count = 5 
                     %} 
                 {% endif %}
             </li>
