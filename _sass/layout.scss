@@ -1,3 +1,17 @@
+:root {
+    --page-inner-width: 70%; 
+    --page-max-width: 1920px; 
+    --content-indent-x: 1.25rem; 
+} 
+
+body { 
+    max-width: var( --page-max-width ); margin-inline: auto; 
+} 
+
+body > :where( :nth-child( n + 2 ) ) {
+    margin-top: 8rem; 
+}
+
 .entry-list { 
     --column-count: 1; 
     --column-gap-x: 0em; 
@@ -22,3 +36,127 @@
     // } 
 
 } 
+
+.section { 
+    --paragraph-block-distance-y: 2em;  
+
+    padding: {
+        left: var(--content-indent-x); right: var( --content-indent-x ); 
+    } 
+
+    // * + * {
+    //     margin-top: 2rem; 
+    // } 
+
+    .heading { 
+        margin-bottom: 1em; margin-top: 1.8em; 
+    } 
+
+    // .details {
+    //     margin-block: 0.5em; 
+    // } 
+
+    // .sport {
+    //     margin-block: 1em; 
+    // } 
+
+    // .price {
+    //     margin-block: 1em; 
+    // }
+
+    :first-child {
+        margin-top: 0; 
+    } 
+
+    // .heading { 
+    //     + * {
+    //         margin-top: 0; 
+    //     } 
+
+    //     + .subheading { 
+    //         margin-top: -2em; 
+    //     } 
+
+    //     + .entry-list {
+    //         margin-top: 1.4em; 
+    //     }
+    // }
+
+    // .subheading { 
+    //     margin-bottom: 3em; 
+    // } 
+
+    // .entry-list {
+    //     margin-top: 4em; margin-bottom: 4em; 
+
+        
+    // } 
+
+    // .paragraph + .paragraph {
+    //     margin-top: 1em; 
+    // } 
+
+    // .details {
+    //     margin-top: 2em; 
+    // }
+
+    // * + .heading {
+    //     margin-top: 1.5em; 
+    // }
+
+    // h1 + * {
+    //     margin-top: 2.5em; 
+    // } 
+
+    // h2 + * {
+    //     margin-top: 2.2em; 
+    // } 
+
+    // h3 + * {
+    //     margin-top: 1.8em; 
+    // } 
+
+    // h4 + * {
+    //     margin-top: 1.4em; 
+    // } 
+
+    // h5 + * {
+    //     margin-top: 0.8em; 
+    // } 
+
+
+    // :not( .heading ) + .entry-list {
+    //     margin-top: 3em; 
+    // }
+
+    // :not( .paragraph ) + .paragraph {
+    //     margin-top: var( --paragraph-block-distance-y ); 
+    // } 
+
+    // .paragraph + :not( .paragraph ) {
+    //     margin-top: var( --paragraph-block-distance-y ); 
+    // } 
+
+    // .heading + .paragraph {
+    //     margin-top: 2em; 
+    // } 
+
+    // .paragraph + .entry-list {
+    //     margin-top: 2em; 
+    // } 
+
+    .text-content {
+        margin-top: 0; 
+    } 
+} 
+
+.section > * {
+    max-width: var( --page-inner-width ); margin-inline: auto; 
+} 
+
+.product-groups-list, 
+.quality-list, 
+.selected-products-list, 
+.news-list {
+    max-width: none; 
+}
