@@ -1,0 +1,45 @@
+// button 
+//     read-more-button 
+//     buy-product-button 
+//     question-open-button ? block-button 
+    
+
+.link, 
+.control-link {
+    display: inline-block; 
+    font: inherit; color: inherit; 
+} 
+
+.read-more-button { 
+    --button-margin-top: 2em; 
+    --button-padding-block: 0.8em; 
+    --button-padding-inline: 1.8em; 
+    --button-border-radius: 50px; 
+
+    --icon-size: 2.2rem; 
+    --icon-font-size: 1.4em; 
+    --icon-code: "\f10b"; 
+    --icon-inline: 0 0.4em; 
+    //--icon-border: 1px solid; 
+    //--icon-border-radius: 50%; 
+
+    & { 
+        display: flex; align-items: center; 
+        margin-inline: auto; margin-top: var( --button-margin-top ); 
+        padding-block: var( --button-padding-block ); padding-inline: var( --button-padding-inline ); 
+        width: fit-content; 
+        text-decoration: none; 
+        //border: 1px solid; border-radius: var( --button-border-radius ); 
+    } 
+
+    
+} 
+
+.product-read-more-button, 
+.question-open-button, 
+.selected-products .control-link {         
+    position: absolute; left: 0; right: 0; top: 0; bottom: 0; 
+    margin: 0; padding: 0; 
+    width: auto; 
+    text-indent: -10000px !important; 
+} 
