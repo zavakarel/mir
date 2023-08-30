@@ -9,13 +9,15 @@
         text = include.data.heading 
     %} 
 
-    {% include subheading.liquid 
-        text = include.data.subheading 
-    %} 
+    {% if include.data.subheading %}
+        {% include subheading.liquid 
+            text = include.data.subheading 
+        %} 
+    {% endif %}
 
     {% include text.liquid 
         text = include.data.text 
     %} 
 
-    <a class= "link" href= "#">Read More</a> 
+    <a class= "link read-more-button" href= "#">Read More</a> 
 </div> 
