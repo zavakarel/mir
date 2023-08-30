@@ -10,6 +10,17 @@ body {
 
 body > :where( :nth-child( n + 2 ) ) {
     margin-top: 8rem; 
+} 
+
+.entry, 
+.control-list-entry { 
+    --image-to-text-content-distance: 2em; 
+    --entry-content-width: calc( ( 100% - var( --image-to-text-content-distance ) ) / 2 ); 
+
+    .image, 
+    .text-content {
+        width: var( --entry-content-width ); 
+    }
 }
 
 .entry-list { 
@@ -51,6 +62,10 @@ body > :where( :nth-child( n + 2 ) ) {
     .heading { 
         margin-bottom: 1em; margin-top: 1.8em; 
     } 
+
+    .paragraph {
+        margin-top: 1em; 
+    }
 
     // .details {
     //     margin-block: 0.5em; 

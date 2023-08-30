@@ -1,19 +1,19 @@
-.section {
-    padding: {
-        left: 1.25em; right: 1.25rem; 
-    }
-}
+
 
 .news { 
-    width: auto; 
-    text-align: center; 
+    --entry-list-margin-top: 3em; 
 
-    > :where( .heading, .paragraph ) {
-        width: 960px; 
-        margin: {
-            left: auto; right: auto; 
-        }
-    }
+    --date-font-size: 1.4em; 
+    --date-padding: 2em; 
+    --date-border: 1px solid; 
+    --date-border-radius: 12px 12px 0 0; 
+    --month-font-size: 1.1em; 
+    --day-font-size: 2.5em; 
+    --year-font-size: 1.1em; 
+
+    --button-margin-top: 2em; 
+
+    text-align: center; 
 
     &-list { 
         --column-count: 3; 
@@ -27,61 +27,36 @@
             margin-left: 0; 
         } 
 
-        .entry * + * {
-            margin-top: 1.2em; 
-        } 
+        & {
+            margin-top: var( --entry-list-margin-top ); 
+        }
 
         .heading { 
-            margin-top: 2em; 
-            font-size: 1.2em; 
-        } 
-
-        .heading + .paragraph {
-            margin-top: 1em; 
+            font-size: var( --font-size-level-4 ); 
         } 
 
     } 
 
     .date { 
         display: flex; flex-direction: column; 
-        padding: 2em; 
-        border: 1px solid; border-radius: 12px 12px 0 0; 
-        font-size: 1.5em; 
+        padding: var( --date-padding );  
+        border: var( --date-border ); border-radius: var( --date-border-radius ); 
+        font-size: var( --date-font-size ); 
+        line-height: 1.2; 
 
-        > * {
-            margin-top: 0; 
-            line-height: 1.2; 
-        }
+        .month {
+            font-size: var( --month-font-size ); 
+            text-transform: uppercase; 
+        } 
+    
+        .day {
+            font-size: var( --day-font-size ); 
+        } 
+    
+        .year {
+            font-size: var( --year-font-size ); 
+        } 
 
-    }
-
-    .month {
-        font-size: 1.1em; 
-        text-transform: uppercase; 
     } 
-
-    .day {
-        font-size: 2.5em; 
-    } 
-
-    .year {
-        font-size: 1.1em; 
-    } 
-
-    .read-more-button { 
-        --icon-size: 2.2rem; 
-        --icon-font-size: 1.4em; 
-        --icon-code: "\f10b"; 
-        --icon-inline: 0 0.4em; 
-        --icon-border: 1px solid; 
-        --icon-border-radius: 50%; 
-
-        display: flex; align-items: center; 
-        margin: {
-            left: auto; right: auto; 
-        }
-        width: fit-content; 
-        text-decoration: none; 
-    }
 
 }

@@ -17,10 +17,10 @@
     .has-subnav, 
     .shopping-cart-link, 
     .header .social-link, 
-    .features-entry, 
+    .features-entry > .heading, 
     .quality-entry, 
     .selected-products .product-feature, 
-    .news-read-more-button, 
+    .read-more-button, 
     .footer-contacts .contact 
 )::before { 
     box-sizing: border-box; 

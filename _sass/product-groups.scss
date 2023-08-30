@@ -6,41 +6,30 @@ body {
 .product-groups { 
     --text-content-padding-y: 4rem; 
 
-    * + * {
-        margin-top: 0.5em; 
-    } 
+    // * + * {
+    //     margin-top: 0.5em; 
+    // } 
 
-    .heading {
-        margin-bottom: 0.6em; 
-    } 
+    // .heading {
+    //     margin-bottom: 0.6em; 
+    // } 
 
-    .text-content {
-        margin-top: 0; 
-    }
+    // .text-content {
+    //     margin-top: 0; 
+    // } 
 }
 
 .product-groups { 
-    & { 
-        
-        width: 1080px; 
-        margin: {
-            left: auto; right: auto; 
-        }
-    } 
 
     > .control-list { 
         --column-count: 4; 
         --column-gap-x: 0.5em; 
+        --control-list-font-size: 0.8em; 
+        --control-list-margin-block-top: 3em; 
         --control-link-height: 2.2em; 
         --control-link-border-width: 1px; 
         --control-link-border-radius: 5px; 
         --control-link-border-color: rgba( 0, 0, 0, 0.342 ); 
-
-        & { 
-            margin-left: 50%;
-            padding-top: 2rem; 
-            font-size: 0.8em; 
-        }
 
         > .entry:nth-child( -n + 4 ) { 
             margin-top: 0; 
@@ -50,6 +39,11 @@ body {
             margin-left: 0; 
         } 
 
+        & { 
+            margin-left: 50%; margin-top: var( --control-list-margin-block-top ); 
+            font-size: var( --control-list-font-size );  
+        }
+
         .control-link {
             display: flex; justify-content: center; align-items: center; 
             height: var( --control-link-height );   
@@ -58,10 +52,6 @@ body {
             text-decoration: none; text-align: center; text-transform: uppercase; 
         }
     } 
-
-    &-list {
-        order: 4; 
-    }
 
     &-entry:not( :first-child ) {
         display: none; 
@@ -73,20 +63,20 @@ body {
 
     & .image {
         position: absolute; left: 0; 
-        width: 40%; height: 100%; 
+        height: 100%; 
     }
 
     & .text-content { 
-        margin-left: 50%; 
-        width: 50%;  
+        margin-left: auto; 
+        //width: 50%;  
 
-        :not( .paragraph ) + .paragraph {
-            margin-top: 0.8em; 
-        } 
+        // :not( .paragraph ) + .paragraph {
+        //     margin-top: 0.8em; 
+        // } 
 
-        .paragraph + :not( .paragraph ) {
-            margin-top: 1.2em; 
-        } 
+        // .paragraph + :not( .paragraph ) {
+        //     margin-top: 1.2em; 
+        // } 
 
     } 
 
@@ -98,6 +88,7 @@ body {
         --column-count: 2; 
         --column-gap-x: 1.2em; 
         --column-gap-y: 1.8em; 
+        --text-content-padding-y: 2em; 
 
         > .entry:nth-child( -n + 2 ) { 
             margin-top: 0; 
@@ -107,42 +98,43 @@ body {
             margin-left: 0; 
         } 
 
-        &-heading { 
-            margin-bottom: 0.85em; 
-            font-size: 1em; 
-        } 
+        
+
+        // &-heading { 
+        //     margin-bottom: 0.85em; 
+        //     font-size: 1em; 
+        // } 
 
         .text-content { 
-            min-height: 6rem; width: 60%; 
+            padding-block: var( --text-content-padding-y ); 
+            //min-height: 6rem; 
+            //width: 50%; 
 
-            .heading { 
-                font-size: 1em; font-weight: bold; 
-            } 
+            // .heading { 
+            //     font-size: 1em; font-weight: bold; 
+            // } 
         }
     } 
 
     .product-feature-list { 
-        --column-count: 2; 
-        --column-gap-x: 0.2em; 
-        
-        > .entry:nth-child( -n + 2 ) { 
-            margin-top: 0; 
-        }
+        --column-width: auto; 
+        // --column-count: 2; 
+        // --column-gap-x: 0.2em; 
 
-        > .entry:nth-child( 2n + 1 ) { 
-            margin-left: 0; 
-        } 
+        gap: 1em; 
         
-        > .entry { 
-            margin-top: 0; 
-        } 
+        // > .entry:nth-child( -n + 2 ) { 
+        //     margin-top: 0; 
+        // }
 
-        > .entry + .entry::before { 
-            display: inline-block; 
-            margin-inline: 0.4em; 
-            // content: "|"; 
-            
-        } 
+        // > .entry:nth-child( 2n + 1 ) { 
+        //     margin-left: 0; 
+        // } 
+        
+        // > .entry { 
+        //     margin-top: 0; 
+        // } 
+
     } 
 
 } 

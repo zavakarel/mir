@@ -1,45 +1,57 @@
 .selected-products { 
+    --price-margin-top: 1.5em; 
+    --entry-heading-margin-bottom: 0.5em; 
+    --control-list-margin-top: 3em; 
+    --entry-list-margin-top: var( --control-list-margin-top ); 
+    --entry-paragraph-margin-top: 1.5em; 
+    --features-list-margin-top: 2em; 
+    --entry-button-margin-top: 2em; 
 
     &-list, 
     .control-list { 
-        --image-text-content-width: calc( ( 100% - var( --image-text-content-distance ) ) / 2 ); 
+
+        .heading {
+            margin-bottom: 0.5em; 
+        } 
 
     }
-
-    // & { 
-    //     display: flex; flex-direction: column; 
-    // } 
-
-    .price-value {
-        display: flex; 
-
-        > * { 
-            margin: 0; 
-            line-height: 1; 
-        }
-    }
-
-    .price-value .int { 
-        margin-right: 0.125em; 
-        font-size: 1.75em; 
-    } 
-
-    .price-value .fract {
-        font-size: 0.8em; 
-    } 
 
     .entry {
         position: relative; 
     } 
 
-    .image, 
-    .text-content {
-        width: var( --image-text-content-width ); 
+    .price { 
+        margin-top: var( --price-margin-top ); 
+
+        &-value {
+            display: flex;  
+
+            > * { 
+                margin: 0; 
+                line-height: 1; 
+            }
+
+            .int { 
+                margin-right: 0.125em; 
+                font-size: 1.75em; 
+            } 
+        
+            .fract {
+                font-size: 0.8em; 
+            } 
+        } 
     }
+
+    
 
     .text-content { 
         margin-left: auto; padding-block: var( --text-content-padding-y ); 
 
+    } 
+
+    .image {
+        position: absolute; 
+        height: 100%; 
     } 
 
     .control-list { 
@@ -47,7 +59,11 @@
         --image-text-content-distance: 0.8em; 
         --text-content-padding-y: 2rem; 
 
-      
+        & { 
+            margin-top: var( --control-list-margin-top ); 
+
+        } 
+
         &:hover .control-entry  {
             opacity: 0.15; 
             transition: opacity 0.1s; 
@@ -62,13 +78,6 @@
             position: relative; 
         } 
 
-        .control-link {
-            position: absolute; left: 0; top: 0; 
-            margin-top: 0; 
-            width: 100%; height: 100%; 
-            text-indent: -10000px; 
-        }
-
         // .image {
         //     width: 40%; 
         // }
@@ -79,27 +88,31 @@
         
     } 
 
-    .image {
-        position: absolute; 
-        height: 100%; 
-    } 
-
     &-list { 
         --image-text-content-distance: 2em; 
         --text-content-padding-y: 6rem; 
 
         & {
-            order: 4; 
-        }
+            margin-top: var( --entry-list-margin-top ); 
+        } 
 
         > .entry:not( :first-child ) {
             display: none; 
         } 
 
+        .text-content > .paragraph {
+            margin-top: 2.5em; 
+        } 
+
+        .image {
+            height: 80%; 
+        } 
+
         .product-feature-list { 
             --column-count: 2; 
             --column-gap-x: 0em; 
-            --column-gap-y: 1.4em; 
+            --column-gap-y: 1.8em; 
+            --margin-top: 2em; 
 
             --icon-size: 1.85rem; 
             --icon-font-size: 1.2em; 
@@ -107,21 +120,9 @@
             --icon-border: 1px solid; 
             --icon-border-radius: 50%; 
 
-            .entry { 
-                box-sizing: border-box; 
-                padding-left: var( --icon-size ); 
-
-                > * {
-                    margin-left: 1em; 
-                }
-            }
-
-            .entry::before { 
-                
-                position: absolute; left: 0; 
-                // top: 50%; transform: translateY( -50% ); 
-
-            }
+            & {
+                margin-top: var( --margin-top ); 
+            } 
 
             > .entry:nth-child( -n + 2 ) { 
                 margin-top: 0; 
@@ -131,20 +132,31 @@
                 margin-left: 0; 
             } 
 
-            .heading { 
-                font-size: 1em; 
-            } 
+            .entry { 
+                box-sizing: border-box; 
+                padding-left: var( --icon-size ); 
 
-            .paragraph { 
-                margin-top: 0.4em; 
+                > * {
+                    margin-left: 1em; 
+                } 
+
             }
+
+            .entry::before { 
+                
+                position: absolute; left: 0; 
+                // top: 50%; transform: translateY( -50% ); 
+
+            }
+
+            
 
         }
 
         .buy-product { 
             box-sizing: border-box; 
             position: absolute; left: 0; bottom: 0; 
-            padding-inline: 5%; 
+            padding-inline: 10%; 
             width: 50%; 
             text-align: center; 
 
@@ -160,10 +172,9 @@
              
             }
 
-            
-
             &-button { 
                 display: block; 
+                margin-top: var( --entry-button-margin-top ); 
                 padding: 1.4em; 
                 border: 1px solid; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; 
                 color: inherit; 

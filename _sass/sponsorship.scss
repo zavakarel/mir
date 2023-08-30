@@ -1,32 +1,48 @@
 .sponsorship { 
-    & { 
-        text-align: center; 
-    } 
+    text-align: center; 
 
     &-list { 
-        width: 50%; 
-        margin: { 
-            left: auto; right: auto; 
-        } 
+        --entry-list-margin-top: 4em; 
+        --entry-list-width: 20%; 
+        --entry-margin-top: 4em; 
+
+        --image-width: 10rem; 
+        --image-height: var( --image-width ); 
+
+        --sport-font-size: 0.9em; 
+        --sport-padding-x: 1.4em; 
+        --sport-padding-y: 0.3em; 
+
+        --paragraph-margin-top: 2em; 
+
+        & { 
+            width: var( --entry-list-width ); 
+            margin-inline: auto; margin-top: var( --entry-list-margin-top ); 
+        }
 
         .entry + .entry {
-            margin-top: 2.5em; 
-        }
-
-        .heading {
-            font-size: 1.2em; 
+            margin-top: var( --entry-margin-top ); 
         } 
-
-        .sport { 
-            display: inline-block; 
-            padding: 0.5em 1.4em; 
-            border: 1px solid; border-radius: 8px; 
-            font-size: 0.9em; 
-        }
 
         .image { 
             display: inline-block; 
+            width: var( --image-width ); height: var( --image-height ); 
             border-radius: 50%; 
+        } 
+
+        .heading {
+            font-size: var( --font-size-level-4 ); 
+        } 
+
+        .paragraph {
+            margin-top: var( --paragraph-margin-top ); 
+        }
+
+        .sport { 
+            display: inline-block; 
+            padding-block: var( --sport-padding-y ); padding-inline: var( --sport-padding-x ); 
+            border: 1px solid; border-radius: 6px; 
+            font-size: var( --sport-font-size ); 
         } 
     }
 
