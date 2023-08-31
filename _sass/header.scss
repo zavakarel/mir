@@ -72,18 +72,27 @@ body {
         align-items: center;  
 
         > * + * {
-            margin-left: 0.5em; 
+            margin-left: 1.5em; 
         } 
 
         .contacts-heading {
             font-size: 1em; 
         } 
 
+        .contact {
+            display: flex; align-items: center; 
+            font-weight: var( --font-weight-semi-bold ); 
+        } 
+
+        .contacts-button {
+            font-weight: var( --font-weight-regular ); 
+        }
+
         .contacts-button-phone {
             --icon-code: "\f4b8"; 
-            --icon-font-size: 1.5em; 
+            --icon-font-size: 1.7em; 
 
-            font-size: 1.1em; 
+            //font-size: 1.1em; 
         } 
 
         .contacts-button-email {
@@ -97,7 +106,7 @@ body {
 
             .hours { 
                 margin-left: 0.4em; 
-                font-weight: 600; 
+                font-weight: var( --font-weight-semi-bold ); 
             }
 
         }
