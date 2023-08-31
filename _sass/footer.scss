@@ -1,6 +1,7 @@
 .site-footer {
     max-width: var( --page-inner-width ); 
     margin-inline: auto; 
+    font-family: var( --font-family-2 ); 
 
     > * + * {
         margin-top: 3em; 
@@ -17,6 +18,7 @@
     .company-info {
         margin-top: 2em; 
         max-width: 80%; 
+        font-family: var( --font-family-1 ); 
     }
     
     .footer-contacts { 
@@ -95,4 +97,8 @@
     // .footer-nav-block:not( :first-child ) { 
     //     margin-left: 0.5rem; 
     // } 
+
+    .notice {
+        font-weight: var( --font-weight-semi-bold ); 
+    }
 }

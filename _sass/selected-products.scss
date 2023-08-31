@@ -22,6 +22,12 @@
 
     .price { 
         margin-top: var( --price-margin-top ); 
+        font-family: var( --font-family-2 ); 
+            
+        &-value, 
+        &-currency {
+            font-weight: var( --font-weight-medium ); 
+        }
 
         &-value {
             display: flex;  
@@ -77,6 +83,10 @@
         .control-entry {
             position: relative; 
         } 
+
+        .heading {
+            font-weight: var( --font-weight-semi-bold ); 
+        }
 
         // .image {
         //     width: 40%; 
@@ -147,6 +157,10 @@
                 position: absolute; left: 0; 
                 // top: 50%; transform: translateY( -50% ); 
 
+            } 
+
+            .heading {
+                font-weight: var( --font-weight-semi-bold ); 
             }
 
             
@@ -163,7 +177,13 @@
             .price { 
                 padding: 3.5em; 
                 border: 1px solid; border-top-left-radius: 10px; border-top-right-radius: 10px; 
+                font-size: 1.4em; 
                 
+            } 
+
+            .price-value, 
+            .price-currency {
+                font-weight: var( --font-weight-semi-bold ); 
             }
 
             .price-value { 

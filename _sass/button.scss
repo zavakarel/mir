@@ -3,11 +3,13 @@
 //     buy-product-button 
 //     question-open-button ? block-button 
     
-
+.button, 
 .link, 
-.control-link {
+.control-link {  
     display: inline-block; 
     font: inherit; color: inherit; 
+    font-family: var( --font-family-2 ); 
+    text-decoration: none; 
 } 
 
 .read-more-button { 
@@ -28,7 +30,6 @@
         margin-inline: auto; margin-top: var( --button-margin-top ); 
         padding-block: var( --button-padding-block ); padding-inline: var( --button-padding-inline ); 
         width: fit-content; 
-        text-decoration: none; 
         //border: 1px solid; border-radius: var( --button-border-radius ); 
     } 
 

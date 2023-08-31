@@ -64,7 +64,11 @@ body {
     & .image {
         position: absolute; left: 0; 
         height: 100%; 
-    }
+    } 
+
+    .heading {
+        font-weight: var( --font-weight-bold ); 
+    } 
 
     & .text-content { 
         margin-left: auto; 
@@ -98,21 +102,18 @@ body {
             margin-left: 0; 
         } 
 
-        
-
-        // &-heading { 
-        //     margin-bottom: 0.85em; 
-        //     font-size: 1em; 
-        // } 
+        &-heading { 
+            font-weight: var( --font-weight-regular ); 
+        } 
 
         .text-content { 
             padding-block: var( --text-content-padding-y ); 
             //min-height: 6rem; 
             //width: 50%; 
 
-            // .heading { 
-            //     font-size: 1em; font-weight: bold; 
-            // } 
+            .heading { 
+                font-weight: var( --font-weight-semi-bold ); 
+            } 
         }
     } 
 
