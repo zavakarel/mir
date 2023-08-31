@@ -57,7 +57,7 @@ body {
         // padding-block: 0.5em; 
         padding-inline: 1.25rem; 
         width: 100%; 
-        background-color: rgb( 46, 46, 46 ); color: rgb( 231, 231, 231 );  
+        background-color: var( --color-4 ); color: rgb( 231, 231, 231 );  
         
 
         .button { 
@@ -172,7 +172,7 @@ body {
        
             .main-nav-entry:first-child .main-nav-link, 
             .main-nav-list .main-nav-entry .main-nav-link:hover { 
-                color: red; 
+                color: var( --color-1 ); 
             }
 
             .main-nav-entry:hover .subnav { 

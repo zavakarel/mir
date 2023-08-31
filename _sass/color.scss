@@ -1,0 +1,29 @@
+:root { 
+    --color-1-r: 215; 
+    --color-1-g: 75; 
+    --color-1-b: 33; 
+    --color-1-a: 1; 
+    --color-1: rgba( var( --color-1-r ), var( --color-1-g ), var( --color-1-b ), var( --color-1-a ) ); 
+
+    --color-2-r: 232; 
+    --color-2-g: 218; 
+    --color-2-b: 218; 
+    --color-2-a: 1; 
+    --color-2: rgba( var( --color-2-r ), var( --color-2-g ), var( --color-2-b ), var( --color-2-a ) ); 
+
+    --color-3-r: 146; 
+    --color-3-g: 88; 
+    --color-3-b: 88; 
+    --color-3-a: 1; 
+    --color-3: rgba( var( --color-3-r ), var( --color-3-g ), var( --color-3-b ), var( --color-3-a ) ); 
+
+    --color-4-r: 47; 
+    --color-4-g: 49; 
+    --color-4-b: 50; 
+    --color-4-a: 1; 
+    --color-4: rgba( var( --color-4-r ), var( --color-4-g ), var( --color-4-b ), var( --color-4-a ) ); 
+} 
+
+body {
+    color: var( --color-3 ); 
+}
