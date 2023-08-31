@@ -163,6 +163,8 @@ body {
         --shopping-cart-separator-y: 20%; 
         --shopping-cart-separator-opacity: 0.5; 
 
+        font-weight: var( --font-weight-medium ); 
+
         .main-nav-list { 
             --icon-inline: 0.4em 0; 
 
@@ -218,7 +220,7 @@ body {
             width: 100%; 
             background-color: rgb( 255, 255, 255 ); 
             // width: 20rem; 
-            border: 1px solid rgba( 0, 0, 0, 0.253 ); 
+            border-style: solid; border-color: rgba( 0, 0, 0, 0.253 ); border-width: 1px 0; 
             
             &-group-link {
                 display: block; 
@@ -310,7 +312,7 @@ body {
         }
 
         .social-link { 
-            --icon-size: 1.8em; 
+            --icon-size: 2.2em; 
             --icon-inline: 0; 
             --icon-border: 1px solid; 
             --icon-border-radius: 4px; 
