@@ -12,11 +12,18 @@
     text-decoration: none; 
 } 
 
-.read-more-button { 
-    --button-margin-top: 2em; 
-    --button-padding-block: 0.8em; 
-    --button-padding-inline: 1.8em; 
-    --button-border-radius: 50px; 
+.button {
+    --button-margin-top: ""; 
+    --button-margin-inline: ""; 
+    --button-padding-block: ""; 
+    --button-padding-inline: ""; 
+    --button-border: ""; 
+    --button-border-radius: ""; 
+}
+
+.read-more-button, 
+.buy-product-button { 
+    --button-margin-inline: auto; 
 
     --icon-size: 2.2rem; 
     --icon-font-size: 1.4em; 
@@ -26,19 +33,38 @@
     //--icon-border-radius: 50%; 
 
     & { 
-        display: flex; align-items: center; 
-        margin-inline: auto; margin-top: var( --button-margin-top ); 
+        display: flex; align-items: center; justify-content: center; 
+        margin-inline: var( --button-margin-inline ); margin-top: var( --button-margin-top ); 
         padding-block: var( --button-padding-block ); padding-inline: var( --button-padding-inline ); 
-        width: fit-content; 
-        //border: 1px solid; border-radius: var( --button-border-radius ); 
+        border: var( --button-border ); border-radius: var( --button-border-radius ); 
     } 
+    
+} 
 
+.read-more-button { 
+    --button-margin-top: 2em; 
+    --button-padding-block: 0.8em; 
+    --button-padding-inline: 1.8em; 
+
+    & { 
+        width: fit-content; 
+    } 
+    
+} 
+
+.buy-product-button { 
+    --button-margin-top: 2em; 
+    --button-padding-block: 1.4em; 
+    --button-padding-inline: 1.8em; 
+    --button-border: 1px solid; 
+    --button-border-radius: 0 0 10px 10px; 
     
 } 
 
 .product-read-more-button, 
 .question-open-button, 
 .selected-products .control-link {         
+    
     position: absolute; left: 0; right: 0; top: 0; bottom: 0; 
     margin: 0; padding: 0; 
     width: auto; 
