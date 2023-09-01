@@ -18,9 +18,17 @@ nav_blocks:
   - 
     image: "footer-image.png" 
     heading: "Products" 
-    links: 
-      - text: "Amino Acids" 
+    links:  
       - text: "Proteins" 
+      - text: "Amino Acids" 
+      - text: "Gainers" 
+      - text: "Antioxidants" 
+      - text: "Fat Burning" 
+      - text: "Vitamins" 
+      - text: "Minerals" 
+      - text: "Isotonic" 
+      - text: "Other" 
+
       
   - 
     image: "footer-image.png" 
