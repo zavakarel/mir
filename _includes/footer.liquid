@@ -29,10 +29,11 @@
         {% for e in site.data.footer.nav_blocks %} 
 
             <article class= "entry nav-block footer-nav-block"> 
-                {% include image.liquid 
-                    width = "100%" 
-                    height = "15rem" 
-                %} 
+                <div class= "image-holder">
+                    {% include image.liquid 
+                        src = e.image 
+                    %} 
+                </div> 
 
                 <h4 class= "heading nav-block-heading">{{ e.heading }}</h4> 
 

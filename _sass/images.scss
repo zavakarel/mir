@@ -4,6 +4,13 @@
 } 
 
 .image { 
-    width: var( --width ); height: var( --height ); 
-    background-color: rgb( 235, 235, 235 ); 
+    max-width: 100%; 
+    height: auto; 
+    //background-color: rgb( 235, 235, 235 ); 
 } 
+
+.entry .image {
+    
+    max-width: 100%; height: 100%; 
+    object-fit: contain; object-position: bottom; 
+}

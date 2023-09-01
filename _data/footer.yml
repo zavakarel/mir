@@ -7,8 +7,7 @@ contacts:
 
 nav_blocks: 
   - 
-    image: 
-      src: "/" 
+    image: "footer-image.png" 
     heading: "Info" 
     links: 
       - text: "Home" 
@@ -17,16 +16,14 @@ nav_blocks:
       - text: "About" 
 
   - 
-    image: 
-      src: "/" 
+    image: "footer-image.png" 
     heading: "Products" 
     links: 
       - text: "Amino Acids" 
       - text: "Proteins" 
       
   - 
-    image: 
-      src: "/" 
+    image: "footer-image.png" 
     heading: "Buy" 
     links: 
       - text: "How To" 

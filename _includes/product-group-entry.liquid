@@ -2,8 +2,7 @@
 {% assign product_entry_level = product_list_level | plus: 1 %} 
 
 {% include image.liquid 
-    width = "40rem" 
-    height = "10rem" 
+    src = include.data.image 
 %} 
 
 <div class= "text-content product-group-text-content"> 
@@ -35,6 +34,7 @@
                 level = product_entry_level 
                 name = product.name 
                 description = features 
+                image = product.image 
             %}
         </li>
     {% endfor %} 

@@ -6,20 +6,23 @@ text:
 
 entry_list: 
   - 
-    name: "Ivet Lalova" 
+    name: "Caleb Plant" 
     sport: "Sprint" 
     text: 
       - 
         "Lorem ipsum dolor sit amet consectetur adipisicing elit." 
+    photo: "person-01.png" 
   - 
-    name: "Ivet Lalova" 
+    name: "Caleb Plant" 
     sport: "Sprint" 
     text: 
       - 
         "Lorem ipsum dolor sit amet consectetur adipisicing elit." 
+    photo: "person-01.png" 
   - 
-    name: "Ivet Lalova" 
+    name: "Caleb Plant" 
     sport: "Sprint" 
     text: 
       - 
         "Lorem ipsum dolor sit amet consectetur adipisicing elit." 
+    photo: "person-01.png" 
