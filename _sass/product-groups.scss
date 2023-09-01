@@ -22,7 +22,7 @@ body {
 .product-groups { 
 
     > .control-list { 
-        --column-count: 4; 
+        --column-count: 5; 
         --column-gap-x: 0.5em; 
         --control-list-font-size: 0.8em; 
         --control-list-margin-block-top: 3em; 
@@ -31,11 +31,11 @@ body {
         --control-link-border-radius: 5px; 
         --control-link-border-color: rgba( 0, 0, 0, 0.342 ); 
 
-        > .entry:nth-child( -n + 4 ) { 
+        > .entry:nth-child( -n + 5 ) { 
             margin-top: 0; 
         }
 
-        > .entry:nth-child( 4n + 1 ) { 
+        > .entry:nth-child( 5n + 1 ) { 
             margin-left: 0; 
         } 
 
@@ -109,12 +109,16 @@ body {
         .text-content { 
             padding-block: var( --text-content-padding-y ); 
             //min-height: 6rem; 
-            //width: 50%; 
+            width: 60%; 
 
             .heading { 
                 font-weight: var( --font-weight-semi-bold ); 
             } 
-        }
+        } 
+
+        // .image {
+        //     width: 10rem; 
+        // } 
     } 
 
     .product-feature-list { 

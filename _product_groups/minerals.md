@@ -1,4 +1,5 @@
----
+--- 
+order: 7 
 name: "minerals" 
 heading: "Minerals" 
 text: 

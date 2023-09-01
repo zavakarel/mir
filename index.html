@@ -25,7 +25,7 @@ layout: default
 </div> 
 
 <div class= "section product-groups"> 
-{% assign control_text_list = site.product_groups | map: "heading" %} 
+{% assign control_text_list = site.product_groups | sort: 'order' | map: "heading" %} 
 {% include entry-list-controllable.liquid 
     level = 2 
     namespace = "product-groups" 
