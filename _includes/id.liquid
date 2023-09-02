@@ -1,6 +1,6 @@
 <article class= "id"> 
     <a class= "link home-link id-link" href= "/"> 
-        <img class= "image logo id-logo" src= "{{ site.baseurl }}/assets/images/logo.png" /> 
+        <img class= "image logo id-logo" src= "{% if jekyll.environment == "production" %}{{ "/biogame-demo" }}{% endif %}/assets/images/logo.png" /> 
         <span class= "id-name">Biogame Nutrition</span> 
     </a>
 </article> 
