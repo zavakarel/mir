@@ -120,7 +120,7 @@
 
         .product-feature-list { 
             --column-count: 2; 
-            --column-gap-x: 0em; 
+            --column-gap-x: 1em; 
             --column-gap-y: 1.8em; 
             --margin-top: 2em; 
 
@@ -170,7 +170,7 @@
         .buy-product { 
             box-sizing: border-box; 
             position: absolute; left: 0; bottom: 0; 
-            padding-inline: 10%; 
+            padding-inline: 5%; 
             width: 50%; 
             text-align: center; 
 
