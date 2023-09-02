@@ -37,6 +37,14 @@
     &-entry { 
         position: relative; 
         // border: 2px dashed; 
+
+        // &::after { 
+        //     position: absolute; right: 0; top: 40%; bottom: -10%; 
+        //     z-index: -1; 
+        //     width: 50%; 
+        //     border: 1px solid; border-radius: 20px; 
+        //     content: ""; 
+        // } 
     } 
 
     &-entry .image {

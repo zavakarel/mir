@@ -186,7 +186,11 @@ body {
 
             .main-nav-entry:hover .subnav { 
                 left: 0; 
-            }
+            } 
+
+            // .main-nav-entry:nth-child( 3 ) .subnav { 
+            //     left: 0; 
+            // }
     
 
 
@@ -214,8 +218,8 @@ body {
         .subnav { 
             box-sizing: border-box; 
             display: flex; justify-content: flex-start; 
-            position: absolute; top: 100%; left: 0; z-index: 2; 
-            padding: 4rem; 
+            position: absolute; top: 100%; left: 0; z-index: 3; 
+            padding: 0rem; 
             padding-left: 50%; 
             width: 100%; 
             background-color: rgb( 255, 255, 255 ); 
@@ -231,13 +235,13 @@ body {
             box-sizing: border-box; 
             display: flex; 
             position: relative; 
-            padding: 2em; //padding-left: 15rem; 
-            width: 35rem; 
+            padding: 8em; //padding-left: 15rem; 
+            width: 45rem; 
             //transform: translateX( -100% ); 
             
             
             &:first-child {
-                margin-left: -35rem; 
+                margin-left: -45rem; 
             } 
 
             > * + * { 
@@ -245,7 +249,7 @@ body {
             } 
 
             .text-content {
-                padding-top: 2em; padding-bottom: 2em; 
+                padding-block: 12em; 
             }
 
             .heading { 
@@ -260,10 +264,11 @@ body {
                 display: block; 
                 // position: absolute; left: 0; top: 0; 
                 margin: 0; 
-                width: 15rem; 
+                width: 25rem; 
                 min-height: 22em; 
-                background-color: rgb(190, 190, 190); 
-                // border: 1px solid; 
+                object-fit: cover; 
+                //background-color: rgb(190, 190, 190); 
+                //border: 1px solid; 
                 border-radius: 8px; 
             } 
 

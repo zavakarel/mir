@@ -12,7 +12,7 @@ entry_list:
       data: 
         - 
           heading: "About" 
-          image: "" 
+          image: "getty_497254373_155996.jpg" 
           entry_list: 
             - 
               text: "News"
@@ -43,7 +43,7 @@ entry_list:
       data: 
         - 
           heading: "Products by Type" 
-          image: "" 
+          image: "cybersecurity-excellence-awards.jpg" 
           entry_list: 
             - 
               text: "Proteins"
@@ -75,7 +75,7 @@ entry_list:
 
         - 
           heading: "Products by Goal" 
-          image: "" 
+          image: "data-analysis-questions.png" 
           entry_list: 
             - 
               text: "Muscle Gain"
@@ -113,7 +113,7 @@ entry_list:
       data: 
         - 
           heading: "Order" 
-          image: "" 
+          image: "istockphoto-1254347556-612x612.jpg" 
           entry_list: 
             - 
               text: "How to Order"
