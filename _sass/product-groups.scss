@@ -29,7 +29,7 @@ body {
         --control-link-height: 2.2em; 
         --control-link-border-width: 1px; 
         --control-link-border-radius: 5px; 
-        --control-link-border-color: rgba( 0, 0, 0, 0.342 ); 
+        --control-link-border-color: inherit; 
 
         > .entry:nth-child( -n + 5 ) { 
             margin-top: 0; 
