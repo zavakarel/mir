@@ -1,7 +1,7 @@
 ---
 product_group: "proteins" 
 form: powder 
-name: "Iso Milk" 
+name: "Iso Whey" 
 description: 
   - 
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit eveniet rerum unde tempora aliquid eius possimus repellat quidem commodi fugiat, optio recusandae veniam. Temporibus non omnis et assumenda corporis?" 
