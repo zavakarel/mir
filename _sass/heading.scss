@@ -1,0 +1,21 @@
+.heading { 
+    --heading-margin-bottom: 1em; 
+    --heading-margin-top: 1.8em; 
+    --subheading-margin-top: 0.8em; 
+
+} 
+
+.heading { 
+    margin-bottom: var( --heading-margin-bottom ); margin-top: var( --heading-margin-top ); 
+    font-family: var( --font-family-2 ); 
+
+    .section > & { 
+        font-weight: var( --font-weight-bold ); 
+    } 
+
+    .subheading { 
+        display: block; 
+        margin-top: var( --subheading-margin-top ); 
+        font-size: var( --font-size-subheading );  
+    }
+} 
