@@ -1,3 +1,7 @@
 <h{{ include.level }} class= "heading {{ include.namespace }}-heading"> 
-    {{ include.text }}
+    {{ include.text }} 
+    
+    {% if include.sub_text %}
+        <span class= "subheading">{{ include.sub_text }}</span>
+    {% endif %} 
 </h{{ include.level }}> 

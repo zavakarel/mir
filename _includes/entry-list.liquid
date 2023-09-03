@@ -2,16 +2,17 @@
     {% include heading.liquid 
         level = include.level 
         text = include.heading 
+        sub_text = include.subheading 
         namespace = include.namespace 
     %} 
 {% endif %}
 
-{% if include.subheading %}
+<!-- {% if include.subheading %}
     {% include subheading.liquid 
         text = include.subheading 
         namespace = include.namespace 
     %} 
-{% endif %} 
+{% endif %}  -->
 
 {% if include.text %}
     {% include text.liquid 
