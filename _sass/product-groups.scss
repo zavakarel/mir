@@ -63,7 +63,7 @@ body {
 
     & .image {
         position: absolute; left: 0; 
-        height: 100%; 
+        height: 80%; 
     } 
 
     .heading {
@@ -106,9 +106,13 @@ body {
             font-weight: var( --font-weight-regular ); 
         } 
 
+        .entry {
+            display: flex; align-items: flex-start; 
+        }
+
         .text-content { 
             padding-block: var( --text-content-padding-y ); 
-            //min-height: 6rem; 
+            //min-height: 10rem; 
             width: 60%; 
 
             .heading { 
@@ -116,9 +120,12 @@ body {
             } 
         } 
 
-        // .image {
-        //     width: 10rem; 
-        // } 
+        .image { 
+            position: initial; 
+            width: 40%; 
+            height: auto; 
+            
+        } 
     } 
 
     .product-feature-list { 
