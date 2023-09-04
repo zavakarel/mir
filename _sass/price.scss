@@ -1,0 +1,27 @@
+.price { 
+    margin-top: var( --price-margin-top ); 
+    font-family: var( --font-family-2 ); 
+        
+    &-value, 
+    &-currency {
+        font-weight: var( --font-weight-medium ); 
+    }
+
+    &-value {
+        display: flex;  
+
+        > * { 
+            margin: 0; 
+            line-height: 1; 
+        }
+
+        .int { 
+            margin-right: 0.125em; 
+            font-size: 1.75em; 
+        } 
+    
+        .fract {
+            font-size: 0.8em; 
+        } 
+    } 
+} 
