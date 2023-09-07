@@ -1,0 +1,28 @@
+.date { 
+    display: flex; flex-direction: column; 
+    padding: var( --date-padding );  
+    border: { 
+        width: var( --date-border-width ); 
+        style: var( --date-border-style ); 
+        radius: var( --date-border-radius ); 
+    }
+    font: { 
+        family: var( --date-font-family ); 
+        size: var( --date-font-size ); 
+    }
+    line-height: var( --date-line-height ); 
+
+    .month {
+        font-size: var( --month-font-size ); 
+        text-transform: uppercase; 
+    } 
+
+    .day {
+        font-size: var( --day-font-size ); font-weight: var( --font-weight-semi-bold ); 
+    } 
+
+    .year {
+        font-size: var( --year-font-size ); 
+    } 
+
+} 

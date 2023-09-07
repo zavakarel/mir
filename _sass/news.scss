@@ -1,19 +1,24 @@
-
-
 .news { 
     --entry-list-margin-top: 3em; 
+    --entry-heading-font-size: var( --font-size-level-4 ); 
+    --entry-heading-font-weight: var( --font-weight-semi-bold );
 
     --date-font-size: 1.4em; 
     --date-padding: 2em; 
-    --date-border: 1px solid; 
+    --date-border-width: 1px; 
+    --date-border-style: solid; 
     --date-border-radius: 12px 12px 0 0; 
+    --date-font-family: var( --font-family-2 ); 
+    --date-line-height: 1.2; 
     --month-font-size: 1.1em; 
     --day-font-size: 2.5em; 
     --year-font-size: 1.1em; 
 
     --button-margin-top: 2em; 
 
-    text-align: center; 
+    & { 
+        text-align: center; 
+    }
 
     &-list { 
         --column-count: 3; 
@@ -32,32 +37,9 @@
         }
 
         .heading { 
-            font-size: var( --font-size-level-4 ); font-weight: var( --font-weight-semi-bold ); 
+            font-size: var( --entry-heading-font-size ); font-weight: var( --entry-heading-font-weight ); 
         } 
 
     } 
 
-    .date { 
-        display: flex; flex-direction: column; 
-        padding: var( --date-padding );  
-        border: var( --date-border ); border-radius: var( --date-border-radius ); 
-        font-family: var( --font-family-2 ); 
-        font-size: var( --date-font-size ); 
-        line-height: 1.2; 
-
-        .month {
-            font-size: var( --month-font-size ); 
-            text-transform: uppercase; 
-        } 
-    
-        .day {
-            font-size: var( --day-font-size ); font-weight: var( --font-weight-semi-bold ); 
-        } 
-    
-        .year {
-            font-size: var( --year-font-size ); 
-        } 
-
-    } 
-
-}
+} 
