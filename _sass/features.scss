@@ -1,5 +1,5 @@
 .features { 
-    &-entry > .heading {
+    &-entry > .heading { 
         --icon-code: "\f3fd"; 
         --icon-size: 2.8rem; 
         --icon-font-size: 2.5em; 
@@ -8,6 +8,10 @@
         --icon-border: 1px solid; 
         --icon-border-radius: 50%; 
     } 
+
+    & {
+        text-align: center; 
+    }
 
     &-list { 
         --column-count: 2; 
@@ -27,15 +31,9 @@
         } 
 
         .entry { 
-            text-align: center; 
-
             .heading + .paragraph {
                 margin-top: 0.8em; 
             } 
-
-            
-
         }
     } 
-
-}
+} 
