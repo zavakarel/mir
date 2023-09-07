@@ -103,6 +103,7 @@
             --icon-code: "\f3d3"; 
             --icon-border: 1px solid; 
             --icon-border-radius: 50%; 
+            --icon-to-content-x: 1em; 
 
             & {
                 margin-top: var( --margin-top ); 
@@ -116,22 +117,7 @@
                 margin-left: 0; 
             } 
 
-            .entry { 
-                box-sizing: border-box; 
-                padding-left: var( --icon-size ); 
-
-                > * {
-                    margin-left: 1em; 
-                } 
-
-            }
-
-            .entry::before { 
-                
-                position: absolute; left: 0; 
-                // top: 50%; transform: translateY( -50% ); 
-
-            } 
+            
 
             .heading {
                 font-weight: var( --font-weight-semi-bold ); 
