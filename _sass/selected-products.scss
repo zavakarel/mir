@@ -1,5 +1,4 @@
-.selected-products { 
-    --price-margin-top: 1.5em; 
+.selected-products {  
     --entry-heading-margin-bottom: 0.5em; 
     --control-list-margin-top: 3em; 
     --entry-list-margin-top: var( --control-list-margin-top ); 
@@ -9,20 +8,14 @@
 
     &-list, 
     .control-list { 
-
         .heading {
             margin-bottom: 0.5em; 
         } 
-
     }
 
     .entry {
         position: relative; 
     } 
-
-    
-
-    
 
     .text-content { 
         margin-left: auto; padding-block: var( --text-content-padding-y ); 
@@ -38,6 +31,7 @@
         --column-count: 3; 
         --image-text-content-distance: 0.8em; 
         --text-content-padding-y: 2rem; 
+        --price-margin-top: 1.5em; 
 
         & { 
             margin-top: var( --control-list-margin-top ); 
@@ -98,12 +92,12 @@
             --column-gap-y: 1.8em; 
             --margin-top: 2em; 
 
-            --icon-size: 1.85rem; 
+            --icon-size: 2.5rem; 
             --icon-font-size: 1.2em; 
             --icon-code: "\f3d3"; 
             --icon-border: 1px solid; 
             --icon-border-radius: 50%; 
-            --icon-to-content-x: 1em; 
+            --icon-to-content-x: 1rem; 
 
             & {
                 margin-top: var( --margin-top ); 
@@ -135,23 +129,24 @@
             text-align: center; 
 
             .price { 
-                padding: 3.5em; 
-                border: 1px solid; border-top-left-radius: 10px; border-top-right-radius: 10px; 
-                font-size: 1.4em; 
-                background-color: rgba( 255, 255, 255, 0.9 ); 
-                
+                --price-padding-block: 3.5em; 
+                --price-border: 1px solid; 
+                --price-border-radius: 10px 10px 0 0; 
+                --price-background-color: rgba( 255, 255, 255, 0.9 ); 
+                --price-elements-y: 0.2em; 
+                --price-int-to-fract-x: 0.125em; 
+                --price-font-size: 1.2em; 
+                --price-value-font-size: 1.8em; 
+
+                &-value, 
+                &-currency {
+                    font-weight: var( --font-weight-medium ); 
+                }
+
+                &-value { 
+                    justify-content: center; 
+                }
             } 
-
-            .price-value, 
-            .price-currency {
-                font-weight: var( --font-weight-semi-bold ); 
-            }
-
-            .price-value { 
-                justify-content: center; 
-                font-size: 1.8em; 
-             
-            }
 
             &-button { 
                 
