@@ -27,7 +27,7 @@
     }
 
     .main-nav-entry:hover .subnav { 
-        left: 0; 
+        left: 0; top: 100%; z-index: 3; 
     } 
 
     // .main-nav-entry:nth-child( 3 ) .subnav { 
@@ -36,14 +36,7 @@
 
 
 
-    .main-nav-entry {
-        ///flex-direction: column; 
-        // position: relative; 
-
-        .subnav { 
-            left: -10000px; 
-        }
-    } 
+   
 
     .main-nav-link { 
         box-sizing: border-box; 
@@ -60,7 +53,7 @@
     .subnav { 
         box-sizing: border-box; 
         display: flex; justify-content: flex-start; 
-        position: absolute; top: 100%; left: 0; z-index: 3; 
+        
         padding: 0rem; 
         padding-left: 50%; 
         width: 100%; 

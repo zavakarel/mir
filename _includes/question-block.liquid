@@ -1,13 +1,18 @@
-<div class= "question-title">
-    {% include heading.liquid 
-        level = include.level 
-        text = include.data.title 
-    %} 
+<div class= "question {% if forloop.index0 == 2 %}selected{% endif %}"> 
+    <div class= "question-title">
+        {% include heading.liquid 
+            level = include.level 
+            text = include.data.title 
+        %} 
 
-    <a class= "button question-open-button" href= "#question-id-{{ include.data.id }}">Open</a> 
-</div> 
-<div class= "question-body" id= "question-id-{{ include.data.id }}"> 
-    {% include text.liquid 
-        text = include.data.body 
-    %} 
-</div> 
+        <a class= "button question-open-button" href= "#question-id-{{ include.data.id }}">Open</a> 
+    </div> 
+    <div 
+        class= "question-body" 
+        id= "question-id-{{ include.data.id }}"
+    > 
+        {% include text.liquid 
+            text = include.data.body 
+        %} 
+    </div> 
+</div>

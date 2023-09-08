@@ -1,6 +1,3 @@
-// Hidden until triggering interaction  
-.hidden, 
-
 // Constantly hidden 
 .header-heading:not( .contacts-heading ), 
 .social-link .icon-text,
@@ -9,3 +6,10 @@
     position: absolute; left: -10000px; top: -10000px; 
     width: 1px; height: 1px; overflow: hidden; 
 } 
+
+
+// Hidden until triggering interaction  
+.subnav, 
+.question-body {
+    position: absolute; left: -10000px; top: -10000px; 
+}
