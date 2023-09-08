@@ -1,0 +1,11 @@
+// Hidden until triggering interaction  
+.hidden, 
+
+// Constantly hidden 
+.header-heading:not( .contacts-heading ), 
+.social-link .icon-text,
+.company-features > .heading, 
+:where( .footer-contacts, .footer-nav ) > .heading {
+    position: absolute; left: -10000px; top: -10000px; 
+    width: 1px; height: 1px; overflow: hidden; 
+} 

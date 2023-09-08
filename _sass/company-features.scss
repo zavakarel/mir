@@ -1,5 +1,4 @@
 .company-features { 
-    
     --entry-padding-y-top: 0; 
     --entry-padding-y-bottom: calc( var( --control-list-top ) + var( --control-link-size ) + var( --control-list-bottom ) ); 
     --entry-image-width: 50%; 
@@ -14,19 +13,12 @@
 
     .read-more-button { 
         --button-margin-top: 3em; 
-
     }
 
     & { 
         //margin-top: 4rem; 
         position: relative; 
         padding-inline: 0; border: solid transparent; border-width: 0 1.25rem; 
-    }
-
-    > .heading {
-        position: absolute; top: -10000px; left: -10000px; 
-        width: 0; height: 0; 
-        overflow: hidden; 
     } 
 
     &-entry:not( :first-child ) { 
