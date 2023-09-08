@@ -1,0 +1,31 @@
+.social-links { 
+    display: flex; 
+    margin-left: 4rem; 
+
+    .social-link-entry + .social-link-entry {
+        margin-left: 0.5em; 
+    }
+
+    .social-link { 
+        --icon-size: 2.2em; 
+        --icon-inline: 0; 
+        --icon-border: 1px solid; 
+        --icon-border-radius: 4px; 
+
+        // padding-block: 0.5em; padding-inline: 1em; 
+        
+        .icon-text {
+            position: absolute; left: -10000px; top: -10000px; 
+            width: 1px; height: 1px; overflow: hidden; 
+        }
+    } 
+
+    .social-link-instagram { 
+        --icon-code: "\f350"; 
+        
+    } 
+
+    .social-link-facebook {
+        --icon-code: "\f231"; 
+    } 
+} 
