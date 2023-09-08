@@ -1,14 +1,44 @@
+:root {
+    --price-margin-top: 0; 
+    --price-padding-block: 0; 
+    --price-border: 0; 
+    --price-border-radius: 0; 
+    --price-background-color: transparent; 
+    --price-font-family: var( --font-family-2 ); 
+    --price-font-size: 1em; 
+    --price-elements-y: 0; 
+    --price-text-font-size: 1em; 
+    --price-value-font-size: 1em; 
+    --price-int-font-size: 1.75em; 
+    --price-fract-font-size: 0.8em;
+    --price-int-to-fract-x: 0.125em; 
+    --price-currency-font-size: 1em; 
+}
+
 .price { 
     margin-top: var( --price-margin-top ); 
-    font-family: var( --font-family-2 ); 
+    padding-block: var( --price-padding-block ); 
+    background-color: var( --price-background-color ); 
+    border: var( --price-border ); border-radius: var( --price-border-radius ); 
+    font-family: var( --price-font-family ); 
+    font-size: var( --price-font-size ); 
+
+    > * + * {
+        margin-top: var( --price-elements-y );  
+    } 
+
+    &-text {
+        font-size: var( --price-text-font-size ); 
+    }
         
     &-value, 
     &-currency {
         font-weight: var( --font-weight-medium ); 
-    }
+    } 
 
     &-value {
-        display: flex;  
+        display: flex; 
+        font-size: var( --price-value-font-size ); 
 
         > * { 
             margin: 0; 
@@ -16,12 +46,17 @@
         }
 
         .int { 
-            margin-right: 0.125em; 
-            font-size: 1.75em; 
+            margin-right: var( --price-int-to-fract-x ); 
+            font-size: var( --price-int-font-size );  
         } 
     
         .fract {
-            font-size: 0.8em; 
+            font-size: var( --price-fract-font-size ); 
         } 
     } 
+
+    &-currency {
+        display: inline-block; 
+        font-size: var( --price-currency-font-size ); 
+    }
 } 
