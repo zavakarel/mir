@@ -30,7 +30,7 @@ entry_list:
     body: 
       - 
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis, quisquam corrupti architecto? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
-      - ccc
+      - 
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis, quisquam corrupti architecto? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
   - 
     id: 5 
