@@ -22,8 +22,12 @@
     --color-4-b: 50; 
     --color-4-a: 1; 
     --color-4: rgba( var( --color-4-r ), var( --color-4-g ), var( --color-4-b ), var( --color-4-a ) ); 
+
+     
+    --color-grayscale-light-rgb: 255, 255, 255; 
+    --color-grayscale-dark-rgb: 0, 0, 0; 
 } 
 
 body {
     color: var( --color-3 ); 
-}
+} 

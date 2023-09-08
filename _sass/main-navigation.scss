@@ -51,15 +51,20 @@
     } 
 
     .subnav { 
+        --subnav-background-color-opacity: 0.95; 
+        --subnav-background-color: rgba( var( --color-grayscale-light-rgb ), var( --subnav-background-color-opacity ) ); 
+        --subnav-border-color-opacity: 0.2; 
+        --subnav-border-color: rgba( var( --color-grayscale-dark-rgb ), var( --subnav-border-color-opacity ) ); 
+
         box-sizing: border-box; 
         display: flex; justify-content: flex-start; 
         
         padding: 0rem; 
         padding-left: 50%; 
         width: 100%; 
-        background-color: rgb( 255, 255, 255 ); 
+        background-color: var( --subnav-background-color ); 
         // width: 20rem; 
-        border-style: solid; border-color: rgba( 0, 0, 0, 0.253 ); border-width: 1px 0; 
+        border-style: solid; border-color: var( --subnav-border-color ); border-width: 1px 0; 
         
         &-group-link {
             display: block; 
