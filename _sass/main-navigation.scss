@@ -53,8 +53,8 @@
     .subnav { 
         --subnav-background-color-opacity: 0.95; 
         --subnav-background-color: rgba( var( --color-grayscale-light-rgb ), var( --subnav-background-color-opacity ) ); 
-        --subnav-border-color-opacity: 0.2; 
-        --subnav-border-color: rgba( var( --color-grayscale-dark-rgb ), var( --subnav-border-color-opacity ) ); 
+        --subnav-border-color-opacity: 0.5; 
+        --subnav-border-color: rgba( var( --color-3-rgb ), var( --subnav-border-color-opacity ) ); 
 
         box-sizing: border-box; 
         display: flex; justify-content: flex-start; 
