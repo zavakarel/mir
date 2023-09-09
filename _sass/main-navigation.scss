@@ -1,12 +1,15 @@
 .main-nav { 
+    --main-nav-link-current-color: rgb( var( --color-1-rgb ) ); 
+
     --shopping-cart-link-left: 3em; 
     --shopping-cart-separator-left: 1em; 
     --shopping-cart-separator-width: 1px; 
     --shopping-cart-separator-y: 20%; 
     --shopping-cart-separator-opacity: 0.5; 
+    --shopping-cart-separator-color: rgb( var( --color-3-rgb ) ); 
 
     font-weight: var( --font-weight-medium ); 
-
+    
     .main-nav-list { 
         --icon-inline: 0.4em 0; 
 
@@ -15,16 +18,22 @@
         // border-right: 1px solid; 
 
     } 
+    
+    // Main navigation link hover effect: 
+    // link is highlighted, when current or hovered 
+    // and when its subnavigation is on  
 
-    .main-nav-list:hover .main-nav-entry .main-nav-link {
-        color: inherit; 
+    .current-entry > .main-nav-link, 
+    &:hover .main-nav-link:hover, 
+    .main-nav-entry:hover > .main-nav-link { 
+        color: var( --main-nav-link-current-color ); 
     } 
 
-   
-    .main-nav-entry:first-child .main-nav-link, 
-    .main-nav-list .main-nav-entry .main-nav-link:hover { 
-        color: var( --color-1 ); 
-    }
+    // Turns off current link highlighting on other link hover so 
+    // only one link is highlighted at any moment 
+    &:hover .main-nav-link {
+        color: inherit; 
+    } 
 
     .main-nav-entry:hover .subnav { 
         left: 0; top: 100%; z-index: 3; 
@@ -43,7 +52,7 @@
         padding-block: 1.4em; padding-inline: 1.4em; 
     } 
 
-    .has-subnav {  
+    .has-subnav > .main-nav-link {  
         --icon-code: "\f3d0"; 
 
         flex-direction: row-reverse; 
@@ -140,7 +149,8 @@
             display: block; 
             position: absolute; right: 100%; margin-right: var( --shopping-cart-separator-left ); 
             top: var( --shopping-cart-separator-y ); bottom: var( --shopping-cart-separator-y ); 
-            border-left: var( --shopping-cart-separator-width ) solid; 
+            width: var( --shopping-cart-separator-width ); 
+            background-color: var( --shopping-cart-separator-color ); 
             content: ""; 
             opacity: var( --shopping-cart-separator-opacity ); 
 
