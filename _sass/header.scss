@@ -39,12 +39,16 @@
     } 
 
     .header-pane {  
+        --header-pane-background-color-opacity: 0.8; 
+        --header-pane-color-opacity: 0.8; 
+        --header-pane-background-color: rgba( var( --color-grayscale-dark-rgb ), var( --header-pane-background-color-opacity ) ); 
+        --header-pane-color: rgba( var( --color-grayscale-light-rgb ), var( --header-pane-color-opacity ) );
         --icon-font-size: 1.3em; 
 
         // padding-block: 0.5em; 
         padding-inline: 1.25rem; 
         width: 100%; 
-        background-color: var( --color-4 ); color: rgb( 231, 231, 231 );  
+        background-color: var( --header-pane-background-color ); color: var( --header-pane-color );  
         
 
         .button { 
