@@ -49,6 +49,10 @@
     & { 
         width: fit-content; 
     } 
+
+    &:hover {
+        color: rgba( var( --color-1-rgb ) ); 
+    }
     
 } 
 
