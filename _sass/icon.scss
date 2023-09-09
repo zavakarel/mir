@@ -15,7 +15,7 @@
 :where( 
     .header-pane .button, 
     .working-hours, 
-    .has-subnav, 
+    .has-subnav > .main-nav-link, 
     .shopping-cart-link, 
     .header .social-link, 
     .features-entry > .heading, 

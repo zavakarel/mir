@@ -67,10 +67,10 @@
 
         <ul class= "main-nav-list">
         {% for e in site.data.main_nav.entry_list %} 
-            <li class= "main-nav-entry"> 
+            <li class= "main-nav-entry{% if e.subnavigation %} has-subnav{% endif %}{% if e.text == 'Home' %} current-entry{% endif %}"> 
                 <a 
                     href= "{{ e.target }}" 
-                    class= "link main-nav-link {% if e.subnavigation %}has-subnav{% endif %}"
+                    class= "link main-nav-link" 
                 >
                     {{ e.text }} 
                 </a> 
