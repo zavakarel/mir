@@ -18,15 +18,24 @@
         } 
     } 
 
+    .question { 
+        padding-inline: var( --question-body-padding-x );  
+        margin-inline: calc( -1 * var( --question-body-padding-x ) ); 
+        border: 1px solid; border-radius: 10px; 
+        border-color: transparent; 
+    } 
+
     .question-body {
         margin-top: var( --question-body-distance-y ); 
-    }
+        opacity: 0; 
+    } 
 
-    .selected { 
+    :target { 
         & { 
-            padding-inline: var( --question-body-padding-x ); padding-block: var( --question-body-padding-y ); 
-            margin-inline: calc( -1 * var( --question-body-padding-x ) ); margin-block: var( --question-distance-y ); 
-            border: 1px solid; border-radius: 10px; 
+            margin-block: var( --question-distance-y ); 
+            padding-block: var( --question-body-padding-y ); 
+            border-color: unset;   
+            transition: border-color 0.4s 0.2s; 
         } 
 
         .question-open-button {
@@ -35,6 +44,8 @@
 
         .question-body {    
             position: initial; 
+            opacity: 1; 
+            transition: opacity 0.4s 0.3s;  
         }
     }
 } 
