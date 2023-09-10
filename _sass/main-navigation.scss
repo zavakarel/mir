@@ -1,18 +1,50 @@
 .main-nav { 
+    // Main navigation link 
+    --main-nav-link-padding-block: 1.8em; 
+    --main-nav-link-padding-inline: 1.4em; 
+    --main-nav-link-has-subnav-text-to-icon-x: 0.4em; 
+    --main-nav-link-has-subnav-icon-code: "\f3d0";  
+    --main-nav-link-has-subnav-icon-font-size: 1.4em; 
+    --main-nav-link-has-subnav-padding-x: 0.8em; 
+    --main-nav-font-size: inherit; 
     --main-nav-link-current-color: rgb( var( --color-1-rgb ) ); 
 
+    // Shopping cart link 
     --shopping-cart-link-left: 3em; 
     --shopping-cart-separator-left: 1em; 
     --shopping-cart-separator-width: 1px; 
     --shopping-cart-separator-y: 20%; 
     --shopping-cart-separator-opacity: 0.5; 
     --shopping-cart-separator-color: rgb( var( --color-3-rgb ) ); 
+    --shopping-cart-icon-code: "\f3f8"; 
+    --shopping-cart-icon-size: 1.3em; 
 
+    // Subnavigation 
+    --subnav-width: 100%; 
+    --subnav-background-color-opacity: 0.95; 
+    --subnav-background-color: rgba( var( --color-grayscale-light-rgb ), var( --subnav-background-color-opacity ) ); 
+    --subnav-border-width: 1px 0; 
+    --subnav-border-color-opacity: 0.5; 
+    --subnav-border-color: rgba( var( --color-3-rgb ), var( --subnav-border-color-opacity ) ); 
+    --subnav-padding-block: 8rem; 
+    --subnav-padding-inline: 4rem; 
+    --subnav-group-padding-block: 4rem; 
+    --subnav-groups-distance-x: 5rem; 
+    --subnav-group-image-to-text-x: 1em; 
+    --subnav-heading-margin-block: 0 1em; 
+    --subnav-heading-padding-block: 0.6em; 
+    --subnav-heading-padding-inline: 1.4em; 
+    --subnav-heading-font-size: inherit; 
+    --subnav-heading-line-height: 1.5; 
+    --subnav-image-width: 25rem; 
+    --subnav-image-min-height: 22em; 
+    --subnav-image-border-radius: 8px; 
+    --subnav-link-padding-block: 0.6em; 
+
+    font-size: var( --main-nav-font-size ); 
     font-weight: var( --font-weight-medium ); 
     
     .main-nav-list { 
-        --icon-inline: 0.4em 0; 
-
         align-items: stretch; 
         // padding-right: 2em; 
         // border-right: 1px solid; 
@@ -45,80 +77,84 @@
 
 
 
-   
+    .main-nav-entry {
+        justify-content: center; 
+    }
 
     .main-nav-link { 
         box-sizing: border-box; 
-        padding-block: 1.4em; padding-inline: 1.4em; 
-    } 
+        padding-block: var( --main-nav-link-padding-block ); padding-inline: var( --main-nav-link-padding-inline ); 
+    }  
 
     .has-subnav > .main-nav-link {  
-        --icon-code: "\f3d0"; 
+        --icon-code: var( --main-nav-link-has-subnav-icon-code ); 
+        --icon-inline: var( --main-nav-link-has-subnav-text-to-icon-x ) 0;  
+        --icon-font-size: var( --main-nav-link-has-subnav-icon-font-size );  
 
         flex-direction: row-reverse; 
-        padding-right: 0.8em; 
+        padding-right: var( --main-nav-link-has-subnav-padding-x ); 
     } 
 
     .subnav { 
-        --subnav-background-color-opacity: 0.95; 
-        --subnav-background-color: rgba( var( --color-grayscale-light-rgb ), var( --subnav-background-color-opacity ) ); 
-        --subnav-border-color-opacity: 0.5; 
-        --subnav-border-color: rgba( var( --color-3-rgb ), var( --subnav-border-color-opacity ) ); 
-
         box-sizing: border-box; 
         display: flex; justify-content: flex-start; 
         
-        padding: 0rem; 
-        padding-left: 50%; 
-        width: 100%; 
+        padding-block: var( --subnav-padding-block ); 
+        padding-inline: var( --subnav-padding-inline ); 
+        
+        width: var( --subnav-width ); 
         background-color: var( --subnav-background-color ); 
-        // width: 20rem; 
-        border-style: solid; border-color: var( --subnav-border-color ); border-width: 1px 0; 
+        border-style: solid; border-color: var( --subnav-border-color ); border-width: var( --subnav-border-width ); 
         
         &-group-link {
             display: block; 
         }
+    } 
+
+    .subnav-group + .subnav-group {
+        margin-left: var( --subnav-groups-distance-x ); 
     }
      
     .subnav-group { 
         box-sizing: border-box; 
         display: flex; 
         position: relative; 
-        padding: 8em; //padding-left: 15rem; 
-        width: 45rem; 
+        //padding: var( --subnav-group-padding-block ); //padding-left: 15rem; 
+        //width: 45rem; 
         //transform: translateX( -100% ); 
         
         
-        &:first-child {
-            margin-left: -45rem; 
-        } 
+        // &:first-child {
+        //     margin-left: -45rem; 
+        // } 
+
 
         > * + * { 
-            margin-left: 1em; 
+            margin-left: var( --subnav-group-image-to-text-x ); 
         } 
 
         .text-content {
-            padding-block: 12em; 
+            padding-block: var( --subnav-group-padding-block ); 
         }
 
         .heading { 
-            margin-bottom: 1em; 
-            padding: 0.6em 1.4em; 
+            margin-bottom: var( --subnav-heading-margin-block ); 
+            padding-block: var( --subnav-heading-padding-block ); padding-inline: var( --subnav-heading-padding-inline ); 
             //width: 8em; 
-            font-size: inherit; font-weight: bold; 
-            line-height: 1.5; 
-        }
+            font-size: var( --subnav-heading-font-size ); font-weight: bold; 
+            line-height: var( --subnav-heading-line-height ); 
+        } 
 
         .image { 
             display: block; 
             // position: absolute; left: 0; top: 0; 
             margin: 0; 
-            width: 25rem; 
-            min-height: 22em; 
+            width: var( --subnav-image-width ); 
+            min-height: var( --subnav-image-min-height ); 
             object-fit: cover; 
             //background-color: rgb(190, 190, 190); 
             //border: 1px solid; 
-            border-radius: 8px; 
+            border-radius: var( --subnav-image-border-radius ); 
         } 
 
         .link-list { 
@@ -128,7 +164,7 @@
         } 
 
         .subnav-group-link {
-            padding-block: 0.6em; 
+            padding-block: var( --subnav-link-padding-block ); 
             
         }
 
@@ -139,8 +175,8 @@
     } 
 
     .shopping-cart-link { 
-        --icon-code: "\f3f8";  
-        --icon-size: 1.3em; 
+        --icon-code: var( --shopping-cart-icon-code ); 
+        --icon-size: var( --shopping-cart-icon-size );  
 
         position: relative;
         margin-left: var( --shopping-cart-link-left ); 
