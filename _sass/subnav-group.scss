@@ -1,0 +1,78 @@
+:root { 
+    --subnav-group-padding-block: 0; 
+    --subnav-heading-margin-bottom: 0; 
+    --subnav-heading-padding-block: var( --subnav-link-padding-block ); 
+    --subnav-heading-padding-inline: var( --subnav-link-padding-inline ); 
+    --subnav-heading-font-size: inherit; 
+    --subnav-heading-line-height: 1; 
+    --subnav-group-image-to-text-x: 0; 
+    --subnav-group-image-to-text-y: 0; 
+    --subnav-image-width: 50%; 
+    --subnav-image-min-height: 100%; 
+    --subnav-image-border-radius: 0; 
+    --subnav-group-blocks-x: 0; 
+    --subnav-link-padding-block: 0; 
+    --subnav-link-padding-inline: var( --subnav-link-padding-block ); 
+} 
+
+.subnav-group { 
+    box-sizing: border-box; 
+    display: flex; 
+    position: relative; 
+    //padding: var( --subnav-group-padding-block ); //padding-left: 15rem; 
+    //width: 45rem; 
+    //transform: translateX( -100% ); 
+    
+    
+    // &:first-child {
+    //     margin-left: -45rem; 
+    // } 
+
+
+    > * + * { 
+        margin-left: var( --subnav-group-image-to-text-x ); 
+    }  
+
+    .text-content { 
+        margin-top: var( --subnav-group-image-to-text-y ); 
+        padding-block: var( --subnav-group-padding-block ); 
+    } 
+
+    .heading, 
+    .subnav-group-link { 
+        padding-inline: var( --subnav-link-padding-inline ); 
+    }
+
+    .heading { 
+        margin-bottom: var( --subnav-heading-margin-bottom ); margin-top: 0; 
+        padding-block: var( --subnav-heading-padding-block ); 
+        font-size: var( --subnav-heading-font-size ); font-weight: bold; 
+        line-height: var( --subnav-heading-line-height ); 
+    } 
+
+    .image { 
+        display: block; 
+        margin: 0; 
+        width: var( --subnav-image-width ); max-width: none; 
+        min-height: var( --subnav-image-min-height ); 
+        object-fit: contain; 
+        border-radius: var( --subnav-image-border-radius ); 
+    } 
+
+    .link-list { 
+        display: flex; 
+        width: max-content; 
+        
+    } 
+
+    .link-list > * + * {
+        margin-left: var( --subnav-group-blocks-x );  
+    }
+
+    .subnav-group-link { 
+        display: block; 
+        padding-block: var( --subnav-link-padding-block ); 
+        
+    } 
+     
+} 

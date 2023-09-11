@@ -33,7 +33,7 @@ body > :where( :nth-child( n + 2 ) ) {
         display: flex; flex-wrap: wrap; 
     }
 
-    > .entry {  
+    > * {  
         width: var( --column-width );  
         margin-left: var( --column-gap-x ); margin-top: var( --column-gap-y ); 
     } 

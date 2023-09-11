@@ -1,34 +1,11 @@
 <div class= "subnav"> 
 
 {% for group in include.data %} 
-<div class= "subnav-group">
-    {% include image.liquid 
-        src = group.image 
+    {% include subnav-group.liquid 
+        group = group 
+        block_link_count = 5 
+        namespace = "main-nav" 
     %} 
-
-    <div class="text-content subnav-group-text-content">
-
-        <h4 class= "heading subnav-group-heading">{{ group.heading }}</h4> 
-
-        <div class= "link-list subnav-group-list"> 
-        {% for entry in group.entry_list %} 
-            {% assign mod = forloop.index0 | modulo: include.block_link_count %} 
-            {% assign prev = include.block_link_count | minus: 1 %} 
-
-            {% if mod == 0 %} 
-                <div class= "subnav-group-block"> 
-            {% endif %} 
-
-            <a class= "link main-nav-link subnav-group-link" href= "{{ entry.target }}">{{ entry.text }}</a> 
-
-            {% if mod == prev or forloop.last %} 
-                </div> 
-            {% endif %} 
-        {% endfor %} 
-        </div> 
-
-    </div> 
-</div> 
 {% endfor %} 
 
 </div> 

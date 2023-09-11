@@ -28,7 +28,12 @@
         <div class= "entry-list footer-nav-blocks"> 
         {% for e in site.data.footer.nav_blocks %} 
 
-            <article class= "entry nav-block footer-nav-block"> 
+            {% include subnav-group.liquid 
+                group = e 
+                block_link_count = 6 
+            %} 
+
+            <!-- <article class= "entry nav-block footer-nav-block"> 
                 <div class= "image-holder">
                     {% include image.liquid 
                         src = e.image 
@@ -40,15 +45,17 @@
                 {% include navigation.liquid 
                     entry_list = e.links 
                 %} 
-            </article> 
+            </article>  -->
 
         {% endfor %} 
         </div> 
     </section> 
 
     <p class= "copyrights">
-        <span class= "owner">Biogame Nutrition</span>
+        
         <span class= "year">2023</span> 
         <span class= "notice">&copy; All Rights Reserved.</span> 
+        
+        <span class= "owner">Biogame Nutrition</span>
     </p>
 </footer> 

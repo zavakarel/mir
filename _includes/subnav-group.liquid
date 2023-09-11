@@ -1,0 +1,28 @@
+<div class= "subnav-group">
+    {% include image.liquid 
+        src = include.group.image 
+    %} 
+
+    <div class= "text-content subnav-group-text-content">
+        <h4 class= "heading subnav-group-heading">{{ include.group.heading }}</h4> 
+
+        <div class= "link-list subnav-group-list"> 
+        {% for entry in include.group.entry_list %} 
+            {% assign mod = forloop.index0 | modulo: include.block_link_count %} 
+            {% assign prev = include.block_link_count | minus: 1 %} 
+
+            {% if mod == 0 %} 
+                <ul class= "subnav-group-block"> 
+            {% endif %} 
+
+            <li class= "entry subnav-group-entry">
+                <a class= "link nav-link subnav-group-link {{ include.namespace }}-link" href= "{{ entry.target }}">{{ entry.text }}</a> 
+            </li> 
+
+            {% if mod == prev or forloop.last %} 
+                </ul> 
+            {% endif %} 
+        {% endfor %} 
+        </div> 
+    </div> 
+</div> 

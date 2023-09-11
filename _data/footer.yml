@@ -9,7 +9,7 @@ nav_blocks:
   - 
     image: "footer-image.png" 
     heading: "Info" 
-    links: 
+    entry_list: 
       - text: "Home" 
       - text: "Products" 
       - text: "Q & A" 
@@ -18,7 +18,7 @@ nav_blocks:
   - 
     image: "footer-image.png" 
     heading: "Products" 
-    links:  
+    entry_list:  
       - text: "Proteins" 
       - text: "Amino Acids" 
       - text: "Gainers" 
@@ -33,7 +33,7 @@ nav_blocks:
   - 
     image: "footer-image.png" 
     heading: "Buy" 
-    links: 
+    entry_list: 
       - text: "How To" 
       - text: "Delivery" 
       - text: "Cart" 
