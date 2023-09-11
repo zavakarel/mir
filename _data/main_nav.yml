@@ -12,7 +12,7 @@ entry_list:
       data: 
         - 
           heading: "About" 
-          image: "getty_497254373_155996.jpg" 
+          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
           entry_list: 
             - 
               text: "News"
@@ -43,7 +43,7 @@ entry_list:
       data: 
         - 
           heading: "Products by Type" 
-          image: "cybersecurity-excellence-awards.jpg" 
+          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
           entry_list: 
             - 
               text: "Proteins"
@@ -75,7 +75,7 @@ entry_list:
 
         - 
           heading: "Products by Goal" 
-          image: "data-analysis-questions.png" 
+          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
           entry_list: 
             - 
               text: "Muscle Gain"
@@ -113,7 +113,7 @@ entry_list:
       data: 
         - 
           heading: "Order" 
-          image: "istockphoto-1254347556-612x612.jpg" 
+          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
           entry_list: 
             - 
               text: "How to Order"
