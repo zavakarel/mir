@@ -24,7 +24,10 @@
         --control-link-height: 2.2em; 
         --control-link-border-width: 1px; 
         --control-link-border-radius: 5px; 
-        --control-link-border-color: inherit; 
+        --control-list-color-rgb: var( --color-3-rgb ); 
+        --control-list-text-color: rgba( var( --control-list-color-rgb ), 1 ); 
+        --control-link-border-color-opacity: 0.5; 
+        --control-link-border-color: rgba( var( --control-list-color-rgb ), var( --control-link-border-color-opacity ) ); 
 
         > .entry:nth-child( -n + 5 ) { 
             margin-top: 0; 
@@ -45,7 +48,14 @@
             border-width: var( --control-link-border-width ); border-style: solid; border-color: var( --control-link-border-color ); 
             border-radius: var( --control-link-border-radius ); 
             text-decoration: none; text-align: center; text-transform: uppercase; 
-        }
+            color: var( --control-list-text-color ); 
+        } 
+
+        // .control-entry:first-child .control-link, 
+        // .control-link:hover { 
+        //     background-color: rgba( var( --color-1-rgb ), 1 ); color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+        //     border-color: transparent; 
+        // } 
     } 
 
     &-entry:not( :first-child ) {
@@ -145,3 +155,11 @@
     } 
 
 } 
+
+.product-groups { 
+    .control-entry:first-child .control-link, 
+    .control-link:hover { 
+        background-color: rgba( var( --color-1-rgb ), 1 ); color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+        border-color: transparent; 
+    } 
+}
