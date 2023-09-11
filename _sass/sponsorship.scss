@@ -8,10 +8,15 @@
 
         --image-width: 10rem; 
         --image-height: var( --image-width ); 
+        --image-border-width: 1px; 
+        --image-border-color-opacity: 0.8; 
+        --image-border-color: rgba( var( --color-3-rgb ), var( --image-border-color-opacity ) ); 
 
         --sport-font-size: 0.9em; 
         --sport-padding-x: 1.4em; 
         --sport-padding-y: 0.3em; 
+        --sport-border-width: 1px; 
+        --sport-border-radius: 6px; 
 
         --paragraph-margin-top: 2em; 
 
@@ -24,10 +29,23 @@
             margin-top: var( --entry-margin-top ); 
         } 
 
+        .entry:hover { 
+            .image { 
+                filter: grayscale( 0% ); 
+            } 
+
+            .sport { 
+                background-color: rgb( var( --color-3-rgb ) ); color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+                border-color: transparent; 
+            } 
+        }
+
         .image { 
             display: inline-block; 
             width: var( --image-width ); height: var( --image-height ); 
+            border-width: var( --image-border-width ); border-style: solid; border-color: var( --image-border-color ); 
             border-radius: 50%; 
+            filter: grayscale( 100% ); 
         } 
 
         .heading {
@@ -36,12 +54,12 @@
 
         .paragraph {
             margin-top: var( --paragraph-margin-top ); 
-        }
+        }  
 
         .sport { 
             display: inline-block; 
             padding-block: var( --sport-padding-y ); padding-inline: var( --sport-padding-x ); 
-            border: 1px solid; border-radius: 6px; 
+            border-width: var( --sport-border-width ); border-style: solid; border-radius: var( --sport-border-radius ); 
             font-size: var( --sport-font-size ); 
         } 
     }
