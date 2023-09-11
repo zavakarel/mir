@@ -10,6 +10,7 @@
     --control-link-x: 0; 
     --control-link-padding: 0.8em; 
     --control-link-size: 8px; 
+    --control-link-border-size: 15px; 
 
     .read-more-button { 
         --button-margin-top: 3em; 
@@ -80,11 +81,40 @@
         }
 
         .control-link { 
+            position: relative; 
             text-indent: -10000px; 
             width: var( --control-link-size ); height: var( --control-link-size ); 
             padding: var( --control-link-padding ); 
             border-radius: 50%; 
             background-color: currentColor; background-clip: content-box; 
+        } 
+
+        .control-link::after { 
+            display: block; 
+            position: absolute; inset: 20%; 
+            //width: var( --control-link-border-size ); height: var( --control-link-border-size ); 
+            border: 1px solid; border-radius: 50%; 
+            border-color: transparent; 
+            content: ""; 
+        }
+
+        .control-link { 
+            transition: background-color 0.1s; 
+
+            &::after {
+                transition: border-color 0.1s; 
+            }
+        } 
+
+        .control-entry:first-child .control-link, 
+        .control-link:hover { 
+            background-color: transparent; 
+            //transition: background-color 0.15s;
+
+            &::after { 
+                border-color: currentColor; 
+                //transition: border-color 0.15s; 
+            }
         } 
 
     }
