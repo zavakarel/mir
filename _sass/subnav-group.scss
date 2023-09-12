@@ -9,6 +9,8 @@
     --subnav-group-image-to-text-y: 0; 
     --subnav-image-width: 50%; 
     --subnav-image-min-height: 100%; 
+    --subnav-image-border: none; 
+    --subnav-image-border-color: unset; 
     --subnav-image-border-radius: 0; 
     --subnav-group-blocks-x: 0; 
     --subnav-link-padding-block: 0; 
@@ -56,6 +58,7 @@
         width: var( --subnav-image-width ); max-width: none; 
         min-height: var( --subnav-image-min-height ); 
         object-fit: contain; 
+        border: var( --subnav-image-border ); border-color: var( --subnav-image-border-color ); 
         border-radius: var( --subnav-image-border-radius ); 
     } 
 
