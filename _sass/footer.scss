@@ -1,7 +1,8 @@
-.site-footer {
+.site-footer { 
+
     max-width: var( --page-inner-width ); 
     margin-inline: auto; padding-inline: 1.25rem; 
-    padding-bottom: 4em; 
+    padding-bottom: 7em; 
     font-family: var( --font-family-2 ); 
     //background-color: red; 
 
@@ -130,16 +131,32 @@
     } 
 
     .copyrights { 
-        margin-top: 7rem; 
+        width: fit-content; 
+        margin-top: 7rem; margin-left: 0.8em; 
         padding-block: 1.5em; 
-        border-top: 1px solid; 
+        //padding-inline: 2em; 
+        //border: 1px solid; border-width: 0 0 0 1px; 
+        //border-radius: 8px; 
         //text-align: center; 
 
-        // .owner {
-        //     display: inline-block; 
-        //     //margin-top: 0.25em; 
-        //     margin-left: auto; 
-        // } 
+        //transform: rotateZ( 90deg ); transform-origin: left bottom; 
+
+        position: relative; 
+
+        &::before { 
+            display: block; 
+            //position: absolute; left: 0; top: 0; 
+            margin-bottom: 2em; 
+            width: 10%; 
+            border-top: 2px solid;  
+            content: ""; 
+        }
+
+        .owner {
+            display: block; 
+            margin-top: 0.6em; 
+            margin-left: auto; 
+        } 
 
         .notice {  
             font-weight: var( --font-weight-semi-bold ); 
