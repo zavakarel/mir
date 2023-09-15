@@ -15,10 +15,39 @@
             </div> 
 
             <div class= "contact email">
-                <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#">
+                <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#send-message-menu"> 
                     Write
                 </a> 
                 order@biogame.biz 
+
+                <div class= "user-action-menu send-message-menu" id= "send-message-menu"> 
+                    <a class= "button close-button user-action-menu-button user-action-menu-close-button send-message-menu-close-button" href= "#" >
+                        <span class= "button-text">Close</span>
+                    </a> 
+
+                    <div class= "user-action-menu-body"> 
+                        <h3 class= "heading">Write A Message</h3> 
+                        
+                        <form class= "form user-action-form send-message-form" action= "" method= "post">
+                            <div class= "form-field sender-name-field">
+                                <label for= "sender-name" class= "field-label">Your Name</label> 
+                                <input class= "form-field-body" type= "text" name= "sender-name" id= "sender-name" /> 
+                            </div> 
+
+                            <div class= "form-field sender-email-field">
+                                <label for= "sender-email" class= "field-label">Your Email</label> 
+                                <input class= "form-field-body" type= "text" name= "sender-email" id= "sender-email" /> 
+                            </div> 
+
+                            <div class= "form-field sender-message-field">
+                                <label for= "sender-message" class= "field-label">Your Message</label> 
+                                <textarea class= "form-field-body" name= "sender-message" id= "sender-message"></textarea> 
+                            </div> 
+
+                            <button class= "form-button send-message-button" type= "submit">Send Message</button> 
+                        </form>
+                    </div> 
+                </div>
             </div>
 
             
