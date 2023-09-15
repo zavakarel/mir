@@ -46,13 +46,14 @@
         --header-pane-color: rgba( var( --color-grayscale-light-rgb ), var( --header-pane-color-opacity ) );
         --icon-font-size: 1.3em; 
 
+        position: relative; 
         // padding-block: 0.5em; 
         padding-inline: 1.25rem; 
         width: 100%; 
         background-color: var( --header-pane-background-color ); color: var( --header-pane-color );  
         
 
-        .button { 
+        .button:not( .user-action-menu-button ) { 
             padding-block: 1.8em; padding-inline: 1em; 
             color: inherit; 
         } 
@@ -108,14 +109,19 @@
     .user-actions { 
         margin-left: auto; 
 
+        > * { 
+            //display: flex; justify-content: center; 
+            //position: relative;             
+        }
+
         .lang-select {
             --icon-code: "\f276"; 
             --icon-font-size: 1.4em; 
         } 
 
         .theme-select {
-            --icon-code: "\f467"; // \f468 
-            --icon-font-size: 2.4em; 
+            --icon-code: "\f3b0"; // \f468 \f467 
+            --icon-font-size: 1.6em; 
         }
 
         .login { 
@@ -148,9 +154,193 @@
         --icon-size: 1.2em;  
     } 
 
-    .user-action-menu {
-        display: none; 
+    .user-action-menu { 
+        display: flex; 
+        justify-content: flex-start; align-items: center; 
+        position: fixed; z-index: 3; 
+        padding-left: 50%; 
+        //height: 80vh; 
+        background-color: rgba( var( --color-grayscale-light-rgb ), 0.975 ); color: rgba( var( --color-grayscale-dark-rgb ), 0.8 );  
+        text-align: center; 
+        overflow: hidden; 
+
+        left: -10000px; top: -10000px; 
+        transform: translateY( -100% ); 
+ 
+        .user-action-menu-close-button, 
+        .user-action-menu-body .heading, 
+        .button-list .button-entry.current .button-preview, 
+        .select-button { 
+            opacity: 0; 
+        }
+
+        &:target { 
+            left: 0; right: 0; top: 0; bottom: 0; 
+            transform: translateY( 0 ); 
+            transition: transform 0.3s; 
+
+            .user-action-menu-close-button, 
+            .user-action-menu-body .heading, 
+            .button-list .button-entry.current .button-preview, 
+            .select-button { 
+                opacity: 1; 
+                transition: opacity 0.5s; 
+            } 
+
+            .user-action-menu-close-button { 
+                transition-delay: 0.5s; 
+            } 
+
+            .button-list .button-entry.current .button-preview { 
+                transition-delay: 0.6s; 
+            } 
+
+            .user-action-menu-body .heading {
+                transition-delay: 0.7s; 
+            }
+
+            .button-entry:nth-child( 1 ) .button { 
+                transition-delay: 0.8s; 
+            } 
+
+            .button-entry:nth-child( 2 ) .button { 
+                transition-delay: 0.85s; 
+            } 
+
+            .button-entry:nth-child( 3 ) .button { 
+                transition-delay: 0.9s; 
+            } 
+
+
+
+        }
+
+        // &::after { 
+        //     display: block; 
+        //     position: absolute; z-index: -1; 
+        //     inset: 10% 5%; 
+        //     border: 1px solid rgba( var( --color-grayscale-dark-rgb ), 0.4 ); 
+        //     border-radius: 10px; 
+        //     content: ""; 
+        // }
+
+        .user-action-menu-close-button { 
+            --icon-code: "\f129"; 
+            --icon-size: 3em; 
+            --icon-font-size: 2em;  
+            
+            position: absolute; left: 0; top: 0; 
+        }
+
+        .user-action-menu-body {
+            display: flex; flex-direction: column; 
+            align-items: center; 
+            //border: 1px solid; border-radius: 15px; 
+
+            .heading {
+                margin-top: 0; 
+                // padding-top: 0.4em; 
+                // border-top: 1px solid; 
+            }
+        }
+
+        .button-list { 
+            --user-action-menu-button-size: 5em; 
+
+            display: flex; 
+        }
+            
+        // .button-entry { 
+        //     //border-bottom: 1px solid; border-color: transparent; 
+        //     //border-radius: 50%; 
+        // } 
+
+        .button-preview {
+            position: absolute; 
+        }
+
+        .button-preview::after { 
+            display: block; 
+            position: absolute; z-index: -1; 
+            inset: 0; 
+            background-size: contain; background-position: right center; background-repeat: no-repeat; 
+            content: ""; 
+            filter: grayscale( 1 ); 
+        } 
+
+        .button { 
+            box-sizing: border-box; 
+            display: block; 
+            width: var( --user-action-menu-button-size ); 
+            height: var( --user-action-menu-button-size ); line-height: var( --user-action-menu-button-size ); 
+            //padding-block: 0.8em; padding-inline: 0.8em; 
+            border-bottom: 1px solid; border-color: transparent; 
+            text-decoration: none; 
+        } 
+
+      
+        .button-preview, 
+        .button-list:hover .button-preview {
+            left: -10000px; top: -10000px; top: auto; bottom: auto; 
+            transform: translateY( 50px ); 
+            opacity: 0; 
+        } 
+
+        .button-list:hover > :hover > .button-preview, 
+        .button-list:hover > .current:hover > .button-preview {
+            transition: transform 0.3s, opacity 0.2s; 
+        } 
+
+        .button-list:hover > :hover > .button-preview, 
+        .current > .button-preview { 
+            left: 20%; right: calc( 50% + 5rem ); top: 20%; bottom: 20%; 
+            transform: translateY( 0 ); 
+            opacity: 1; 
+        } 
+
+        .button-list:hover > :hover .button, 
+        .current .button { 
+            border-color: rgba( var( --color-grayscale-dark-rgb ), 0.7 ); 
+        } 
+
+        .button-list:hover .button {
+            border-color: transparent; 
+        } 
+
     } 
+
+
+    .lang-select-entry { 
+        &-en > ::after { 
+            background-image: url( '/assets/images/united\ kingdom\ \(uk\)-flag-map.jpg' ); 
+        } 
+
+        &-ru > ::after { 
+            background-image: url( '/assets/images/istockphoto-696318252-612x612.jpg' ); 
+        } 
+
+        &-bg > ::after { 
+            background-image: url( '/assets/images/1914_kingdom_of_bulgaria_borders___flag_overlay_by_universallyidiotic_dce0v36-fullview.png' ); 
+        } 
+    } 
+
+    .theme-select-entry { 
+        .button-preview::after { 
+            display: flex; justify-content: center; align-items: center; 
+            font-family: var( --icon-font-family ); font-size: 20em; 
+
+        } 
+
+        &-dark > .button-preview::after { 
+            content: "\f467"; 
+            //content: "\f468"; 
+        } 
+
+        &-light > .button-preview::after { 
+            content: "\f4b6"; 
+            //content: "\f4b7"; 
+        } 
+    }
     
     // .product-group-image { 
     //     --width: 10rem; --height: 8rem; 
