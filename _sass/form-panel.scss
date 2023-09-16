@@ -53,10 +53,12 @@
 
 } 
 
-.send-message-panel::after { 
-    content: "\f2c3"; 
-    //content: "\f474"; 
-} 
+.send-message-panel { 
+    &::after { 
+        content: "\f2c3"; 
+        //content: "\f474"; 
+    } 
+}
 
 .login-panel::after { 
     font-size: 50em; 
