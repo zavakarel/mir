@@ -14,19 +14,19 @@
                 0888 123 456 
             </div> 
 
-            <div class= "contact email">
-                <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#send-message-menu"> 
+            <div class= "user-action form-action send-message contact email"> 
+                <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#send-message-panel"> 
                     Write
                 </a> 
                 order@biogame.biz 
 
-                <div class= "user-action-menu send-message-menu" id= "send-message-menu"> 
-                    <a class= "button close-button user-action-menu-button user-action-menu-close-button send-message-menu-close-button" href= "#" >
+                <div class= "user-action-panel form-panel send-message-panel" id= "send-message-panel"> 
+                    <a class= "button close-button user-action-button user-action-close-button" href= "#" >
                         <span class= "button-text">Close</span>
                     </a> 
 
-                    <div class= "user-action-menu-body"> 
-                        <h3 class= "heading">Write A Message</h3> 
+                    <div class= "user-action-panel-main"> 
+                        <h3 class= "heading user-action-panel-heading">Write A Message</h3> 
                         
                         <form class= "form user-action-form send-message-form" action= "" method= "post">
                             <div class= "form-field sender-name-field">
@@ -54,33 +54,34 @@
         </section> 
 
         <section class= "user-actions"> 
-            <h3 class="heading header-heading user-actions-heading">User Settings</h3> 
+            <h3 class= "heading header-heading user-actions-heading">User Settings</h3> 
 
-            <div class= "select-panel lang-select"> 
-                <a class= "button user-actions-button toggle-menu-button lang-select-toggle-menu-button" href= "#lang-select-menu">
+            <div class= "user-action select-action lang-select"> 
+                <a class= "button user-action-button user-action-open-button" href= "#lang-select-panel"> 
                     en 
                 </a> 
 
-                <div class= "user-action-menu lang-select-menu" id= "lang-select-menu"> 
-                    <a class= "button close-button user-action-menu-button user-action-menu-close-button lang-select-menu-close-button" href= "#" >
+                <div class= "user-action-panel select-action-panel" id= "lang-select-panel"> 
+                    <a class= "button close-button user-action-button user-action-close-button" href= "#" >
                         <span class= "button-text">Close</span>
                     </a> 
 
-                    <div class= "user-action-menu-body"> 
-                        <h3 class= "heading">Choose Your Language</h3> 
+                    <div class= "user-action-panel-main"> 
+                        <h3 class= "heading user-action-panel-heading">Choose Your Language</h3> 
+
                         <ul class= "button-list"> 
                             <li class= "button-entry lang-select-entry lang-select-entry-en current"> 
-                                <a class= "button user-action-menu-button select-button lang-select-button" href= "#" >en</a> 
+                                <a class= "button user-action-panel-button select-button lang-select-button" href= "#" >en</a> 
                                 <div class= "button-preview"></div>
                             </li> 
 
                             <li class= "button-entry lang-select-entry lang-select-entry-ru"> 
-                                <a class= "button user-action-menu-button select-button lang-select-button" href= "#" >ru</a> 
+                                <a class= "button user-action-panel-button select-button lang-select-button" href= "#" >ru</a> 
                                 <div class= "button-preview"></div>
                             </li> 
 
                             <li class= "button-entry lang-select-entry lang-select-entry-bg"> 
-                                <a class= "button user-action-menu-button select-button lang-select-button" href= "#" >bg</a> 
+                                <a class= "button user-action-panel-button select-button lang-select-button" href= "#" >bg</a> 
                                 <div class= "button-preview"></div>
                             </li>
                         </ul>
@@ -88,26 +89,27 @@
                 </div>
             </div> 
 
-            <div class= "select-panel theme-select"> 
-                <a class= "button user-actions-button toggle-menu-button theme-select-toggle-menu-button" href= "#theme-select-menu">
+            <div class= "user-action select-action theme-select"> 
+                <a class= "button user-action-button user-action-open-button" href= "#theme-select-panel">
                     light 
                 </a> 
 
-                <div class= "user-action-menu theme-select-menu" id= "theme-select-menu"> 
-                    <a class= "button close-button user-action-menu-button user-action-menu-close-button theme-select-menu-close-button" href= "#" >
+                <div class= "user-action-panel select-action-panel" id= "theme-select-panel"> 
+                    <a class= "button close-button user-action-button user-action-close-button" href= "#" >
                         <span class= "button-text">Close</span> 
                     </a> 
 
-                    <div class= "user-action-menu-body"> 
-                        <h3 class= "heading">Choose Your Colors</h3> 
+                    <div class= "user-action-panel-main"> 
+                        <h3 class= "heading user-action-panel-heading">Choose Your Colors</h3> 
+
                         <ul class= "button-list"> 
                             <li class= "button-entry theme-select-entry theme-select-entry-light current"> 
-                                <a href= "#" class= "button user-action-menu-button select-button theme-select-button theme-select-button-light">light</a> 
+                                <a href= "#" class= "button user-action-panel-button select-button theme-select-button theme-select-button-light">light</a> 
                                 <div class= "button-preview"></div> 
                             </li> 
 
                             <li class= "button-entry theme-select-entry theme-select-entry-dark"> 
-                                <a href= "#" class= "button user-action-menu-button select-button theme-select-button theme-select-button-dark">dark</a> 
+                                <a href= "#" class= "button user-action-panel-button select-button theme-select-button theme-select-button-dark">dark</a> 
                                 <div class= "button-preview"></div> 
                             </li>
                         </ul> 
@@ -115,10 +117,34 @@
                 </div>
             </div> 
 
-            <div class= "login">
-                <a href= "#" class= "button user-actions-button login-button">
+            <div class= "user-action form-action login">
+                <a class= "button user-action-button login-open-button" href= "#login-panel">
                     log in
                 </a> 
+
+                <div class= "user-action-panel form-panel login-panel" id= "login-panel"> 
+                    <a class= "button close-button user-action-button user-action-close-button login-close-button" href= "#" > 
+                        <span class= "button-text">Close</span>
+                    </a> 
+
+                    <div class= "user-action-panel-main"> 
+                        <h3 class= "heading user-action-panel-heading">Login</h3> 
+                        
+                        <form class= "form user-action-form login-form" action= "" method= "post">
+                            <div class= "form-field username-field">
+                                <label for= "username" class= "field-label">Username</label> 
+                                <input class= "form-field-body" type= "text" name= "username" id= "username" /> 
+                            </div> 
+
+                            <div class= "form-field password-field">
+                                <label for= "password" class= "field-label">Password</label> 
+                                <input class= "form-field-body" type= "text" name= "password" id= "password" /> 
+                            </div> 
+
+                            <button class= "form-button login-button" type= "submit">Log In</button> 
+                        </form>
+                    </div> 
+                </div>
             </div> 
         </section> 
     </div> 

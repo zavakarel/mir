@@ -1,0 +1,67 @@
+.form-panel { 
+    font-weight: var( --font-weight-regular ); 
+
+    &::after { 
+        display: flex; justify-content: center; align-items: center;  
+        position: absolute; z-index: -1; 
+        inset: 0; right: 50%; 
+        //content: "\f2c3"; 
+        font-family: var( --icon-font-family ); font-size: 40em; 
+        background-color: rgba( var( --color-grayscale-dark-rgb ), 0.1 ); color: rgba( var( --color-grayscale-dark-rgb ), 0.4 ); 
+    }
+
+    .user-action-panel-main { 
+        margin-left: 5rem; 
+        width: 50%; 
+    }
+} 
+
+.form-panel { 
+    .user-action-close-button, 
+    &::after, 
+    .user-action-panel-main, 
+    .user-action-panel-heading { 
+        opacity: 0; 
+        transform: translateY( -100px );
+    } 
+} 
+
+.form-panel:target { 
+    .user-action-close-button, 
+    &::after, 
+    .user-action-panel-main, 
+    .user-action-panel-heading { 
+        opacity: 1; 
+        transform: translateY( 0 ); 
+        transition: opacity 0.3s, transform 0.2s; 
+    } 
+
+    .user-action-close-button { 
+        transition-delay: 0.2s; 
+    } 
+
+    &::after { 
+        transition-delay: 0.3s; 
+    } 
+
+    .user-action-panel-main { 
+        transition-delay: 0.35s; 
+    } 
+
+    .user-action-panel-heading { 
+        transition-delay: 0.4s; 
+    } 
+
+} 
+
+.send-message-panel::after { 
+    content: "\f2c3"; 
+    //content: "\f474"; 
+} 
+
+.login-panel::after { 
+    font-size: 50em; 
+    content: "\f47d"; 
+    //content: "\f47e"; 
+}
+

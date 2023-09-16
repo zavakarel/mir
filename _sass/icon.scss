@@ -13,8 +13,9 @@
 
 // Where to place an icon 
 :where( 
-    .header-pane .button:not( .user-action-menu-button ), 
-    .user-action-menu-close-button, 
+    .header-pane .user-action-button, 
+    .header-pane .contacts-button, 
+    .close-button, 
     .working-hours, 
     .has-subnav > .main-nav-link, 
     .shopping-cart-link, 

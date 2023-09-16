@@ -1,0 +1,126 @@
+.select-action-panel { 
+    .user-action-close-button, 
+    .user-action-panel-heading, 
+    .button-list .button-entry.current .button-preview, 
+    .select-button { 
+        opacity: 0; 
+    } 
+
+    &:target { 
+        .user-action-close-button, 
+        .user-action-panel-heading, 
+        .button-list .button-entry.current .button-preview, 
+        .select-button { 
+            opacity: 1; 
+            transition: opacity 0.5s; 
+        } 
+
+        .user-action-close-button { 
+            transition-delay: 0.2s; 
+        } 
+
+        .button-list .button-entry.current .button-preview { 
+            transition-delay: 0.3s; 
+        } 
+
+        .user-action-panel-heading {
+            transition-delay: 0.4s; 
+        }
+
+        .button-entry:nth-child( 1 ) .button { 
+            transition-delay: 0.5s; 
+        } 
+
+        .button-entry:nth-child( 2 ) .button { 
+            transition-delay: 0.55s; 
+        } 
+
+        .button-entry:nth-child( 3 ) .button { 
+            transition-delay: 0.6s; 
+        } 
+    } 
+
+    .button-list {  
+        display: flex; 
+    }
+
+    .button-preview {
+        position: absolute; 
+    }
+
+    .button-preview::after { 
+        display: block; 
+        position: absolute; z-index: -1; 
+        inset: 0; 
+        background-size: contain; background-position: right center; background-repeat: no-repeat; 
+        content: ""; 
+        filter: grayscale( 1 ); 
+    } 
+
+    .select-button { 
+        box-sizing: border-box; 
+        display: block; 
+        width: var( --user-action-menu-button-size ); 
+        height: var( --user-action-menu-button-size ); line-height: var( --user-action-menu-button-size ); 
+        border-bottom: 1px solid; border-color: transparent; 
+        text-decoration: none; 
+    } 
+
+    .button-preview, 
+    .button-list:hover .button-preview {
+        left: -10000px; top: -10000px; top: auto; bottom: auto; 
+        transform: translateY( 50px ); 
+        opacity: 0; 
+    } 
+
+    .button-list:hover > :hover > .button-preview, 
+    .button-list:hover > .current:hover > .button-preview {
+        transition: transform 0.3s, opacity 0.2s; 
+    } 
+
+    .button-list:hover > :hover > .button-preview, 
+    .current > .button-preview { 
+        left: 20%; right: calc( 50% + 5rem ); top: 20%; bottom: 20%; 
+        transform: translateY( 0 ); 
+        opacity: 1; 
+    } 
+
+    .button-list:hover > :hover .button, 
+    .current .button { 
+        border-color: rgba( var( --color-grayscale-dark-rgb ), 0.7 ); 
+    } 
+
+    .button-list:hover .button {
+        border-color: transparent; 
+    } 
+}
+
+
+.lang-select-entry { 
+    &-en > ::after { 
+        background-image: url( '/assets/images/united\ kingdom\ \(uk\)-flag-map.jpg' ); 
+    } 
+
+    &-ru > ::after { 
+        background-image: url( '/assets/images/istockphoto-696318252-612x612.jpg' ); 
+    } 
+
+    &-bg > ::after { 
+        background-image: url( '/assets/images/1914_kingdom_of_bulgaria_borders___flag_overlay_by_universallyidiotic_dce0v36-fullview.png' ); 
+    } 
+} 
+
+.theme-select-entry { 
+    .button-preview::after { 
+        display: flex; justify-content: center; align-items: center; 
+        font-family: var( --icon-font-family ); font-size: 20em; 
+    } 
+
+    &-dark > .button-preview::after { 
+        content: "\f467"; //content: "\f468"; 
+    } 
+
+    &-light > .button-preview::after { 
+        content: "\f4b6"; //content: "\f4b7"; 
+    } 
+} 

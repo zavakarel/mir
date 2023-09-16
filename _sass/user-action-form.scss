@@ -1,0 +1,40 @@
+.user-action-form { 
+    margin-top: 2em; 
+    width: 100%; 
+    font-weight: var( --font-weight-semi-bold ); 
+    
+
+    > * + * { 
+        margin-top: 1em; 
+    } 
+
+    .form-field > *, 
+    .form-button { 
+        box-sizing: border-box; 
+        display: block; 
+        padding: 0.8em; 
+        width: 100%; 
+        background-color: transparent; 
+
+    } 
+
+    .form-field-body { 
+        border: 1px solid; border-color: rgba( var( --color-grayscale-dark-rgb ), 0.4 ); 
+        border-radius: 0; 
+
+    } 
+
+    .form-field-body {
+        border-width: 0 0 1px 0; 
+    }
+
+    .form-button {
+        margin-top: 5em; 
+        padding: 2em; 
+        background-color: rgba( var( --color-grayscale-dark-rgb ), 0.5 ); color: rgba( var( --color-grayscale-light-rgb ), 1 ); 
+        border: none; 
+        font: inherit; text-transform: inherit; 
+    }
+}
+
+
