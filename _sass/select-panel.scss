@@ -41,6 +41,8 @@
     } 
 
     .button-list {  
+        //--user-action-menu-button-size: 5em; 
+
         display: flex; 
     }
 
@@ -60,10 +62,16 @@
     .select-button { 
         box-sizing: border-box; 
         display: block; 
-        width: var( --user-action-menu-button-size ); 
-        height: var( --user-action-menu-button-size ); line-height: var( --user-action-menu-button-size ); 
+        padding-block: 1.5em; padding-inline: 2em; 
+        // width: var( --user-action-menu-button-size ); 
+        // height: var( --user-action-menu-button-size ); line-height: var( --user-action-menu-button-size ); 
         border-bottom: 1px solid; border-color: transparent; 
         text-decoration: none; 
+
+        &-note {
+            display: block; 
+            
+        }
     } 
 
     .button-preview, 
@@ -124,3 +132,30 @@
         content: "\f4b6"; //content: "\f4b7"; 
     } 
 } 
+
+.phone-select-entry {
+    .select-button { 
+        &-text { 
+            font-size: 1.4em; 
+        } 
+
+        &-note {
+            display: block; 
+            margin-bottom: 1em; 
+            font-size: unset; 
+        }
+    } 
+
+    .button-preview::after { 
+        display: flex; justify-content: center; align-items: center; 
+        font-family: var( --icon-font-family ); font-size: 20em; 
+    } 
+
+    &-store > .button-preview::after { 
+        content: "\f228"; 
+    } 
+
+    &-shop > .button-preview::after { 
+        content: "\f3f7"; 
+    } 
+}
