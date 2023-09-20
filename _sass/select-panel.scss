@@ -146,16 +146,23 @@
         }
     } 
 
-    .button-preview::after { 
-        display: flex; justify-content: center; align-items: center; 
-        font-family: var( --icon-font-family ); font-size: 20em; 
-    } 
+    .button-list:hover > &:hover > .button-preview, 
+    &.current > .button-preview  { 
+        left: 10%; top: 10%; bottom: 10%; 
+
+        &::after { 
+            // display: flex; justify-content: center; align-items: center; 
+            // font-family: var( --icon-font-family ); font-size: 20em; 
+        } 
+    }
 
     &-store > .button-preview::after { 
-        content: "\f228"; 
+        //content: "\f228"; 
+        background-image: url( '/assets/images/125685666-driver-on-a-forklift-carries-boxes-on-a-white-background.jpg' ); 
     } 
 
     &-shop > .button-preview::after { 
-        content: "\f3f7"; 
+        //content: "\f3f7"; 
+        background-image: url( '/assets/images/istockphoto-1304019898-170667a.jpg' ); 
     } 
-}
+} 
