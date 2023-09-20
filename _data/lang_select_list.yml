@@ -1,0 +1,14 @@
+- 
+  key: "en" 
+  value: "en" 
+  figure: "uk-flag-map.jpg" 
+
+- 
+  key: "ru" 
+  value: "ru" 
+  figure: "ru-flag-map.jpg" 
+
+- 
+  key: "bg" 
+  value: "bg" 
+  figure: "bg-flag-map.png" 

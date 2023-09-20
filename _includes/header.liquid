@@ -20,25 +20,10 @@
                     <div class= "user-action-panel-main"> 
                         <h3 class= "heading user-action-panel-heading">Call Us</h3> 
 
-                        <ul class= "button-list"> 
-                            <li class= "button-entry phone-select-entry phone-select-entry-store current"> 
-                                <a href= "#" class= "button user-action-panel-button select-button phone-select-button"> 
-                                    <span class= "select-button-note">Store</span>
-                                    <span class= "select-button-text">0888 123 456</span> 
-                                </a> 
-                                
-                                <div class= "button-preview"></div> 
-                            </li> 
-
-                            <li class= "button-entry phone-select-entry phone-select-entry-shop">  
-                                <a href= "#" class= "button user-action-panel-button select-button phone-select-button">
-                                    <span class= "select-button-note">Shop</span> 
-                                    <span class= "select-button-text">0888 123 456</span> 
-                                </a> 
-    
-                                <div class= "button-preview"></div> 
-                            </li>
-                        </ul> 
+                        {% include select-button-list.liquid 
+                            namespace = "phone" 
+                            button_list = site.data.phone_select_list 
+                        %} 
                     </div> 
                 </div>
             </div> 
@@ -99,22 +84,10 @@
                     <div class= "user-action-panel-main"> 
                         <h3 class= "heading user-action-panel-heading">Choose Your Language</h3> 
 
-                        <ul class= "button-list"> 
-                            <li class= "button-entry lang-select-entry lang-select-entry-en current"> 
-                                <a class= "button user-action-panel-button select-button lang-select-button" href= "#" >en</a> 
-                                <div class= "button-preview"></div>
-                            </li> 
-
-                            <li class= "button-entry lang-select-entry lang-select-entry-ru"> 
-                                <a class= "button user-action-panel-button select-button lang-select-button" href= "#" >ru</a> 
-                                <div class= "button-preview"></div>
-                            </li> 
-
-                            <li class= "button-entry lang-select-entry lang-select-entry-bg"> 
-                                <a class= "button user-action-panel-button select-button lang-select-button" href= "#" >bg</a> 
-                                <div class= "button-preview"></div>
-                            </li>
-                        </ul>
+                        {% include select-button-list.liquid 
+                            namespace = "lang" 
+                            button_list = site.data.lang_select_list 
+                        %} 
                     </div> 
                 </div>
             </div> 
@@ -132,17 +105,10 @@
                     <div class= "user-action-panel-main"> 
                         <h3 class= "heading user-action-panel-heading">Choose Your Colors</h3> 
 
-                        <ul class= "button-list"> 
-                            <li class= "button-entry theme-select-entry theme-select-entry-light current"> 
-                                <a href= "#" class= "button user-action-panel-button select-button theme-select-button theme-select-button-light">light</a> 
-                                <div class= "button-preview"></div> 
-                            </li> 
-
-                            <li class= "button-entry theme-select-entry theme-select-entry-dark"> 
-                                <a href= "#" class= "button user-action-panel-button select-button theme-select-button theme-select-button-dark">dark</a> 
-                                <div class= "button-preview"></div> 
-                            </li>
-                        </ul> 
+                        {% include select-button-list.liquid 
+                            namespace = "theme" 
+                            button_list = site.data.theme_select_list 
+                        %} 
                     </div> 
                 </div>
             </div> 

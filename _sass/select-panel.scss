@@ -48,16 +48,26 @@
 
     .button-preview {
         position: absolute; 
-    }
 
-    .button-preview::after { 
-        display: block; 
-        position: absolute; z-index: -1; 
-        inset: 0; 
-        background-size: contain; background-position: right center; background-repeat: no-repeat; 
-        content: ""; 
-        filter: grayscale( 1 ); 
-    } 
+        > *, 
+        &::after {
+            position: absolute; z-index: -1; 
+            inset: 0; 
+            filter: grayscale( 1 ); 
+        }
+
+        > * { 
+            display: block; 
+            width: 100%; height: 100%; 
+            object-fit: contain; background-position: center; 
+        } 
+
+        &::after { 
+            //background-size: contain; background-position: center; background-repeat: no-repeat; 
+            display: flex; justify-content: center; align-items: center; 
+            font-family: var( --icon-font-family ); font-size: 20em; 
+        } 
+    }
 
     .select-button { 
         box-sizing: border-box; 
@@ -104,26 +114,21 @@
 }
 
 
-.lang-select-entry { 
-    &-en > ::after { 
-        background-image: url( '/assets/images/united\ kingdom\ \(uk\)-flag-map.jpg' ); 
-    } 
+// .lang-select-entry { 
+//     &-en > ::after { 
+//         background-image: url( '/assets/images/united\ kingdom\ \(uk\)-flag-map.jpg' ); 
+//     } 
 
-    &-ru > ::after { 
-        background-image: url( '/assets/images/istockphoto-696318252-612x612.jpg' ); 
-    } 
+//     &-ru > ::after { 
+//         background-image: url( '/assets/images/istockphoto-696318252-612x612.jpg' ); 
+//     } 
 
-    &-bg > ::after { 
-        background-image: url( '/assets/images/1914_kingdom_of_bulgaria_borders___flag_overlay_by_universallyidiotic_dce0v36-fullview.png' ); 
-    } 
-} 
+//     &-bg > ::after { 
+//         background-image: url( '/assets/images/1914_kingdom_of_bulgaria_borders___flag_overlay_by_universallyidiotic_dce0v36-fullview.png' ); 
+//     } 
+// } 
 
 .theme-select-entry { 
-    .button-preview::after { 
-        display: flex; justify-content: center; align-items: center; 
-        font-family: var( --icon-font-family ); font-size: 20em; 
-    } 
-
     &-dark > .button-preview::after { 
         content: "\f467"; //content: "\f468"; 
     } 
@@ -150,19 +155,19 @@
     &.current > .button-preview  { 
         left: 10%; top: 10%; bottom: 10%; 
 
-        &::after { 
-            // display: flex; justify-content: center; align-items: center; 
-            // font-family: var( --icon-font-family ); font-size: 20em; 
-        } 
+        // &::after { 
+        //     // display: flex; justify-content: center; align-items: center; 
+        //     // font-family: var( --icon-font-family ); font-size: 20em; 
+        // } 
     }
 
-    &-store > .button-preview::after { 
-        //content: "\f228"; 
-        background-image: url( '/assets/images/125685666-driver-on-a-forklift-carries-boxes-on-a-white-background.jpg' ); 
-    } 
+    // &-store > .button-preview::after { 
+    //     //content: "\f228"; 
+    //     background-image: url( '/assets/images/125685666-driver-on-a-forklift-carries-boxes-on-a-white-background.jpg' ); 
+    // } 
 
-    &-shop > .button-preview::after { 
-        //content: "\f3f7"; 
-        background-image: url( '/assets/images/istockphoto-1304019898-170667a.jpg' ); 
-    } 
+    // &-shop > .button-preview::after { 
+    //     //content: "\f3f7"; 
+    //     background-image: url( '/assets/images/istockphoto-1304019898-170667a.jpg' ); 
+    // } 
 } 

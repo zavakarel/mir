@@ -1,0 +1,24 @@
+<ul class= "button-list select-button-list {{ include.namespace }}-select-button-list"> 
+{% for button in include.button_list %} 
+
+    <li class= "button-entry select-entry {{ include.namespace }}-select-entry {{ include.namespace }}-select-entry-{{ button.key }}{% if forloop.first %} current{% endif %}"> 
+        <a href= "#" class= "button select-button"> 
+            {{ if button.text }}
+                <span class= "select-button-note">{{ button.text }}</span> 
+            {{ endif }} 
+            
+            <span class= "select-button-text">{{ button.value }}</span> 
+        </a> 
+        
+        <div class= "button-figure button-preview">
+            {% if button.figure %} 
+                {% include image.liquid 
+                    src = button.figure 
+                %} 
+            {% endif %}
+        </div> 
+    </li> 
+
+{% endfor %}
+</ul> 
+
