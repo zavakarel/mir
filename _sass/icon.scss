@@ -13,6 +13,7 @@
 
 // Where to place an icon 
 :where( 
+    .id, 
     .header-pane .user-action-button, 
     .header-pane .contacts-button, 
     .close-button, 
