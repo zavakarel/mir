@@ -19,6 +19,15 @@
     --button-padding-inline: ""; 
     --button-border: ""; 
     --button-border-radius: ""; 
+} 
+
+.company-features-action-button, 
+.read-more-button, 
+.buy-product-button { 
+    display: flex; align-items: center; justify-content: center; 
+    margin-inline: var( --button-margin-inline ); margin-top: var( --button-margin-top ); 
+    padding-block: var( --button-padding-block ); padding-inline: var( --button-padding-inline ); 
+    border: var( --button-border ); border-radius: var( --button-border-radius ); 
 }
 
 .read-more-button, 
@@ -31,24 +40,18 @@
     --icon-inline: 0 0.4em; 
     //--icon-border: 1px solid; 
     //--icon-border-radius: 50%; 
-
-    & { 
-        display: flex; align-items: center; justify-content: center; 
-        margin-inline: var( --button-margin-inline ); margin-top: var( --button-margin-top ); 
-        padding-block: var( --button-padding-block ); padding-inline: var( --button-padding-inline ); 
-        border: var( --button-border ); border-radius: var( --button-border-radius ); 
-    } 
     
+} 
+
+.company-features-action-button, 
+.read-more-button { 
+    width: fit-content; 
 } 
 
 .read-more-button { 
     --button-margin-top: 2em; 
     --button-padding-block: 0.8em; 
     --button-padding-inline: 1.8em; 
-
-    & { 
-        width: fit-content; 
-    } 
 
     &:hover {
         color: rgba( var( --color-1-rgb ) ); 
@@ -74,3 +77,10 @@
     width: auto; 
     text-indent: -10000px !important; 
 } 
+
+.company-features-action-button {
+    --button-padding-block: 0.6em; 
+    --button-padding-inline: 3em; 
+    --button-border: 1px solid; 
+    --button-border-radius: 8px; 
+}

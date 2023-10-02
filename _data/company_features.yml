@@ -1,18 +1,14 @@
 - 
-  image: "Protein-Powder-Packaging-BEAPAK-1.png" 
-  heading: "Great Quality That Won't Betray You" 
-  text: 
-    - 
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit eveniet rerum unde tempora aliquid eius possimus." 
-- 
-  image: "" 
-  heading: "Over 1500 Partners Across the Country"
-  text: 
-    - 
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit eveniet rerum unde tempora aliquid eius possimus repellat quidem commodi fugiat, optio recusandae veniam. Temporibus non omnis et assumenda corporis?" 
-- 
-  image: "" 
-  heading: "Douzens of Top Athletes and Celebrities" 
-  text: 
-    - 
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit eveniet rerum unde tempora aliquid eius possimus repellat quidem commodi fugiat, optio recusandae veniam. Temporibus non omnis et assumenda corporis?" 
+  subheading: "Stand Up And Dare To" 
+  heading: "Take Back Vakarel" 
+  actions: 
+    write: 
+      key: "write" 
+      value: "Lighten Up Now" 
+      target: "" 
+
+    call: 
+      key: "call" 
+      value: "0888 123 456" 
+      text: "Talk With Us" 
+      target: "" 

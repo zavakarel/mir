@@ -1,131 +1,82 @@
 entry_list: 
   - 
-    text: "Home"
-    target: "/" 
-
-  - 
-    text: "About"
+    text: "Priorities"
     target: "/" 
 
     subnavigation: 
       templ: "subnav-block.liquid"
       data: 
         - 
-          heading: "About" 
-          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
+          heading: "Priorities" 
+          image: "" 
           entry_list: 
             - 
-              text: "News"
+              text: "Ethical Stealing" 
               target: "/" 
-            - 
-              text: "Quality"
-              target: "/" 
-            - 
-              text: "Partners"
-              target: "/" 
-            - 
-              text: "Sponsorship"
-              target: "/" 
-            - 
-              text: "Publications"
-              target: "/" 
-            - 
-              text: "Contacts" 
-              target: "/"
 
+            - 
+              text: "Ichtiman Independence" 
+              target: "/" 
+
+            - 
+              text: "Competent Experts" 
+              target: "/" 
+
+            - 
+              text: "Ecopathways" 
+              target: "/" 
 
   - 
-    text: "Products"
+    text: "Team"
     target: "/" 
 
     subnavigation: 
       templ: "subnav-block.liquid"
       data: 
         - 
-          heading: "Products by Type" 
-          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
+          heading: "Team" 
+          image: "" 
           entry_list: 
             - 
-              text: "Proteins"
+              text: "Boyko Stoynov" 
               target: "/" 
+              
             - 
-              text: "Amino Acids"
-              target: "/" 
-            - 
-              text: "Gainers"
-              target: "/" 
-            - 
-              text: "Energetics" 
-              target: "/" 
-            - 
-              text: "Fat Burning"
-              target: "/" 
-            - 
-              text: "Antioxidants"
-              target: "/" 
-            - 
-              text: "Vitamins"
-              target: "/" 
-            - 
-              text: "Minerals"
-              target: "/" 
-            - 
-              text: "Isotonic"
+              text: "Plamena Stoyanova" 
               target: "/" 
 
+            - 
+              text: "Stanislav Stoyanov" 
+              target: "/" 
+
+
+  - 
+    text: "Discussions"
+    target: "/" 
+
+    subnavigation: 
+      templ: "subnav-block.liquid"
+      data: 
         - 
-          heading: "Products by Goal" 
-          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
+          heading: "Discussions" 
+          image: "" 
           entry_list: 
             - 
-              text: "Muscle Gain"
+              text: "Why Is Important To Not Wait And Act" 
               target: "/" 
+
             - 
-              text: "Weight Loss"
+              text: "Who Is Responsible For The World We Are Living In" 
               target: "/" 
+
             - 
-              text: "Recovery"
+              text: "What A Good Mayor Looks Like" 
               target: "/" 
-            - 
-              text: "Strength" 
-              target: "/" 
-            - 
-              text: "Endurance" 
-              target: "/" 
-            - 
-              text: "General Health" 
-              target: "/" 
-            - 
-              text: "Feeling Better" 
-              target: "/" 
-        
           
   - 
     text: "FAQ" 
     target: "/" 
 
   - 
-    text: "Order"
-    target: "/" 
-
-    subnavigation: 
-      templ: "subnav-block.liquid"
-      data: 
-        - 
-          heading: "Order" 
-          image: "Protein-Powder-Packaging-BEAPAK-1.png" 
-          entry_list: 
-            - 
-              text: "How to Order"
-              target: "/" 
-            - 
-              text: "Delivery"
-              target: "/" 
-            - 
-              text: "Cart" 
-              target: "/"
-
-
-  - 
-    text: "Contact" 
+    text: "Contacts" 
     target: "/" 

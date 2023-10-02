@@ -1,10 +1,10 @@
 <header class= "header site-header"> 
     <div class= "header-pane">
         <section class= "contacts"> 
-            <h3 class= "heading header-heading contacts-heading">Make an Order</h3> 
+            <h3 class= "heading header-heading contacts-heading">Reach Us</h3> 
 
             <p class= "working-hours">
-                Mon-Fr <span class= "hours">08.00-18.00</span> 
+                Every Day<span class= "hours">The Whole Day</span> 
             </p> 
 
             <div class= "user-action select-action select-phone contact phone">
@@ -68,33 +68,12 @@
             
         </section> 
 
-        <section class= "user-actions"> 
+        <!-- <section class= "user-actions"> 
             <h3 class= "heading header-heading user-actions-heading">User Settings</h3> 
-
-            <div class= "user-action select-action lang-select"> 
-                <a class= "button user-action-button user-action-open-button" href= "#lang-select-panel"> 
-                    en 
-                </a> 
-
-                <div class= "user-action-panel select-action-panel" id= "lang-select-panel"> 
-                    <a class= "button close-button user-action-button user-action-close-button" href= "#" >
-                        <span class= "button-text">Close</span>
-                    </a> 
-
-                    <div class= "user-action-panel-main"> 
-                        <h3 class= "heading user-action-panel-heading">Choose Your Language</h3> 
-
-                        {% include select-button-list.liquid 
-                            namespace = "lang" 
-                            button_list = site.data.lang_select_list 
-                        %} 
-                    </div> 
-                </div>
-            </div> 
 
             <div class= "user-action select-action theme-select"> 
                 <a class= "button user-action-button user-action-open-button" href= "#theme-select-panel">
-                    light 
+                    <strong>Theme </strong> Light 
                 </a> 
 
                 <div class= "user-action-panel select-action-panel" id= "theme-select-panel"> 
@@ -112,39 +91,7 @@
                     </div> 
                 </div>
             </div> 
-
-            <div class= "user-action form-action login">
-                <a class= "button user-action-button login-open-button" href= "#login-panel">
-                    log in
-                </a> 
-
-                <div class= "user-action-panel form-panel login-panel" id= "login-panel"> 
-                    <a class= "button close-button user-action-button user-action-close-button login-close-button" href= "#" > 
-                        <span class= "button-text">Close</span>
-                    </a> 
-
-                    <div class= "user-action-panel-main"> 
-                        <h3 class= "heading user-action-panel-heading">Login</h3> 
-                        
-                        <form class= "form user-action-form login-form" action= "" method= "post">
-                            <div class= "form-field username-field">
-                                <label for= "username" class= "field-label">Username</label> 
-                                <input class= "form-field-body" type= "text" name= "username" id= "username" /> 
-                            </div> 
-
-                            <div class= "form-field password-field">
-                                <label for= "password" class= "field-label">Password</label> 
-                                <input class= "form-field-body" type= "text" name= "password" id= "password" /> 
-                            </div> 
-
-                            <button class= "form-button login-button" type= "submit">Log In</button> 
-                        </form> 
-
-                        <p class= "form-note">Or <strong>register</strong> if you don't have an account</p> 
-                    </div> 
-                </div>
-            </div> 
-        </section> 
+        </section>  -->
     </div> 
     
     {% include id.liquid %} 
@@ -174,17 +121,14 @@
         {% endfor %}
         </ul> 
 
-        <a class= "link main-nav-link shopping-cart-link" href= "#">
-            Cart 
+        <a class= "link main-nav-link" href= "#"> 
+            Lighten Up Now 
         </a> 
     </nav> 
 
     <div class= "social-links">
         <h3 class="heading header-heading social-links-heading">Join Us</h3>
-        <ul class= "social-links-list">
-            <li class= "social-link-entry">
-                <a class= "link social-link social-link-instagram" href= "#"><span class= "icon-text">Instagram</span></a> 
-            </li> 
+        <ul class= "social-links-list"> 
 
             <li class= "social-link-entry">
                 <a class= "link social-link social-link-facebook" href= "#"><span class= "icon-text">Facebook</span></a> 

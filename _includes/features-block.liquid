@@ -1,10 +1,12 @@
-{% include heading.liquid 
-    level = include.level 
-    text = include.data.heading 
-%} 
+<div class= "features-block">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.heading 
+    %} 
 
-{% include text.liquid 
-    text = include.data.text 
-%} 
+    {% include text.liquid 
+        text = include.data.text 
+    %}  
 
-<a class= "link read-more-button" href= "#">Explore Benefits</a> 
+    <a class= "link read-more-button" href= "#">Explore Benefits</a> 
+</div>

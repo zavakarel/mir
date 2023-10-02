@@ -1,4 +1,7 @@
-.id {
+.id { 
+    font-size: 1.5em; 
+    text-transform: none; 
+
     &-logo { 
         display: block; 
         width: 10rem; height: auto; 
@@ -8,9 +11,9 @@
 
     } 
 
-    &-name {
-        position: absolute; left: -10000px; top: -10000px; 
-        width: 0; height: 0; 
-        overflow: hidden; 
-    }
-}
+    // &-name {
+    //     position: absolute; left: -10000px; top: -10000px; 
+    //     width: 0; height: 0; 
+    //     overflow: hidden; 
+    // }
+} 

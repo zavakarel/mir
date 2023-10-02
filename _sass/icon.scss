@@ -1,6 +1,6 @@
 :root {
     --icon-size: 1rem; 
-    --icon-code: ""; 
+    --icon-code: unset; 
     --icon-block: 0; 
     --icon-inline: 0; 
     --icon-background-color: transparent;  
@@ -20,11 +20,12 @@
     .has-subnav > .main-nav-link, 
     .shopping-cart-link, 
     .header .social-link, 
-    .features-entry > .heading, 
+    //.features-entry > .heading, 
     .quality-entry, 
     .selected-products .product-feature, 
     .read-more-button, 
     .buy-product-button, 
+    .button-value, 
     .footer-contacts .contact 
 )::before { 
     box-sizing: border-box; 

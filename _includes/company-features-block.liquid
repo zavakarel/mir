@@ -1,0 +1,30 @@
+{% if include.data.image  %} 
+    {% include image.liquid 
+        src = include.data.image 
+    %} 
+{% endif %}
+
+<div class= "text-content">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.heading 
+        sub_text = include.data.subheading 
+    %} 
+
+    {% include text.liquid 
+        text = include.data.text 
+    %} 
+
+    <div class= "actions company-features-actions">
+        {% include button.liquid 
+            value = include.data.actions.write.value 
+            namespace = "company-features-action" 
+        %} 
+        
+        {% include button.liquid 
+            value = include.data.actions.call.value 
+            text = include.data.actions.call.text 
+            namespace = "company-features-action" 
+        %} 
+    </div>
+</div> 
