@@ -1,0 +1,61 @@
+heading: "Team"
+subheading: ""
+text: 
+  - 
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur, atque animi maxime provident possimus sed inventore voluptas repellat temporibus!" 
+
+entry_list: 
+  - 
+    name: "Milena Chomakova" 
+    position: "Mayor" 
+    region: "Ichtiman"
+    text: 
+      - 
+        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
+    photo: "professional-woman.jpg" 
+
+  - 
+    name: "Bore Stoynov" 
+    position: "Mayor" 
+    region: "Vakarel" 
+    text: 
+      - 
+        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
+    photo: "istockphoto-1212710606-612x612.jpg" 
+
+  - 
+    name: "Milka Georgieva" 
+    position: "Mayor Representative" 
+    region: "Verinsko" 
+    text: 
+      - 
+        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
+    photo: "1000_F_222749360_SsHqxLoAkdecqPZRIRO5LMJ7DsXlNPAf.jpg" 
+
+  - 
+    name: "Mite Stoynov" 
+    position: "Municipal Counselor" 
+    region: "Ichtiman" 
+    text: 
+      - 
+        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
+    photo: "istockphoto-1388648617-612x612.jpg" 
+
+  - 
+    name: "Radka Vasileva" 
+    position: "Municipal Counselor" 
+    region: "Ichtiman"
+    text: 
+      - 
+        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
+    photo: "istockphoto-831902150-170667a.jpg" 
+
+  - 
+    name: "Ivan Marinov" 
+    position: "Mayor Representative" 
+    region: "Balyovtsi" 
+    text: 
+      - 
+        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
+    photo: "istockphoto-1200677760-612x612.jpg" 
+ 

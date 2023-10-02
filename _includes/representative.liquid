@@ -1,0 +1,28 @@
+{% include image.liquid 
+    src = include.data.photo 
+%} 
+
+<div class= "text-content">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.name 
+    %} 
+
+    <div class= "details">
+        <p class= "position">
+            <span class= "text">Runs For</span>
+            <span class= "value">{{ include.data.position }}</span>
+        </p> 
+
+        <p class= "region">
+            <span class= "text">Of</span>
+            <span class= "value">{{ include.data.region }}</span> 
+        </p> 
+    </div>
+
+    <!-- {% include text.liquid 
+        text = include.data.text 
+    %}  --> 
+
+    <a href= "#" class= "link read-more-button">Read More</a> 
+</div>
