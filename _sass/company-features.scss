@@ -1,16 +1,11 @@
 .company-features { 
-    --entry-padding-y-top: 0; 
-    --entry-padding-y-bottom: calc( var( --control-list-top ) + var( --control-link-size ) + var( --control-list-bottom ) ); 
+    --entry-padding-y-top: 12rem; 
+    --entry-padding-y-bottom: var( --entry-padding-y-top ); 
     --entry-image-width: 50%; 
     --entry-image-distance-x: 0; 
     --entry-image-distance-y: 0; 
      
-    --control-list-top: 8rem; 
-    --control-list-bottom: 8rem; 
-    --control-link-x: 0; 
-    --control-link-padding: 0.8em; 
-    --control-link-size: 8px; 
-    --control-link-border-size: 15px; 
+    
 
     .read-more-button { 
         --button-margin-top: 3em; 
@@ -19,7 +14,9 @@
     & { 
         //margin-top: 4rem; 
         position: relative; 
-        padding-inline: 0; border: solid transparent; border-width: 0 1.25rem; 
+        margin-inline: 2em; //border: solid transparent; border-width: 0 1.25rem; 
+        //border-style: solid; border-width: 1px; border-color: inherit; 
+        border-radius: 10px; 
     } 
 
     &-entry:not( :first-child ) { 
