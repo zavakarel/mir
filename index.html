@@ -13,14 +13,14 @@ layout: default
 %} 
 </div> 
 
-<div class= "section features">
+<div class= "section priorities">
 {% include entry-list.liquid 
     level = 2 
-    namespace = "features" 
+    namespace = "priorities" 
     heading = "Priorities" 
     text = site.data.sponsorship.text 
     entry_list = site.data.features 
-    entry_template = "features-block.liquid" 
+    entry_template = "priorities-block.liquid" 
 %} 
 </div> 
 
@@ -35,6 +35,7 @@ layout: default
 %} 
 </div> 
 
+{%- comment -%}
 <div class= "section features">
 {% include entry-list.liquid 
     level = 2 
@@ -45,6 +46,7 @@ layout: default
     entry_template = "features-block.liquid" 
 %} 
 </div> 
+{%- endcomment -%} 
 
 <div class= "section questions"> 
 {% include entry-list.liquid 
