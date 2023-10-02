@@ -1,0 +1,82 @@
+.priorities { 
+    &-entry > .heading { 
+        --icon-code: "\f3fd"; 
+        --icon-size: 2.8rem; 
+        --icon-font-size: 2.5em; 
+        --icon-block: 0 2.5rem; 
+        --icon-inline: auto; 
+        --icon-border: 1px solid; 
+        --icon-border-radius: 50%; 
+    } 
+
+    & {
+        text-align: center; 
+    }
+
+    &-list { 
+        --column-count: 1; 
+        --column-gap-x: 0em; 
+        --column-gap-y: 4.5em; 
+
+        margin-top: 5em; 
+
+        .heading { 
+            font-size: var( --font-size-level-4 ); font-weight: var( --font-weight-semi-bold ); 
+        } 
+
+        counter-reset: entry-counter; 
+
+        .entry { 
+            counter-increment: entry-counter; 
+
+            display: flex; 
+
+            &::after, 
+            > * {
+                flex: 1 1 0; 
+            } 
+
+            .read-more-button { 
+                --read-more-button-position-correction: calc( -1 * var( --button-padding-inline ) ); 
+
+                --icon-size: auto; 
+                --icon-inline: 0 0.75em; 
+            }
+    
+            &:nth-child( 2n + 1 ) { 
+                flex-direction: row-reverse; 
+                text-align: left; 
+
+                .read-more-button {
+                    --button-margin-inline: var( --read-more-button-position-correction ) auto; 
+                }
+            } 
+
+            &:nth-child( 2n ) { 
+                flex-direction: row; 
+                text-align: right; 
+
+                .read-more-button {
+                    --button-margin-inline: auto var( --read-more-button-position-correction ); 
+                }
+            } 
+
+            &::after { 
+                display: block; 
+                margin-bottom: 1em; 
+                font-family: var( --font-family-2 ); font-size: 4em; 
+                content: counter( entry-counter ); 
+                text-align: center; 
+
+            } 
+
+            .heading + .paragraph {
+                margin-top: 0.8em; 
+            } 
+
+            // .read-more-button {
+            //     border-bottom: 1px solid; 
+            // }
+        }
+    } 
+} 
