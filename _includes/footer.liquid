@@ -1,54 +1,59 @@
 <footer class= "footer site-footer"> 
-    {% include id.liquid %} 
-    <p class= "company-info">{{ site.data.footer.company.text }}</p> 
+
+    <div class= "company">
+        {% include id.liquid %} 
+        <p class= "company-info">{{ site.data.footer.company.text }}</p> 
+    </div> 
 
     <section class= "footer-contacts"> 
         {% include heading.liquid 
             level = 3 
-            text = "Footer Contacts" 
-        %}
-
-        {% include contact.liquid 
-            key = 'phone'
-            value = site.data.footer.contacts.phone 
+            text = "Reach Your Candidate" 
         %} 
 
-        {% include contact.liquid 
-            key = 'email'
-            value = site.data.footer.contacts.email 
-        %}
-    </section> 
-
-    <section class= "footer-nav"> 
-        {% include heading.liquid 
-            level = 3 
-            text = "Footer Navigation" 
-        %}
-
-        <div class= "entry-list footer-nav-blocks"> 
-        {% for e in site.data.footer.nav_blocks %} 
-
-            {% include subnav-group.liquid 
-                group = e 
-                block_link_count = 6 
-            %} 
-
-            <!-- <article class= "entry nav-block footer-nav-block"> 
-                <div class= "image-holder">
+        <ul class= "entry-list team-member-list">
+        {% for entry in site.data.team.entry_list %} 
+            <li class= "entry team-member"> 
+                <div class= "image-holder"> 
                     {% include image.liquid 
-                        src = e.image 
+                        src = entry.photo 
                     %} 
                 </div> 
 
-                <h4 class= "heading nav-block-heading">{{ e.heading }}</h4> 
+                <div class= "text-content">
+                    {% include heading.liquid 
+                        level = 4
+                        text = entry.name 
+                    %} 
 
-                {% include navigation.liquid 
-                    entry_list = e.links 
-                %} 
-            </article>  -->
+                    <div class= "details">
+                        <p class= "position">
+                            <span class= "value">{{ entry.position }}</span>
+                            <span class= "text">Candidate</span>
+                        </p> 
+                
+                        <p class= "region">
+                            <span class= "value">{{ entry.region }}</span> 
+                            <span class= "text"></span> 
+                        </p> 
+                    </div>
 
+                    <div class= "team-member-contacts"> 
+                        {% for contact in entry.contacts %} 
+                            {% assign key = contact[ 0 ] %} 
+                            {% assign value = contact[ 1 ] %} 
+
+                            {% include contact.liquid 
+                                key = key 
+                                value = value 
+                            %} 
+                        {% endfor %}
+                    </div>
+                </div> 
+            </li> 
         {% endfor %} 
-        </div> 
+        </ul>
+
     </section> 
 
     <p class= "copyrights">
@@ -56,6 +61,6 @@
         <span class= "year">2023</span> 
         <span class= "notice">&copy; All Rights Reserved.</span> 
         
-        <span class= "owner">Biogame Nutrition</span>
+        <span class= "owner">For Vakarel</span> 
     </p>
 </footer> 
