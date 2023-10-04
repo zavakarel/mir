@@ -68,3 +68,28 @@ layout: default
     entry_template = "news-block.liquid" 
 %} 
 </div> 
+
+<div class= "section send-message"> 
+    <h2 class= "heading user-action-panel-heading">Say What You Think</h2> 
+    
+    <form class= "form user-action-form send-message-form" action= "" method= "post">
+        <div class= "form-field sender-name-field">
+            <label for= "sender-name" class= "field-label">Your Name</label> 
+            <input class= "form-field-body" type= "text" name= "sender-name" id= "sender-name" /> 
+        </div> 
+
+        <div class= "form-field sender-email-field">
+            <label for= "sender-email" class= "field-label">Your Email</label> 
+            <input class= "form-field-body" type= "text" name= "sender-email" id= "sender-email" /> 
+        </div> 
+
+        <div class= "form-field sender-message-field">
+            <label for= "sender-message" class= "field-label">Your Message</label> 
+            <textarea class= "form-field-body" name= "sender-message" id= "sender-message"></textarea> 
+        </div> 
+
+        <button class= "form-button send-message-button" type= "submit">Send Message</button> 
+    </form> 
+
+    <p class= "form-note">Or just write to <strong>za-vakarel@gmail.com</strong></p> 
+</div> 

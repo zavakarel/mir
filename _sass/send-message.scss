@@ -1,0 +1,25 @@
+body > .send-message { 
+    max-width: 40%; margin-inline: auto; 
+    font-family: var( --font-family-2 ); 
+    text-align: center; 
+
+    .form { 
+        padding: 5em; 
+        border: 1px solid; border-color: rgba( var( --color-3-rgb ), 0.4 ); 
+        border-radius: 12px; 
+        font-size: 0.8em; 
+        font-weight: var( --font-weight-regular ); 
+        text-transform: uppercase; 
+        
+
+        .form-field-body { 
+            border-color: rgba( var( --color-3-rgb ), 0.4 ); 
+
+        } 
+
+        .form-button {
+            background-color: rgba( var( --color-3-rgb ), 0.8 ); 
+        } 
+    }
+    
+}
