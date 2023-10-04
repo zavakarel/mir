@@ -3,10 +3,10 @@
 
     &-list { 
         --entry-list-margin-top: 4em; 
-        --entry-list-width: 20%; 
+        --entry-list-width: 50%; 
         --entry-margin-top: 4em; 
 
-        --column-count: 3; 
+        --column-count: 4; 
         --column-gap-x: 1em; 
         
 
@@ -29,11 +29,11 @@
             margin-inline: auto; margin-top: var( --entry-list-margin-top ); 
         } 
 
-        > .entry:nth-child( -n + 3 ) { 
+        > .entry:nth-child( -n + 4 ) { 
             margin-top: 0; 
         }
 
-        > .entry:nth-child( 3n + 1 ) { 
+        > .entry:nth-child( 4n + 1 ) { 
             margin-left: 0; 
         } 
 
@@ -71,7 +71,8 @@
             left: 0; top: 0; 
             width: var( --image-width ); height: var( --image-height ); 
             object-fit: cover; object-position: center top; 
-            border-width: var( --image-border-width ); border-style: solid; border-color: var( --image-border-color ); 
+            //border-width: var( --image-border-width ); border-style: solid; border-color: var( --image-border-color ); 
+            border-radius: 12px; 
             //border-radius: 50%; 
             //filter: grayscale( 100% ); 
             //opacity: 0.2; 
