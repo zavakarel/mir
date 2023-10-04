@@ -1,4 +1,4 @@
-heading: "Team"
+heading: "Candidates" 
 subheading: ""
 text: 
   - 
@@ -13,6 +13,9 @@ entry_list:
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
     photo: "professional-woman.jpg" 
+    contacts: 
+      phone: 0888 123 456 
+      email: podkrepete@za-vakarel.com 
 
   - 
     name: "Bore Stoynov" 
@@ -22,15 +25,9 @@ entry_list:
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
     photo: "istockphoto-1212710606-612x612.jpg" 
-
-  - 
-    name: "Milka Georgieva" 
-    position: "Mayor Representative" 
-    region: "Verinsko" 
-    text: 
-      - 
-        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
-    photo: "1000_F_222749360_SsHqxLoAkdecqPZRIRO5LMJ7DsXlNPAf.jpg" 
+    contacts: 
+      phone: 0888 123 456 
+      email: podkrepete@za-vakarel.com 
 
   - 
     name: "Mite Stoynov" 
@@ -39,7 +36,10 @@ entry_list:
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
-    photo: "istockphoto-1388648617-612x612.jpg" 
+    photo: "istockphoto-1200677760-612x612.jpg" 
+    contacts: 
+      phone: 0888 123 456 
+      email: podkrepete@za-vakarel.com 
 
   - 
     name: "Radka Vasileva" 
@@ -49,13 +49,6 @@ entry_list:
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
     photo: "istockphoto-831902150-170667a.jpg" 
-
-  - 
-    name: "Ivan Marinov" 
-    position: "Mayor Representative" 
-    region: "Balyovtsi" 
-    text: 
-      - 
-        "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
-    photo: "istockphoto-1200677760-612x612.jpg" 
- 
+    contacts: 
+      phone: 0888 123 456 
+      email: podkrepete@za-vakarel.com 
