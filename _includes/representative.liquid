@@ -8,17 +8,10 @@
         text = include.data.name 
     %} 
 
-    <div class= "details">
-        <p class= "position">
-            <span class= "text">Runs For</span>
-            <span class= "value">{{ include.data.position }}</span>
-        </p> 
-
-        <p class= "region">
-            <span class= "text">Of</span>
-            <span class= "value">{{ include.data.region }}</span> 
-        </p> 
-    </div>
+    {% include candidate-details.liquid 
+        position = include.data.position 
+        region = include.data.region
+    %}
 
     <!-- {% include text.liquid 
         text = include.data.text 

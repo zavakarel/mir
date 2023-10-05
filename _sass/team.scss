@@ -99,33 +99,35 @@
             margin-top: var( --paragraph-margin-top ); 
         }  
 
-        .details {
-            //display: flex; justify-content: center; 
-            font-family: var( --font-family-2 ); 
-
-            > * + * {
-                margin-left: 0.3em; 
-            } 
-
-            .text {
-                font-size: 0.75em; 
-                font-weight: var( --font-weight-light );
-                text-transform: uppercase; 
-            }
-        } 
-
         
 
-        .value { 
-            display: block; 
-            padding-block: var( --value-padding-y ); padding-inline: var( --value-padding-x ); 
-            //border-width: var( --value-border-width ); border-style: solid; //border-radius: var( --sport-border-radius ); 
-            
-            font-size: var( --value-font-size ); 
-            font-weight: var( --font-weight-semi-bold ); 
-            text-transform: uppercase; 
-            
-        } 
+        
     }
 
-}
+} 
+
+.details {
+    //display: flex; justify-content: center; 
+    font-family: var( --font-family-2 ); 
+
+    // > * + * {
+    //     margin-left: 0.3em; 
+    // } 
+
+    .text {
+        font-size: 0.75em; 
+        font-weight: var( --font-weight-light );
+        text-transform: uppercase; 
+    } 
+
+    .value { 
+        display: block; 
+        padding-block: var( --value-padding-y ); padding-inline: var( --value-padding-x ); 
+        //border-width: var( --value-border-width ); border-style: solid; //border-radius: var( --sport-border-radius ); 
+        
+        font-size: var( --value-font-size ); 
+        font-weight: var( --font-weight-semi-bold ); 
+        text-transform: uppercase; 
+        
+    } 
+} 
