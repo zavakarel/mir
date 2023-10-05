@@ -1,0 +1,58 @@
+<div class= "candidate">
+    <a class= "button close-button candidate-close-button" href= "#" >
+        <span class= "button-text">Close</span>
+    </a> 
+
+    <header class= "candidate-header"> 
+        <div class=" image-holder">
+            {% include image.liquid 
+                src = include.data.photo 
+            %} 
+        </div>
+
+        
+            {% include heading.liquid 
+                level = 4 
+                text = include.data.name 
+            %} 
+
+            {% include candidate-details.liquid 
+                position = include.data.position 
+                region = include.data.region 
+            %} 
+        
+    </header> 
+
+    <div class= "candidate-body">
+        {% for section in include.data.info %} 
+            {% include heading.liquid 
+                level = 5 
+                text = section.heading 
+            %} 
+
+            {% for p in section.text %} 
+                <p class= "paragraph candidate-paragraph">{{ p }}</p>
+            {% endfor %}
+            
+        {% endfor %}
+    </div> 
+
+    <footer class= "candidate-footer"> 
+        <!-- {% include heading.liquid 
+            level = 5 
+            text = "Reach Me" 
+        %}   -->
+
+        <div class= "candidate-contacts"> 
+        {% for contact in include.data.contacts %} 
+            {% assign key = contact[ 0 ] %} 
+            {% assign value = contact[ 1 ] %} 
+
+            {% include contact.liquid 
+                key = key 
+                value = value 
+            %} 
+        {% endfor %}
+        </div>
+    </footer> 
+</div>

@@ -93,3 +93,6 @@ layout: default
 
     <p class= "form-note">Or just write to <strong>za-vakarel@gmail.com</strong></p> 
 </div> 
+
+{% assign member = site.data.team.entry_list[ 0 ] %}
+{% include candidate.liquid data = member %} 
