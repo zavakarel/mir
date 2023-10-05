@@ -84,4 +84,13 @@
     --button-padding-inline: 3em; 
     --button-border: 1px solid; 
     --button-border-radius: 8px; 
+} 
+
+.close-button { 
+    --icon-code: "\f129"; 
+    --icon-size: 3em; 
+    --icon-font-size: 2em;  
+    
+    position: absolute; z-index: 2; 
+    left: 0; top: 0; 
 }

@@ -10,13 +10,7 @@
     left: -10000px; top: -10000px; 
     transform: translateY( -100% ); 
 
-    .user-action-close-button { 
-        --icon-code: "\f129"; 
-        --icon-size: 3em; 
-        --icon-font-size: 2em;  
-        
-        position: absolute; left: 0; top: 0; 
-    }
+    
 
     .user-action {
         &-panel-main { 
