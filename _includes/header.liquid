@@ -98,33 +98,7 @@
 
     
 
-    <nav class= "main-nav"> 
-        <h3 class= "heading usability-heading header-heading">Site Navigation</h3> 
-
-        <ul class= "main-nav-list">
-        {% for e in site.data.main_nav.entry_list %} 
-            <li class= "main-nav-entry{% if e.subnavigation %} has-subnav{% endif %}{% if e.text == 'Home' %} current-entry{% endif %}"> 
-                <a 
-                    href= "{{ e.target }}" 
-                    class= "link main-nav-link" 
-                >
-                    {{ e.text }} 
-                </a> 
-
-                {% if e.subnavigation %} 
-                    {% include {{ e.subnavigation.templ }} 
-                        data = e.subnavigation.data 
-                        block_link_count = 5 
-                    %} 
-                {% endif %}
-            </li>
-        {% endfor %}
-        </ul> 
-
-        <!-- <a class= "link main-nav-link" href= "#"> 
-            Lighten Up Now 
-        </a>  -->
-    </nav> 
+    {% include main-nav.liquid %} 
 
     <div class= "social-links">
         <h3 class= "heading header-heading social-links-heading">Join Us</h3>

@@ -4,74 +4,21 @@ entry_list:
     target: "/" 
 
     subnavigation: 
-      templ: "subnav-block.liquid"
-      data: 
-        - 
-          heading: "Priorities" 
-          image: "" 
-          entry_list: 
-            - 
-              text: "Ethical Stealing" 
-              target: "/" 
-
-            - 
-              text: "Ichtiman Independence" 
-              target: "/" 
-
-            - 
-              text: "Competent Experts" 
-              target: "/" 
-
-            - 
-              text: "Ecopathways" 
-              target: "/" 
+      templ: "entry-list-priorities.liquid" 
 
   - 
-    text: "Team"
+    text: "Candidates" 
     target: "/" 
 
     subnavigation: 
-      templ: "subnav-block.liquid"
-      data: 
-        - 
-          heading: "Team" 
-          image: "" 
-          entry_list: 
-            - 
-              text: "Boyko Stoynov" 
-              target: "/" 
-              
-            - 
-              text: "Plamena Stoyanova" 
-              target: "/" 
-
-            - 
-              text: "Stanislav Stoyanov" 
-              target: "/" 
+      templ: "entry-list-team.liquid" 
 
 
   - 
     text: "Discussions"
     target: "/" 
 
-    subnavigation: 
-      templ: "subnav-block.liquid"
-      data: 
-        - 
-          heading: "Discussions" 
-          image: "" 
-          entry_list: 
-            - 
-              text: "Why Is Important To Not Wait And Act" 
-              target: "/" 
-
-            - 
-              text: "Who Is Responsible For The World We Are Living In" 
-              target: "/" 
-
-            - 
-              text: "What A Good Mayor Looks Like" 
-              target: "/" 
+    
           
   - 
     text: "FAQ" 

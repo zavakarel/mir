@@ -1,0 +1,37 @@
+{% include heading.liquid 
+    level = 3 
+    text = "Our Candidates" 
+%} 
+<ul class= "entry-list team-member-list">
+{% for entry in site.data.team.entry_list %} 
+    <li class= "entry team-member"> 
+        <div class= "image-holder"> 
+            {% include image.liquid 
+                src = entry.photo 
+            %} 
+        </div> 
+
+        <div class= "text-content">
+            {% include heading.liquid 
+                level = 4
+                text = entry.name 
+            %} 
+
+            <div class= "details">
+                <p class= "position">
+                    <span class= "value">{{ entry.position }}</span>
+                    <span class= "text">Candidate</span>
+                </p> 
+        
+                <p class= "region">
+                    <span class= "value">{{ entry.region }}</span> 
+                    <span class= "text"></span> 
+                </p> 
+            </div> 
+
+            <a class= "link read-more-button" href= "#">Explore</a> 
+
+        </div> 
+    </li> 
+{% endfor %} 
+</ul> 
