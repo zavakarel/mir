@@ -18,19 +18,20 @@
             %} 
 
             <div class= "details">
-                <p class= "position">
+                <p class= "position"> 
+                    <span class= "text">Candidate</span> 
                     <span class= "value">{{ entry.position }}</span>
-                    <span class= "text">Candidate</span>
+                    
                 </p> 
         
-                <p class= "region">
+                <p class= "region"> 
+                    <span class= "text">For</span> 
                     <span class= "value">{{ entry.region }}</span> 
-                    <span class= "text"></span> 
+                     
                 </p> 
             </div> 
 
-            <a class= "link read-more-button" href= "#">Explore</a> 
-
+            <a class= "link read-more-button" href= "#candidate-article-id-{{ entry.id }}">Explore</a> 
         </div> 
     </li> 
 {% endfor %} 
