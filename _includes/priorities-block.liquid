@@ -1,12 +1,33 @@
-<div class= "priorities-block">
-    {% include heading.liquid 
-        level = include.level 
-        text = include.data.heading 
-    %} 
+{% assign priority = include.data %}
+{% assign entry_id = "priority-entry-id-" | append: priority.id %}
 
-    {% include text.liquid 
-        text = include.data.text 
-    %}  
+<div class= "priority-entry" id= "priority-entry-id-{{ priority.id }}">
+    <div class= "priorities-block">
+        {% include heading.liquid 
+            level = include.level 
+            text = include.data.heading 
+        %} 
+        
+        {% if include.data.text  %} 
+            {% assign text = include.data.text  %} 
+        {% else %}
+            {% assign text = include.data.body[ 0 ].text[ 0 ]  %} 
+        {% endif %}
 
-    <a class= "link read-more-button" href= "#">Explore</a> 
+        {% include text.liquid 
+            text = text 
+        %}  
+
+        <a class= "link read-more-button" href= "#priority-article-id-{{ priority.id }}">Explore</a> 
+    </div> 
+
+    <div class= "article-holder" id= "priority-article-id-{{ priority.id }}"> 
+        {% include article.liquid 
+            namespace = "priority" 
+            entry_id = priority.id 
+            heading = priority.heading 
+            image = priority.image 
+            body = priority.body 
+        %}  
+    </div> 
 </div>

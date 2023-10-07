@@ -1,0 +1,18 @@
+<div class= "priorities-block">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.heading 
+    %} 
+    
+    {% if include.data.text  %} 
+        {% assign text = include.data.text  %} 
+    {% else %}
+        {% assign text = include.data.body[ 0 ].text[ 0 ]  %} 
+    {% endif %}
+
+    {% include text.liquid 
+        text = text 
+    %}  
+
+    <a class= "link read-more-button" href= "#priority-id-{{ include.data.id }}">Explore</a> 
+</div> 

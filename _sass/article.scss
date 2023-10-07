@@ -1,11 +1,14 @@
-.candidate { 
+.article { 
+    --date-padding: 0 8rem; 
+
     box-sizing: border-box;  
-    position: relative; 
     margin-inline: auto; 
     padding-left: 8em; padding-right: 2.5em;
     padding-bottom: 8em; 
-    width: 50%; 
-    border: 1px solid; 
+    width: 100%; 
+    
+    //background-color: rgba( var( --color-grayscale-light-rgb ), 0.9 ); 
+    text-align: left; 
 
     // > * { 
     //     padding-left: 8em; padding-right: 2.5em; 
@@ -21,14 +24,48 @@
         left: auto; right: 0; top: 0; 
         padding: 0; 
     } 
+
+    &-holder { 
+        box-sizing: border-box; 
+        position: fixed; z-index: 10; 
+        left: -10000px; top: -10000px; 
+        //padding-block: 8rem; 
+        overflow-y: auto; 
+        background-color: rgba( var( --color-grayscale-light-rgb ), 0.9 ); 
+        //border: 1px solid; //border-radius: 12px; 
+        box-shadow: 0 0 15px rgba( var( --color-grayscale-dark-rgb ), 0.8 ); 
+        
+        transform: translateY( 50px ); 
+        opacity: 0; 
+    
+        &:target { 
+            inset: 10% 25%; 
+            transform: translateY( 0 ); 
+            opacity: 1; 
+            transition: opacity 0.2s, transform 0.3s; 
+            
+        }
+    } 
+
+    .date { 
+        border: none; 
+    } 
 } 
 
-.candidate-header {
+.article { 
+    .close-button, 
+    &-header {
+        color: rgba( var( --color-grayscale-light-rgb ), 0.9 ); 
+    }
+}
+
+.article-header {
     position: relative; 
     margin-left: -8em; margin-right: -2.5em; 
     //padding-left: 8rem; padding-right: 2.5em; 
     padding-top: 15rem; padding-bottom: 2em; 
     //background-color: #888; 
+    
 
     .image-holder { 
         position: absolute; z-index: -1; 
@@ -47,11 +84,10 @@
     //     background-color: rgba( var( --color-grayscale-dark-rgb ), 0.3 ); color: rgba( var( --color-grayscale-light-rgb ), 0.5 ); 
     // }
 
-    .heading, 
-    .details { 
+    > :not( .image-holder ) { 
         padding-left: 8rem; 
         //width: fit-content; 
-        background-color: rgba( var( --color-grayscale-dark-rgb ), 0.1 ); color: rgba( var( --color-grayscale-light-rgb ), 0.7 ); 
+        background-color: rgba( var( --color-grayscale-dark-rgb ), 0.1 ); 
     } 
 
     .heading { 
@@ -66,14 +102,14 @@
         font-family: var( --font-family-2 ); 
     }
     
-}
+} 
 
-.candidate-body { 
+.article-body { 
     margin-top: 5em; 
     
 } 
 
-.candidate-footer {
+.article-footer {
     margin-top: 3em; 
     //padding-top: 1em; 
     //width: fit-content; 
@@ -124,4 +160,5 @@
         --icon-code: "\f474"; 
         --icon-font-size: 1.3em; 
     } 
-}
+} 
+

@@ -1,0 +1,20 @@
+{% assign news_article = include.news_article %} 
+
+{% capture header_complementary %} 
+    {% assign article_date = news_article.date | date: "%b %d %Y" | split: " " %} 
+
+    <div class= "date news-date">
+        <span class= "month news-month">{{ article_date[ 0 ] }}</span> 
+        <span class= "day news-day">{{ article_date[ 1 ] }}</span> 
+        <span class= "year news-year">{{ article_date[ 2 ] }}</span> 
+    </div>
+{% endcapture %} 
+
+{% include article.liquid 
+    namespace = "news_article" 
+    entry_id = news_article.id 
+    heading = news_article.heading
+    image = news_article.image 
+    header_complementary = header_complementary 
+    body = news_article.body 
+%} 

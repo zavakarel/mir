@@ -1,0 +1,10 @@
+{% assign priority = include.priority %} 
+{% assign id = "priority-id-" | append: priority.id %} 
+
+{% include article.liquid 
+    namespace = "priority" 
+    id = id 
+    heading = priority.heading
+    image = priority.image 
+    body = priority.body 
+%}  

@@ -31,7 +31,7 @@ layout: default
     heading = site.data.team.heading 
     text = site.data.team.text 
     entry_list = site.data.team.entry_list 
-    entry_template = "representative.liquid" 
+    entry_template = "candidate-block.liquid" 
 %} 
 </div> 
 
@@ -94,5 +94,4 @@ layout: default
     <p class= "form-note">Or just write to <strong>za-vakarel@gmail.com</strong></p> 
 </div> 
 
-{% assign member = site.data.team.entry_list[ 0 ] %}
-{% include candidate.liquid data = member %} 
+

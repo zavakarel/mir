@@ -1,0 +1,9 @@
+{% assign question_entry = include.question %} 
+
+{% include article.liquid 
+    namespace = "question" 
+    entry_id = question_entry.id 
+    heading = question_entry.title 
+    image = question_entry.image 
+    body = question_entry.body 
+%} 

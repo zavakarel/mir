@@ -6,13 +6,14 @@ text:
 
 entry_list: 
   - 
+    id: 1 
     name: "Milena Chomakova" 
     position: "Mayor" 
     region: "Ichtiman"
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
-    info: 
+    body: 
       - 
         heading: "Culpa cum fugiat repudiandae consectetur" 
         text: 
@@ -37,13 +38,14 @@ entry_list:
       email: podkrepete@za-vakarel.com 
 
   - 
+    id: 2 
     name: "Bore Stoynov" 
     position: "Mayor" 
     region: "Vakarel" 
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
-    info: 
+    body: 
       - 
         heading: "Culpa cum fugiat repudiandae consectetur" 
         text: 
@@ -67,13 +69,14 @@ entry_list:
       email: podkrepete@za-vakarel.com 
 
   - 
+    id: 3 
     name: "Mite Stoynov" 
     position: "Municipal Counselor" 
     region: "Ichtiman" 
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
-    info: 
+    body: 
       - 
         heading: "Culpa cum fugiat repudiandae consectetur" 
         text: 
@@ -97,13 +100,14 @@ entry_list:
       email: podkrepete@za-vakarel.com 
 
   - 
+    id: 4 
     name: "Radka Vasileva" 
     position: "Municipal Counselor" 
     region: "Ichtiman"
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
-    info: 
+    body: 
       - 
         heading: "Culpa cum fugiat repudiandae consectetur" 
         text: 

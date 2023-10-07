@@ -1,1 +1,5 @@
-<img class= "image" src= "{% if jekyll.environment == "production" %}{{ "/biogame-demo" }}{% endif %}/assets/images/{{ include.src }}" alt= "{{ include.alt }}" />  
+<img 
+    class= "image {{ include.namespace }}-image" 
+    src= "{% if jekyll.environment == "production" %}{{ "/biogame-demo" }}{% endif %}/assets/images/{{ include.src }}" 
+    alt= "{{ include.alt }}" 
+/>  

@@ -1,0 +1,34 @@
+{% assign candidate = include.data %}
+
+<div class= "candidate-entry" id= "candidate-entry-id-{{ candidate.id }}"> 
+    <div class= "candidate-block">
+        {% include image.liquid 
+            namespace = "candidate" 
+            src = include.data.photo 
+        %} 
+
+        <div class= "text-content">
+            {% include heading.liquid 
+                level = include.level 
+                text = include.data.name 
+            %} 
+
+            {% include candidate-details.liquid 
+                position = include.data.position 
+                region = include.data.region
+            %}
+
+            <!-- {% include text.liquid 
+                text = include.data.text 
+            %}  --> 
+
+            <a class= "link read-more-button" href= "#candidate-article-id-{{ candidate.id }}">Read More</a> 
+        </div> 
+    </div> 
+
+    <div class= "article-holder" id= "candidate-article-id-{{ candidate.id }}"> 
+        {% include candidate.liquid 
+            candidate = include.data 
+        %}  
+    </div>
+</div>

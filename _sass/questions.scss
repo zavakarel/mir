@@ -25,27 +25,27 @@
         border-color: transparent; 
     } 
 
-    .question-body {
-        margin-top: var( --question-body-distance-y ); 
-        opacity: 0; 
-    } 
+    // .question-body {
+    //     margin-top: var( --question-body-distance-y ); 
+    //     opacity: 0; 
+    // } 
 
-    :target { 
-        & { 
-            margin-block: var( --question-distance-y ); 
-            padding-block: var( --question-body-padding-y ); 
-            border-color: unset;   
-            transition: border-color 0.4s 0.2s; 
-        } 
+    // :target { 
+    //     & { 
+    //         margin-block: var( --question-distance-y ); 
+    //         padding-block: var( --question-body-padding-y ); 
+    //         border-color: unset;   
+    //         transition: border-color 0.4s 0.2s; 
+    //     } 
 
-        .question-open-button {
-            display: none; 
-        } 
+    //     .question-open-button {
+    //         display: none; 
+    //     } 
 
-        .question-body {    
-            position: initial; 
-            opacity: 1; 
-            transition: opacity 0.4s 0.3s;  
-        }
-    }
+    //     .question-body {    
+    //         position: initial; 
+    //         opacity: 1; 
+    //         transition: opacity 0.4s 0.3s;  
+    //     }
+    // } 
 } 

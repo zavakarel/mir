@@ -49,7 +49,9 @@
 
                 .read-more-button {
                     --button-margin-inline: var( --read-more-button-position-correction ) auto; 
-                }
+                } 
+
+                
             } 
 
             &:nth-child( 2n ) { 
@@ -58,7 +60,11 @@
 
                 .read-more-button {
                     --button-margin-inline: auto var( --read-more-button-position-correction ); 
-                }
+                } 
+
+                .article {
+                    left: auto; right: 0; 
+                } 
             } 
 
             &::after { 

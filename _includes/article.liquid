@@ -1,0 +1,41 @@
+<article class= "article {{ include.namespace }}-article"> 
+    <a class= "button close-button article-close-button {{ include.namespace }}-close-button" href= "#{{ include.namespace }}-entry" > 
+        <span class= "button-text">Close</span>
+    </a> 
+
+    <header class= "article-header {{ include.namespace }}-header"> 
+        <div class= "image-holder article-image-holder">
+            {% include image.liquid 
+                namespace = "article-header"
+                src = include.image 
+            %} 
+        </div>
+
+        {% include heading.liquid 
+            level = 4 
+            text = include.heading 
+        %} 
+
+        {{ include.header_complementary }} 
+    </header> 
+
+    <div class= "article-body {{ include.namespace }}-body">
+        {% for section in include.body %} 
+            {% include heading.liquid 
+                level = 5 
+                text = section.heading 
+            %} 
+
+            {% for p in section.text %} 
+                <p class= "paragraph article-paragraph {{ include.namespace }}-paragraph">{{ p }}</p>
+            {% endfor %}
+            
+        {% endfor %}
+    </div> 
+
+    {% if include.footer %}
+        <footer class= "article-footer {{ include.namespace }}-footer">  
+            {{ include.footer }}
+        </footer> 
+    {% endif %}
+</article> 

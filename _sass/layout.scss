@@ -4,6 +4,11 @@
     --content-indent-x: 1.25rem; 
 } 
 
+html, 
+body {
+    scroll-behavior: smooth; 
+}
+
 body { 
     max-width: var( --page-max-width ); margin-inline: auto; 
 } 
@@ -36,6 +41,7 @@ body > :where( :nth-child( n + 3 ) ) {
     > * {  
         width: var( --column-width );  
         margin-left: var( --column-gap-x ); margin-top: var( --column-gap-y ); 
+        position: relative; 
     } 
 
     // > .entry:nth-child( -n + 4 ) { 
