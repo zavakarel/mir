@@ -21,7 +21,7 @@
         <a class= "link read-more-button" href= "#priority-article-id-{{ priority.id }}">Explore</a> 
     </div> 
 
-    <div class= "article-holder" id= "priority-article-id-{{ priority.id }}"> 
+    <div class= "article-holder" id= "priority-article-id-{{ priority.id }}" style= "--entry-id: '{{ priority.id }}';"> 
         {% include article.liquid 
             namespace = "priority" 
             entry_id = priority.id 
