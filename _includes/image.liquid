@@ -1,5 +1,5 @@
 <img 
     class= "image {{ include.namespace }}-image" 
-    src= "{% if jekyll.environment == "production" %}{{ "/biogame-demo" }}{% endif %}/assets/images/{{ include.src }}" 
+    src= "{% if jekyll.environment == "production" %}{{ site.repo_name }}{% endif %}/assets/images/{{ include.src }}" 
     alt= "{{ include.alt }}" 
 />  

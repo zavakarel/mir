@@ -21,6 +21,7 @@
 title: For Vakarel 
 description: >- # this means to ignore newlines until "baseurl:"
   MIR local elections website 
+repo_name: "/mir" 
 baseurl: "" # the subpath of your site, e.g. /blog 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com 
 
