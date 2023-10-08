@@ -1,6 +1,7 @@
 - 
   subheading: "Stand Up And Dare To" 
   heading: "Take Back Vakarel" 
+  image: "Protest.png" 
   actions: 
     write: 
       key: "write" 

@@ -1,7 +1,7 @@
 .company-features { 
     --entry-padding-y-top: 12rem; 
     --entry-padding-y-bottom: var( --entry-padding-y-top ); 
-    --entry-image-width: 50%; 
+    --entry-image-width: 100%; 
     --entry-image-distance-x: 0; 
     --entry-image-distance-y: 0; 
      
@@ -14,7 +14,7 @@
     & { 
         //margin-top: 4rem; 
         position: relative; 
-        margin-inline: 2em; //border: solid transparent; border-width: 0 1.25rem; 
+        //margin-inline: 2em; //border: solid transparent; border-width: 0 1.25rem; 
         //border-style: solid; border-width: 1px; border-color: inherit; 
         border-radius: 10px; 
     } 
@@ -40,14 +40,17 @@
     } 
 
     &-entry .image {
-        position: absolute; right: var( --entry-image-distance-x ); top: var( --entry-image-distance-y ); 
+        position: absolute; 
+        left: var( --entry-image-distance-x ); right: var( --entry-image-distance-x ); top: var( --entry-image-distance-y ); 
         width: var( --entry-image-width ); height: 100%; 
-        object-fit: contain; object-position: bottom; 
+        object-fit: cover; object-position: bottom; 
+        opacity: 0.2; 
     }
 
     .text-content {  
 
         box-sizing: border-box; 
+        position: relative; z-index: 2; 
         margin-left: 0; 
         padding: { 
             top: var( --entry-padding-y-top ); bottom: var( --entry-padding-y-bottom ); 
