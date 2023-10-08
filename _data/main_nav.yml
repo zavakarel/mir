@@ -1,29 +1,27 @@
 entry_list: 
   - 
     text: "Priorities"
-    target: "/" 
+    target: "#priorities-section" 
 
     subnavigation: 
       templ: "entry-list-priorities.liquid" 
 
   - 
     text: "Candidates" 
-    target: "/" 
+    target: "#candidates-section" 
 
     subnavigation: 
       templ: "entry-list-team.liquid" 
 
 
   - 
-    text: "Discussions"
-    target: "/" 
+    text: "News"
+    target: "#news-section" 
 
-    
-          
   - 
-    text: "FAQ" 
-    target: "/" 
+    text: "Questions" 
+    target: "#questions-section" 
 
   - 
     text: "Contacts" 
-    target: "/" 
+    target: "#contacts-section" 
