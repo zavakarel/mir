@@ -1,5 +1,7 @@
 .form-panel { 
     //font-weight: var( --font-weight-regular ); 
+    padding-left: 50%; 
+    text-align: center; 
 
     &::after { 
         display: flex; justify-content: center; align-items: center;  
@@ -36,19 +38,19 @@
     } 
 
     .user-action-close-button { 
-        transition-delay: 0.2s; 
+        transition-delay: 0.35s; 
     } 
 
     &::after { 
-        transition-delay: 0.2s; 
+        transition-delay: 0.3s; 
     } 
 
     .user-action-panel-main { 
-        transition-delay: 0.25s; 
+        transition-delay: 0.2s; 
     } 
 
     .user-action-panel-heading { 
-        transition-delay: 0.3s; 
+        transition-delay: 0.4s; 
     } 
 
 } 

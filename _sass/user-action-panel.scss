@@ -4,7 +4,7 @@
     position: fixed; z-index: 3; 
     padding-left: 50%; 
     background-color: rgba( var( --color-grayscale-light-rgb ), 0.975 ); color: rgba( var( --color-grayscale-dark-rgb ), 0.8 );  
-    text-align: center; 
+    //text-align: center; 
     overflow: hidden; 
 
     left: -10000px; top: -10000px; 
@@ -18,8 +18,9 @@
             align-items: center; 
         }
 
-        &-heading {
+        &-panel-heading {
             margin-top: 0; 
+            font-weight: var( --font-weight-light ); 
         }
     } 
 

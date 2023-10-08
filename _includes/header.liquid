@@ -8,21 +8,24 @@
             </p> 
 
             <div class= "user-action select-action select-phone contact phone">
-                <a class= "button contacts-button header-contacts-button contacts-button-phone" href= "#phone-select-panel">
-                    Give Us <strong>A Call </strong> 
+                <a class= "button contacts-button header-contacts-button contacts-button-phone" href= "#contact-panel">
+                    Contact <strong>Our Candidates </strong> 
                 </a> 
 
-                <div class= "user-action-panel select-action-panel" id= "phone-select-panel"> 
-                    <a class= "button close-button user-action-button user-action-close-button" href= "#" >
+                <div class= "user-action-panel contact-panel" id= "contact-panel"> 
+                    <a class= "button close-button user-action-button user-action-close-button" href= "#contact" >
                         <span class= "button-text">Close</span> 
                     </a> 
 
                     <div class= "user-action-panel-main"> 
-                        <h3 class= "heading user-action-panel-heading">Call Us</h3> 
+                        <h3 class= "heading user-action-panel-heading">Contact <strong>Our Candidates </strong></h3> 
 
-                        {% include select-button-list.liquid 
-                            namespace = "phone" 
-                            button_list = site.data.phone_select_list 
+                        {% include entry-list.liquid 
+                            level = 4
+                            namespace = "team-member" 
+                            heading = ""  
+                            entry_list = site.data.team.entry_list 
+                            entry_template = "candidate-contact-block.liquid" 
                         %} 
                     </div> 
                 </div>
@@ -30,16 +33,16 @@
 
             <div class= "user-action form-action send-message contact email"> 
                 <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#send-message-panel"> 
-                    Write <strong>A Message </strong> 
+                    Write Us <strong>A Message </strong> 
                 </a> 
 
                 <div class= "user-action-panel form-panel send-message-panel" id= "send-message-panel"> 
-                    <a class= "button close-button user-action-button user-action-close-button" href= "#" >
+                    <a class= "button close-button user-action-button user-action-close-button" href= "#send-message" >
                         <span class= "button-text">Close</span>
                     </a> 
 
                     <div class= "user-action-panel-main"> 
-                        <h3 class= "heading user-action-panel-heading">Write A Message</h3> 
+                        <h3 class= "heading user-action-panel-heading">Write Us <strong>A Message </strong> </h3> 
                         
                         <form class= "form user-action-form send-message-form" action= "" method= "post">
                             <div class= "form-field sender-name-field">
@@ -60,7 +63,7 @@
                             <button class= "form-button send-message-button" type= "submit">Send Message</button> 
                         </form> 
 
-                        <p class= "form-note">Or just write to <strong>order@biogame.biz</strong></p> 
+                        <p class= "form-note">Or just write to <strong>podkrepete@za-vakarel.com</strong></p> 
                     </div> 
                 </div>
             </div>

@@ -13,7 +13,7 @@ layout: default
 %} 
 </div> 
 
-<div class= "section priorities">
+<div class= "section priorities" id= "priorities-section">
 {% include entry-list.liquid 
     level = 2 
     namespace = "priorities" 
@@ -24,7 +24,7 @@ layout: default
 %} 
 </div> 
 
-<div class= "section team">
+<div class= "section team" id= "candidates-section">
 {% include entry-list.liquid 
     level = 2 
     namespace = "team" 
@@ -35,7 +35,7 @@ layout: default
 %} 
 </div> 
 
-<div class= "section news"> 
+<div class= "section news" id= "news-section"> 
 {% include entry-list.liquid 
     level = 2 
     namespace = "news" 
@@ -59,7 +59,7 @@ layout: default
 </div> 
 {%- endcomment -%} 
 
-<div class= "section questions"> 
+<div class= "section questions" id= "questions-section"> 
 {% include entry-list.liquid 
     level = 2 
     namespace = "questions"
@@ -69,7 +69,7 @@ layout: default
 %} 
 </div> 
 
-<div class= "section send-message"> 
+<div class= "section send-message" id= "contacts-section"> 
     <h2 class= "heading user-action-panel-heading">Say What You Think</h2> 
     
     <form class= "form user-action-form send-message-form" action= "" method= "post">

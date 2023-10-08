@@ -105,7 +105,35 @@
                 font-weight: var( --font-weight-semi-bold ); 
             }
 
-        }
+        } 
+
+        .contact-panel { 
+            justify-content: center; 
+            padding-left: unset; 
+
+            .user-action-panel-main { 
+                font-size: 1.3em; 
+            }
+
+            .candidate-contacts { 
+                .contact { 
+                    --icon-size: 1.8rem; 
+                    
+                    --icon-block: 0; 
+                    --icon-inline: 0 0.2rem; 
+                    --icon-border: none; 
+
+                    // &-value { 
+                    //     display: block; 
+                    // } 
+
+                    &-email { 
+                        --icon-font-size: 1.5em; 
+                    } 
+                } 
+            } 
+                    
+        } 
     } 
  
     .user-actions { 

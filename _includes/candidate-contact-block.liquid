@@ -1,0 +1,28 @@
+{% include image.liquid 
+    namespace = "candidate" 
+    src = include.data.photo 
+%} 
+
+<div class= "text-content">
+    {% include heading.liquid 
+        level = include.level 
+        text = include.data.name 
+    %} 
+
+    {% include candidate-details.liquid 
+        position = include.data.position 
+        region = include.data.region
+    %}
+
+    <div class= "candidate-contacts"> 
+    {% for contact in include.data.contacts %} 
+        {% assign key = contact[ 0 ] %} 
+        {% assign value = contact[ 1 ] %} 
+
+        {% include contact.liquid 
+            key = key 
+            value = value 
+        %} 
+    {% endfor %} 
+    </div> 
+</div> 
