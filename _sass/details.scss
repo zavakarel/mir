@@ -1,0 +1,16 @@
+.details {
+    font-family: var( --font-family-2 ); 
+    text-transform: uppercase; 
+
+    .text {
+        font-size: 0.75em; 
+        font-weight: var( --font-weight-light ); 
+    } 
+
+    .value { 
+        display: block; 
+        padding-block: var( --value-padding-y ); 
+        font-size: var( --value-font-size ); 
+        font-weight: var( --font-weight-semi-bold ); 
+    } 
+} 
