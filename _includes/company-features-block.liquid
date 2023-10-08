@@ -19,12 +19,13 @@
         {% include button.liquid 
             value = include.data.actions.write.value 
             namespace = "company-features-action" 
+            target = "#send-message-panel"
         %} 
         
         {% include button.liquid 
             value = include.data.actions.call.value 
-            text = include.data.actions.call.text 
             namespace = "company-features-action" 
+            target = "#contact-panel" 
         %} 
     </div>
 </div> 

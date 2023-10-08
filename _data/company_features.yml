@@ -4,11 +4,11 @@
   actions: 
     write: 
       key: "write" 
-      value: "Lighten Up Now" 
+      value: "Write Us" 
       target: "" 
 
     call: 
       key: "call" 
-      value: "0888 123 456" 
-      text: "Talk With Us" 
+      value: "Talk With Us" 
+      text: "" 
       target: "" 

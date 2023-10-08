@@ -77,23 +77,41 @@
 
         .button-value {
             display: flex; align-items: center; 
-        }
+        } 
 
-        > :nth-child( 2 ) { 
+        > * {
             --button-margin-inline: 0; 
-            --button-border: none; 
+            --button-padding-block: 1em; 
             --button-padding-inline: 2em; 
 
-            --icon-code: "\f4b9"; 
+            --icon-code: "\f2c3"; 
             --icon-font-size: 1.2em; 
             --icon-inline: 0 0.5em; 
 
-            flex-direction: column; 
-            align-items: flex-start; 
+            min-width: 10rem; 
+        } 
 
-            .button-value {
-                font-weight: var( --font-weight-semi-bold ); 
-            }
+        > * + * {
+            margin-left: 0.5em; 
+        }
+
+        > :nth-child( 1 ) { 
+            --icon-code: "\f2c3"; 
+            --icon-font-size: 1.1em; 
+            --icon-inline: 0 0.7em; 
+
+        } 
+
+
+        > :nth-child( 2 ) { 
+            --icon-code: "\f4b9"; 
+            --icon-code: "\f4b8"; 
+            --icon-font-size: 1.4em; 
+            --icon-inline: 0 0.5em; 
+
+            // .button-value {
+            //     font-weight: var( --font-weight-semi-bold ); 
+            // }
             
         } 
     }
