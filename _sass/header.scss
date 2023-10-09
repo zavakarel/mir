@@ -8,7 +8,7 @@
     & { 
         display: flex; flex-wrap: wrap; 
         justify-content: center; 
-        position: relative; 
+        position: relative; position: absolute; z-index: 3; 
         text-transform: uppercase; 
         font-family: var( --font-family-2 ); 
         font-size: 0.8em; 
@@ -41,27 +41,34 @@
     .header-pane {  
         --header-pane-background-color-opacity: 0.8; 
         --header-pane-color-opacity: 0.8; 
-        --header-pane-background-color: rgba( var( --color-grayscale-dark-rgb ), var( --header-pane-background-color-opacity ) ); 
-        --header-pane-color: rgba( var( --color-grayscale-light-rgb ), var( --header-pane-color-opacity ) );
+        --header-pane-background-color: rgba( var( --color-3-rgb ), var( --header-pane-background-color-opacity ) ); 
+        --header-pane-color: rgba( var( --color-grayscale-light-rgb ), var( --header-pane-color-opacity ) ); 
         --icon-font-size: 1.3em; 
 
+        justify-content: center; 
         position: relative; 
         // padding-block: 0.5em; 
         padding-inline: 1.25rem; 
         width: 100%; 
-        background-color: var( --header-pane-background-color ); color: var( --header-pane-color );  
+        background-color: var( --header-pane-background-color ); color: var( --header-pane-color ); 
+        //border: 1px solid rgba( var( --color-3-rgb ), 0.2 ); 
         
 
-        .button:not( .user-action-panel-button ) { 
-            padding-block: 1.8em; padding-inline: 1em; 
-            color: inherit; 
-        } 
+        // .button:not( .user-action-panel-button ) { 
+        //     padding-block: 1.8em; padding-inline: 1em; 
+        //     color: inherit; 
+        // } 
 
-        font-size: 0.85em; 
+        font-size: 0.9em; 
     } 
 
     .contacts { 
+        //margin-block: 2em; 
+        margin-left: auto; 
         align-items: center;  
+        // padding: 1.8em; 
+        // border: 1px solid; border-radius: 8px; 
+        //background-color: var( --header-pane-background-color ); color: var( --header-pane-color ); 
 
         > * + * {
             margin-left: 1.5em; 
@@ -78,16 +85,23 @@
         } 
 
         .contacts-button { 
+            --button-padding-block: 2em; 
+            // --icon-size: 2.5rem; 
+            // --icon-font-size: 1.4em;
+            // --icon-border: 1px solid; 
+            // --icon-border-radius: 50%; 
+
             strong { 
                 margin-left: 0.4em; 
                  
-            }
+            } 
+
         }
 
         .contacts-button-phone {
             --icon-code: "\f4b8"; 
             --icon-font-size: 1.7em; 
-
+ 
             //font-size: 1.1em; 
         } 
 
@@ -99,6 +113,8 @@
         .working-hours { 
             --icon-code: "\f3b3"; 
             --icon-font-size: 1.3em; 
+
+            //margin-right: auto;
 
             .hours { 
                 margin-left: 0.4em; 
@@ -175,9 +191,14 @@
 
     .id { 
         justify-content: center; 
-        padding-block: 3em; 
-        width: 100%; 
+        padding-block: 2em; 
+        //width: 100%; 
+        //border: solid; border-width: 1px 0; border-color: rgba( var( --color-3-rgb ), 0.2 ); 
     } 
+
+    .main-nav {
+        margin-left: 8em; 
+    }
 
     .main-nav, 
     .social-links {

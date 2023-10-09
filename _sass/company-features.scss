@@ -1,6 +1,6 @@
 .company-features { 
-    --entry-padding-y-top: 12rem; 
-    --entry-padding-y-bottom: var( --entry-padding-y-top ); 
+    --entry-padding-y-top: 20rem; 
+    --entry-padding-y-bottom: 18rem; 
     --entry-image-width: 100%; 
     --entry-image-distance-x: 0; 
     --entry-image-distance-y: 0; 
@@ -15,7 +15,7 @@
         //margin-top: 4rem; 
         position: relative; 
         //margin-inline: 2em; //border: solid transparent; border-width: 0 1.25rem; 
-        //border-style: solid; border-width: 1px; border-color: inherit; 
+        // border-style: solid; border-width: 1px; border-color: inherit; 
         border-radius: 10px; 
     } 
 
@@ -27,24 +27,31 @@
     &-entry { 
         --entry-content-width: 100%; 
 
-        position: relative; 
+        //position: relative; 
+        position: unset; 
         // border: 2px dashed; 
 
         // &::after { 
-        //     position: absolute; right: 0; top: 40%; bottom: -10%; 
-        //     z-index: -1; 
-        //     width: 50%; 
-        //     border: 1px solid; border-radius: 20px; 
+        //     position: absolute; 
+        //     inset: 0; 
+        //     //right: 0; top: 40%; bottom: -10%; 
+        //     z-index: 1; 
+        //     //width: 50%; 
+        //     //border: 1px solid; border-radius: 20px; 
+        //     background-color: rgba( var( --color-3-rgb ), 0.2 ); 
         //     content: ""; 
         // } 
     } 
 
     &-entry .image {
         position: absolute; 
-        left: var( --entry-image-distance-x ); right: var( --entry-image-distance-x ); top: var( --entry-image-distance-y ); 
+        left: var( --entry-image-distance-x ); //right: var( --entry-image-distance-x ); 
+        top: var( --entry-image-distance-y ); 
         width: var( --entry-image-width ); height: 100%; 
         object-fit: cover; object-position: bottom; 
-        opacity: 0.2; 
+        //border-radius: 10px; 
+        opacity: 0.3; 
+        //filter: grayscale( 1 ); 
     }
 
     .text-content {  
