@@ -1,6 +1,6 @@
 .main-nav { 
     // Main navigation link 
-    --main-nav-link-padding-block: 1.8em; 
+    --main-nav-link-padding-block: 3em; 
     --main-nav-link-padding-inline: 1.4em; 
     --main-nav-link-has-subnav-text-to-icon-x: 0.4em; 
     --main-nav-link-has-subnav-icon-code: "\f3d0";  
@@ -21,9 +21,9 @@
 
     // Subnavigation 
     --subnav-width: 100%; 
-    --subnav-background-color-opacity: 0.95; 
+    --subnav-background-color-opacity: 0.9; 
     --subnav-background-color: rgba( var( --color-grayscale-light-rgb ), var( --subnav-background-color-opacity ) ); 
-    --subnav-border-width: 1px 0; 
+    --subnav-border-width: 1px; 
     --subnav-border-color-opacity: 0.5; 
     --subnav-border-color: rgba( var( --color-3-rgb ), var( --subnav-border-color-opacity ) ); 
     --subnav-padding-block: 8rem; 
@@ -74,7 +74,7 @@
     .main-nav-entry { 
         .subnav { 
             transform: translateY( 50px ); 
-            opacity: 0; 
+            opacity: 0;  
         } 
     
         //.subnav-group, 
@@ -86,7 +86,9 @@
         //&:nth-child( 2 ), 
         &:hover {  
             .subnav { 
-                left: 0; top: 99%; z-index: 3; 
+                left: 0; right: 0; 
+                top: 98%; 
+                z-index: 3; 
             } 
 
             // .subnav-group { 
@@ -149,16 +151,19 @@
         box-sizing: border-box; 
         //display: flex; justify-content: flex-start; 
         position: absolute; 
-        //left: 0; right: 0; top: 100%; 
+
+        margin-inline: 2rem; 
         
         padding-block: var( --subnav-padding-block ); 
         padding-inline: var( --subnav-padding-inline ); 
         
-        width: var( --subnav-width );  
-        background-color: var( --subnav-background-color ); 
-        border-style: solid; border-color: var( --subnav-border-color ); border-width: var( --subnav-border-width ); 
-        //border-radius: 10px; 
-        //box-shadow: 0 0 10px 1px rgba( 0, 0, 0, 0.2 ); 
+        //width: var( --subnav-width );  
+        background-color: #e7eaea; 
+        background-color: rgba( 231, 234, 234, 0.95 ); //color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+        //border-style: solid; border-color: var( --subnav-border-color ); border-width: var( --subnav-border-width ); 
+        border-radius: 10px; 
+        box-shadow: 0 0 10px 1px rgba( 0, 0, 0, 0.2 ); 
+        //box-shadow: 0 0 15px rgba( var( --color-grayscale-dark-rgb ), 0.8 ); 
 
         .entry-list { 
             margin-top: 3em; 
