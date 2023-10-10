@@ -29,6 +29,7 @@ body > :where( :nth-child( n + 3 ) ) {
 }
 
 .entry-list { 
+    --entry-list-margin-top: 4em; 
     --column-count: 1; 
     --column-gap-x: 0em; 
     --column-gap-y: var( --column-gap-x ); 
@@ -36,6 +37,7 @@ body > :where( :nth-child( n + 3 ) ) {
 
     & {
         display: flex; flex-wrap: wrap; 
+        margin-top: var( --entry-list-margin-top ); 
     }
 
     > * {  
