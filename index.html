@@ -94,4 +94,14 @@ layout: default
     <p class= "form-note">Or just write to <strong>za-vakarel@gmail.com</strong></p> 
 </div> 
 
+<div class= "section reviews" id= "reviews-section"> 
+{% include entry-list.liquid 
+    level = 2 
+    namespace = "reviews"
+    heading = site.data.reviews.heading 
+    text = site.data.reviews.text 
+    entry_list = site.data.reviews.entry_list
+    entry_template = "review.liquid" 
+%} 
+</div> 
 

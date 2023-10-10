@@ -1,0 +1,46 @@
+{% assign review = include.data %} 
+{% assign preview = review.body[ 0 ].text[ 0 ] | truncatewords: 20, '...' %} 
+{% assign heading = preview | truncatewords: 5, "" %} 
+{% assign preview = preview | remove_first: heading %} 
+
+<div class= "review">
+    <h4 class= "heading review-heading">{{ heading }}</h4> 
+
+    <p class= "paragraph review-paragraph">{{ preview }}</p> 
+
+    <article class= "person review-person"> 
+        <div class= "entry person-entry person-photo review-person-photo">
+            <span class= "key">Photo</span> 
+
+            {% include image.liquid 
+                src = review.photo 
+            %} 
+        </div> 
+
+        <div class= "text-content review-person-text-content"> 
+            <div class= "entry person-entry person-name review-person-name">
+                <span class= "key">Name</span> 
+
+                {{ review.name }}
+            </div> 
+
+            <div class= "entry person-entry person-occupation review-person-occupation">
+                <span class= "key">Occupation</span> 
+
+                {{ review.occupation }}
+            </div> 
+        </div>
+    </article> 
+
+    <a class= "link read-more-button review-link" href= "#review-id-{{ review.id }}">Read More</a> 
+</div> 
+
+<div class= "article-holder" id= "review-id-{{ review.id }}"> 
+    {% include article.liquid 
+        namespace = "review" 
+        entry_id = review.id 
+        heading = heading 
+        image = review.photo 
+        body = review.body 
+    %}  
+</div> 
