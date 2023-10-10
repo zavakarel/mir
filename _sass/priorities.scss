@@ -37,9 +37,7 @@
             } 
 
             .read-more-button { 
-                --read-more-button-position-correction: calc( -1 * var( --button-padding-inline ) ); 
-
-                --icon-size: auto; 
+                
                 --icon-inline: 0 0.75em; 
             }
     

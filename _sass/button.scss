@@ -54,11 +54,19 @@
     --button-padding-block: 0.8em; 
     --button-padding-inline: 1.8em; 
 
+    --read-more-button-position-correction: calc( -1 * var( --button-padding-inline ) ); 
+
     &:hover {
         color: rgba( var( --color-1-rgb ) ); 
     }
     
 } 
+
+.priorities-block .read-more-button, 
+.review-link {
+    --icon-size: auto; 
+    --button-margin-inline: var( --read-more-button-position-correction ) auto; 
+}
 
 .buy-product-button { 
     --button-margin-top: 2em; 
