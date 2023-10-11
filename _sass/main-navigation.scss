@@ -10,7 +10,7 @@
     --main-nav-link-current-color: rgb( var( --color-1-rgb ) ); 
 
     // Shopping cart link 
-    --shopping-cart-link-left: 3em; 
+    --shopping-cart-link-left: 5%; 
     --shopping-cart-separator-left: 1em; 
     --shopping-cart-separator-width: 1px; 
     --shopping-cart-separator-y: 20%; 
@@ -151,12 +151,9 @@
         box-sizing: border-box; 
         //display: flex; justify-content: flex-start; 
         position: absolute; 
-
         margin-inline: 2rem; 
-        
         padding-block: var( --subnav-padding-block ); 
         padding-inline: var( --subnav-padding-inline ); 
-        
         //width: var( --subnav-width );  
         background-color: #e7eaea; 
         background-color: rgba( 231, 234, 234, 0.95 ); //color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
@@ -169,13 +166,12 @@
             margin-top: 3em; 
             font-size: 1.2em; 
             text-transform: none; 
-            
             font-weight: var( --font-weight-regular ); 
 
             .heading {
                 font-weight: var( --font-weight-medium ); 
+                
             }
-           
 
             :first-child {
                 margin-top: 0; 
@@ -198,17 +194,9 @@
         }
              
         &-priorities-list {
-            --column-count: 3; 
             --column-gap-x: 1.5em; 
             --column-gap-y: 3.5em; 
 
-            > .entry:nth-child( -n + 3 ) { 
-                margin-top: 0; 
-            }
-    
-            > .entry:nth-child( 3n + 1 ) { 
-                margin-left: 0; 
-            }  
 
             counter-reset: entry-counter; 
 
@@ -228,13 +216,6 @@
             }
 
         } 
-
-        
-
-            
-            
-        
-
         
     } 
 
@@ -263,17 +244,20 @@
 } 
 
 .team-member-list { 
-    --column-count: 4; 
-    --column-gap-x: 2.5em; 
+    --column-gap-x: 2rem; 
+    --column-gap-y: 4em; 
+
+    // --column-count: 4; 
+    // --column-gap-x: 2.5em; 
     
 
-    > .entry:nth-child( -n + 4 ) { 
-        margin-top: 0; 
-    }
+    // > .entry:nth-child( -n + 4 ) { 
+    //     margin-top: 0; 
+    // }
 
-    > .entry:nth-child( 4n + 1 ) { 
-        margin-left: 0; 
-    } 
+    // > .entry:nth-child( 4n + 1 ) { 
+    //     margin-left: 0; 
+    // } 
 
     .team-member { 
         //display: flex; 
@@ -324,6 +308,7 @@
             
         } 
     } 
-}
+} 
+
 
 

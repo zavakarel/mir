@@ -6,9 +6,8 @@
         --entry-list-width: 50%; 
         --entry-margin-top: 4em; 
 
-        --column-count: 4; 
-        --column-gap-x: 1em; 
-        
+        // --column-count: 4; 
+        // --column-gap-x: 1em; 
 
         --image-width: 100%; 
         --image-height: 100%;  
@@ -29,13 +28,13 @@
             margin-inline: auto; margin-top: var( --entry-list-margin-top ); 
         } 
 
-        > .entry:nth-child( -n + 4 ) { 
-            margin-top: 0; 
-        }
+        // > .entry:nth-child( -n + 4 ) { 
+        //     margin-top: 0; 
+        // }
 
-        > .entry:nth-child( 4n + 1 ) { 
-            margin-left: 0; 
-        } 
+        // > .entry:nth-child( 4n + 1 ) { 
+        //     margin-left: 0; 
+        // } 
 
         .entry { 
             box-sizing: border-box; 
@@ -64,6 +63,8 @@
         
 
         .candidate-block { 
+            
+
             .candidate-image { 
                 display: block; 
                 position: absolute; z-index: -1; 

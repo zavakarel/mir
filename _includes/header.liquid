@@ -9,7 +9,7 @@
 
             <div class= "user-action select-action select-phone contact phone">
                 <a class= "button contacts-button header-contacts-button contacts-button-phone" href= "#contact-panel">
-                    Contact <strong>Our Candidates </strong> 
+                    <span class= "button-text">Contact <strong>Our Candidates </strong></span> 
                 </a> 
 
                 <div class= "user-action-panel contact-panel" id= "contact-panel"> 
@@ -23,7 +23,7 @@
                         {% include entry-list.liquid 
                             level = 4
                             namespace = "team-member" 
-                            heading = ""  
+                            
                             entry_list = site.data.team.entry_list 
                             entry_template = "candidate-contact-block.liquid" 
                         %} 
@@ -33,7 +33,7 @@
 
             <div class= "user-action form-action send-message contact email"> 
                 <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#send-message-panel"> 
-                    Write Us <strong>A Message </strong> 
+                    <span class= "button-text">Write Us <strong>A Message </strong></span> 
                 </a> 
 
                 <div class= "user-action-panel form-panel send-message-panel" id= "send-message-panel"> 

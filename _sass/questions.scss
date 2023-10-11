@@ -1,5 +1,5 @@
 .questions { 
-    --question-body-padding-x: 1em; 
+    --question-body-padding-x: 1.5em; 
     --question-body-padding-y: 1.2rem; 
     --question-body-distance-y: 1.2em; 
     --question-distance-y: 2em; 
@@ -64,7 +64,7 @@
     > .image-holder { 
         position: absolute; z-index: -1; 
         left: 0; right: 0; top: 0; bottom: 0; 
-        margin-inline: 2em; 
+        margin-inline: var( --content-indent-x ); 
         max-width: none; 
         //margin-inline: 2em; 
         //background-color: rgba( var( --color-3-rgb ), 0.3 ); 

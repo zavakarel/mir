@@ -1,5 +1,5 @@
 :root {
-    --page-inner-width: 70%; 
+    --page-inner-width: 1200px; 
     --page-max-width: 1920px; 
     --content-indent-x: 1.25rem; 
 } 
@@ -30,6 +30,7 @@ body > :where( :nth-child( n + 3 ) ) {
 
 .entry-list { 
     --entry-list-margin-top: 4em; 
+    //--max-width: unset; 
     --column-count: 1; 
     --column-gap-x: 0em; 
     --column-gap-y: var( --column-gap-x ); 
@@ -38,6 +39,7 @@ body > :where( :nth-child( n + 3 ) ) {
     & {
         display: flex; flex-wrap: wrap; 
         margin-top: var( --entry-list-margin-top ); 
+        
     }
 
     > * {  
@@ -174,14 +176,18 @@ body > :where( :nth-child( n + 3 ) ) {
 } 
 
 .section > * {
-    max-width: var( --page-inner-width ); margin-inline: auto; 
+    max-width: var( --max-width, var( --page-inner-width ) ); margin-inline: auto; 
+} 
+
+.entry-list {
+    max-width: var( --max-width, var( --page-inner-width ) ); 
 } 
 
 .questions-image, 
 .company-features-list, 
-.team-list, 
+//.team-list, 
 .product-groups-list, 
 .quality-list, 
 .selected-products-list {
     max-width: none; 
-}
+} 

@@ -16,16 +16,7 @@
     }
 
     &-list { 
-        --column-count: 2; 
-        --column-gap-x: 1.5em; 
-
-        > .entry:nth-child( -n + 2 ) { 
-            margin-top: 0; 
-        }
-
-        > .entry:nth-child( 2n + 1 ) { 
-            margin-left: 0; 
-        } 
+        
 
         & {
             margin-top: var( --entry-list-margin-top ); 

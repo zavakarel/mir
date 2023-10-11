@@ -1,11 +1,14 @@
 .user-action-panel { 
     display: flex; 
-    justify-content: flex-start; align-items: center; 
+    justify-content: flex-start;  
     position: fixed; z-index: 3; 
-    padding-left: 50%; 
+    padding-block: 5rem; 
+    //padding-left: 50%; 
+    padding-inline: 2rem; 
     background-color: rgba( var( --color-grayscale-light-rgb ), 0.975 ); color: rgba( var( --color-grayscale-dark-rgb ), 0.8 );  
     //text-align: center; 
-    overflow: hidden; 
+    //overflow: hidden; 
+    overflow-y: auto; 
 
     left: -10000px; top: -10000px; 
     transform: translateY( -100% ); 

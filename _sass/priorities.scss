@@ -28,7 +28,6 @@
 
         .entry { 
             counter-increment: entry-counter; 
-
             display: flex; 
 
             &::after, 
@@ -49,9 +48,9 @@
                     --button-margin-inline: var( --read-more-button-position-correction ) auto; 
                 } 
 
-                .article-holder {
-                    left: auto; right: 0; 
-                } 
+                // .article-holder {
+                //     left: auto; right: 0; 
+                // } 
             } 
 
             &:nth-child( 2n ) { 
@@ -62,9 +61,9 @@
                     --button-margin-inline: auto var( --read-more-button-position-correction ); 
                 } 
 
-                .article-holder {
-                    left: 0; right: auto; 
-                } 
+                // .article-holder {
+                //     left: 0; right: auto; 
+                // } 
             } 
 
             &::after { 

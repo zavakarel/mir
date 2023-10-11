@@ -2,10 +2,10 @@
     --date-padding: 0.5em 8rem; 
 
     box-sizing: border-box;  
-    margin-inline: 25%; 
+    margin-inline: auto; 
     padding-left: 8em; padding-right: 2.5em;
     padding-bottom: 8em; 
-    //width: 100%; 
+    max-width: 960px; 
     //border: 1px solid; 
     border-radius: 12px; 
     
@@ -37,7 +37,7 @@
         position: fixed; z-index: 10; 
         left: -10000px; top: -10000px; 
         //width: calc( 70vw * 70 / 100 ); //height: auto; 
-        padding-block: 5rem; 
+        padding-block: 5rem; padding-inline: 2rem; 
         overflow-y: auto; 
         background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
         //border: 1px solid; 
@@ -96,7 +96,7 @@
     }
 }
 
-.article-header {
+.article-header { 
     position: relative; 
     margin-left: -8em; margin-right: -2.5em; 
     //padding-left: 8rem; padding-right: 2.5em; 
