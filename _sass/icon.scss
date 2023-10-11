@@ -13,6 +13,7 @@
 
 // Where to place an icon 
 :where( 
+    .question-title, 
     .candidate-contacts .contact-value, 
     .id, 
     .header-pane .user-action-button, 
@@ -44,6 +45,7 @@
 
 
 // Where the icon is on the left side 
+.question-title, 
 .selected-products .product-feature { 
     & { 
         box-sizing: border-box; 
@@ -62,10 +64,11 @@
     } 
 } 
 
-// Where the icon is centered vertically 
-// .selected-products .product-feature { 
-//     &::before { 
-//         top: 50%; transform: translateY( -50% ); 
+//Where the icon is centered vertically 
+.question-title, 
+.selected-products .product-feature { 
+    &::before { 
+        top: 50%; transform: translateY( -50% ); 
 
-//     } 
-// }
+    } 
+} 
