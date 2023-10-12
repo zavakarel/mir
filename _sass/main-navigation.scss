@@ -47,6 +47,11 @@
 
     font-size: var( --main-nav-font-size ); 
     font-weight: var( --font-weight-medium ); 
+
+    .main-nav-open-button, 
+    .main-nav-close-button {
+        display: none; 
+    }
     
     .main-nav-list { 
         align-items: stretch; 

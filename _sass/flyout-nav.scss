@@ -1,46 +1,119 @@
-.flyout-nav { 
-    display: flex; justify-content: center; align-items: center; 
-    position: fixed; z-index: 3; 
-    inset: -10000px -10000px auto auto; 
-    margin: 0; 
-    max-width: none; 
-    background-color: rgba( var( --color-grayscale-light-rgb ), 0.9 ); 
-    //border: 1px solid; 
+.main-nav { 
+    --main-nav-link-has-subnav-icon-code: unset; 
 
-    // transform: translateY( -100% ); 
-    // opacity: 0; 
-
-    &:target {
-        inset: 0; 
-        // transform: translateY( 0 ); 
-        // opacity: 1; 
-        // transition: opacity 0.2s, transform 0.2s; 
+    .subnav {
+        display: none; 
     }
 
-    .main-nav { 
-        --main-nav-link-padding-block: 1em; 
-        --main-nav-link-padding-inline: 1.4em; 
-        --main-nav-link-has-subnav-icon-code: unset; 
+    &-panel { 
+        display: flex; justify-content: center; align-items: center; 
+        position: fixed; z-index: 3; 
+        inset: -10000px -10000px auto auto; overflow: hidden; 
+        margin: 0; 
+        max-width: none; 
+        background-color: rgba( var( --color-grayscale-light-rgb ), 0.9 ); 
+        //border: 1px solid; 
+    } 
 
-        .has-subnav .main-nav-link {
-            padding-right: var( --main-nav-link-padding-inline ); 
-        }
+    .main-nav-close-button, 
+    &-panel, 
+    &-entry { 
+        transform: translateY( -100% ); 
+        opacity: 0; 
 
     } 
 
-} 
+    &-panel:target {
+        inset: 0; 
 
-.main-nav-open-button { 
-    --icon-size: 1.4rem; 
-    --icon-code: "\f394"; 
-    --icon-font-size: 1.4rem; 
-    //--icon-border: 1px solid; 
-    --icon-left-holder-padding: 1rem; 
-    --icon-to-content-x: 0.5rem; 
+        &, 
+        & .main-nav-close-button, 
+        & .main-nav-entry { 
+            transform: translateY( 0 ); 
+            opacity: 1; 
+            transition: opacity 0.2s, transform 0.2s; 
+        } 
 
-    position: fixed; z-index: 2; 
-    right: 0; bottom: 0; 
-    padding-block: 0.5em; padding-inline: 1rem; 
-    background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
-    transform: rotateZ( 90deg ); transform-origin: right top; 
+        .main-nav-close-button {
+            transition-delay: 0.65s; 
+        } 
+
+        & {
+            transition-delay: 0s; 
+        } 
+    
+        .main-nav-entry:nth-child( 5 ) {
+            transition-delay: 0.4s; 
+        } 
+    
+        .main-nav-entry:nth-child( 4 ) {
+            transition-delay: 0.45s; 
+        } 
+    
+        .main-nav-entry:nth-child( 3 ) {
+            transition-delay: 0.5s; 
+        } 
+    
+        .main-nav-entry:nth-child( 2 ) {
+            transition-delay: 0.55s; 
+        } 
+    
+        .main-nav-entry:nth-child( 1 ) {
+            transition-delay: 0.6s; 
+        }
+    }
+
+    .main-nav-list { 
+        flex-direction: column; 
+        width: 80%; 
+
+        > * + * { 
+            //display: block; 
+            position: relative; 
+
+            &::after { 
+                display: block; 
+                position: absolute; top: 0; 
+                width: 100%; 
+                border-top: 1px solid; 
+                content: ""; 
+                opacity: 0.4; 
+            } 
+        } 
+
+        .main-nav-link { 
+            --main-nav-link-padding-block: 1.5em; 
+            --main-nav-link-padding-inline: 1.4em; 
+
+            display: block; 
+            width: 100%; 
+            
+            text-align: center; 
+        } 
+    } 
+
+    .has-subnav .main-nav-link {
+        padding-right: var( --main-nav-link-padding-inline ); 
+    } 
+
+    .main-nav-open-button, 
+    .main-nav-close-button {
+        display: block; 
+    }
+
+    .main-nav-open-button { 
+        --icon-size: 1.4rem; 
+        --icon-code: "\f394"; 
+        --icon-font-size: 1.4rem; 
+        //--icon-border: 1px solid; 
+        --icon-left-holder-padding: 1rem; 
+        --icon-to-content-x: 0.5rem; 
+
+        
+        // position: fixed; z-index: 2; 
+        // right: 0; bottom: 0; 
+        padding-block: 0.5em; padding-inline: 1rem; 
+        //background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+        //transform: rotateZ( 90deg ); transform-origin: right top; 
+    } 
 }

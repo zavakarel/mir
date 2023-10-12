@@ -1,26 +1,36 @@
 <nav class= "main-nav"> 
-    <h3 class= "heading usability-heading header-heading">Site Navigation</h3> 
+    <a class= "button main-nav-control-button main-nav-open-button" href= "#flyout-nav"> 
+        <span class= "button-text">Menu</span> 
+    </a> 
 
-    <ul class= "main-nav-list">
-    {% for e in site.data.main_nav.entry_list %} 
-        <li class= "main-nav-entry{% if e.subnavigation %} has-subnav{% endif %}{% if e.text == 'Home' %} current-entry{% endif %}"> 
-            <a 
-                href= "{{ e.target }}" 
-                class= "link main-nav-link" 
-            >
-                {{ e.text }} 
-            </a> 
+    <div class= "main-nav-panel" id= "flyout-nav"> 
+        <a class= "button close-button main-nav-control-button main-nav-close-button" href= "#flyout-nav-closed"> 
+            <span class= "button-text">Close Navigation</span> 
+        </a> 
+        
+        <h3 class= "heading usability-heading header-heading">Site Navigation</h3> 
 
-            {% if e.subnavigation %} 
-                <div class= "subnav"> 
-                    {% include {{ e.subnavigation.templ }} %} 
-                </div> 
-            {% endif %} 
-        </li>
-    {% endfor %}
-    </ul> 
+        <ul class= "main-nav-list">
+        {% for e in site.data.main_nav.entry_list %} 
+            <li class= "main-nav-entry{% if e.subnavigation %} has-subnav{% endif %}{% if e.text == 'Home' %} current-entry{% endif %}"> 
+                <a 
+                    href= "{{ e.target }}" 
+                    class= "link main-nav-link" 
+                >
+                    {{ e.text }} 
+                </a> 
+
+                {% if e.subnavigation %} 
+                    <div class= "subnav"> 
+                        {% include {{ e.subnavigation.templ }} %} 
+                    </div> 
+                {% endif %} 
+            </li>
+        {% endfor %}
+        </ul> 
+    </div> 
 
     <!-- <a class= "link main-nav-link" href= "#"> 
         Lighten Up Now 
-    </a>  -->
+    </a>  --> 
 </nav> 
