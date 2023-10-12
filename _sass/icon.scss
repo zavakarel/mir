@@ -9,10 +9,12 @@
     --icon-border-radius: 0; 
     --icon-font-family: "Ionicons"; 
     --icon-font-size: 1rem; 
+    --icon-left-holder-padding: unset; 
 } 
 
 // Where to place an icon 
 :where( 
+    .main-nav-open-button, 
     .question-title, 
     .candidate-contacts .contact-value, 
     .id, 
@@ -45,27 +47,29 @@
 
 
 // Where the icon is on the left side 
+.main-nav-open-button, 
 //.working-hours, 
 .question-title, 
 .selected-products .product-feature { 
     & { 
         box-sizing: border-box; 
         position: relative; 
-        padding-left: var( --icon-size ); 
+        //padding-left: var( --icon-left-holder-padding ); 
         text-align: left; 
 
         > * {
-            margin-left: var( --icon-to-content-x ); 
+            margin-left: calc( var( --icon-size ) + var( --icon-to-content-x ) ); 
         } 
 
     }
 
     &::before { 
-        position: absolute; left: 0; 
+        position: absolute; left: var( --icon-left-holder-padding, 0 ); 
     } 
 } 
 
 //Where the icon is centered vertically 
+.main-nav-open-button, 
 //.working-hours, 
 .question-title, 
 .selected-products .product-feature { 

@@ -1,0 +1,46 @@
+.flyout-nav { 
+    display: flex; justify-content: center; align-items: center; 
+    position: fixed; z-index: 3; 
+    inset: -10000px -10000px auto auto; 
+    margin: 0; 
+    max-width: none; 
+    background-color: rgba( var( --color-grayscale-light-rgb ), 0.9 ); 
+    //border: 1px solid; 
+
+    // transform: translateY( -100% ); 
+    // opacity: 0; 
+
+    &:target {
+        inset: 0; 
+        // transform: translateY( 0 ); 
+        // opacity: 1; 
+        // transition: opacity 0.2s, transform 0.2s; 
+    }
+
+    .main-nav { 
+        --main-nav-link-padding-block: 1em; 
+        --main-nav-link-padding-inline: 1.4em; 
+        --main-nav-link-has-subnav-icon-code: unset; 
+
+        .has-subnav .main-nav-link {
+            padding-right: var( --main-nav-link-padding-inline ); 
+        }
+
+    } 
+
+} 
+
+.main-nav-open-button { 
+    --icon-size: 1.4rem; 
+    --icon-code: "\f394"; 
+    --icon-font-size: 1.4rem; 
+    //--icon-border: 1px solid; 
+    --icon-left-holder-padding: 1rem; 
+    --icon-to-content-x: 0.5rem; 
+
+    position: fixed; z-index: 2; 
+    right: 0; bottom: 0; 
+    padding-block: 0.5em; padding-inline: 1rem; 
+    background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+    transform: rotateZ( 90deg ); transform-origin: right top; 
+}
