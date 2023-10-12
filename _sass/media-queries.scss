@@ -443,3 +443,21 @@
     } 
     
 } 
+
+@media screen and ( max-width: 820px ) { 
+    .site-footer { 
+        .company-info {
+            max-width: none; 
+        } 
+    }
+    
+} 
+
+@media screen and ( max-width: 640px ) { 
+    .site-footer { 
+        .company-info {
+            text-align: left; 
+        } 
+    }
+    
+} 
