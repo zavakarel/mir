@@ -285,15 +285,6 @@
     
 } 
 
-// FAQ 
-// @media screen and ( max-width: 520px ) { 
-//     .questions > .image-holder { 
-//         margin-inline: 0;  
-
-//     }
-    
-// } 
-
 // Send Message 
 @media screen and ( max-width: 520px ) { 
     .send-message-section .form {
@@ -311,6 +302,7 @@
     
 } 
 
+// Team Member List 
 @media screen and ( min-width: 1201px ) { 
     .team-member-list { 
         --column-count: 4; 
@@ -360,6 +352,7 @@
     } 
 } 
 
+// Subnav Priorities List 
 @media screen and ( min-width: 1201px ) { 
     .subnav-priorities-list { 
         --column-count: 3; 
@@ -408,6 +401,7 @@
     } 
 } 
 
+// Form Panel 
 @media screen and ( min-width: 1081px )  { 
     .form-panel { 
         padding-left: 50%; 
