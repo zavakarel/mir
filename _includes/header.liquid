@@ -4,69 +4,72 @@
             <h3 class= "heading header-heading contacts-heading">Reach Us</h3> 
 
             <p class= "working-hours">
-                Every Day<span class= "hours">The Whole Day</span> 
+                <span class= "text">Every Day</span> 
+                <span class= "hours">The Whole Day</span> 
             </p> 
 
-            <div class= "user-action select-action select-phone contact phone">
-                <a class= "button contacts-button header-contacts-button contacts-button-phone" href= "#contact-panel">
-                    <span class= "button-text">Contact <strong>Our Candidates </strong></span> 
-                </a> 
-
-                <div class= "user-action-panel contact-panel" id= "contact-panel"> 
-                    <a class= "button close-button user-action-button user-action-close-button" href= "#contact" >
-                        <span class= "button-text">Close</span> 
+            <div class= "user-actions">
+                <div class= "user-action select-action select-phone contact phone">
+                    <a class= "button contacts-button header-contacts-button contacts-button-phone" href= "#contact-panel">
+                        <span class= "button-text">Contact <strong>Our Candidates </strong></span> 
                     </a> 
 
-                    <div class= "user-action-panel-main"> 
-                        <h3 class= "heading user-action-panel-heading">Contact <strong>Our Candidates </strong></h3> 
+                    <div class= "user-action-panel contact-panel" id= "contact-panel"> 
+                        <a class= "button close-button user-action-button user-action-close-button" href= "#contact" >
+                            <span class= "button-text">Close</span> 
+                        </a> 
 
-                        {% include entry-list.liquid 
-                            level = 4
-                            namespace = "team-member" 
+                        <div class= "user-action-panel-main"> 
+                            <h3 class= "heading user-action-panel-heading">Contact <strong>Our Candidates </strong></h3> 
+
+                            {% include entry-list.liquid 
+                                level = 4
+                                namespace = "team-member" 
+                                
+                                entry_list = site.data.team.entry_list 
+                                entry_template = "candidate-contact-block.liquid" 
+                            %} 
+                        </div> 
+                    </div>
+                </div> 
+
+                <div class= "user-action form-action send-message contact email"> 
+                    <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#send-message-panel"> 
+                        <span class= "button-text">Write Us <strong>A Message </strong></span> 
+                    </a> 
+
+                    <div class= "user-action-panel form-panel send-message-panel" id= "send-message-panel"> 
+                        <a class= "button close-button user-action-button user-action-close-button" href= "#send-message" >
+                            <span class= "button-text">Close</span>
+                        </a> 
+
+                        <div class= "user-action-panel-main"> 
+                            <h3 class= "heading user-action-panel-heading">Write Us <strong>A Message </strong> </h3> 
                             
-                            entry_list = site.data.team.entry_list 
-                            entry_template = "candidate-contact-block.liquid" 
-                        %} 
-                    </div> 
+                            <form class= "form user-action-form send-message-form" action= "" method= "post">
+                                <div class= "form-field sender-name-field">
+                                    <label for= "sender-name" class= "field-label">Your Name</label> 
+                                    <input class= "form-field-body" type= "text" name= "sender-name" id= "sender-name" /> 
+                                </div> 
+
+                                <div class= "form-field sender-email-field">
+                                    <label for= "sender-email" class= "field-label">Your Email</label> 
+                                    <input class= "form-field-body" type= "text" name= "sender-email" id= "sender-email" /> 
+                                </div> 
+
+                                <div class= "form-field sender-message-field">
+                                    <label for= "sender-message" class= "field-label">Your Message</label> 
+                                    <textarea class= "form-field-body" name= "sender-message" id= "sender-message"></textarea> 
+                                </div> 
+
+                                <button class= "form-button send-message-button" type= "submit">Send Message</button> 
+                            </form> 
+
+                            <p class= "form-note">Or just write to <strong>podkrepete@za-vakarel.com</strong></p> 
+                        </div> 
+                    </div>
                 </div>
             </div> 
-
-            <div class= "user-action form-action send-message contact email"> 
-                <a class= "button contacts-button header-contacts-button contacts-button-email" href= "#send-message-panel"> 
-                    <span class= "button-text">Write Us <strong>A Message </strong></span> 
-                </a> 
-
-                <div class= "user-action-panel form-panel send-message-panel" id= "send-message-panel"> 
-                    <a class= "button close-button user-action-button user-action-close-button" href= "#send-message" >
-                        <span class= "button-text">Close</span>
-                    </a> 
-
-                    <div class= "user-action-panel-main"> 
-                        <h3 class= "heading user-action-panel-heading">Write Us <strong>A Message </strong> </h3> 
-                        
-                        <form class= "form user-action-form send-message-form" action= "" method= "post">
-                            <div class= "form-field sender-name-field">
-                                <label for= "sender-name" class= "field-label">Your Name</label> 
-                                <input class= "form-field-body" type= "text" name= "sender-name" id= "sender-name" /> 
-                            </div> 
-
-                            <div class= "form-field sender-email-field">
-                                <label for= "sender-email" class= "field-label">Your Email</label> 
-                                <input class= "form-field-body" type= "text" name= "sender-email" id= "sender-email" /> 
-                            </div> 
-
-                            <div class= "form-field sender-message-field">
-                                <label for= "sender-message" class= "field-label">Your Message</label> 
-                                <textarea class= "form-field-body" name= "sender-message" id= "sender-message"></textarea> 
-                            </div> 
-
-                            <button class= "form-button send-message-button" type= "submit">Send Message</button> 
-                        </form> 
-
-                        <p class= "form-note">Or just write to <strong>podkrepete@za-vakarel.com</strong></p> 
-                    </div> 
-                </div>
-            </div>
 
             
         </section> 

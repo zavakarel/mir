@@ -42,6 +42,55 @@
     
 } 
 
+@media screen and ( max-width: 430px ) { 
+    .site-header { 
+        .contacts { 
+            //display: block; 
+            flex-wrap: wrap; 
+            justify-content: center; align-content: center; 
+            margin-left: 0; 
+            padding-block: 1.5em; 
+
+            .user-actions { 
+                justify-content: center; 
+                margin-top: 1em; margin-left: 0; 
+                width: 100%; 
+
+                > * + * {
+                    margin-left: 1em; 
+                }
+            }
+
+            .contact {
+                display: inline-block; 
+            }
+
+            .working-hours { 
+                --icon-size: 1.4rem; 
+                --icon-to-content-x: 0.4rem; 
+                --icon-font-size: 2.2em; 
+
+                //display: unset; 
+                
+                .hours { 
+                    //display: block; 
+                    margin-left: 0; 
+                } 
+            } 
+
+            .contacts-button { 
+                --button-padding-block: 0; 
+                
+            }
+        } 
+
+        // .contacts-heading { 
+        //     position: absolute; left: -10000px; top: -10000px; 
+        // } 
+    }
+    
+} 
+
 @media screen and ( max-width: 720px ) { 
     .site-header .main-nav { 
         display: none; 
