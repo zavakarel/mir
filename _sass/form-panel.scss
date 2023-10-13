@@ -8,6 +8,7 @@
         inset: 0; 
         font-family: var( --icon-font-family ); font-size: 40em; 
         background-color: rgba( var( --color-grayscale-dark-rgb ), 0.1 ); color: rgba( var( --color-grayscale-dark-rgb ), 0.4 ); 
+        overflow: hidden; 
     }
 
     .user-action-panel-main { 
