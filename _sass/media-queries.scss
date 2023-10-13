@@ -70,6 +70,7 @@
             padding-block: 1.5em; 
 
             .user-actions { 
+                display: none; 
                 justify-content: center; 
                 margin-top: 1em; margin-left: 0; 
                 width: 100%; 
@@ -127,6 +128,14 @@
             margin-left: 0; 
             margin-top: 0.5em; 
         } 
+    }
+    
+} 
+
+@media screen and ( max-width: 430px ) { 
+    .company-features { 
+        --entry-padding-y-top: 16rem; 
+        --entry-padding-y-bottom: 10rem; 
     }
     
 } 
