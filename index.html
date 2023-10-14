@@ -13,13 +13,14 @@ layout: default
 %} 
 </div> 
 
+{% assign priorities = site.pages | where: 'name', 'priorities' | first %} 
 <div class= "section priorities" id= "priorities-section">
 {% include entry-list.liquid 
     level = 2 
     namespace = "priorities" 
-    heading = "Priorities" 
-    text = site.data.priorities.text 
-    entry_list = site.data.priorities.entry_list 
+    heading = priorities.heading 
+    text = priorities.text 
+    entry_list = priorities.entry_list 
     entry_template = "priorities-block.liquid" 
 %} 
 </div> 
