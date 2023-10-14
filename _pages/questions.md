@@ -1,13 +1,13 @@
 --- 
 name: questions 
-heading: "Questions You May Want To Ask" 
+heading: "Въпроси, които може би си задавате" 
 text: 
   - 
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit temporibus possimus accusamus minus omnis? Laudantium asperiores delectus incidunt ad provident non tempore iusto, rerum consequatur labore." 
 entry_list: 
   - 
     id: 1 
-    title: "Are You Going To Steal In Large Amounts?" 
+    title: "Ще крадете ли в особено големи размери?" 
     image: "istockphoto-1254347556-612x612.jpg" 
     body: 
       - 
@@ -21,7 +21,7 @@ entry_list:
 
   - 
     id: 2 
-    title: "What Actions You Would Take About Infrastructure?" 
+    title: "Какво смятате да направите с дупките по улиците?" 
     image: "istockphoto-1254347556-612x612.jpg" 
     body: 
       - 
@@ -35,7 +35,7 @@ entry_list:
  
   - 
     id: 3 
-    title: "Are You Lying Shamelessly?" 
+    title: "Лъжете ли безсрамно?" 
     image: "istockphoto-1254347556-612x612.jpg" 
     body: 
       - 
@@ -49,7 +49,7 @@ entry_list:
 
   - 
     id: 4
-    title: "Are You The Same As Any Municipal Representatives Before?" 
+    title: "Същите ли сте като всички други преди вас?" 
     image: "istockphoto-1254347556-612x612.jpg" 
     body: 
       - 
@@ -63,7 +63,7 @@ entry_list:
 
   - 
     id: 5 
-    title: "Why Are You Trying To Get Into Our Municipal Covernment?" 
+    title: "Защо се опитвате да се намърдате във властта?" 
     image: "istockphoto-1254347556-612x612.jpg" 
     body: 
       - 

@@ -1,6 +1,6 @@
 --- 
 name: candidates 
-heading: "Candidates" 
+heading: "Нашите кандидати" 
 subheading: ""
 text: 
   - 

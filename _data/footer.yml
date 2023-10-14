@@ -4,37 +4,3 @@ company:
 contacts: 
   phone: 0888 123 456 
   email: podkrepete@za-vakarel.com 
-
-nav_blocks: 
-  - 
-    image: "footer-image.png" 
-    heading: "Info" 
-    entry_list: 
-      - text: "Home" 
-      - text: "Products" 
-      - text: "Q & A" 
-      - text: "About" 
-
-  - 
-    image: "footer-image.png" 
-    heading: "Products" 
-    entry_list:  
-      - text: "Proteins" 
-      - text: "Amino Acids" 
-      - text: "Gainers" 
-      - text: "Antioxidants" 
-      - text: "Fat Burning" 
-      - text: "Vitamins" 
-      - text: "Minerals" 
-      - text: "Isotonic" 
-      - text: "Other" 
-
-      
-  - 
-    image: "footer-image.png" 
-    heading: "Buy" 
-    entry_list: 
-      - text: "How To" 
-      - text: "Delivery" 
-      - text: "Cart" 
-        

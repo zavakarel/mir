@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: For Vakarel 
+title: "За Вакарел" 
 description: >- # this means to ignore newlines until "baseurl:"
   MIR local elections website 
 repo_name: "/mir" 

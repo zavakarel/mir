@@ -1,13 +1,13 @@
 entry_list: 
   - 
-    text: "Priorities"
+    text: "Приоритети"
     target: "#priorities-section" 
 
     subnavigation: 
       templ: "entry-list-priorities.liquid" 
 
   - 
-    text: "Candidates" 
+    text: "Кандидати" 
     target: "#candidates-section" 
 
     subnavigation: 
@@ -15,13 +15,13 @@ entry_list:
 
 
   - 
-    text: "News"
+    text: "Новини"
     target: "#news-section" 
 
   - 
-    text: "Questions" 
+    text: "Въпроси" 
     target: "#questions-section" 
 
   - 
-    text: "Contacts" 
+    text: "Контакти" 
     target: "#contacts-section" 

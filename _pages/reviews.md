@@ -1,6 +1,6 @@
 --- 
 name: reviews 
-heading: "Our Supporters" 
+heading: "Нашите избиратели" 
 text: 
   - 
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur, atque animi maxime provident possimus sed inventore voluptas repellat temporibus!" 
@@ -8,8 +8,8 @@ text:
 entry_list: 
   - 
     id: 1 
-    name: "Ivan Marinov" 
-    occupation: "Carpenter" 
+    name: "Иван Маринов" 
+    occupation: "Дърводелец" 
     photo: "istockphoto-1212710606-612x612.jpg" 
     text: 
       - 
@@ -35,8 +35,8 @@ entry_list:
 
   - 
     id: 2 
-    name: "Georgi Petrov" 
-    occupation: "Manager" 
+    name: "Георги Петров" 
+    occupation: "Мениджър" 
     photo: "istockphoto-1200677760-612x612.jpg" 
     region: "Vakarel" 
     text: 
@@ -54,8 +54,8 @@ entry_list:
 
   - 
     id: 3 
-    name: "Ralitsa Karageorgieva" 
-    occupation: "Cashier" 
+    name: "Ралица Карагеоргиева" 
+    occupation: "Касиерка" 
     photo: "professional-woman.jpg" 
     text: 
       - 
@@ -72,8 +72,8 @@ entry_list:
 
   - 
     id: 4 
-    name: "Radka Vasileva" 
-    occupation: "Cleaner" 
+    name: "Радка Василева" 
+    occupation: "Чистачка" 
     photo: "istockphoto-831902150-170667a.jpg" 
     text: 
       - 

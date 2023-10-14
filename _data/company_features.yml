@@ -1,15 +1,15 @@
 - 
-  subheading: "Stand Up And Dare To" 
-  heading: "Take Back Vakarel" 
+  subheading: "Да се съберем и заедно" 
+  heading: "Да си върнем Вакарел!" 
   image: "Protest.png" 
   actions: 
     write: 
       key: "write" 
-      value: "Write Us" 
+      value: "Пишете Ни" 
       target: "" 
 
     call: 
       key: "call" 
-      value: "Talk With Us" 
+      value: "Говорете с нас" 
       text: "" 
       target: "" 
