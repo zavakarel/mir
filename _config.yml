@@ -52,3 +52,5 @@ collections:
 
   candidates: 
     sort_by: id 
+
+  news: 
