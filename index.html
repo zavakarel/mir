@@ -62,6 +62,7 @@ layout: default
 </div> 
 {%- endcomment -%} 
 
+{% assign questions = site.pages | where: 'name', 'questions' | first %}
 <div class= "section questions" id= "questions-section"> 
 <div class= "image-holder"> 
     {% include image.liquid 
@@ -72,8 +73,8 @@ layout: default
 {% include entry-list.liquid 
     level = 2 
     namespace = "questions"
-    heading = site.data.questions.heading 
-    entry_list = site.data.questions.entry_list 
+    heading = questions.heading 
+    entry_list = questions.entry_list 
     entry_template = "question-block.liquid" 
 %} 
 </div> 
