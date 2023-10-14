@@ -7,9 +7,9 @@ text:
 entry_list: 
   - 
     id: 1 
-    name: "Milena Chomakova" 
-    position: "Mayor" 
-    region: "Ichtiman"
+    name: "Милена Чомакова" 
+    position: "Кмет на Ихтиман" 
+   
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
@@ -32,16 +32,16 @@ entry_list:
           - 
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur, atque animi maxime provident possimus sed inventore voluptas repellat temporibus!" 
             
-    photo: "professional-woman.jpg" 
+    photo: "376803465_272656228986323_6942697388337488751_n.jpg" 
     contacts: 
       phone: 0888 123 456 
       email: podkrepete@za-vakarel.com 
 
   - 
     id: 2 
-    name: "Bore Stoynov" 
-    position: "Mayor" 
-    region: "Vakarel" 
+    name: "Бойко Стойнов" 
+    position: "Кмет на Вакарел" 
+ 
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
@@ -63,16 +63,15 @@ entry_list:
 
           - 
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur, atque animi maxime provident possimus sed inventore voluptas repellat temporibus!" 
-    photo: "istockphoto-1212710606-612x612.jpg" 
+    photo: "380898863_271293172455962_6053877959729184124_n.jpg" 
     contacts: 
       phone: 0888 123 456 
       email: podkrepete@za-vakarel.com 
 
   - 
     id: 3 
-    name: "Mite Stoynov" 
-    position: "Municipal Counselor" 
-    region: "Ichtiman" 
+    name: "Димитър Стойнов" 
+    position: "Общински Съветник" 
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
@@ -94,16 +93,15 @@ entry_list:
 
           - 
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur, atque animi maxime provident possimus sed inventore voluptas repellat temporibus!" 
-    photo: "istockphoto-1200677760-612x612.jpg" 
+    photo: "387737465_282913814627231_6003175362536465745_n.jpg" 
     contacts: 
       phone: 0888 123 456 
       email: podkrepete@za-vakarel.com 
 
   - 
     id: 4 
-    name: "Radka Vasileva" 
-    position: "Municipal Counselor" 
-    region: "Ichtiman"
+    name: "Богомил Златанов" 
+    position: "Общински Съветник" 
     text: 
       - 
         "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur" 
@@ -125,7 +123,7 @@ entry_list:
 
           - 
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur, atque animi maxime provident possimus sed inventore voluptas repellat temporibus!" 
-    photo: "istockphoto-831902150-170667a.jpg" 
+    photo: "376672093_272163935702219_2308808763411100379_n.jpg" 
     contacts: 
       phone: 0888 123 456 
       email: podkrepete@za-vakarel.com 

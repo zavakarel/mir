@@ -1,6 +1,6 @@
 {% include heading.liquid 
     level = 3 
-    text = "Our Candidates" 
+    text = "Вашите Кандидати" 
 %} 
 <ul class= "entry-list team-member-list">
 {% for entry in site.data.team.entry_list %} 
@@ -17,21 +17,12 @@
                 text = entry.name 
             %} 
 
-            <div class= "details">
-                <p class= "position"> 
-                    <span class= "text">Candidate</span> 
-                    <span class= "value">{{ entry.position }}</span>
-                    
-                </p> 
-        
-                <p class= "region"> 
-                    <span class= "text">For</span> 
-                    <span class= "value">{{ entry.region }}</span> 
-                     
-                </p> 
-            </div> 
+            {% include candidate-details.liquid 
+                position = entry.position 
+                region = entry.region
+            %} 
 
-            <a class= "link read-more-button" href= "#candidate-article-id-{{ entry.id }}">Explore</a> 
+            <a class= "link read-more-button" href= "#candidate-article-id-{{ entry.id }}">Информация</a> 
         </div> 
     </li> 
 {% endfor %} 
