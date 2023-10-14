@@ -37,13 +37,14 @@ layout: default
 %} 
 </div> 
 
+{% assign news = site.pages | where: 'name', 'news' | first %}
 <div class= "section news" id= "news-section"> 
 {% include entry-list.liquid 
     level = 2 
     namespace = "news" 
-    heading = site.data.news.heading 
-    text = site.data.news.text 
-    entry_list = site.data.news.entry_list 
+    heading = news.heading 
+    text = news.text 
+    entry_list = news.entry_list 
     entry_template = "news-block.liquid" 
 %} 
 </div> 
