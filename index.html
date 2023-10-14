@@ -24,13 +24,14 @@ layout: default
 %} 
 </div> 
 
-<div class= "section team" id= "candidates-section">
+{% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
+<div class= "section team" id= "candidates-section"> 
 {% include entry-list.liquid 
     level = 2 
     namespace = "team" 
-    heading = site.data.team.heading 
-    text = site.data.team.text 
-    entry_list = site.data.team.entry_list 
+    heading = candidates.heading 
+    text = candidates.text 
+    entry_list = candidates.entry_list 
     entry_template = "candidate-block.liquid" 
 %} 
 </div> 
