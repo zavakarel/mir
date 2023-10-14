@@ -46,10 +46,3 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-collections: 
-  product_groups: 
-    output: true 
-
-  products: 
-    output: false 
