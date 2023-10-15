@@ -2,8 +2,11 @@
     level = 3 
     text = "Вашите Кандидати" 
 %} 
+
+{% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
+
 <ul class= "entry-list team-member-list">
-{% for entry in site.data.team.entry_list %} 
+{% for entry in candidates.entry_list %} 
     <li class= "entry team-member"> 
         <div class= "image-holder"> 
             {% include image.liquid 

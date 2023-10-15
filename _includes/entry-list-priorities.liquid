@@ -1,7 +1,8 @@
+{% assign priorities = site.pages | where: 'name', 'priorities' | first %} 
 {% include entry-list.liquid 
     level = 3 
     namespace = "subnav-priorities" 
     heading = "Priorities" 
-    entry_list = site.data.priorities.entry_list 
+    entry_list = priorities.entry_list 
     entry_template = "priorities-block-subnav.liquid" 
 %} 
