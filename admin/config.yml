@@ -1,0 +1,179 @@
+# when using the default proxy server port
+local_backend: true 
+
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master) 
+
+# These lines should *not* be indented
+media_folder: "/static/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections: 
+  - 
+    name: "candidates"
+    label: "Кандидати"
+    folder: "_candidates" 
+    label_singular: "Candidate" 
+    create: true 
+    fields: 
+      # Name 
+      - 
+        name: "name"
+        label: "Име" 
+        widget: "string" 
+
+      # Position
+      -  
+        name: "position"
+        label: "Кандидат за" 
+        widget: "string" 
+
+      # Photo 
+      - 
+        name: "photo"
+        label: "Снимка" 
+        widget: "string" 
+        required: false 
+
+      # Contacts 
+      - 
+        name: "contacts"  
+        label: "Контакти" 
+        widget: list 
+         
+        fields:
+          - 
+            name: "key"
+            label: "Вид контакт" 
+            widget: string 
+            required: false
+          - 
+            name: "value"
+            label: "Контакт" 
+            widget: string 
+            required: false
+
+      # Body 
+      - 
+        name: "info"  
+        label: "Информация" 
+        widget: "list" 
+        fields: 
+          - 
+            name: "heading"
+            label: "Заглавие" 
+            widget: "string" 
+            required: false 
+          - 
+            name: "text" 
+            label: "Текст"  
+            widget: "list" 
+            required: false   
+            fields: 
+              - 
+                name: "paragraph" 
+                label: "Параграф"  
+                widget: "string" 
+                required: false    
+
+  -
+    name: "news"
+    label: "Събития" 
+    folder: "_news" 
+    label_singular: "Event" 
+    create: true 
+    fields: 
+      # Heading 
+      - 
+        name: "heading" 
+        label: "Заглавие" 
+        widget: "string" 
+      # Image 
+      - 
+        name: "image"
+        label: "Снимка" 
+        widget: "string" 
+      # Text 
+      - 
+        name: "text"
+        label: "Описание" 
+        widget: "string" 
+
+      # Sections 
+      - 
+        name: "sections" 
+        label: "Секции" 
+        widget: "list" 
+        fields: 
+          # Heading 
+          - 
+            name: "heading" 
+            label: "заглавие" 
+            widget: "string" 
+          # Text 
+          - 
+            name: "text" 
+            label: "Текст" 
+            widget: "list" 
+            fields: 
+              - 
+                name: "paragraph" 
+                label: "Параграф" 
+                widget: "string" 
+
+  -
+    name: "reviews"
+    label: "Мнения" 
+    folder: "_reviews" 
+    label_singular: "Review" 
+    create: true 
+    identifier_field: author.name 
+    fields: 
+      # Content 
+      - 
+        name: "sections" 
+        label: "Секции" 
+        widget: "list" 
+        fields: 
+          # Heading 
+          - 
+            name: "heading" 
+            label: "Заглавие" 
+            widget: "string" 
+            required: false 
+          # Text 
+          - 
+            name: "text" 
+            label: "Текст" 
+            widget: "list" 
+            fields: 
+              # Paragraph 
+              - 
+                name: "paragraph" 
+                label: "Параграф" 
+                widget: "string"
+      
+      # Author 
+      - 
+        name: "author" 
+        label: "Автор" 
+        widget: "object" 
+        fields: 
+          # Name 
+          - 
+            name: "name" 
+            label: "Име" 
+            widget: "string" 
+          # Occupation 
+          - 
+            name: "occupation" 
+            label: "Заетост" 
+            widget: "string" 
+            required: false 
+          # Photo 
+          - 
+            name: "photo" 
+            label: "Снимка" 
+            widget: "string" 
+            required: false 
