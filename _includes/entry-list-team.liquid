@@ -6,7 +6,7 @@
 {% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
 
 <ul class= "entry-list team-member-list">
-{% for entry in candidates.entry_list %} 
+{% for entry in site.candidates %} 
     <li class= "entry team-member"> 
         <div class= "image-holder"> 
             {% include image.liquid 

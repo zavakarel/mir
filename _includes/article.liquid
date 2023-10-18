@@ -27,7 +27,7 @@
             %} 
 
             {% for p in section.text %} 
-                <p class= "paragraph article-paragraph {{ include.namespace }}-paragraph">{{ p }}</p>
+                <p class= "paragraph article-paragraph {{ include.namespace }}-paragraph">{{ p.paragraph }}</p> 
             {% endfor %}
             
         {% endfor %}

@@ -1,7 +1,7 @@
-{% assign news_entry = include.data %} 
-{% assign article_date = news_entry.date | date: "%b %d %Y" | split: " " %} 
+{% assign entry = include.data %} 
+{% assign article_date = entry.date | date: "%b %d %Y" | split: " " %} 
 
-<div class= "news-entry" id= "news-entry-id-{{ news_entry.id }}">
+<div class= "news-entry" id= "news-entry-id-{{ entry.id }}">
     <div class= "news-block">
         <footer class= "date news-date">
             <span class= "month news-month">{{ article_date[ 0 ] }}</span> 
@@ -11,19 +11,22 @@
 
         {% include heading.liquid 
             level = include.level 
-            text = news_entry.heading 
+            text = entry.heading 
         %} 
 
-        {% include text.liquid 
-            text = news_entry.text 
-        %} 
+        {% if entry.text != "" %} 
+            {% assign text = entry.text %} 
+        {% else %}
+            {% assign text = entry.sections[ 0 ].text[ 0 ].paragraph | truncatewords: 15, '...' %} 
+        {% endif %}
+        <p class= "news-entry-text">{{ text }}</p> 
 
-        <a class= "link read-more-button news-read-more-button" href= "#news-article-id-{{ news_entry.id }}">Повече</a> 
+        <a class= "link read-more-button news-read-more-button" href= "#news-article-id-{{ entry.id }}">Повече</a> 
     </div> 
 
-    <div class= "article-holder" id= "news-article-id-{{ news_entry.id }}"> 
+    <div class= "article-holder" id= "news-article-id-{{ entry.id }}"> 
         {% include news-article.liquid 
-            news_article = news_entry 
+            news_article = entry 
         %}
     </div> 
 </div> 

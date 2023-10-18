@@ -1,5 +1,5 @@
 {% assign review = include.data %} 
-{% assign preview = review.body[ 0 ].text[ 0 ] | truncatewords: 20, '...' %} 
+{% assign preview = review.sections[ 0 ].text[ 0 ].paragraph | truncatewords: 20, '...' %} 
 {% assign heading = preview | truncatewords: 5, "" %} 
 {% assign preview = preview | remove_first: heading %} 
 
@@ -13,7 +13,7 @@
             <span class= "key">Photo</span> 
 
             {% include image.liquid 
-                src = review.photo 
+                src = review.author.photo 
             %} 
         </div> 
 
@@ -21,13 +21,13 @@
             <div class= "entry person-entry person-name review-person-name">
                 <span class= "key">Name</span> 
 
-                {{ review.name }}
+                {{ review.author.name }}
             </div> 
 
             <div class= "entry person-entry person-occupation review-person-occupation">
                 <span class= "key">Occupation</span> 
 
-                {{ review.occupation }}
+                {{ review.author.occupation }} 
             </div> 
         </div>
     </article> 
@@ -40,7 +40,7 @@
         namespace = "review" 
         entry_id = review.id 
         heading = heading 
-        image = review.photo 
-        body = review.body 
+        image = review.author.photo 
+        body = review.sections 
     %}  
 </div> 

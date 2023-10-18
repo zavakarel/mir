@@ -1,0 +1,54 @@
+{% assign candidate = include.data %} 
+{% assign namespace = "featured-candidate" %} 
+
+<div class= "featured-candidate">
+    {% include image.liquid 
+        namespace = namespace 
+        src = candidate.photo 
+    %} 
+
+    <blockquote class= "quote"><span class= "quote-icon"></span>{{ candidate.quote }}</blockquote> 
+
+    <div class= "facts"> 
+        <figure class= "election-number">{{ candidate.election_number }}</figure> 
+
+        <h3 class= "heading facts-heading">{{ candidate.name }}</h3> 
+
+        {% include candidate-details.liquid 
+            position = candidate.position 
+        %} 
+
+        {% if candidate.gender == "female" %} 
+            {% assign suffix = "а" %} 
+        {% else %}
+            {% assign suffix = "" %} 
+        {% endif %}
+
+        <dl class= "entry-list fact-list"> 
+            <div class= "fact-entry"> 
+                <dt class= "key fact-key">Възраст</dt> 
+                <dd class= "value fact-value">{{ candidate.age }}</dd> 
+            </div> 
+
+            <div class= "fact-entry">
+                <dt class= "key fact-key">{{ "Роден" | append: suffix }}</dt> 
+                <dd class= "value fact-value">{{ candidate.facts.born }}</dd> 
+            </div> 
+
+            <div class= "fact-entry">
+                <dt class= "key fact-key">{{ "Завършил" | append: suffix }}</dt> 
+                <dd class= "value fact-value">{{ candidate.facts.education }}</dd> 
+            </div> 
+
+            <div class= "fact-entry">
+                <dt class= "key fact-key">Семейно положение</dt> 
+                <dd class= "value fact-value">{{ candidate.facts.family }}</dd> 
+            </div> 
+
+            <div class= "fact-entry">
+                <dt class= "key fact-key">{{ "Работил" | append: suffix }}</dt> 
+                <dd class= "value fact-value">{{ candidate.facts.work }}</dd> 
+            </div>
+        </dl>
+    </div>  
+</div>
