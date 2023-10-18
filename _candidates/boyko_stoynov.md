@@ -1,8 +1,17 @@
 ---
 id: 2
-name: Бойко Стойнов
-position: "Кмет на Вакарел "
-photo: 380898863_271293172455962_6053877959729184124_n.jpg
+name: Бойко Стойнов 
+gender: male 
+age: 44
+position: "Кмет на Вакарел " 
+election_number: 63 
+quote: "Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat" 
+facts:
+  born: Гр. Ихтиман.
+  education: Селскостопански техникум
+  family: "Женен, с едно дете. "
+  work: Шофьор, строител.
+photo: 380898863_271293172455962_6053877959729184124_n_e.jpg
 contacts:
   - key: Телефон
     value: 0888 123 456
