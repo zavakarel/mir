@@ -54,3 +54,5 @@ collections:
     sort_by: id 
 
   news: 
+
+  reviews: 

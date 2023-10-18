@@ -6,8 +6,8 @@ backend:
   branch: master # Branch to update (optional; defaults to master) 
 
 # These lines should *not* be indented
-media_folder: "/static/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/assets/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "/assets/images/" # Media files will be stored in the repo under static/images/uploads
+public_folder: "" # The src attribute for uploaded media will begin with /images/uploads
 
 collections: 
   - 
@@ -23,17 +23,67 @@ collections:
         label: "Име" 
         widget: "string" 
 
+      # Age 
+      - 
+        name: "age"
+        label: "Възраст" 
+        widget: "number" 
+        min: 1 
+        max: 100 
+
       # Position
       -  
         name: "position"
         label: "Кандидат за" 
         widget: "string" 
 
+       # Election Number 
+      -  
+        name: "election_number"
+        label: "Номер" 
+        widget: "number" 
+
+       # Quote 
+      -  
+        name: "quote"
+        label: "Цитат" 
+        widget: "string" 
+
+      # Facts 
+      -  
+        name: "facts" 
+        label: "Накратко" 
+        required: false 
+        collapsed: true 
+        widget: "object" 
+        fields: 
+          -  
+            name: "born"
+            label: "Роден(а)" 
+            required: false 
+            widget: "text" 
+
+          -  
+            name: "education"
+            label: "Завършил(а)" 
+            required: false 
+            widget: "text" 
+          -  
+            name: "family"
+            label: "Семейно положение" 
+            required: false 
+            widget: "text" 
+          -  
+            name: "work"
+            label: "Работил(а)" 
+            required: false 
+            widget: "text" 
+
       # Photo 
       - 
         name: "photo"
         label: "Снимка" 
-        widget: "string" 
+        widget: "image" 
         required: false 
 
       # Contacts 
@@ -82,23 +132,35 @@ collections:
     label: "Събития" 
     folder: "_news" 
     label_singular: "Event" 
+    identifier_field: heading 
     create: true 
     fields: 
+      # Date 
+      - 
+        name: "date" 
+        label: "Дата" 
+        widget: "datetime" 
+        date_format: "DD.MM.YYYY" 
+        
       # Heading 
       - 
         name: "heading" 
         label: "Заглавие" 
         widget: "string" 
-      # Image 
-      - 
-        name: "image"
-        label: "Снимка" 
-        widget: "string" 
+
       # Text 
       - 
         name: "text"
         label: "Описание" 
         widget: "string" 
+        required: false 
+
+      # Image 
+      - 
+        name: "image"
+        label: "Снимка" 
+        widget: "image" 
+        required: false 
 
       # Sections 
       - 
@@ -111,6 +173,7 @@ collections:
             name: "heading" 
             label: "заглавие" 
             widget: "string" 
+            required: false 
           # Text 
           - 
             name: "text" 
@@ -175,5 +238,49 @@ collections:
           - 
             name: "photo" 
             label: "Снимка" 
-            widget: "string" 
+            widget: "image" 
             required: false 
+
+  - 
+    name: "pages"
+    label: "Страници" 
+    files: 
+      - 
+        name: "priorities" 
+        label: "Priorities" 
+        file: "_pages/priorities.md" 
+        fields: 
+          - 
+            name: "heading"
+            label: "Heading" 
+            widget: "string" 
+          - 
+            name: "text"
+            label: "Text" 
+            widget: "list" 
+            fields: 
+              - 
+                name: "paragraph"
+                label: "Paragraph" 
+                widget: "text" 
+                required: false 
+          - 
+            name: "entry_list"
+            label: "Entry List" 
+            widget: "list" 
+            fields: 
+              - 
+                name: "heading"
+                label: "Heading" 
+                widget: "string" 
+              - 
+                name: "text"
+                label: "Text" 
+                widget: "list" 
+                fields: 
+                  - 
+                    name: "paragraph"
+                    label: "Paragraph" 
+                    widget: "text" 
+                    required: false 
+              
