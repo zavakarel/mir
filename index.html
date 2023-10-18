@@ -13,6 +13,15 @@ layout: default
 %} 
 </div> 
 
+<div class= "section featured-candidates">
+{% include entry-list.liquid 
+    level = 2 
+    namespace = "featured-candidates" 
+    entry_list = site.candidates 
+    entry_template = "featured-candidate-block.liquid" 
+%} 
+</div>
+
 {% assign priorities = site.pages | where: 'name', 'priorities' | first %} 
 <div class= "section priorities" id= "priorities-section">
 {% include entry-list.liquid 
@@ -32,7 +41,7 @@ layout: default
     namespace = "team" 
     heading = candidates.heading 
     text = candidates.text 
-    entry_list = candidates.entry_list 
+    entry_list = site.candidates 
     entry_template = "candidate-block.liquid" 
 %} 
 </div> 
@@ -87,7 +96,7 @@ layout: default
     namespace = "reviews"
     heading = reviews.heading 
     text = reviews.text 
-    entry_list = reviews.entry_list 
+    entry_list = site.reviews 
     entry_template = "review.liquid" 
 %} 
 </div> 

@@ -17,16 +17,16 @@ body > :where( :nth-child( n + 3 ) ) {
     margin-top: 8rem; 
 } 
 
-.entry, 
-.control-list-entry { 
-    --image-to-text-content-distance: 2em; 
-    --entry-content-width: calc( ( 100% - var( --image-to-text-content-distance ) ) / 2 ); 
+// .entry, 
+// .control-list-entry { 
+//     --image-to-text-content-distance: 2em; 
+//     --entry-content-width: calc( ( 100% - var( --image-to-text-content-distance ) ) / 2 ); 
 
-    .image, 
-    .text-content {
-        width: var( --entry-content-width ); 
-    }
-}
+//     .image, 
+//     .text-content {
+//         width: var( --entry-content-width ); 
+//     }
+// } 
 
 .entry-list { 
     --entry-list-margin-top: 4em; 
