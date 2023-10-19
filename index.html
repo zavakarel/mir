@@ -72,6 +72,7 @@ layout: default
 </div> 
 {%- endcomment -%} 
 
+{%- comment -%}
 {% assign questions = site.pages | where: 'name', 'questions' | first %}
 <div class= "section questions" id= "questions-section"> 
 <div class= "image-holder"> 
@@ -88,6 +89,7 @@ layout: default
     entry_template = "question-block.liquid" 
 %} 
 </div> 
+{%- endcomment -%} 
 
 {% assign reviews = site.pages | where: 'name', 'reviews' | first %}
 <div class= "section reviews" id= "reviews-section"> 
