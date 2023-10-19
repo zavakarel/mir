@@ -4,7 +4,7 @@ heading: "Кои сме ние"
 subheading: ""
 text: 
   - 
-    paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum fugiat repudiandae consectetur laborum dicta obcaecati aliquam quaerat consequuntur consequatur, atque animi maxime provident possimus sed inventore voluptas repellat temporibus!" 
+    paragraph: "" 
 
 entry_list: 
   - 
