@@ -33,6 +33,7 @@
         border-radius: 50%; 
         font-family: var( --font-family-2 ); font-size: 12em; 
         font-weight: var( --font-weight-semi-bold ); 
+        overflow: hidden; 
     } 
 
     > .election-number { 
@@ -124,6 +125,7 @@
     border-radius: 12px; 
     //border: 1px solid; 
     //box-shadow: 0 0 20px 2px rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
+    overflow: hidden; 
 
     &-heading {
         font-size: 1.2em;  
@@ -143,22 +145,7 @@
     } 
 }
 
-.fact-list { 
-    --column-count: 2; 
-    --column-gap-x: 1em; 
-    --column-gap-y: 1.5em; 
 
-    > :nth-child( -n + 2 ) { 
-        margin-top: 0; 
-    }
-
-    > :nth-child( 2n + 1 ) { 
-        margin-left: 0; 
-    } 
-
-    margin-top: 2em; 
-
-}
 
 .fact-key { 
     font-family: var( --font-family-2 ); font-size: 0.9em; 

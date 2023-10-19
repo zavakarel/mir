@@ -209,6 +209,90 @@
     
 // } 
 
+@media screen and ( max-width: 520px ) { 
+    .entry:nth-child( n ) .featured-candidate { 
+        &-image {
+            position: initial; 
+            height: 50vh; 
+        } 
+
+        .quote { 
+            //position: absolute; 
+            background-color: rgba( var( --color-grayscale-light-rgb ), 0.5 ); 
+        } 
+    } 
+} 
+
+@media screen and ( max-width: 980px ) { 
+    .entry:nth-child( n ) .featured-candidate { 
+        flex-direction: column; 
+        padding-block: 2rem 3rem; 
+        max-width: 680px; margin-inline: auto; 
+    
+        > * {
+            width: 100%; 
+        } 
+
+        .quote { 
+            padding: 1em; 
+        } 
+
+    } 
+    
+} 
+
+@media screen and ( max-width: 720px ) { 
+    .entry:nth-child( n ) .featured-candidate { 
+        .facts { 
+            padding: 2em; 
+            border-radius: 0;
+        } 
+
+        .facts > .election-number { 
+            opacity: 0.2; 
+        } 
+    } 
+} 
+
+@media screen and ( min-width: 541px ) { 
+    .entry:nth-child( n ) .featured-candidate { 
+        .fact-list { 
+            --column-count: 2; 
+            --column-gap-x: 1em; 
+            --column-gap-y: 1.5em; 
+        
+            > :nth-child( -n + 2 ) { 
+                margin-top: 0; 
+            }
+        
+            > :nth-child( 2n + 1 ) { 
+                margin-left: 0; 
+            } 
+        
+            margin-top: 2em; 
+        }
+    } 
+} 
+
+@media screen and ( max-width: 540px ) { 
+    .entry:nth-child( n ) .featured-candidate { 
+        .fact-list { 
+            --column-count: 1; 
+            --column-gap-x: 1em; 
+            --column-gap-y: 1.5em; 
+        
+            > :nth-child( 1 ) { 
+                margin-top: 0; 
+            }
+        
+            > :nth-child( n ) { 
+                margin-left: 0; 
+            } 
+        
+        }
+    } 
+} 
+
 // Team 
 @media screen and ( min-width: 1281px ) { 
     .team-list { 
