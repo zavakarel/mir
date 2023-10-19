@@ -72,12 +72,12 @@
                 //     left: auto; right: 0; 
                 // } 
 
-                &::after { 
-                    margin-left: 50%; 
-                    //margin-inline: auto 0; 
-                    //text-align: right; 
+                // &::after { 
+                //     //margin-left: 50%; 
+                //     //margin-inline: auto 0; 
+                //     //text-align: right; 
     
-                } 
+                // } 
             } 
 
             &:nth-child( 2n ) { 
@@ -99,19 +99,19 @@
                 //     left: 0; right: auto; 
                 // } 
 
-                &::after { 
-                    margin-right: 50%; 
-                    margin-inline: auto 50%; 
-                    //text-align: left; 
+                // &::after { 
+                //     //margin-right: 50%; 
+                //     //margin-inline: auto 50%; 
+                //     //text-align: left; 
     
-                } 
+                // } 
             } 
 
             &::after { 
                 display: block; 
                 
                 width: 1.5em; height: 1.5em; line-height: 1.5em; 
-                margin-inline: auto !important; 
+                margin-inline: auto; 
                 margin-bottom: 1em; 
                 //border: 1px solid; 
                 border-radius: 50%; 

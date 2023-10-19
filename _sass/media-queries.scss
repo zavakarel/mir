@@ -153,43 +153,61 @@
 } 
 
 // Priorities 
-@media screen and ( max-width: 820px ) { 
-    .priorities-list .entry { 
-        > * {
-            flex-grow: 3; 
+@media screen and ( max-width: 620px ) { 
+    .priorities { 
+        .entry:nth-child( n ) {
+            .priorities-block { 
+                margin-left: 0; margin-right: 0; 
+                padding-left: 1em; padding-right: 0; 
+                border-left: 1px solid; border-right: none; 
+                text-align: left; 
+            } 
+
+            &::after {
+                margin-inline: 0 auto; 
+                margin-bottom: 0.5em; 
+                text-align: left; 
+
+            } 
+
         } 
-    } 
+    }
+    // .priorities-list .entry { 
+    //     > * {
+    //         flex-grow: 3; 
+    //     } 
+    // } 
     
 } 
 
-@media screen and ( max-width: 820px ) { 
-    .priorities-list {
-        --column-gap-y: 2.5em; 
-    } 
+// @media screen and ( max-width: 820px ) { 
+//     .priorities-list {
+//         --column-gap-y: 2.5em; 
+//     } 
 
-    .priorities-list .entry:nth-child( n ) { 
-        flex-direction: column; 
+//     .priorities-list .entry:nth-child( n ) { 
+//         // flex-direction: column; 
 
-        &::after, 
-        > * {
-            text-align: left; 
-        } 
+//         // &::after, 
+//         // > * {
+//         //     text-align: left; 
+//         // } 
 
-        &::after { 
-            order: 1;   
-            margin-bottom: 0.5em; 
-        } 
+//         &::after { 
+//             //order: 1;   
+//             margin-bottom: 0.5em; 
+//         } 
 
-        > * {
-            order: 2; 
-        } 
+//         // > * {
+//         //     order: 2; 
+//         // } 
 
-        .read-more-button {
-            --button-margin-inline: var( --read-more-button-position-correction ) auto; 
-        } 
-    } 
+//         .read-more-button {
+//             --button-margin-inline: var( --read-more-button-position-correction ) auto; 
+//         } 
+//     } 
     
-} 
+// } 
 
 // Team 
 @media screen and ( min-width: 1281px ) { 
