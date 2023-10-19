@@ -15,7 +15,7 @@ entry_list:
 
 
   - 
-    text: "Новини"
+    text: "Събития" 
     target: "#news-section" 
 
   - 

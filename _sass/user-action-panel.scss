@@ -1,6 +1,6 @@
 .user-action-panel { 
-    display: flex; 
-    justify-content: flex-start; align-items: flex-start;  
+    // display: flex; 
+    // justify-content: flex-start; align-items: flex-start;  
     position: fixed; z-index: 3; 
     padding-block: 8rem 5rem; 
     //padding-left: 50%; 
@@ -15,13 +15,18 @@
 
     .user-action {
         &-panel-main { 
-            display: flex; flex-direction: column; 
+            //display: flex; flex-direction: column; 
             align-items: center; 
+
+            > * {
+                margin-inline: auto; 
+            }
         }
 
         &-panel-heading {
             margin-top: 0; 
             font-weight: var( --font-weight-light ); 
+            text-align: center; 
         }
     } 
 

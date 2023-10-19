@@ -124,7 +124,7 @@ collections:
               - 
                 name: "paragraph" 
                 label: "Параграф"  
-                widget: "string" 
+                widget: "text" 
                 required: false    
 
   -
@@ -147,6 +147,7 @@ collections:
         name: "heading" 
         label: "Заглавие" 
         widget: "string" 
+        required: false 
 
       # Text 
       - 
@@ -183,7 +184,7 @@ collections:
               - 
                 name: "paragraph" 
                 label: "Параграф" 
-                widget: "string" 
+                widget: "text" 
 
   -
     name: "reviews"
@@ -215,7 +216,7 @@ collections:
               - 
                 name: "paragraph" 
                 label: "Параграф" 
-                widget: "string"
+                widget: "text"
       
       # Author 
       - 

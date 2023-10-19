@@ -1,24 +1,22 @@
 {% assign entry = include.data %} 
 {% assign article_date = entry.date | date: "%b %d %Y" | split: " " %} 
-
 <div class= "news-entry" id= "news-entry-id-{{ entry.id }}">
     <div class= "news-block">
         <footer class= "date news-date">
             <span class= "month news-month">{{ article_date[ 0 ] }}</span> 
             <span class= "day news-day">{{ article_date[ 1 ] }}</span> 
             <span class= "year news-year">{{ article_date[ 2 ] }}</span> 
-        </footer>
+        </footer> 
+
+        {% assign excerpt = entry.sections[ 0 ].text[ 0 ].paragraph | truncatewords: 20, "..." %}
+        {% assign heading = excerpt | truncatewords: 4, "" %} 
+        {% assign text = excerpt | replace_first: heading, ""  %} 
 
         {% include heading.liquid 
             level = include.level 
-            text = entry.heading 
+            text = heading 
         %} 
 
-        {% if entry.text != "" %} 
-            {% assign text = entry.text %} 
-        {% else %}
-            {% assign text = entry.sections[ 0 ].text[ 0 ].paragraph | truncatewords: 15, '...' %} 
-        {% endif %}
         <p class= "news-entry-text">{{ text }}</p> 
 
         <a class= "link read-more-button news-read-more-button" href= "#news-article-id-{{ entry.id }}">Повече</a> 

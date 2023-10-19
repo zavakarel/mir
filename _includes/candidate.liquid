@@ -7,19 +7,18 @@
     %}
 {% endcapture %} 
 
-{% capture footer %}
-    <div class= "candidate-contacts"> 
-    {% for contact in candidate.contacts %} 
-        {% assign key = contact[ 0 ] %} 
-        {% assign value = contact[ 1 ] %} 
-
-        {% include contact.liquid 
-            key = key 
-            value = value 
-        %} 
-    {% endfor %} 
-    </div> 
-{% endcapture %}
+{% if candidate.contacts %}
+    {% capture footer %}
+        <div class= "candidate-contacts"> 
+        {% for contact in candidate.contacts %} 
+            {% include contact.liquid 
+                key = contact.key 
+                value = contact.value 
+            %} 
+        {% endfor %} 
+        </div> 
+    {% endcapture %}
+{% endif %}
 
 {% include article.liquid 
     namespace = "candidate" 

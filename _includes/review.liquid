@@ -1,5 +1,5 @@
 {% assign review = include.data %} 
-{% assign preview = review.sections[ 0 ].text[ 0 ].paragraph | truncatewords: 20, '...' %} 
+{% assign preview = review.sections[ 0 ].text[ 0 ].paragraph | truncatewords: 30, '...' %} 
 {% assign heading = preview | truncatewords: 5, "" %} 
 {% assign preview = preview | remove_first: heading %} 
 
@@ -39,7 +39,7 @@
     {% include article.liquid 
         namespace = "review" 
         entry_id = review.id 
-        heading = heading 
+        heading = review.author.name 
         image = review.author.photo 
         body = review.sections 
     %}  

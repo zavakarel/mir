@@ -133,7 +133,11 @@
             //padding-left: unset; 
 
             .user-action-panel-main { 
+                //width: 70%; 
+                
                 .team-member-list { 
+                    margin-inline: auto; 
+                    //width: 100%; 
                     font-size: 1.3em; 
                 }
             }

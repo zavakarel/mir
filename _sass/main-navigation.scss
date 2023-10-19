@@ -209,9 +209,16 @@
                 counter-increment: entry-counter; 
                 font-family: var( --font-family-1 ); 
 
+                .heading {
+                    font-weight: var( --font-weight-semi-bold ); 
+                }
+
                 .heading::before { 
                     display: block; 
                     margin-bottom: 1em; 
+                    padding-inline: 0 1em; 
+                    width: fit-content; 
+                    border-bottom: 1px solid; 
                     font-family: var( --font-family-2 ); font-size: 2.5em; 
                     font-weight: var( --font-weight-regular ); 
                     content: counter( entry-counter ); 

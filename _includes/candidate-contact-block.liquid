@@ -1,3 +1,4 @@
+
 {% include image.liquid 
     namespace = "candidate" 
     src = include.data.photo 
@@ -14,15 +15,15 @@
         region = include.data.region
     %}
 
-    <div class= "candidate-contacts"> 
-    {% for contact in include.data.contacts %} 
-        {% assign key = contact[ 0 ] %} 
-        {% assign value = contact[ 1 ] %} 
-
-        {% include contact.liquid 
-            key = key 
-            value = value 
-        %} 
-    {% endfor %} 
-    </div> 
+    {% if include.data.contacts %}
+        <div class= "candidate-contacts"> 
+        {% for contact in include.data.contacts %} 
+            {% include contact.liquid 
+                key = contact.key 
+                value = contact.value 
+            %} 
+        {% endfor %} 
+        </div> 
+    {% endif %}
 </div> 
+
