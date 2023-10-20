@@ -142,29 +142,29 @@
                 }
             }
 
-            .candidate-contacts { 
-                text-transform: none; 
+            // .candidate-contacts { 
+            //     text-transform: none; 
 
-                .contact { 
-                    --icon-size: 1.8rem; 
+            //     .contact { 
+            //         --icon-size: 1.8rem; 
                     
-                    --icon-block: 0; 
-                    --icon-inline: 0 0.2rem; 
-                    --icon-border: none; 
+            //         --icon-block: 0; 
+            //         --icon-inline: 0 0.2rem; 
+            //         --icon-border: none; 
 
-                    + .contact {
-                        margin-top: 0.2em; 
-                    }
+            //         + .contact {
+            //             margin-top: 0.2em; 
+            //         }
 
-                    // &-value { 
-                    //     display: block; 
-                    // } 
+            //         // &-value { 
+            //         //     display: block; 
+            //         // } 
 
-                    &-email { 
-                        --icon-font-size: 1.5em; 
-                    } 
-                } 
-            } 
+            //         &-email { 
+            //             --icon-font-size: 1.5em; 
+            //         } 
+            //     } 
+            // } 
                     
         } 
     } 

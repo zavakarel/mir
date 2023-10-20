@@ -172,45 +172,69 @@
     
     .contact { 
         --icon-size: 1.8rem; 
-        
-        --icon-block: 0; 
+        --icon-block: 0;  
         --icon-inline: 0 0.5rem; 
-        
         --icon-border: 1px solid; 
         --icon-border-radius: 50%; 
+        --icon-font-size: 1.2em; 
 
-        //display: flex; 
         font-family: var( --font-family-2 ); 
-        font-size: 1em; 
 
         &-key { 
-            display: none; 
-            margin-bottom: 0.4em; 
-            font-size: 0.9em; 
-            font-weight: var( --font-weight-regular ); 
-            text-transform: capitalize; 
+            display: none;  
         } 
 
         &-value { 
             display: flex; align-items: center; 
-            //margin-left: 0.2em; 
         } 
 
         + .contact {
-            margin-top: 1em; 
-            //margin-left: 2em; 
+            margin-top: 1.5em; 
         } 
         
         &-phone { 
-            --icon-code: "\f4b8"; 
+            //--icon-code: "\f4b8"; 
             --icon-code: "\f4b9"; 
-            
         } 
         
         &-email { 
-            --icon-code: "\f2c3"; 
+            //--icon-code: "\f2c3"; 
             --icon-code: "\f474"; 
-            --icon-font-size: 1.3em; 
+            --icon-font-size: 1.5em; 
+        } 
+    }
+} 
+
+.article .candidate-contacts { 
+    //display: flex; justify-content: flex-start; 
+    //flex-wrap: wrap; 
+    margin-top: 2em; 
+    padding: 2em; 
+    border: 1px solid; 
+    border-radius: 8px; 
+
+    > .heading {
+        width: 100%; 
+    }
+    
+    .contact { 
+        --icon-size: 1.8rem; 
+        --icon-block: 0;  
+        --icon-inline: 0 0.5rem; 
+        --icon-border: none; 
+        --icon-font-size: 1.2em; 
+
+        //display: flex; 
+        margin-top: 1.5em; 
+        font-family: var( --font-family-2 ); 
+        //font-size: 1em; 
+
+        &-key { 
+            display: block; 
+            margin-bottom: 0.5em; 
+            font-size: 0.8em; 
+            font-weight: var( --font-weight-regular ); 
+            text-transform: uppercase; 
         } 
     }
 } 
