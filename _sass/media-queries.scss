@@ -153,12 +153,24 @@
 } 
 
 // Priorities 
+@media screen and ( min-width: 621px ) { 
+    .priorities { 
+        .entry:nth-child( n ) {
+            &::after {
+                border: 1px solid; 
+                border-radius: 50%; 
+            } 
+
+        } 
+    }
+}
+
 @media screen and ( max-width: 620px ) { 
     .priorities { 
         .entry:nth-child( n ) {
             .priorities-block { 
                 margin-left: 0; margin-right: 0; 
-                padding-left: 1em; padding-right: 0; 
+                padding-left: 1.5em; padding-right: 0; 
                 border-left: 1px solid; border-right: none; 
                 text-align: left; 
             } 

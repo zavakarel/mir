@@ -109,12 +109,9 @@
 
             &::after { 
                 display: block; 
-                
                 width: 1.5em; height: 1.5em; line-height: 1.5em; 
                 margin-inline: auto; 
                 margin-bottom: 1em; 
-                //border: 1px solid; 
-                border-radius: 50%; 
                 font-family: var( --font-family-2 ); font-size: 2em; 
                 content: counter( entry-counter ); 
                 //text-align: center; 
