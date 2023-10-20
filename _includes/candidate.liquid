@@ -7,9 +7,13 @@
     %}
 {% endcapture %} 
 
-{% if candidate.contacts %}
+{% if candidate.contacts %} 
     {% capture footer %}
         <div class= "candidate-contacts"> 
+        {% include heading.liquid 
+            level = 4 
+            text = "За връзка:" 
+        %}
         {% for contact in candidate.contacts %} 
             {% include contact.liquid 
                 key = contact.key 
@@ -29,3 +33,5 @@
     body = candidate.info   
     footer = footer 
 %} 
+
+{% assign footer = nil %} 
