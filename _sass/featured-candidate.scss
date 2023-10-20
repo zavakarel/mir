@@ -143,6 +143,11 @@
         //content: ""; 
         border-left: 1px solid; 
     } 
+
+    .read-more-button { 
+        --icon-size: 1em; 
+        --button-margin-inline: var( --read-more-button-position-correction ) auto; 
+    }
 }
 
 
