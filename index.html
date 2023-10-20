@@ -47,7 +47,7 @@ layout: default
 </div> 
 
 {% assign news = site.pages | where: 'name', 'news' | first %} 
-{% assign news_list = site.news | slice: 0, 4 %} 
+{% assign news_list = site.news | reverse | slice: 0, 4 %} 
 <div class= "section news" id= "news-section"> 
 {% include entry-list.liquid 
     level = 2 
