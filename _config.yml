@@ -51,7 +51,11 @@ collections:
   pages: 
 
   candidates: 
-    sort_by: id 
+    order: 
+      - milena_chomakova.md 
+      - boyko_stoynov.md 
+      - dimitar_stoynov.md 
+      - bogomil_zlatanov.md 
 
   news: 
 
