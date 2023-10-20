@@ -14,13 +14,14 @@ layout: default
 </div> 
 
 {% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
+{% assign candidates_ordered = site.candidates | sort: 'order' %} 
 <div class= "section team" id= "candidates-section"> 
 {% include entry-list.liquid 
     level = 2 
     namespace = "team" 
     heading = candidates.heading 
     text = candidates.text 
-    entry_list = site.candidates 
+    entry_list = candidates_ordered
     entry_template = "candidate-block.liquid" 
 %} 
 </div> 
@@ -29,7 +30,7 @@ layout: default
 {% include entry-list.liquid 
     level = 2 
     namespace = "featured-candidates" 
-    entry_list = site.candidates 
+    entry_list = candidates_ordered 
     entry_template = "featured-candidate-block.liquid" 
 %} 
 </div>
