@@ -13,6 +13,18 @@ layout: default
 %} 
 </div> 
 
+{% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
+<div class= "section team" id= "candidates-section"> 
+{% include entry-list.liquid 
+    level = 2 
+    namespace = "team" 
+    heading = candidates.heading 
+    text = candidates.text 
+    entry_list = site.candidates 
+    entry_template = "candidate-block.liquid" 
+%} 
+</div> 
+
 <div class= "section featured-candidates">
 {% include entry-list.liquid 
     level = 2 
@@ -31,18 +43,6 @@ layout: default
     text = priorities.text 
     entry_list = priorities.entry_list 
     entry_template = "priorities-block.liquid" 
-%} 
-</div> 
-
-{% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
-<div class= "section team" id= "candidates-section"> 
-{% include entry-list.liquid 
-    level = 2 
-    namespace = "team" 
-    heading = candidates.heading 
-    text = candidates.text 
-    entry_list = site.candidates 
-    entry_template = "candidate-block.liquid" 
 %} 
 </div> 
 
