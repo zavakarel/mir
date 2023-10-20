@@ -21,7 +21,7 @@
 title: "За Вакарел" 
 description: >- # this means to ignore newlines until "baseurl:"
   MIR local elections website 
-repo_name: "/mir" 
+repo_name: "" 
 baseurl: "" # the subpath of your site, e.g. /blog 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com 
 
