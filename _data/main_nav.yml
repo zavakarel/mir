@@ -18,10 +18,10 @@ entry_list:
     text: "Събития" 
     target: "#news-section" 
 
-  - 
-    text: "Въпроси" 
-    target: "#questions-section" 
+  # - 
+  #   text: "Въпроси" 
+  #   target: "#questions-section" 
 
   - 
     text: "Контакти" 
-    target: "#contacts-section" 
+    target: "#send-message-section" 
