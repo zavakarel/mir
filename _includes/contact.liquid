@@ -1,4 +1,11 @@
+{% case include.key %}
+    {% when "phone" %} 
+        {% assign text = "Телефон" %}
+    {% when "email" %}
+        {% assign text = "Имейл" %}  
+{% endcase %}
+
 <dl class= "contact contact-{{ include.key }}"> 
-    <dt class= "contact-key">{{ include.key }}</dt> 
+    <dt class= "contact-key">{{ text }}</dt> 
     <dd class= "contact-value">{{ include.value }}</dd> 
 </dl> 
