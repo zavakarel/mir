@@ -1,0 +1,37 @@
+{% if include.heading %}
+    <h2 class= "heading user-action-panel-heading">{{ include.heading }}</h2> 
+{% endif %}
+    
+<form 
+    class= "form user-action-form send-message-form gform" 
+    action= "https://script.google.com/macros/s/AKfycbxpBZI94QaayNiXnIHlv6pEQ8l1t30tnsSwHV1jKtdwFTv7eGeEPFHlPJEXpA-i6xmb-Q/exec" 
+    method= "post"
+>
+    <div class= "form-field sender-name-field">
+        <label for= "sender-name" class= "field-label">Вашето име</label> 
+        <input class= "form-field-body" type= "text" name= "name" id= "sender-name" /> 
+    </div> 
+
+    <div class= "form-field sender-email-field">
+        <label for= "sender-email" class= "field-label">Вашият имейл</label> 
+        <input class= "form-field-body" type= "email" name= "email" id= "sender-email" /> 
+    </div> 
+
+    <div class= "form-field sender-message-field">
+        <label for= "sender-message" class= "field-label">Вашето съобщение</label> 
+        <textarea class= "form-field-body" name= "message" id= "sender-message"></textarea> 
+    </div> 
+
+    <div class= "honeypot-field"> 
+        <input id= "honeypot" type= "hidden" name= "honeypot" value= "" />
+    </div>
+
+    <button class= "form-button send-message-button" type= "submit">Изпращане</button> 
+
+    <div class= "thankyou_message" style= "display: none;"> 
+        <p><strong>Благодаря Ви</strong>, че ни писахте!</p> 
+    </div>
+
+</form>
+
+<p class= "form-note">Или пишете на <strong>{{ site.email }}</strong></p> 
