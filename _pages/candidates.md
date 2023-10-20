@@ -1,6 +1,6 @@
 --- 
 name: candidates 
-heading: "Кои сме ние" 
+heading: "Нашите кандидати" 
 subheading: ""
 text: 
   - 
