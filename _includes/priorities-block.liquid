@@ -4,6 +4,10 @@
 <div class= "priority-entry" id= "priority-entry-id-{{ priority.id }}">
     <div class= "priorities-block"> 
 
+        {% include image.liquid 
+            src = priority.image 
+        %} 
+
         {% if priority.heading == nil or priority.heading == "" %} 
             {% assign heading = priority.paragraph | truncatewords: 3, "" %}  
         {% else %}
