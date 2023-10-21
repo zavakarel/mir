@@ -7,7 +7,7 @@ entry_list:
   - paragraph: Да решим проблема със сметосъбирането на Вакарел. 
     image: "Alternatives-to-Plastic-Trash-Bags.png" 
   - paragraph: "Да разкрием нови работни места, като привлечем сериозни инвеститори. " 
-    image: "161012_coll_whoispaying.jpg" 
+    image: "7391410_Are-your-investments-properly-positioned_hub8_2560x1600_2022-11-04T21_20_43-1694x1090.jpg" 
   - paragraph: Да привлечем лекари и осигурим машина за основни лекарства. 
     image: "primary-care.jpg" 
   - paragraph: Да изградим пречиствателна станция за питейна вода. 
