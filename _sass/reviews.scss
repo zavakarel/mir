@@ -1,31 +1,94 @@
 .reviews { 
-    &-list {
-        
 
-    } 
+    &-entry:nth-child( 2n + 1 ) .review-text-content { 
+        //margin-right: 50%; 
+    }
+
+    &-entry:nth-child( 2n ) { 
+        .review-figure {
+            //left: 50%; 
+        } 
+
+        .review-text-content { 
+            //margin-left: 50%; 
+            //flex-direction: row-reverse; 
+        } 
+    }
 
 } 
 
+.review-figure, 
+.review-person {
+    border-color: rgba( var( --color-3-rgb ), 0.2 ); 
+}
+
 .review { 
-    > * { 
-        margin-top: 1em; 
+    //display: flex; 
+
+    // > * {
+    //     width: 50%; 
+    // } 
+
+    position: relative; 
+
+    // > * + * {
+    //     margin-left: 2em; 
+    // }
+
+    // > * { 
+    //     margin-top: 1em; 
+    // } 
+
+    &-figure { 
+        display: flex; justify-content: center; align-items: center; 
+        position: absolute; 
+        //width: 50%; 
+        width: 100%; height: 100%; 
+        border-width: 1px; border-style: solid; 
+        border-radius: 8px; 
+        //color: rgba( var( --color-grayscale-dark-rgb ), 0.125 ); 
+        //background-color: rgba( var( --color-grayscale-dark-rgb ), 0.02 ); 
+
+        &::after {  
+            font-family: var( --icon-font-family ); 
+            font-size: 20em; 
+            content: "\f11f"; 
+            opacity: 0.125; 
+        }
     } 
 
-    &-heading {
-        font-weight: var( --font-weight-regular ); 
+    &-text-content { 
+        position: relative; z-index: 2; 
+        padding-block: 5em; padding-inline: 4em; 
+        //border: 1px solid; 
+
+        > * + * {
+            margin-top: 2em; 
+        }
+    }
+
+    &-heading { 
+        margin-top: 3em; 
+        font-weight: var( --font-weight-semi-bold ); 
     } 
 
     &-person-name {
-        font-weight: var( --font-weight-semi-bold ); 
+        //font-weight: var( --font-weight-semi-bold ); 
     } 
 
     &-article .image {
         object-position: center top; 
     }
-}
+} 
 
 .review-person { 
-    display: flex; flex-wrap: wrap; 
+    --image-width: 3em; 
+    --image-height: var( --image-width ); 
+
+    // display: flex; align-items: center; 
+    // flex-wrap: wrap; 
+    padding-bottom: 1em; 
+    border-width: 0 0 1px 0; border-style: solid; 
     font-family: var( --font-family-2 ); 
 
     .key {
@@ -36,13 +99,14 @@
     &-photo .image { 
         display: block; 
         //position: absolute; left: 0; 
-        width: 4em; height: 4em; 
+        width: var( --image-width ); height: var( --image-height ); 
         object-fit: cover; object-position: center top; 
-        border-radius: 8px; 
+        border-radius: 50%; 
     } 
 
-    &-text-content {
-        margin-left: 1em; 
+    .text-content {
+        //margin-left: 1em; 
+        margin-top: 1em; 
     } 
 
 } 

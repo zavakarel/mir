@@ -404,11 +404,11 @@
 } 
 
 // Reviews 
-@media screen and ( min-width: 781px ) { 
+@media screen and ( min-width: 921px ) { 
     .reviews-list { 
         --column-count: 2; 
         --column-gap-x: 2em; 
-        --column-gap-y: 3em; 
+        --column-gap-y: 2em; 
 
         > .entry:nth-child( -n + 2 ) { 
             margin-top: 0; 
@@ -422,7 +422,7 @@
     
 } 
 
-@media screen and ( max-width: 780px ) { 
+@media screen and ( max-width: 920px ) { 
     .reviews-list { 
         --column-count: 1; 
         --column-gap-x: 0em; 
