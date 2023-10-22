@@ -4,11 +4,13 @@
     </a> 
 
     <header class= "article-header {{ include.namespace }}-header"> 
-        <div class= "image-holder article-image-holder">
-            {% include image.liquid 
-                namespace = "article-header"
-                src = include.image 
-            %} 
+        <div class= "image-holder article-image-holder"> 
+            {% if include.image  %}
+                {% include image.liquid 
+                    namespace = "article-header"
+                    src = include.image 
+                %} 
+            {% endif %}
         </div>
 
         {% include heading.liquid 
