@@ -1,5 +1,19 @@
 .reviews { 
 
+    // &-list {
+    //     --column-count: 1; 
+    //     --column-gap-x: 2em; 
+    //     --max-width: 620px; 
+
+    //     > .entry:nth-child( 1 ) { 
+    //         margin-top: 0; 
+    //     }
+    
+    //     > .entry:nth-child( n ) { 
+    //         margin-left: 0; 
+    //     } 
+    // }
+
     &-entry:nth-child( 2n + 1 ) .review-text-content { 
         //margin-right: 50%; 
     }
@@ -29,7 +43,7 @@
     //     width: 50%; 
     // } 
 
-    position: relative; 
+    //position: relative; 
 
     // > * + * {
     //     margin-left: 2em; 

@@ -404,17 +404,17 @@
 } 
 
 // Reviews 
-@media screen and ( min-width: 921px ) { 
+@media screen and ( min-width: 1241px ) { 
     .reviews-list { 
-        --column-count: 2; 
+        --column-count: 3; 
         --column-gap-x: 2em; 
-        --column-gap-y: 2em; 
+        --max-width: none; 
 
-        > .entry:nth-child( -n + 2 ) { 
+        > .entry:nth-child( -n + 3 ) { 
             margin-top: 0; 
         }
     
-        > .entry:nth-child( 2n + 1 ) { 
+        > .entry:nth-child( 3n + 1 ) { 
             margin-left: 0; 
         } 
 
@@ -422,12 +422,12 @@
     
 } 
 
-@media screen and ( max-width: 920px ) { 
+@media screen and ( max-width: 1240px ) { 
     .reviews-list { 
         --column-count: 1; 
         --column-gap-x: 0em; 
         --column-gap-y: 2em; 
-        --max-width: 420px; 
+        --max-width: 620px; 
 
         > .entry:nth-child( 1 ) { 
             margin-top: 0; 
