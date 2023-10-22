@@ -11,9 +11,11 @@
             <div class= "entry person-entry person-photo review-person-photo">
                 <span class= "key">Photo</span> 
 
-                {% include image.liquid 
-                    src = review.author.photo 
-                %} 
+                {% if review.author.photo %}
+                    {% include image.liquid 
+                        src = review.author.photo 
+                    %} 
+                {% endif %}
             </div> 
 
             <div class= "text-content review-person-text-content"> 

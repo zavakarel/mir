@@ -96,13 +96,19 @@
         left: -10000px; top: -10000px; 
     } 
 
-    &-photo .image { 
-        display: block; 
-        //position: absolute; left: 0; 
+    &-photo { 
         width: var( --image-width ); height: var( --image-height ); 
-        object-fit: cover; object-position: center top; 
+        background-color: rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
         border-radius: 50%; 
-    } 
+        overflow: hidden; 
+
+        .image { 
+            display: block; 
+            //position: absolute; left: 0; 
+            width: var( --image-width ); height: var( --image-height ); 
+            object-fit: cover; object-position: center top; 
+        } 
+    }
 
     .text-content {
         //margin-left: 1em; 
