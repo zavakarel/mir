@@ -19,7 +19,7 @@
 
     <div class= "form-field sender-message-field">
         <label for= "sender-message" class= "field-label">Вашето съобщение</label> 
-        <textarea class= "form-field-body" name= "message" id= "sender-message"></textarea> 
+        <textarea class= "form-field-body" name= "message" id= "sender-message" rows= "5"></textarea> 
     </div> 
 
     <div class= "honeypot-field"> 
@@ -30,8 +30,8 @@
 
     <div class= "thankyou_message" style= "display: none;"> 
         <p><strong>Благодарим Ви</strong>, че ни писахте!</p> 
-    </div>
+    </div> 
+
+    <p class= "form-note">Или пишете на <strong>{{ site.email }}</strong></p> 
 
 </form>
-
-<p class= "form-note">Или пишете на <strong>{{ site.email }}</strong></p> 
