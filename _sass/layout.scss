@@ -2,6 +2,7 @@
     --page-inner-width: 1200px; 
     --page-max-width: 1920px; 
     --content-indent-x: 1.25rem; 
+    --indent-x-correction: calc( -1 * var( --content-indent-x ) ); 
 } 
 
 html, 
