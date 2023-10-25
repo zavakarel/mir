@@ -22,13 +22,9 @@
                 text = include.data.text 
             %}  --> 
 
-            <a class= "link read-more-button" href= "#candidate-article-id-{{ candidate.id }}">Информация</a> 
+            <a class= "link read-more-button" href= "#featured-candidate-id-{{ candidate.id }}">Информация</a> 
         </div> 
     </div> 
 
-    <div class= "article-holder" id= "candidate-article-id-{{ candidate.id }}"> 
-        {% include candidate.liquid 
-            candidate = include.data 
-        %}  
-    </div>
+    
 </div>
