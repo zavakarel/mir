@@ -13,6 +13,26 @@ layout: default
 %} 
 </div> 
 
+<div class= "section principles"> 
+    <div class= "candidate-image-holder">
+        {% include image.liquid 
+            namespace = "candidate" 
+            src = "1392158430-need-investor-ditch-pitch.jpg" 
+        %} 
+    </div> 
+
+    <div class= "text-content section-text-content principles-text-content"> 
+        {% include entry-list.liquid 
+            level = 2 
+            namespace = "principles" 
+            heading = "Принципи на управление" 
+            text = site.data.principles.text 
+            entry_list = site.data.principles.entry_list 
+            entry_template = "principles-block.liquid" 
+        %} 
+    </div> 
+</div> 
+
 {% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
 {% assign candidates_ordered = site.candidates | sort: 'order' %} 
 <div class= "section team" id= "candidates-section"> 
@@ -33,7 +53,7 @@ layout: default
     entry_list = candidates_ordered 
     entry_template = "featured-candidate-block.liquid" 
 %} 
-</div>
+</div> 
 
 {% assign priorities = site.pages | where: 'name', 'priorities' | first %} 
 <div class= "section priorities" id= "priorities-section">
@@ -47,6 +67,7 @@ layout: default
 %} 
 </div> 
 
+
 {% assign news = site.pages | where: 'name', 'news' | first %} 
 {% assign news_list = site.news | reverse | slice: 0, 4 %} 
 <div class= "section news" id= "news-section"> 
@@ -59,19 +80,6 @@ layout: default
     entry_template = "news-block.liquid" 
 %} 
 </div> 
-
-{%- comment -%}
-<div class= "section features">
-{% include entry-list.liquid 
-    level = 2 
-    namespace = "features" 
-    heading = "Discussions" 
-    text = site.data.sponsorship.text 
-    entry_list = site.data.features 
-    entry_template = "features-block.liquid" 
-%} 
-</div> 
-{%- endcomment -%} 
 
 {%- comment -%}
 {% assign questions = site.pages | where: 'name', 'questions' | first %}

@@ -1,0 +1,113 @@
+.principles { 
+    padding: 4.5em; 
+    padding-left: 40%; 
+    //display: flex; 
+    position: relative; 
+
+    // > * { 
+    //     width: 50%; 
+    // } 
+
+    > * + * {
+        margin-left: 1em; 
+    }
+
+    .candidate-list { 
+        --column-count: 2; 
+        --column-gap-x: 1em; 
+        --column-gap-y: 1em; 
+
+        > .entry:nth-child( -n + 2 ) { 
+            margin-top: 0; 
+        }
+
+        > .entry:nth-child( 2n + 1 ) { 
+            margin-left: 0; 
+        } 
+
+        //margin-block: auto; 
+
+        // .entry {
+        //     height: 50%; 
+        // }
+
+    } 
+
+    .candidate-image { 
+        display: block; 
+        //margin-inline: auto; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        border-radius: 8px; 
+
+        &-holder { 
+            position: absolute; 
+            left: var( --content-indent-x ); right: var( --content-indent-x ); margin-right: 40%; top: 0; 
+            max-width: none; height: 100%; 
+            opacity: 0.1; 
+            
+        }
+    }
+
+    &-text-content { 
+        box-sizing: border-box; 
+        position: relative; z-index: 2; 
+        padding: 5em; //padding-inline: 5em;  
+        //border: 1px solid; 
+        border-radius: 8px; 
+        background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+        //box-shadow: 0 0 15px 2px rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
+    }
+
+    .heading {
+        font-size: var( --font-size-level-3 ); 
+    }
+
+    &-list { 
+        --entry-list-margin-top: 2.5em; 
+
+        --column-count: 2; 
+        --column-gap-x: 1em; 
+        --column-gap-y: 1.5em; 
+
+        > .entry:nth-child( -n + 2 ) { 
+            margin-top: 0; 
+        }
+
+        > .entry:nth-child( 2n + 1 ) { 
+            margin-left: 0; 
+        } 
+
+        counter-reset: principle-counter; 
+        .entry { 
+             
+            counter-increment: principle-counter; 
+            box-sizing: border-box;
+            // padding: 2em; 
+            // border: 1px solid; 
+            // border-radius: 8px; 
+
+            .heading { 
+                margin-right: 1em; 
+                padding-bottom: 0.5em; 
+                border-bottom: 1px solid; 
+                
+                &::before { 
+                    display: block; 
+                    margin-bottom: 1em; 
+                    font-size: var( --font-size-level-4 ); 
+                    content: counter( principle-counter ); 
+                } 
+            }
+        }
+
+    } 
+
+    &-entry {
+        .heading {
+            font-size: var( --font-size-level-4 ); 
+        }
+    }
+    
+} 
