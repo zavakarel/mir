@@ -531,17 +531,17 @@
 } 
 
 // Reviews 
-@media screen and ( min-width: 1241px ) { 
+@media screen and ( min-width: 981px ) { 
     .reviews-list { 
-        --column-count: 3; 
+        --column-count: 2; 
         --column-gap-x: 2em; 
-        --max-width: none; 
+        --max-width: var( --page-inner-width ); 
 
-        > .entry:nth-child( -n + 3 ) { 
+        > .entry:nth-child( -n + 2 ) { 
             margin-top: 0; 
         }
     
-        > .entry:nth-child( 3n + 1 ) { 
+        > .entry:nth-child( 2n + 1 ) { 
             margin-left: 0; 
         } 
 
@@ -549,7 +549,7 @@
     
 } 
 
-@media screen and ( max-width: 1240px ) { 
+@media screen and ( max-width: 980px ) { 
     .reviews-list { 
         --column-count: 1; 
         --column-gap-x: 0em; 
