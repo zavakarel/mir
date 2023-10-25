@@ -1,6 +1,7 @@
 .principles { 
-    padding: 4.5em; 
-    padding-left: 40%; 
+    //padding: 4.5em; padding: min( 8vw, 4.5em ); 
+    padding-block: 4.5em; 
+    //padding-left: 40%; 
     //display: flex; 
     position: relative; 
 
@@ -53,7 +54,8 @@
     &-text-content { 
         box-sizing: border-box; 
         position: relative; z-index: 2; 
-        padding: 5em; //padding-inline: 5em;  
+        padding: min( 5em, 8vw ); 
+        margin-left: auto; max-width: 800px; 
         //border: 1px solid; 
         border-radius: 8px; 
         background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
@@ -65,20 +67,6 @@
     }
 
     &-list { 
-        --entry-list-margin-top: 2.5em; 
-
-        --column-count: 2; 
-        --column-gap-x: 1em; 
-        --column-gap-y: 1.5em; 
-
-        > .entry:nth-child( -n + 2 ) { 
-            margin-top: 0; 
-        }
-
-        > .entry:nth-child( 2n + 1 ) { 
-            margin-left: 0; 
-        } 
-
         counter-reset: principle-counter; 
         .entry { 
              
