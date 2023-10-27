@@ -1,0 +1,56 @@
+.invite { 
+    font-family: var( --font-family-2 ); 
+    text-align: center; 
+
+    &-details { 
+        //display: flex; justify-content: center; 
+        margin-top: 3em; 
+        margin-inline: auto; 
+        padding: 2em; 
+        width: 15rem; 
+        border: 1px solid; 
+        border-radius: 8px; 
+
+        > * + * {
+            //margin-top: 0.8em; 
+            border-top: 1px solid; 
+        }
+
+    }
+
+    .date { 
+        --date-padding: 1em; 
+        
+        // display: flex; flex-direction: row; 
+        // margin-inline: auto; 
+        // width: fit-content; 
+        // border: 1px solid; 
+        // border-radius: 8px; 
+
+        // > * { 
+        //     font-size: 1.2em; 
+        // }
+
+    } 
+
+    .time { 
+        padding-block: 0.5em; 
+        font-size: 1.5em; 
+
+        .hour { 
+        
+
+        } 
+    
+        .minutes {
+    
+        }
+
+    } 
+
+    .place { 
+        padding-top: 1em; 
+        font-size: 1.2em; 
+    }
+
+}

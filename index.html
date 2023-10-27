@@ -13,6 +13,16 @@ layout: default
 %} 
 </div> 
 
+<div class= "section invites" id= "invites-section"> 
+{% include entry-list.liquid 
+    level = 2 
+    namespace = "invites" 
+    
+    entry_list = site.invites 
+    entry_template = "invites-block.liquid" 
+%} 
+</div> 
+
 <div class= "section principles"> 
     {% assign principles = site.pages | where: 'name', 'principles' | first %} 
 

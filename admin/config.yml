@@ -242,6 +242,46 @@ collections:
             widget: "image" 
             required: false 
 
+  -     
+    name: "invites" 
+    label: "Покани" 
+    folder: "_invites" 
+    label_singular: "Invite" 
+    create: true 
+    identifier_field: heading 
+    fields: 
+      - 
+        name: "date" 
+        label: "Date" 
+        widget: "datetime" 
+        date_format: "DD.MM.YYYY" 
+
+      - 
+        name: "place" 
+        label: "Place" 
+        widget: "string" 
+
+      - 
+        name: "heading"
+        label: "Heading" 
+        widget: "string" 
+        required: false 
+      - 
+        name: "text"
+        label: "Text" 
+        widget: "list" 
+        fields: 
+          - 
+            name: "paragraph"
+            label: "Paragraph" 
+            widget: "text" 
+            required: false 
+      - 
+        name: "image" 
+        label: "Image" 
+        widget: "image" 
+        required: false 
+
   - 
     name: "pages"
     label: "Страници" 
@@ -325,3 +365,5 @@ collections:
                     label: "Paragraph" 
                     widget: "text" 
                     required: false 
+
+      

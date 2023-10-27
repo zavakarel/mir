@@ -1,0 +1,29 @@
+{% assign entry = include.data %} 
+{% assign entry_date = entry.date | date: "%b %d %Y %H %M" | split: " " %} 
+
+<div class= "invite">
+   
+
+    {% include heading.liquid 
+        level = 3 
+        text = entry.heading 
+    %} 
+
+    {% include text.liquid 
+        text = entry.text 
+    %} 
+
+    <footer class= "invite-details"> 
+        <div class= "date invite-date">
+            <span class= "month news-month">{{ entry_date[ 0 ] }}</span> 
+            <span class= "day news-day">{{ entry_date[ 1 ] }}</span> 
+            <span class= "year news-year">{{ entry_date[ 2 ] }}</span> 
+        </div> 
+
+        <div class= "time invite-time">
+            <span class= "hour">{{ entry_date[ 3 ] }}</span>:<span class= "minutes">{{ entry_date[ 4 ] }}</span> ч. 
+        </div> 
+
+        <div class= "place invite-place">{{ entry.place }}</div> 
+    </footer> 
+</div>
