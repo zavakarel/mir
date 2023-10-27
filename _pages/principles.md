@@ -7,7 +7,7 @@ text:
       професия, виждания и опит, които да формират едно представителство на
       цялото село, което да има глас в управлението и да държи кмета отговорен.
       '
-image: 63e2e74675de8b1c29acdc2a_team-meeting-games.jpg
+image: why-is-it-significant-for-students-to-develop-teamwork-skills.jpg
 entry_list:
   - heading: "Прозрачност "
     text:
