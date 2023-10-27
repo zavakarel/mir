@@ -1,8 +1,7 @@
 {% assign entry = include.data %} 
 {% assign entry_date = entry.date | date: "%B %d %Y %H %M" | split: " " %} 
 
-<div class= "invite">
-
+<div class= "invite"> 
     {% include heading.liquid 
         level = 3 
         text = entry.heading 
@@ -22,8 +21,6 @@
 
         <div class= "place invite-place">{{ entry.place }}</div> 
     </footer> 
-
-    
 
     {% if include.data.image  %} 
         {% include image.liquid 

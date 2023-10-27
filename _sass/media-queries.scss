@@ -152,6 +152,40 @@
     
 } 
 
+@media screen and ( max-width: 680px ) { 
+    .invite-details { 
+        display: block; 
+        margin-top: 3em; 
+        margin-inline: auto; 
+        padding: 1.5em; 
+        
+        > * { 
+            --icon-block: 0 0.4em; 
+            --icon-inline: auto; 
+
+            display: block; 
+            
+        }
+
+        > * + * { 
+            margin-left: 0; margin-top: 1em; 
+        } 
+
+        .date { 
+            display: block; 
+        } 
+
+    }
+    
+} 
+
+@media screen and ( max-width: 420px ) { 
+    .invite .heading {
+        font-size: 2em; 
+    } 
+    
+} 
+
 // Principles 
 // @media screen and ( min-width: 981px ) { 
 //     .principles { 
