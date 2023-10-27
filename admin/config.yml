@@ -255,27 +255,38 @@ collections:
         label: "Date" 
         widget: "datetime" 
         date_format: "DD.MM.YYYY" 
-
+        time_format: "HH:mm" 
+        picker_utc: false 
       - 
         name: "place" 
         label: "Place" 
-        widget: "string" 
-
+        widget: "string"
       - 
         name: "heading"
         label: "Heading" 
         widget: "string" 
         required: false 
       - 
-        name: "text"
-        label: "Text" 
+        name: "subheading"
+        label: "Subheading" 
+        widget: "string" 
+        required: false 
+      - 
+        name: "sections"
+        label: "Sections" 
         widget: "list" 
+        required: false 
         fields: 
           - 
-            name: "paragraph"
-            label: "Paragraph" 
-            widget: "text" 
-            required: false 
+            name: "text"
+            label: "Text" 
+            widget: "list" 
+            fields: 
+              - 
+                name: "paragraph"
+                label: "Paragraph" 
+                widget: "text" 
+                required: false 
       - 
         name: "image" 
         label: "Image" 
