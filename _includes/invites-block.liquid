@@ -1,29 +1,47 @@
 {% assign entry = include.data %} 
-{% assign entry_date = entry.date | date: "%b %d %Y %H %M" | split: " " %} 
+{% assign entry_date = entry.date | date: "%B %d %Y %H %M" | split: " " %} 
 
 <div class= "invite">
-   
 
     {% include heading.liquid 
         level = 3 
         text = entry.heading 
-    %} 
-
-    {% include text.liquid 
-        text = entry.text 
+        sub_text = entry.subheading 
     %} 
 
     <footer class= "invite-details"> 
         <div class= "date invite-date">
-            <span class= "month news-month">{{ entry_date[ 0 ] }}</span> 
             <span class= "day news-day">{{ entry_date[ 1 ] }}</span> 
+            <span class= "month news-month">{{ entry_date[ 0 ] }}</span> 
             <span class= "year news-year">{{ entry_date[ 2 ] }}</span> 
         </div> 
 
         <div class= "time invite-time">
-            <span class= "hour">{{ entry_date[ 3 ] }}</span>:<span class= "minutes">{{ entry_date[ 4 ] }}</span> ч. 
+            <span class= "hour">{{ entry_date[ 3 ] }}</span>:<span class= "minutes">{{ entry_date[ 4 ] }}</span>
         </div> 
 
         <div class= "place invite-place">{{ entry.place }}</div> 
     </footer> 
-</div>
+
+    
+
+    {% if include.data.image  %} 
+        {% include image.liquid 
+            namespace = "invite" 
+            src = include.data.image 
+        %} 
+    {% endif %} 
+
+    <a class= "link read-more-button" href= "#invite-id-{{ forloop.index }}">Повече</a> 
+</div> 
+
+{% assign text = entry.text %} 
+<div class= "article-holder" id= "invite-id-{{ forloop.index }}"> 
+    {% include article.liquid 
+        namespace = "" 
+        entry_id = entry.id 
+        heading = entry.heading 
+        image = entry.image 
+        body = entry.sections 
+    %}  
+</div> 

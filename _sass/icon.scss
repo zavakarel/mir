@@ -14,6 +14,8 @@
 
 // Where to place an icon 
 :where( 
+    .invite-details > *, 
+    .invite > .paragraph, 
     .quote-icon, 
     .main-nav-open-button, 
     .question-title, 
@@ -48,6 +50,7 @@
 
 
 // Where the icon is on the left side 
+
 .main-nav-open-button, 
 //.working-hours, 
 .question-title, 
