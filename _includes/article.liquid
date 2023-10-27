@@ -21,8 +21,34 @@
         {{ include.header_complementary }} 
     </header> 
 
-    <div class= "article-body {{ include.namespace }}-body">
+    <div class= "article-body {{ include.namespace }}-body"> 
+        {% assign lead_section = include.body[ 0 ] %} 
+
+        {% if lead_section.heading == nil or lead_section.heading == "" %} 
+            {% assign lead_paragraph = include.body[ 0 ].text[ 0 ].paragraph %} 
+            {% assign heading = lead_paragraph | truncatewords: 5, "" %} 
+            {% assign lead_paragraph = lead_paragraph | remove_first: heading %} 
+
+            {% include heading.liquid 
+                level = 5 
+                text = heading 
+            %} 
+
+            <p class= "paragraph article-paragraph">{{ lead_paragraph}}</p> 
+            {% for p in lead_section.text %} 
+                {% if forloop.first %} 
+                    {% continue %} 
+                {% endif %} 
+
+                <p class= "paragraph article-paragraph">{{ p.paragraph }}</p> 
+            {% endfor %}
+        {% endif %} 
+
         {% for section in include.body %} 
+            {% if lead_section.heading == nil or lead_section.heading == "" and forloop.first %} 
+                {% continue %} 
+            {% endif %} 
+
             {% include heading.liquid 
                 level = 5 
                 text = section.heading 
