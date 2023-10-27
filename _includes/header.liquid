@@ -17,11 +17,12 @@
                     <div class= "user-action-panel-main"> 
                         <h3 class= "heading user-action-panel-heading">Вашите <strong>Кандидати</strong></h3> 
 
+                        {% assign candidates_ordered = site.candidates | sort: 'order' %}
                         {% include entry-list.liquid 
                             level = 4
                             namespace = "team-member" 
                             
-                            entry_list = site.candidates 
+                            entry_list = candidates_ordered 
                             entry_template = "candidate-contact-block.liquid" 
                         %} 
                     </div> 

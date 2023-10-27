@@ -257,6 +257,7 @@ collections:
         date_format: "DD.MM.YYYY" 
         time_format: false 
         picker_utc: false 
+        format: "ll" 
       - 
         name: "start_time" 
         label: "Start Time" 

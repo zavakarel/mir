@@ -3,10 +3,10 @@
     text = "Вашите Кандидати" 
 %} 
 
-{% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
+{% assign candidates_ordered = site.candidates | sort: 'order' %}
 
 <ul class= "entry-list team-member-list">
-{% for entry in site.candidates %} 
+{% for entry in candidates_ordered %} 
     <li class= "entry team-member"> 
         <div class= "image-holder"> 
             {% include image.liquid 
