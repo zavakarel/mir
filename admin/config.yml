@@ -255,8 +255,21 @@ collections:
         label: "Date" 
         widget: "datetime" 
         date_format: "DD.MM.YYYY" 
-        time_format: "HH:mm" 
-        picker_utc: true 
+        time_format: false 
+        picker_utc: false 
+      - 
+        name: "start_time" 
+        label: "Start Time" 
+        widget: "object" 
+        fields: 
+          - 
+            name: "hours" 
+            label: "Hours" 
+            widget: "string" 
+          - 
+            name: "minutes" 
+            label: "Minutes"  
+            widget: "string" 
       - 
         name: "place" 
         label: "Place" 

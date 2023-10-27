@@ -16,8 +16,8 @@
             <span class= "year news-year">{{ entry_date[ 2 ] }}</span> 
         </div> 
 
-        <div class= "time invite-time">
-            <span class= "hour">{{ entry_date[ 3 ] }}</span>:<span class= "minutes">{{ entry_date[ 4 ] }}</span>
+        <div class= "time invite-time"> 
+            <span class= "hour">{{ entry.start_time.hours }}</span>:<span class= "minutes">{{ entry.start_time.minutes }}</span> 
         </div> 
 
         <div class= "place invite-place">{{ entry.place }}</div> 
