@@ -256,7 +256,7 @@ collections:
         widget: "datetime" 
         date_format: "DD.MM.YYYY" 
         time_format: "HH:mm" 
-        picker_utc: false 
+        picker_utc: true 
       - 
         name: "place" 
         label: "Place" 
