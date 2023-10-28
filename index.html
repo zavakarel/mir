@@ -13,6 +13,25 @@ layout: default
 %} 
 </div> 
 
+<div class= "introduction"> 
+    <figure class= "election-number">63</figure> 
+
+    <div class= "introduction-body"> 
+        <figure class= "election-number">63</figure> 
+        
+        <div class= "start">За</div> 
+
+        <div class= "window">
+            <div class= "end-list"> 
+                {% assign end_list = "Прозрачност Активност Компетентност Вакарел" | split: " " %} 
+                {% for entry in end_list %} 
+                    <div class= "end-entry">{{ entry }}</div> 
+                {% endfor %}
+            </div> 
+        </div> 
+    </div> 
+</div>
+
 <div class= "until-victory-display"> 
     <style> 
         .until-victory-display {
