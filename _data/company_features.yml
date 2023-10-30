@@ -5,7 +5,7 @@
   actions: 
     write: 
       key: "write" 
-      value: "Пишете Ни" 
+      value: "Пишете ни" 
       target: "" 
 
     call: 
