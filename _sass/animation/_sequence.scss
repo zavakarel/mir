@@ -1,0 +1,230 @@
+$sequence: (
+	start: 1.5s, 
+	stages: ( 
+		( 
+			selector: ".introduction", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction-body > .election-number", 
+			animationGroup: ( 
+				startShift: -0.1s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".start", 
+			animationGroup: ( 
+				startShift: -0.1s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction .end-entry-1", 
+			animationGroup: ( 
+				startShift: -0.1s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 1.4s, 
+						name: slide-y, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 1.4s, 
+						name: fade-out, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction .end-entry-2", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 1.4s, 
+						name: slide-y, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 1.4s, 
+						name: fade-out, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction .end-entry-3", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 1.4s, 
+						name: slide-y, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 1.4s, 
+						name: fade-out, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction .end-entry-4", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction > .election-number", 
+			animationGroup: ( 
+				startShift: -0.1s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: cruise, 
+						
+						duration: 3s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: slide-up, 
+						duration: 0.4s 
+					), 
+
+					( 
+						startShift: 0.2s, 
+						name: fade-out, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0.5s, 
+						name: off, 
+						duration: 0.0005s 
+					)
+
+				) 
+			)
+		) 
+
+
+	)
+); 

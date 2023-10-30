@@ -1,0 +1,124 @@
+@use "sass:list"; 
+@use "sass:map"; 
+@use "sass:string"; 
+@use "sass:math"; 
+
+
+// Intended to render a complex animation, represented as a sequence of stages
+@mixin animate( $sequence ) { 
+	// Grouping animations by their selector 
+	$selectorAnimations: getSelectorAnimations( $sequence ); 
+	// Loops through selector-animations pairs 
+	@each $selector, $animationCSSValueData in $selectorAnimations { 
+		// and joins separate animation values into a CSS "animation" property value
+		$animationCSSValue: listJoin( $animationCSSValueData, ", " ); 
+		// Finally, the animation CSS code is rendered 
+		#{ $selector } { 	
+			animation: $animationCSSValue; animation-fill-mode: forwards; 
+		}
+	} 
+}
+
+// Returns a list with CSS animation values for each animation in a group 
+@function getAnimationValues( $animations ) { 
+	// List, holding animation values 
+	$animationValues: []; 
+	@each $a in $animations { 
+		// CSS animation value is set in the "<name> <duration> <delay>" format 
+		$animationValue: map.get( $a, "name" ) + " " + map.get( $a, "duration" ) + " " + map.get( $a, "delay" ); 
+		//
+		@if map.get( $a, "timingFunction" ) { 
+			$animationValue: $animationValue + " " + map.get( $a, "timingFunction" ); 
+		}
+		// Animation value is saved  
+		$animationValues: list.append( $animationValues, $animationValue ); 
+	} 
+
+	@return $animationValues; 
+}
+
+@function getSelectorAnimations( $sequence ) { 
+	// Time elapsed 
+	$time: map.get( $sequence, "start" ); 
+	$selectors: (); 
+
+	// Loops through animation stages 
+	@each $s in map.get( $sequence, "stages" ) {  
+		// Gets stage selector and associated animation group 
+		$selector: map.get( $s, "selector" ); 
+		$animationGroup: map.get( $s, "animationGroup" ); 
+
+		// Calculates and sets animation delays 
+		$delayedAnimations: setDelays( $time, $animationGroup ); 
+		// CSS animation values list 
+		$animationValues: getAnimationValues( $delayedAnimations ); 
+		// Updates time for the start of the next animation group 
+		$time: getAnimationGroupEnd( $delayedAnimations ); 
+
+		// In case the current selector has animations set, 
+		// current animations are added to previous ones 
+		@if map.has-key( $selectors, $selector ) { 
+			$existingAnimationValues: map.get( $selectors, $selector ); 
+			$animationValues: list.join( $existingAnimationValues, $animationValues ); 
+		} 
+		// Sets CSS animation values list 
+		$selectors: map.set( $selectors, $selector, $animationValues );  
+	} 
+
+	@return $selectors; 
+} 
+
+// Aims to calculate and set delays to animations in an animation group 
+@function setDelays( $time, $animationGroup ) { 
+	// Animation group start time 
+	$groupStartTime: $time + map.get( $animationGroup, "startShift" ); 
+	// As long as the function aims to set each member animation start time 
+	// a new list to hold updated animations data is used
+	$updatedAnimations: []; 
+
+	@each $member in map.get( $animationGroup, "animations" ) { 
+		// Each animation start time is based on group start time and animation start shift 
+		$startMember: $groupStartTime + map.get( $member, "startShift" );  
+		// Adds "delay" property to animation data 
+		$member: map.set( $member, delay, $startMember ); 
+		// Puts updated animation into updated animations list 
+		$updatedAnimations: list.append( $updatedAnimations, $member ); 
+	} 
+	
+	@return $updatedAnimations; 
+} 
+
+// Finds when animation group ends, that is the time its last animation ends 
+@function getAnimationGroupEnd( $animations ) { 
+	// A list to hold separate animations end times 
+	$memberEnds: []; 
+	// Loops through all animations in the animation group 
+	@each $member in $animations { 
+		// Calculates when each animation ends, based on its start time and duration 
+		$currentMemberEnd: map.get( $member, "delay" ) + map.get( $member, "duration" ); 
+		$memberEnds: list.append( $memberEnds, $currentMemberEnd ); 
+	} 
+
+	// Returns the greatest value from the list, holding animation end times
+	@return math.max( $memberEnds... ); 
+}
+
+// Joins list elements to a string with a specified separator 
+@function listJoin( $list, $separator ) { 
+	// String variable to hold the string representation of the list, 
+	// the first element of the list is appended to it
+	$listToString: list.nth( $list, 1 ); 
+
+	// Set a counter variable to differentiate between iterations 
+	$pos: 1; 
+	@each $e in $list { 
+		// All elements, except the first one, are appended to the string 
+		@if $pos > 1 { 
+			$listToString: $listToString + $separator + $e; 
+		} 
+		// Increments the counter variable 
+		$pos: $pos + 1; 
+	} 
+
+	@return $listToString; 
+}
