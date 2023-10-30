@@ -1,4 +1,10 @@
 --- 
 ---
 
-@import "animation/main"; 
+@use "animation/settings" as settings; 
+@use "animation/keyframes"; 
+@use "animation/animation" as animation; 
+@use "animation/sequence" as sequence; 
+@use "animation/setup"; 
+
+@include animation.animate( sequence.$sequence ); 
