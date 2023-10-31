@@ -1,7 +1,74 @@
 .introduction {
     --distance-y: 50px; 
     --fade-in-end-opacity: 1; 
-}
+    --entry-height: 1.5em; 
+   
+} 
+
+.introduction { 
+    display: flex; justify-content: center; align-items: center; 
+    position: absolute; z-index: 200; 
+    left: 0; top: 0; right: 0; bottom: 0; 
+    margin: 0; 
+    margin-block: 10rem; margin-inline: 10rem; margin: min( 5rem, 4vw ); 
+    background-color: rgba( var( --color-3-rgb ), 1 ); color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+    border-radius: 12px; 
+    font-family: var( --font-family-2 ); font-weight: var( --font-weight-bold ); 
+    font-size: 4em; 
+    text-transform: uppercase; 
+    box-shadow: 0 0 15px 5px rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
+
+    > .election-number {
+        font-size: 10em; 
+        opacity: 0.05; 
+    } 
+
+    &-body {
+        padding-inline: 2rem; 
+        display: flex; 
+        align-items: center; 
+
+        > .election-number {  
+            position: initial; 
+            margin-inline: auto; margin-top: 0.2em; 
+            font-size: 2em; 
+            opacity: 0.8; 
+        } 
+
+
+        > * + * { 
+            margin-left: 0.5em; 
+
+        } 
+    } 
+
+    .window, 
+    .end-entry {
+        height: var( --entry-height ); 
+    } 
+
+    .start, 
+    .end-entry {
+        line-height: var( --entry-height ); 
+    } 
+
+    .start {
+        font-weight: var( --font-weight-light ); 
+    } 
+
+    .window { 
+        box-sizing: border-box; 
+        position: relative; 
+        overflow: hidden; 
+    } 
+
+    .end-list { 
+        --n: 3; 
+        --end-list-y: calc( -1 * var( --n ) * var( --entry-height ) );        
+    } 
+
+} 
+
 
 .introduction { 
     &, 
