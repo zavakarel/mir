@@ -62,11 +62,6 @@
         overflow: hidden; 
     } 
 
-    .end-list { 
-        --n: 3; 
-        --end-list-y: calc( -1 * var( --n ) * var( --entry-height ) );        
-    } 
-
 } 
 
 
@@ -98,52 +93,3 @@
     margin-top: calc( -1 * var( --entry-height ) ); 
 } 
 
-// > .election-number {
-//     opacity: 0; 
-//     transform: translateY( var( --entry-y ) ); 
-// } 
-
-// .start, 
-// .end-entry {
-//     transform: translateY( var( --entry-y ) ); 
-//     opacity: 0; 
-// } 
-
-// > .election-number { 
-//     --fade-in-end: 0.05; 
-
-//     animation: fade-in 0.2s, cruise 4s linear; animation-delay: 5.9s; animation-fill-mode: forwards; 
-// } 
-
-// $start: 1s; 
-// $entry-duration: 1.5s; 
-// $start-delay: $start + 0.25s; 
-
-// & {
-//     animation: display-intro 0.2s $start, fade-out 0.2s 7.25s, hide-intro 0.0005s 7.35s; //animation: display-intro 0.2s $start; 
-//     animation-fill-mode: forwards; 
-    
-// }
-
-// .start {  
-//     animation: slide-in 0.2s, fade-in 0.2s; animation-delay: $start-delay; animation-fill-mode: forwards; 
-// }
-
-// .end-entry { 
-//     animation: end $entry-duration; animation-fill-mode: forwards; 
-
-//     // &:first-child {
-//     //     animation-delay: $start; 
-//     // }
-
-//     &:last-child {
-//         animation-name: end-last; 
-//     }
-
-//     @for $i from 1 to 5 { 
-//         &:nth-child( #{$i} ) { 
-//             animation-delay: -0.1s + $entry-duration * $i; 
-//         }
-//     } 
-
-// } 
