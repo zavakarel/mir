@@ -1,7 +1,7 @@
-@use "settings" as settings; 
-@use "keyframes"; 
-@use "animation" as animation; 
-@use "sequence" as sequence; 
-@use "setup"; 
+@import "settings"; 
+@import "keyframes"; 
+@import "animation"; 
+@import "sequence"; 
+@import "setup"; 
 
-@include animation.animate( sequence.$sequence ); 
+@include animate( $sequence ); 
