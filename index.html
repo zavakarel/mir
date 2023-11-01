@@ -33,11 +33,12 @@ layout: default
 </div> 
 
 <div class= "section invites" id= "invites-section"> 
+{% assign invites_order_reversed = site.invites | order: "date" | reverse %} 
 {% include entry-list.liquid 
     level = 2 
     namespace = "invites" 
     
-    entry_list = site.invites 
+    entry_list = invites_order_reversed 
     entry_template = "invites-block.liquid" 
 %} 
 </div> 

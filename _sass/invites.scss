@@ -1,3 +1,9 @@
+.invites-list {
+    > * + * {
+        margin-top: 1.5em; 
+    }
+}
+
 .invite { 
     position: relative; 
     padding-block: 8em; padding-inline: var( --content-indent-x ); 
