@@ -123,7 +123,7 @@
 } 
 
 @media screen and ( max-width: 720px ) { 
-    @import 'flyout-nav'; 
+    @import "flyout-nav"; 
 
     .social-links { 
         margin-left: 0; 
@@ -152,6 +152,7 @@
     
 } 
 
+// Invite 
 @media screen and ( max-width: 680px ) { 
     .invite-details { 
         display: block; 
@@ -186,6 +187,7 @@
     
 } 
 
+// Introduction
 @media screen and ( max-width: 1180px ) { 
     .introduction { 
         font-size: calc( 1em + 3vw ); 

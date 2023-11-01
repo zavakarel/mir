@@ -13,9 +13,10 @@
 
     <link rel= "stylesheet" href= "{% if jekyll.environment == "production" %}{{ site.repo_name }}{% endif %}/assets/css/main.css"> 
     <link rel= "stylesheet" href= "/assets/css/animation.css"> 
+    <link rel= "stylesheet" href= "/assets/css/media-queries.css"> 
     <title>{{ site.title }}</title> 
 </head>
-<body> 
+<body class= "body"> 
     {% include header.liquid %} 
 
     {{ content }} 
