@@ -35,9 +35,10 @@
 {% assign text = entry.text %} 
 <div class= "article-holder" id= "invite-id-{{ forloop.index }}"> 
     {% include article.liquid 
-        namespace = "" 
+        namespace = "invite-article" 
         entry_id = entry.id 
         heading = entry.heading 
+        subheading = entry.subheading 
         image = entry.image 
         body = entry.sections 
     %}  

@@ -14,8 +14,10 @@
         </div>
 
         {% include heading.liquid 
+            namespace = include.namespace 
             level = 4 
             text = include.heading 
+            sub_text = include.subheading 
         %} 
 
         {{ include.header_complementary }} 

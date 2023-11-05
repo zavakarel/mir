@@ -123,6 +123,14 @@
         --icon-font-size: 1.25em; 
 
         font-size: 1em; 
+    } 
+
+    &-article-heading {
+        text-transform: uppercase; 
+
+        .subheading {
+            font-size: 0.65em; 
+        }
     }
 
 }
