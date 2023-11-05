@@ -125,12 +125,18 @@
         font-size: 1em; 
     } 
 
-    &-article-heading {
+} 
+
+.invites-entry {
+    .invite-article-header {
+        padding-top: 24rem; 
+    } 
+
+    .invite-article-heading {
         text-transform: uppercase; 
 
         .subheading {
-            font-size: 0.65em; 
+            font-size: 0.7em; 
         }
     }
-
 }
