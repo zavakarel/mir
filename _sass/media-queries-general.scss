@@ -632,6 +632,17 @@
     
 } 
 
+@media screen and ( max-width: 920px ) { 
+    .article-holder { 
+        > * {  
+            .close-button { 
+                right: auto; left: 0; 
+            } 
+        } 
+    }
+    
+} 
+
 // Send Message 
 @media screen and ( min-width: 1081px ) { 
     .send-message-section {  
@@ -670,8 +681,9 @@
 // Article 
 @media screen and ( max-width: 740px ) { 
     .article {
-        padding-left: 2.5em; 
-    }
+        --article-padding-left: 2.5rem; 
+        --article-padding-bottom: 5rem; 
+    } 
     
 } 
 
