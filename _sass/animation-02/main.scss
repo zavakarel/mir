@@ -3,5 +3,6 @@
 @import "animation"; 
 @import "sequence"; 
 @import "setup"; 
+@import "../introduction-logo"; 
 
 @include animate( $sequence ); 
