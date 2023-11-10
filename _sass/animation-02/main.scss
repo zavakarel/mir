@@ -1,0 +1,7 @@
+@import "settings"; 
+@import "keyframes"; 
+@import "animation"; 
+@import "sequence"; 
+@import "setup"; 
+
+@include animate( $sequence ); 

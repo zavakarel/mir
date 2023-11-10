@@ -1,0 +1,118 @@
+$sequence: (
+	start: 1s, 
+	stages: ( 
+		( 
+			selector: ".introduction", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction-logo .introduction-logo-icon", 
+			animationGroup: ( 
+				startShift: 0.5s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: scale-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction-logo .introduction-logo-icon-border", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: scale-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction-body", 
+			animationGroup: ( 
+				startShift: 0.4s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: move-left-border, 
+						duration: 0.3s 
+					), 
+
+					
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction-logo-text-holder", 
+			animationGroup: ( 
+				startShift: -0.2s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					) 
+
+				) 
+			)
+		), 
+
+		( 
+			selector: ".introduction-background-logo-icon", 
+			animationGroup: ( 
+				startShift: -0.1s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.4s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.4s 
+					) 
+				) 
+			)
+		), 
+
+
+	)
+); 
