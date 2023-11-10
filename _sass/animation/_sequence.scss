@@ -22,7 +22,7 @@ $sequence: (
 		), 
 
 		( 
-			selector: ".introduction-body > .election-number", 
+			selector: ".introduction-body > .introduction-logo-icon", 
 			animationGroup: ( 
 				startShift: -0.1s, 
 				animations: ( 
@@ -178,7 +178,7 @@ $sequence: (
 		), 
 
 		( 
-			selector: ".introduction > .election-number", 
+			selector: ".introduction-background-logo-icon", 
 			animationGroup: ( 
 				startShift: -0.1s, 
 				animations: ( 
@@ -192,7 +192,7 @@ $sequence: (
 						startShift: 0s, 
 						name: cruise, 
 						
-						duration: 3s 
+						duration: 2.5s 
 					) 
 				) 
 			)
