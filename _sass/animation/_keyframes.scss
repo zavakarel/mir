@@ -1,15 +1,15 @@
 @keyframes cruise { 
     0% {
-        transform: translateY( var( --distance-y ) ); 
+        transform: translateY( 50px ); 
     } 
 
-    5% {
+    10% {
         transform: translateY( 0 ); 
         
     } 
 
     100% {
-        transform: translateY( -2% ); 
+        transform: translateY( -100px ); 
         
     } 
 } 

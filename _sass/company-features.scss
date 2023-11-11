@@ -1,6 +1,8 @@
 .company-features { 
-    --entry-padding-y-top: 20rem; 
-    --entry-padding-y-bottom: 18rem; 
+    --entry-padding-y-top: 10rem; 
+    --entry-padding-y-bottom: 8rem; 
+    --entry-text-content-padding-y-top: 10rem; 
+    --entry-text-content-padding-y-bottom: 10rem; 
     --entry-image-width: 100%; 
     --entry-image-distance-x: 0; 
     --entry-image-distance-y: 0; 
@@ -33,6 +35,9 @@
 
         //position: relative; 
         position: unset; 
+        padding: { 
+            top: var( --entry-padding-y-top ); bottom: var( --entry-padding-y-bottom ); 
+        } 
         // border: 2px dashed; 
 
         // &::after { 
@@ -64,11 +69,12 @@
         position: relative; z-index: 2; 
         margin-left: 0; 
         padding: { 
-            top: var( --entry-padding-y-top ); bottom: var( --entry-padding-y-bottom ); 
-            // left: var( --entry-padding-x ); right: var( --entry-padding-x ); 
+            top: var( --entry-text-content-padding-y-top ); bottom: var( --entry-text-content-padding-y-bottom ); 
         } 
         //max-width: 50%; 
         text-align: center; 
+        //background-color: rgba( var( --color-3-rgb ), 0.5 ); 
+        overflow: hidden; 
 
         .heading { 
             display: flex; flex-direction: column-reverse; 

@@ -2,6 +2,21 @@ $sequence: (
 	start: 1.8s, 
 	stages: ( 
 		( 
+			selector: ".company-features .company-features-image", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.4s 
+					), 
+
+				) 
+			)
+		), 		
+
+		( 
 			selector: ".introduction", 
 			animationGroup: ( 
 				startShift: 0s, 
@@ -15,7 +30,7 @@ $sequence: (
 					( 
 						startShift: 0s, 
 						name: slide-in, 
-						duration: 0.2s 
+						duration: 0.4s 
 					) 
 				) 
 			)
@@ -24,7 +39,7 @@ $sequence: (
 		( 
 			selector: ".introduction-body > .introduction-logo-icon", 
 			animationGroup: ( 
-				startShift: -0.1s, 
+				startShift: -0.15s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
@@ -44,7 +59,7 @@ $sequence: (
 		( 
 			selector: ".start", 
 			animationGroup: ( 
-				startShift: -0.1s, 
+				startShift: -0.15s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
@@ -64,7 +79,7 @@ $sequence: (
 		( 
 			selector: ".introduction .end-entry-1", 
 			animationGroup: ( 
-				startShift: -0.1s, 
+				startShift: -0.15s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
@@ -180,7 +195,7 @@ $sequence: (
 		( 
 			selector: ".introduction-background-logo-icon", 
 			animationGroup: ( 
-				startShift: -0.1s, 
+				startShift: -0.15s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
@@ -191,8 +206,7 @@ $sequence: (
 					( 
 						startShift: 0s, 
 						name: cruise, 
-						
-						duration: 2.5s 
+						duration: 3s 
 					) 
 				) 
 			)
@@ -205,14 +219,14 @@ $sequence: (
 				animations: ( 
 					( 
 						startShift: 0s, 
-						name: slide-up, 
-						duration: 0.2s 
+						name: fade-out, 
+						duration: 0.5s 
 					), 
 
 					( 
 						startShift: 0s, 
-						name: fade-out, 
-						duration: 0.2s 
+						name: slide-up, 
+						duration: 0.5s 
 					), 
 
 					( 
@@ -221,6 +235,66 @@ $sequence: (
 						duration: 0.0005s 
 					)
 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".company-features-text-content > .heading", 
+			animationGroup: ( 
+				startShift: 0s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 		
+
+		( 
+			selector: ".company-features-action-button:nth-child( 1 )", 
+			animationGroup: ( 
+				startShift: -0.1s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.2s 
+					) 
+				) 
+			)
+		), 
+
+		( 
+			selector: ".company-features-action-button:nth-child( 2 )", 
+			animationGroup: ( 
+				startShift: -0.1s, 
+				animations: ( 
+					( 
+						startShift: 0s, 
+						name: fade-in, 
+						duration: 0.2s 
+					), 
+
+					( 
+						startShift: 0s, 
+						name: slide-in, 
+						duration: 0.3s 
+					) 
 				) 
 			)
 		) 

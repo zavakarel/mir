@@ -7,19 +7,31 @@
 
 .introduction { 
     display: flex; justify-content: center; align-items: center; 
-    position: absolute; z-index: 200; 
-    left: 0; top: 0; right: 0; bottom: 0; 
+    position: absolute; z-index: 2; 
+    left: 0; right: 0; top: var( --entry-padding-y-top ); bottom: var( --entry-padding-y-bottom ); 
     margin: 0; 
-    margin-block: 10rem; margin-inline: 10rem; margin: min( 5rem, 4vw ); 
-    background-color: rgba( var( --color-3-rgb ), 1 ); color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+    //margin-block: clamp( 12rem, 30vh, 20rem ); 
+    margin-inline: min( 8rem, 8vw ); 
+    //padding-block: calc( 12rem - 5vw ); 
+    //min-height: 70vh; 
+    //margin: min( 8rem, 5vw ); 
+    background-color: rgba( var( --color-3-rgb ), 0.9 ); color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+    //background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); color: rgba( var( --color-3-rgb ), 0.8 ); 
+    //border: 1px solid; 
     border-radius: 12px; 
     font-family: var( --font-family-2 ); font-weight: var( --font-weight-bold ); 
-    font-size: 4em; 
+    font-size: 3.5em; 
     text-transform: uppercase; 
     box-shadow: 0 0 15px 5px rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
 
+    &-holder { 
+        position: absolute; 
+        inset: 0; 
+        overflow: hidden; 
+    }
+
     .introduction-background-logo-icon {
-        font-size: 12em; 
+        font-size: calc( 20em - 8vw ); 
     } 
 
     &-body {
@@ -63,6 +75,10 @@
 
 } 
 
+.animation-start {
+    opacity: 0; 
+    transform: translateY( var( --distance-y ) ); 
+} 
 
 .introduction { 
     &, 
@@ -70,8 +86,7 @@
     .introduction-background-logo-icon, 
     &-body > .start, 
     .end-entry {
-        opacity: 0; 
-        transform: translateY( var( --distance-y ) ); 
+        @extend .animation-start; 
         
     } 
 } 
@@ -82,7 +97,29 @@
 
         animation-timing-function: linear !important; 
     } 
+} 
+
+.company-features-entry {
+    overflow: hidden; 
 }
+
+.company-features-text-content > .heading { 
+    --distance-y: 50px; 
+
+    @extend .animation-start; 
+} 
+
+.company-features-action-button { 
+    --distance-y: 30px; 
+
+    @extend .animation-start; 
+}
+
+.company-features .company-features-image { 
+    --fade-in-end-opacity: 0.3; 
+
+    @extend .animation-start; 
+} 
 
 .window { 
     overflow: hidden; 
