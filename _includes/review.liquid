@@ -5,7 +5,11 @@
 {% assign preview = preview | remove_first: heading %} 
 
 <div class= "review"> 
-    <div class= "figure review-figure"></div> 
+    <div class= "figure review-figure">
+        {% include image.liquid 
+            src = "cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTA1NzQwNC1pbWFnZS1qb2I2MzAtYV8xLmpwZw.jpg" 
+        %} 
+    </div> 
 
     <div class= "text-content review-text-content"> 
         <article class= "person review-person"> 
@@ -56,6 +60,12 @@
         <a class= "button close-button review-close-button {{ include.namespace }}-close-button" href= "#{{ include.namespace }}-entry" > 
             <span class= "button-text">Close</span>
         </a>  
+
+        <div class= "figure review-figure">
+            {% include image.liquid 
+                src = "cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTA1NzQwNC1pbWFnZS1qb2I2MzAtYV8xLmpwZw.jpg" 
+            %} 
+        </div> 
 
         <div class= "text-content review-text-content"> 
             <article class= "person review-person"> 

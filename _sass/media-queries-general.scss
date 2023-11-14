@@ -167,16 +167,6 @@
     
 } 
 
-@media screen and ( max-width: 780px ) { 
-    .company-features { 
-        //--entry-padding-y-top: 16rem; 
-        //--entry-padding-y-bottom: 5rem; 
-        // --entry-text-content-padding-y-top: 5rem; 
-        // --entry-text-content-padding-y-bottom: 5rem; 
-    }
-    
-} 
-
 @media screen and ( max-width: 640px ) { 
     .company-features { 
         //--entry-padding-y-top: 16rem; 
@@ -653,7 +643,7 @@
         --column-count: 1; 
         --column-gap-x: 0em; 
         --column-gap-y: 2em; 
-        --max-width: 620px; 
+        //--max-width: 620px; 
 
         > .entry:nth-child( 1 ) { 
             margin-top: 0; 
