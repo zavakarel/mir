@@ -198,9 +198,11 @@
 
     &-photo { 
         width: var( --image-width ); height: var( --image-height ); 
-        background-color: rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
+        background-color: rgba( var( --color-grayscale-dark-rgb ), 0.5 ); 
+        //border: 1px solid; 
         border-radius: 50%; 
         overflow: hidden; 
+        box-shadow: 0 0 12px 2px rgba( var( --color-grayscale-dark-rgb ), 0.4 ); 
 
         .image { 
             display: block; 
@@ -208,6 +210,14 @@
             width: var( --image-width ); height: var( --image-height ); 
             object-fit: cover; object-position: center top; 
         } 
+    } 
+
+    .no-photo { 
+        --icon-size: 100%; 
+        --icon-code: "\f47e"; 
+        --icon-font-size: 2em; 
+        --icon-color: rgba( var( --color-grayscale-light-rgb ), 0.7 ); 
+
     }
 
     .text-content {

@@ -13,7 +13,7 @@
 
     <div class= "text-content review-text-content"> 
         <article class= "person review-person"> 
-            <div class= "entry person-entry person-photo review-person-photo">
+            <div class= "entry person-entry person-photo review-person-photo {% if review.author.photo == nil %}no-photo{% endif %}"> 
                 <span class= "key">Photo</span> 
 
                 {% if review.author.photo %}
@@ -69,7 +69,7 @@
 
         <div class= "text-content review-text-content"> 
             <article class= "person review-person"> 
-                <div class= "entry person-entry person-photo review-person-photo">
+                <div class= "entry person-entry person-photo review-person-photo {% if review.author.photo == nil %}no-photo{% endif %}"> 
                     <span class= "key">Photo</span> 
 
                     {% if review.author.photo %}
