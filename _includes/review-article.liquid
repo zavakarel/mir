@@ -1,0 +1,58 @@
+{% assign review = include.data %} 
+{% assign lead_paragraph = review.sections[ 0 ].text[ 0 ].paragraph %}
+{% assign preview = lead_paragraph | truncatewords: 20, '...' %} 
+{% assign heading = preview | truncatewords: 5, "" %} 
+{% assign preview = preview | remove_first: heading %} 
+
+<div class= "article-holder" id= "{{ review.slug }}"> 
+    <div class= "review"> 
+        <a class= "button close-button review-close-button {{ include.namespace }}-close-button" href= "#{{ include.namespace }}-entry" > 
+            <span class= "button-text">Close</span>
+        </a>  
+
+        <div class= "figure review-figure">
+            {% include image.liquid 
+                src = "simple-background-1ftrc1277zbxdktu.jpg" 
+            %} 
+        </div> 
+
+        <div class= "text-content review-text-content"> 
+            <article class= "person review-person"> 
+                <div class= "entry person-entry person-photo review-person-photo {% if review.author.photo == nil %}no-photo{% endif %}"> 
+                    <span class= "key">Photo</span> 
+
+                    {% if review.author.photo %}
+                        {% include image.liquid 
+                            src = review.author.photo 
+                        %} 
+                    {% endif %}
+                </div> 
+
+                <div class= "text-content review-person-text-content"> 
+                    <div class= "entry person-entry person-name review-person-name">
+                        <span class= "key">Name</span> 
+
+                        {{ review.author.name }}
+                    </div> 
+
+                    <div class= "entry person-entry person-occupation review-person-occupation">
+                        <span class= "key">Occupation</span> 
+
+                        {{ review.author.occupation }} 
+                    </div> 
+                </div>
+            </article> 
+
+            <h4 class= "heading review-heading">{{ heading }}</h4> 
+            <p class= "paragraph review-paragraph">{{ lead_paragraph | replace_first: heading, "" }}</p> 
+            {% for entry in review.sections[ 0 ].text %} 
+                {% if forloop.first %}
+                    {% continue %} 
+                {% endif %} 
+
+                <p class= "paragraph review-paragraph">{{ entry.paragraph }}</p> 
+            {% endfor %} 
+        </div> 
+    </div> 
+
+</div> 

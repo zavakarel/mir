@@ -1,5 +1,10 @@
 .reviews { 
+    --slider-pagination-block-height: 3rem; 
+
     position: relative; 
+    padding-bottom: var( --slider-pagination-block-height ); 
+    //background-color: #999; 
+    //border-bottom: 1px solid; 
 
     // &-list { 
     //     display: flex; flex-wrap: nowrap; 
@@ -34,11 +39,10 @@
     //     display: none; 
     // } 
 
-    // &-entry { 
-    //     .review-text-content { 
-    //         margin-left: 50%; 
-    //     } 
-    // } 
+    
+    .review-text-content { 
+        margin-left: 50%; 
+    } 
 
     // .entry + .entry {
     //     margin-top: 1em; 
@@ -112,38 +116,32 @@
         //border: 1px solid; 
         // border-radius: 12px; 
         background-color: rgba( var( --color-grayscale-light-rgb ), 0.9 ); 
-    }
+    } 
 
     &-figure { 
         display: flex; justify-content: flex-end; //align-items: center; 
         position: absolute; 
+        top: 0; 
         //width: 50%; 
         width: 100%; 
         height: 100%; 
         //color: rgba( var( --color-grayscale-dark-rgb ), 0.125 ); 
         //background-color: rgba( var( --color-grayscale-dark-rgb ), 0.02 );  
 
-        .image { 
-            //display: none; 
-            width: 100%; height: 100%; 
-            object-fit: cover; 
-            border-radius: 12px; 
-            opacity: 0.3; 
-        }
-
         &::after {  
             box-sizing: border-box; 
             display: block; 
             display: flex; justify-content: center; align-items: center; 
             position: absolute; 
-            inset: 2rem; //right: 50%;  
+            inset: 2rem; right: 50%;  
             // width: 2em; height: 2em; 
-            // width: 100%; height: 100%; 
+            //width: 50%; 
+            //height: 100%; 
             //border: 1px solid; border-color: currentColor; 
             //border-radius: 12px; 
-            color: rgba( var( --color-grayscale-light-rgb ), 0.5 ); 
-            //color: rgba( var( --color-grayscale-dark-rgb ), 0.1 ); 
-            //background-color: rgba( var( --color-grayscale-light-rgb ), 0.3 ); 
+            color: rgba( var( --color-grayscale-light-rgb ), 0.3 ); 
+            color: rgba( var( --color-grayscale-dark-rgb ), 0.03 ); 
+            background-color: rgba( var( --color-grayscale-light-rgb ), 0.2 ); 
 
             font-family: var( --icon-font-family ); 
             font-size: 15em; 
@@ -157,7 +155,7 @@
     &-text-content { 
         position: relative; z-index: 2; 
         padding-block: 5em; 
-        padding-inline: calc( 1em + 4% ); 
+        padding-inline: 2em 7em; 
         //border: 1px solid; 
         //background-color: rgba( var( --color-3-rgb ), 0.8 ); color: rgba( var( --color-grayscale-dark-rgb ), 0.8 ); 
         //color: rgba( var( --color-grayscale-light-rgb ), 1 ); 
@@ -179,6 +177,16 @@
     &-article .image {
         object-position: center top; 
     }
+} 
+
+.reviews-list-holder > .image, 
+.review-figure .image { 
+    position: absolute; z-index: -1; 
+    top: 0; 
+    width: 100%; height: 100%; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    opacity: 0.3; 
 } 
 
 .review-person { 
@@ -226,3 +234,38 @@
     } 
 
 } 
+
+.splide__arrow {
+    --icon-size: 3rem; 
+    --icon-border: 1px solid; 
+    --icon-border-radius: 50%; 
+    --icon-font-size: 1.5rem; 
+
+    display: inline-block; 
+    width: var( --icon-size ) !important; 
+    background: transparent !important; 
+    color: inherit; 
+}
+
+.splide__arrow--prev {
+    --icon-code: "\f3d2"; 
+} 
+
+.splide__arrow--next {
+    --icon-code: "\f3d3"; 
+} 
+
+.splide__pagination {
+    bottom: auto !important; top: 100%; 
+    height: var( --slider-pagination-block-height ); 
+
+    .splide__pagination__page { 
+        background-color: rgba( var( --color-3-rgb ), 0.2 ); 
+
+        &.is-active { 
+            background-color: rgba( var( --color-3-rgb ), 0.8 ); 
+            //border: 1px solid; 
+            transform: scale( 1.5 ); 
+        }
+    }
+}

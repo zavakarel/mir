@@ -638,22 +638,64 @@
     
 } 
 
-@media screen and ( max-width: 980px ) { 
-    .reviews-list { 
-        --column-count: 1; 
-        --column-gap-x: 0em; 
-        --column-gap-y: 2em; 
-        //--max-width: 620px; 
+// @media screen and ( max-width: 980px ) { 
+//     .reviews-list { 
+//         --column-count: 1; 
+//         --column-gap-x: 0em; 
+//         --column-gap-y: 2em; 
+//         //--max-width: 620px; 
 
-        > .entry:nth-child( 1 ) { 
-            margin-top: 0; 
-        }
+//         > .entry:nth-child( 1 ) { 
+//             margin-top: 0; 
+//         }
 
-        > .entry:nth-child( n ) { 
+//         > .entry:nth-child( n ) { 
+//             margin-left: 0; 
+//         } 
+
+//     } 
+    
+// } 
+
+@media screen and ( max-width: 880px ) { 
+    .reviews { 
+        .review-text-content { 
             margin-left: 0; 
+            padding-inline: calc( 1em + 4% ); 
         } 
 
-    } 
+        .review-figure::after {  
+            left: 0; right: 0; 
+        } 
+
+        .splide__pagination {
+            position: initial; 
+        }
+
+        .splide__arrows {
+            display: flex; justify-content: center; 
+            position: absolute; position: initial; 
+            // right: 0; 
+            margin-top: 1em; 
+            width: 100%; 
+
+            > * + * {
+                margin-left: 0.5em; 
+            }
+
+            .splide__arrow {
+                position: initial; 
+                top: auto; 
+                height: auto; 
+                transform: none; 
+
+                // &--prev {
+                //     margin-left: auto; 
+                // } 
+            } 
+        }
+    }
+    
     
 } 
 
