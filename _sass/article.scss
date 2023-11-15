@@ -110,7 +110,7 @@
 }
 
 .article-header { 
-    position: relative; 
+    position: relative; z-index: 2; 
     margin-left: calc( -1 * var( --article-padding-left ) ); 
     margin-right: calc( -1 * var( --article-padding-right ) ); 
     //padding-left: 8rem; padding-right: 2.5em; 
