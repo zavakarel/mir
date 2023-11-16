@@ -14,9 +14,9 @@ entry_list:
       templ: "entry-list-team.liquid" 
 
 
-  - 
-    text: "Събития" 
-    target: "#news-section" 
+  # - 
+  #   text: "Събития" 
+  #   target: "#news-section" 
 
   # - 
   #   text: "Въпроси" 

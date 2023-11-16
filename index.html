@@ -82,7 +82,7 @@ layout: default
 %} 
 </div> 
 
-
+{%- comment -%}
 {% assign news = site.pages | where: 'name', 'news' | first %} 
 {% assign news_list = site.news | reverse | slice: 0, 4 %} 
 <div class= "section news" id= "news-section"> 
@@ -95,6 +95,7 @@ layout: default
     entry_template = "news-block.liquid" 
 %} 
 </div> 
+{%- endcomment -%} 
 
 {%- comment -%}
 {% assign questions = site.pages | where: 'name', 'questions' | first %}
