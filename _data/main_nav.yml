@@ -13,6 +13,10 @@ entry_list:
     subnavigation: 
       templ: "entry-list-team.liquid" 
 
+  - 
+    text: "Мнения" 
+    target: "#reviews-section" 
+
 
   # - 
   #   text: "Събития" 
