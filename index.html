@@ -29,23 +29,22 @@ layout: default
 <div class= "section principles"> 
     {% assign principles = site.pages | where: 'name', 'principles' | first %} 
 
-    <div class= "candidate-image-holder">
+    <!-- <div class= "candidate-image-holder">
         {% include image.liquid 
             namespace = "candidate" 
             src = principles.image 
         %} 
-    </div> 
+    </div>  --> 
 
-    <div class= "text-content section-text-content principles-text-content"> 
-        {% include entry-list.liquid 
-            level = 2 
-            namespace = "principles" 
-            heading = principles.heading 
-            text = principles.text 
-            entry_list = principles.entry_list 
-            entry_template = "principles-block.liquid" 
-        %} 
-    </div> 
+
+    {% include entry-list.liquid 
+        level = 2 
+        namespace = "principles" 
+        heading = principles.heading 
+        text = principles.text 
+        entry_list = principles.entry_list 
+        entry_template = "principles-block.liquid" 
+    %} 
 </div> 
 
 {% assign candidates = site.pages | where: 'name', 'candidates' | first %} 
