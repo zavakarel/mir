@@ -283,7 +283,7 @@
 
 // } 
 
-@media screen and ( max-width: 720px ) { 
+@media screen and ( max-width: 820px ) { 
     .principles { 
         &-list { 
             > * + * {
@@ -302,19 +302,22 @@
 
             & .text-content { 
                 box-sizing: border-box; 
-                margin-left: 0; margin-right: 0; 
-                padding-inline: var( --text-content-margin-x ); 
+                //margin-left: 0; margin-right: 0; 
+                margin-inline: auto; //margin-inline: 1rem; 
+                max-width: 100%; 
+                //padding-inline: var( --text-content-margin-x ); 
+                border-radius: 0; 
                 
-                &::after { 
-                    display: block; 
-                    position: absolute; z-index: 1; 
-                    left: 0; 
-                    top: 10%; bottom: 10%; 
-                    width: 100%; 
-                    content: ""; 
-                    background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
-                    //box-shadow: 0 0 15px 2px rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
-                }
+                // &::after { 
+                //     display: block; 
+                //     position: absolute; z-index: 1; 
+                //     left: 0; 
+                //     top: 10%; bottom: 10%; 
+                //     width: 100%; 
+                //     content: ""; 
+                //     background-color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
+                //     //box-shadow: 0 0 15px 2px rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
+                // } 
                 
             }
     
