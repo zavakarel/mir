@@ -31,7 +31,7 @@
     }
 
     .introduction-background-logo-icon {
-        font-size: calc( 20em - 8vw ); 
+        font-size: calc( 18em - 8vw ); 
     } 
 
     &-body {
@@ -93,7 +93,7 @@
 
 .introduction { 
     > .introduction-background-logo-icon { 
-        --fade-in-end-opacity: 0.05; 
+        --fade-in-end-opacity: 0.1; 
 
         animation-timing-function: linear !important; 
     } 

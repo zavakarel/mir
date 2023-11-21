@@ -1,5 +1,5 @@
 $sequence: (
-	start: 1.8s, 
+	start: 1s, 
 	stages: ( 
 		( 
 			selector: ".company-features .company-features-image", 
@@ -19,7 +19,7 @@ $sequence: (
 		( 
 			selector: ".introduction", 
 			animationGroup: ( 
-				startShift: 0s, 
+				startShift: -0.2s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
@@ -195,7 +195,7 @@ $sequence: (
 		( 
 			selector: ".introduction-background-logo-icon", 
 			animationGroup: ( 
-				startShift: -0.15s, 
+				startShift: -0.2s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
@@ -242,7 +242,7 @@ $sequence: (
 		( 
 			selector: ".company-features-text-content > .heading", 
 			animationGroup: ( 
-				startShift: 0s, 
+				startShift: 0.2s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
