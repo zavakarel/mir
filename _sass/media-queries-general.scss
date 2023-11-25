@@ -730,31 +730,35 @@
             left: 0; right: 0; 
         } 
 
+        .review-block > .review-figure::after  { 
+            top: 0; bottom: 0; 
+        }
+
+        .splide {
+            --slider-pagination-block-height: 5rem; 
+        }
+
         .splide__pagination {
             position: initial; 
         }
 
-        .splide__arrows {
+        .splide__arrows { 
+            --icon-size: 3rem; 
+            //--icon-border: 1px solid; 
+            --icon-border-radius: 8px; 
+            --icon-font-size: 1.5rem; 
+
             display: flex; justify-content: center; 
-            position: absolute; position: initial; 
-            // right: 0; 
-            margin-top: 1em; 
+            position: initial; 
+            margin-top: 0; 
+            //padding-block: 1em; 
             width: 100%; 
+            height: var( --slider-pagination-block-height ); 
 
             > * + * {
                 margin-left: 0.5em; 
             }
 
-            .splide__arrow {
-                position: initial; 
-                top: auto; 
-                height: auto; 
-                transform: none; 
-
-                // &--prev {
-                //     margin-left: auto; 
-                // } 
-            } 
         }
     }
     
