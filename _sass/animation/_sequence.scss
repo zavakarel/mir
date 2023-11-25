@@ -230,7 +230,7 @@ $sequence: (
 					), 
 
 					( 
-						startShift: 0.5s, 
+						startShift: 0.8s, 
 						name: off, 
 						duration: 0.0005s 
 					)
@@ -242,7 +242,7 @@ $sequence: (
 		( 
 			selector: ".company-features-text-content > .heading", 
 			animationGroup: ( 
-				startShift: 0.2s, 
+				startShift: 0s, 
 				animations: ( 
 					( 
 						startShift: 0s, 
