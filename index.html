@@ -60,14 +60,60 @@ layout: default
 %} 
 </div> 
 
-<div class= "section featured-candidates">
+<div class= "section featured-candidates splide" id= "featured-candidates-section"> 
+    <ul class="featured-candidates-control-list"> 
+    {% for candidate in candidates_ordered %} 
+        <li class="entry control-entry"> 
+            <a class= "control-link" href= "#" data-target-slide-index= "{{ forloop.index0 }}" style= "background-image: url( '/assets/images/{{ candidate.photo }}' )"> 
+                <span class= "control-link-text">{{ candidate.name }}</span> 
+            </a> 
+        </li>
+    {% endfor %}
+    </ul> 
+
+    <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev">
+            <span class= "button-text">Prev</span>
+        </button> 
+
+        <button class="splide__arrow splide__arrow--next">
+            <span class= "button-text">Next</span> 
+        </button>
+    </div> 
+
+    <div class="splide__track"> 
+        <ul class="featured-candidates-list splide__list"> 
+        {% for candidate in candidates_ordered %} 
+            <li class="entry splide__slide">
+                {% include featured-candidate-block.liquid 
+                    data = candidate 
+                %} 
+            </li>
+        {% endfor %}
+        </ul>
+    </div> 
+
+{%- comment -%}
 {% include entry-list.liquid 
     level = 2 
     namespace = "featured-candidates" 
     entry_list = candidates_ordered 
     entry_template = "featured-candidate-block.liquid" 
 %} 
+{%- endcomment -%}
 </div> 
+
+<ul class=""> 
+{% for candidate in candidates_ordered %} 
+    <li class="entry"> 
+        <div class= "article-holder" id= "candidate-article-id-{{ candidate.id }}"> 
+            {% include candidate.liquid 
+                candidate = candidate  
+            %}  
+        </div> 
+    </li>
+{% endfor %}
+</ul> 
 
 {% assign priorities = site.pages | where: 'name', 'priorities' | first %} 
 <div class= "section priorities" id= "priorities-section">

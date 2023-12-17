@@ -30,19 +30,47 @@
     <script src= "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link href= "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" /> 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-intersection@0.2.0/dist/js/splide-extension-intersection.min.js"></script> 
-    <script>
-        new Splide( '.splide', {
-            //pagination: false, 
-            autoplay: 'pause', 
-            intersection: {
-                inView: {
-                    autoplay: true,
-                }, 
-                outView: {
-                    autoplay: false,
-                }, 
-            },
-        } ).mount( window.splide.Extensions ); 
+    <script> 
+
+        document.addEventListener( 'DOMContentLoaded', function () {
+            const main = new Splide( '#featured-candidates-section', {
+                rewind: true,
+                pagination: false,
+                arrows: false, 
+            } );
+
+            main.mount();
+
+            document.querySelector( '.featured-candidates-control-list' ).addEventListener( 'click', function( e ) { 
+                const link = e.target.closest( '.control-link' ); 
+                if ( !link ) { 
+                    return; 
+                } 
+
+                e.preventDefault(); 
+                const targetSlideIndex = parseInt( link.dataset.targetSlideIndex ); 
+                main.go( targetSlideIndex ); 
+            } ); 
+        } ); 
+
+        // const splideHolders = document.getElementsByClassName( 'splide' ); 
+        // const spliders = []; 
+        // for ( let i = 0; i < splideHolders.length; i++ ) {
+        //     spliders.push( new Splide( splideHolders[ i ], {
+        //         autoplay: 'pause', 
+        //         intersection: {
+        //             inView: {
+        //                 autoplay: true,
+        //             }, 
+        //             outView: {
+        //                 autoplay: false,
+        //             }, 
+        //         },
+        //     } ).mount( window.splide.Extensions ) ); 
+        // } 
+
+        // spliders[ 0 ].options = { arrows: false }; 
+
     </script>
 </body>
 </html> 

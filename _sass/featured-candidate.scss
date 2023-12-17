@@ -106,18 +106,18 @@
 
     }
 
-    .entry:nth-child( 2n ) & { 
-        flex-direction: row-reverse; 
+    // .entry:nth-child( 2n ) & { 
+    //     flex-direction: row-reverse; 
 
-        &-image {
-            left: auto; right: 0; 
-        } 
+    //     &-image {
+    //         left: auto; right: 0; 
+    //     } 
 
-        // .facts {
-        //     margin-inline: 8rem 0; 
-        // }
+    //     // .facts {
+    //     //     margin-inline: 8rem 0; 
+    //     // }
 
-    } 
+    // } 
 
 
 } 
@@ -130,7 +130,7 @@
     //margin-left: 2em; 
     //margin-inline: 0 8rem; 
     width: 50%; 
-    padding: 4em; 
+    padding: 4rem; 
     background-color: rgba( var( --color-grayscale-light-rgb ), 0.5 ); 
     border-radius: 12px; 
     //border: 1px solid; 
@@ -179,3 +179,30 @@
     font-weight: var( --font-weight-semi-bold ); 
     overflow: hidden; 
 } 
+
+.featured-candidates-control-list { 
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 1em; 
+    
+    //background-color: #CCC; 
+
+    .control-entry + .control-entry {
+        margin-left: 0.5em; 
+    }
+
+    .control-link { 
+        display: block; 
+        width: 4em; height: 4em; 
+        border-radius: 50%; 
+        overflow: hidden; 
+        background-size: cover; 
+
+    } 
+
+    .image { 
+        width: 100%; height: 100%; 
+        object-fit: cover; 
+    } 
+
+}
