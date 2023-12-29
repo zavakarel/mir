@@ -248,7 +248,7 @@
     --icon-border-radius: 8px; 
     --icon-font-size: 3.5rem; 
 
-    display: flex; justify-content: space-between; 
+    display: flex; justify-content: space-between; align-items: center; 
     position: absolute; //position: initial; 
     //right: 50%; 
      
@@ -293,11 +293,20 @@
     height: var( --slider-pagination-block-height ); 
 
     .splide__pagination__page { 
-        background-color: rgba( var( --color-3-rgb ), 0.2 ); 
+        box-sizing: border-box; 
+        width: var( --slider-pagination-button-size, auto ); height: var( --slider-pagination-button-size, auto ); 
+        //background-color: rgba( var( --color-3-rgb ), 0.2 ); 
+        background-size: cover; 
+        //border: 1px solid transparent; 
+        //opacity: 0.5; 
 
         &.is-active { 
-            background-color: rgba( var( --color-3-rgb ), 0.8 ); 
-            transform: scale( 1.5 ); 
+            //background-color: rgba( var( --color-3-rgb ), 0.8 ); 
+            //background: unset !important; 
+            //border: 1px solid rgba( var( --color-grayscale-dark-rgb ), 0.4 ); 
+            //opacity: 1; 
+            transform: scale( 1.4 ); 
+            
         }
     }
 } 
@@ -314,20 +323,79 @@
 } 
 
 .featured-candidates { 
-    --slider-pagination-block-height: 5rem; 
+    --slider-pagination-block-height: 10rem; 
+    --slider-pagination-button-size: 3rem; 
 
-    padding-top: var( --slider-pagination-block-height ); 
+    //padding-top: var( --slider-pagination-block-height ); 
 
-    .splide__arrows {
+    
+
+    .splide__arrows { 
+        min-height: var( --slider-pagination-block-height ); 
         //left: 50%; 
-        //right: calc( 50% + 0em ); 
-        top: 0; right: 0; 
+        //right: calc( 50% + 2em );   
+        right: 0; 
+        //background-color: rgba( var( --color-3-rgb ), 0.2 ); 
+
+        // .splide__arrow {
+        //     background-color: red !important; 
+        // } 
+
+        .splide__arrow:focus { 
+            outline: none !important; 
+        }
     } 
 
     .splide__pagination { 
-        //width: auto; 
+        box-sizing: border-box; 
+        //display: block; 
+        // flex-direction: column; flex-wrap: nowrap; 
+        // align-items: flex-end; 
+        padding-left: 4rem !important; 
+        //padding-inline: 2rem !important; padding-block: 2rem !important; 
+        width: auto; 
+        //max-width: var( --page-inner-width ); 
         //left: 50%; margin-left: 4rem; right: auto; 
         //left: auto; right: 0; 
-        top: 0; 
+        //inset: auto; left: 0; top: 0; right: 50% !important; 
+        //left: 50%; margin-left: calc( var( --page-inner-width ) / -2 ); 
+        inset: auto; left: 50%; top: 0; 
+        // bottom: 100%; 
+        //background-color: rgba( var( --color-3-rgb ), 0.2 ); 
+
+        .splide__pagination__page { 
+            //box-sizing: border-box; 
+            width: var( --slider-pagination-button-size, auto ); height: var( --slider-pagination-button-size, auto ); 
+            //background-color: rgba( var( --color-3-rgb ), 0.2 ); 
+            background-size: cover; 
+            border: 3px solid rgba( var( --color-grayscale-light-rgb ), 1 ); 
+            border-radius: 4px; 
+            opacity: 1; 
+            box-shadow: 0 0 5px 2px rgba( var( --color-grayscale-dark-rgb ), 0.1 ); 
+    
+            &.is-active {  
+                opacity: 1; 
+                transform: scale( 1.5 );
+                box-shadow: 0 0 5px 2px rgba( var( --color-grayscale-dark-rgb ), 0.2 ); 
+                
+            }
+        } 
+
+        li {
+            display: block; 
+        }
+    } 
+
+    $candidate_photos: ( 
+        "376803465_272656228986323_6942697388337488751_n.jpg", 
+        "380898863_271293172455962_6053877959729184124_n_e.jpg", 
+        "387737465_282913814627231_6003175362536465745_n_e.jpg", 
+        "376672093_272163935702219_2308808763411100379_n_e.jpg" 
+    ); 
+    @for $i from 1 through length( $candidate_photos ) { 
+        .splide__pagination .splide__pagination__page-#{ $i } { 
+            background-image: url( '/assets/images/#{ nth( $candidate_photos, $i ) }' ) !important; 
+
+        } 
     }
 }

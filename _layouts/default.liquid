@@ -32,44 +32,47 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-intersection@0.2.0/dist/js/splide-extension-intersection.min.js"></script> 
     <script> 
 
-        document.addEventListener( 'DOMContentLoaded', function () {
-            const main = new Splide( '#featured-candidates-section', {
-                rewind: true,
-                pagination: false,
-                arrows: false, 
-            } );
+        document.addEventListener( 'DOMContentLoaded', function () { 
+            // Slider id list 
+            const sliderIdList = [ 
+                "featured-candidates-section", 
+                "reviews-list-holder" 
+            ]; 
 
-            main.mount();
+            // Object to store 'slider id - slider reference' pairs 
+            const sliderMap = {}; 
 
-            document.querySelector( '.featured-candidates-control-list' ).addEventListener( 'click', function( e ) { 
-                const link = e.target.closest( '.control-link' ); 
-                if ( !link ) { 
-                    return; 
-                } 
+            // Common slider options
+            const commonSliderOptions = { 
+                autoplay: 'pause', 
+                intersection: {
+                    inView: {
+                        autoplay: true,
+                    }, 
+                    outView: {
+                        autoplay: false,
+                    }, 
+                },
+            }; 
 
-                e.preventDefault(); 
-                const targetSlideIndex = parseInt( link.dataset.targetSlideIndex ); 
-                main.go( targetSlideIndex ); 
+            // Creating slider objects and storing references in 'sliderMap' object 
+            sliderIdList.forEach( function( id ) { 
+                sliderMap[ id ] = new Splide( document.getElementById( id ), commonSliderOptions ); 
+            } ); 
+
+            // 'featured-candidates-section' slider specific options 
+            sliderMap[ "featured-candidates-section" ].on( 'pagination:mounted', function ( data ) { 
+                // `items` contains all dot items
+                data.items.forEach( function ( item ) {
+                    item.button.classList.add( `splide__pagination__page-${ item.page + 1 }` ); 
+                } ); 
+            } ); 
+
+            // Calling 'mount' method on all slider references 
+            Object.entries( sliderMap ).forEach( function( [ id, slider ] ) { 
+                slider.mount( window.splide.Extensions ); 
             } ); 
         } ); 
-
-        // const splideHolders = document.getElementsByClassName( 'splide' ); 
-        // const spliders = []; 
-        // for ( let i = 0; i < splideHolders.length; i++ ) {
-        //     spliders.push( new Splide( splideHolders[ i ], {
-        //         autoplay: 'pause', 
-        //         intersection: {
-        //             inView: {
-        //                 autoplay: true,
-        //             }, 
-        //             outView: {
-        //                 autoplay: false,
-        //             }, 
-        //         },
-        //     } ).mount( window.splide.Extensions ) ); 
-        // } 
-
-        // spliders[ 0 ].options = { arrows: false }; 
 
     </script>
 </body>

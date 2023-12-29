@@ -489,25 +489,20 @@
 // } 
 
 // Featured Candidate 
-@media screen and ( max-width: 520px ) { 
-    .entry:nth-child( n ) .featured-candidate { 
-        &-image {
-            position: initial; 
-            height: 50vh; 
-        } 
 
-        .quote { 
-            //position: absolute; 
-            background-color: rgba( var( --color-grayscale-light-rgb ), 0.5 ); 
-            border-width: 0 0 5px 0; border-style: solid; 
-        } 
+@media screen and ( min-width: 981px ) { 
+    .entry:nth-child( n ) .featured-candidate { 
+        .facts { 
+            padding-top: var( --slider-pagination-block-height ); 
+        }
+
     } 
-} 
+}
 
 @media screen and ( max-width: 980px ) { 
     .entry:nth-child( n ) .featured-candidate { 
         flex-direction: column; 
-        padding-block: 2rem 3rem; 
+        padding-block: 2rem 3rem; //padding-top: 10rem; 
         max-width: 680px; margin-inline: auto; 
     
         > * {
@@ -516,11 +511,26 @@
 
         .quote { 
             margin-bottom: 0.2em; 
-            padding: 1em; 
+            padding: 1em; //padding-top: 10rem; 
             border-radius: 12px; 
         } 
-
     } 
+
+    .featured-candidates { 
+        .splide__pagination {
+            position: initial; 
+            //justify-content: flex-start; 
+            padding-left: 0 !important; 
+        } 
+
+        .splide__arrows { 
+            display: none; 
+            z-index: 2; 
+            //justify-content: center; 
+            width: 100%; 
+            //background-color: rgba( var( --color-grayscale-light-rgb ), 0.5 ); 
+        } 
+    }
     
 } 
 
@@ -587,6 +597,25 @@
             // color: rgba( var( --color-grayscale-light-rgb ), 0.8 ); 
         } 
     } 
+} 
+
+@media screen and ( max-width: 520px ) { 
+    .entry:nth-child( n ) .featured-candidate { 
+        padding-top: 0; 
+
+        &-image {
+            position: initial; 
+            height: 50vh; 
+        } 
+
+        .quote { 
+            //position: absolute; 
+            padding-top: 0; 
+            background-color: rgba( var( --color-grayscale-light-rgb ), 0.5 ); 
+            border-width: 0 0 5px 0; border-style: solid; 
+        } 
+    } 
+    
 } 
 
 // Team 
