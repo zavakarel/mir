@@ -7,8 +7,8 @@ layout: default
     {% include entry-list.liquid 
         level = 2 
         namespace = "company-features" 
-        heading = "Company Features" 
-        entry_list = site.data.company_features
+        heading = site.data.company_features.heading 
+        entry_list = site.data.company_features.entry_list 
         entry_template = "company-features-block.liquid" 
     %} 
 </div> 
@@ -137,7 +137,7 @@ layout: default
     {% assign reviews = site.pages | where: 'name', 'reviews' | first %}
 
     <!-- Section heading -->
-    <h2 class= "heading reviews-heading">Мнения</h2> 
+    <h2 class= "heading reviews-heading">{{ reviews.heading }}</h2> 
 
     <!-- Reviews section slider, background image wrapping -->
     <section class= "reviews-list-holder splide" id= "reviews-list-holder" aria-label=""> 
@@ -165,7 +165,7 @@ layout: default
 
         <!-- Reviews section background image  -->
         {% include image.liquid 
-            src = "Writing-2.jpg" 
+            src = reviews.image  
         %} 
     </section> 
 
@@ -185,13 +185,16 @@ layout: default
 
 <!-- Send message -->
 <div class= "section send-message-section" id= "send-message-section"> 
+    <!-- Getting 'send-message' page data  -->
+    {% assign send_message = site.pages | where: 'name', 'send_message' | first %}
+
     <!-- Section heading -->
-    <h2 class= "heading send-message-heading">Включете се и Вие с коментар или идея</h2> 
+    <h2 class= "heading send-message-heading">{{ send_message.heading }}</h2> 
 
     <!-- Section background image -->
     <div class= "image-holder send-message-image-holder">
         {% include image.liquid 
-            src = "how-to-take-board-meeting-minutes.jpg" 
+            src = send_message.image 
         %} 
     </div> 
     

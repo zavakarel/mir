@@ -1,9 +1,10 @@
 --- 
 name: reviews 
-heading: "Какво мислят хората" 
+heading: "Мнения" 
 text: 
   - 
     paragraph: "" 
+image: "Writing-2.jpg" 
 
 entry_list: 
   - 
