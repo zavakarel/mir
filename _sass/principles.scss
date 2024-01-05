@@ -89,6 +89,17 @@
 
         > * {
             position: relative; z-index: 2; 
+        } 
+
+        &::after { 
+            display: block; 
+            margin-top: max( 3em, 5% ); margin-inline: auto; 
+            // position: absolute; 
+            // bottom: 20%; left: 45%; right: 45%; 
+            height: 1px; 
+            width: 25%; max-width: 4em; 
+            border-bottom: 1px solid; 
+            content: ""; 
         }
     } 
     

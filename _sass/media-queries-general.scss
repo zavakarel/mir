@@ -311,6 +311,10 @@
 
         & .text-content { 
             text-align: left; 
+
+            &::after { 
+                margin-inline: 0 auto; 
+            }
         } 
     } 
 } 
