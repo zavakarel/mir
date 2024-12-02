@@ -13,7 +13,7 @@
 
     <link rel= "stylesheet" href= "{% if jekyll.environment == "production" %}{{ site.repo_name }}{% endif %}/assets/css/main.css"> 
      
-    <link rel= "stylesheet" href= "/assets/css/media-queries.css"> 
+    <link rel= "stylesheet" href= "{% if jekyll.environment == "production" %}{{ site.repo_name }}{% endif %}/assets/css/media-queries.css"> 
     <title>{{ site.title }}</title> 
 </head>
 <body class= "body"> 
